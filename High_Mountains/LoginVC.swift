@@ -29,10 +29,10 @@ class LoginVC: UIViewController {
     
     @IBAction func SingInbtn(_ sender: Any) {
         
-        //StoryBoard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Menu") 
-        self.present(controller, animated: true, completion: nil)
+       //validation method
+        
+        
+        
         
         //TextFieldDelegate
         self.UsernameTxt.resignFirstResponder()
@@ -41,13 +41,38 @@ class LoginVC: UIViewController {
         //Json fatch
         if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
-            let postparam = "username=swapnil &&password=swap1234 &&action=login";
+            let postparam = "username=\(UsernameTxt.text!) &&password=\(PasswordTxt.text!) &&action=login";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
                     print(dt)
-                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                    print(dte!)
+                    let res : AnyObject = dt.object as AnyObject
+                    if let name = res["status"]as? Int as Optional!{
+                        print(name!)
+                       if (name == 1)
+                      {
+                        //StoryBoard
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "Menu")
+                        self.present(controller, animated: true, completion: nil)
+                        
+                        }
+                      else if(name == 0){
+                        let res = dt.object as AnyObject
+                        if (res["msg"]as? String) != nil{
+                            
+                          self.alertDialog(header: "Alert", msg: "Failed")
+                            print("failed")
+                        }
+                        }
+                        
+                    }
+                    
+                    
+//                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+//                    print(dte!)
+                
+                    
                 }
                 else {
                     self.alertDialog(msg: result as! String)
@@ -59,6 +84,7 @@ class LoginVC: UIViewController {
             print("There is no internet connection")
         }
     }
+    
     
     
     

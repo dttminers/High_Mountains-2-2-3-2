@@ -9,4 +9,15 @@
 import Foundation
 import UIKit
 
+class EmailValidator{
+    
+    //function for emailvalidation
+    class func invalid(emailid:String) -> Bool {
+        
+        let exp="[A-Za-z0-9_%-]+@[A-Za-z0-9-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", exp).evaluate(with:emailid)
+    }
+    
+    
+}
 

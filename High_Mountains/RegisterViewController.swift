@@ -76,6 +76,8 @@ class RegisterViewController: UIViewController {
        // let Jdata : Any? = UserDefaults.standard.object(forKey: "uid")
        // print(Jdata)
         
+        
+        
     }
     
     
@@ -110,35 +112,21 @@ class RegisterViewController: UIViewController {
         
         if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!||(ReferalCode?.isEmpty)!)
         {
-            let myalert=UIAlertController(title:"Alert", message: "Field Can't Be Empty", preferredStyle: UIAlertControllerStyle.alert)
+           AlertMsg(title: "Warning", message: "Field Can't be Empty")
             
-            let okAction=UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler:nil)
-            myalert.addAction(okAction)
-            self.present(myalert, animated: true, completion:nil)
-            return
         }
             
             
-            
-        else if(invalid(emailid:finalemail!))
+        else if(EmailValidator.invalid(emailid:finalemail!))
         {
             print("valid")
-            let myalert=UIAlertController(title:"Alert", message: "valid", preferredStyle: UIAlertControllerStyle.alert)
+            AlertMsg(title: "Alert", message: "Valid")
             
-            let okAction=UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler:nil)
-            myalert.addAction(okAction)
-            self.present(myalert, animated: true, completion:nil)
-            return
             
         }
         else{
             print("ntvalid")
-            let myalert=UIAlertController(title:"Alert", message: "NOT valid", preferredStyle: UIAlertControllerStyle.alert)
-            
-            let okAction=UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler:nil)
-            myalert.addAction(okAction)
-            self.present(myalert, animated: true, completion:nil)
-            return
+            AlertMsg(title: "Alert", message: "Not Valid")
             
         }
     
@@ -183,7 +171,20 @@ class RegisterViewController: UIViewController {
         
     }
     
+    
+    // Alert function method
+    func AlertMsg(title:String, message:String){
+        
+        let myalert=UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction=UIAlertAction(title: "ok", style: .default, handler:nil)
+        myalert.addAction(okAction)
+        self.present(myalert, animated: true, completion:nil)
+        return
+    }
 }
+    
+
 
 
 

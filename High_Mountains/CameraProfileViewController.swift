@@ -15,7 +15,7 @@ class CameraProfileViewController: UIViewController {
         //self.loadDesign()
         super.viewDidLoad()
  
-        ///
+        
     }
 
 
