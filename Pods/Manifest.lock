@@ -1,0 +1,27 @@
+PODS:
+  - DLRadioButton (1.4.11)
+  - IQKeyboardManagerSwift (5.0.7)
+  - SkyFloatingLabelTextField (3.4.0)
+  - TextFieldEffects (1.4.0)
+  - XLPagerTabStrip (8.0.0)
+  - YNDropDownMenu (3.0.1)
+
+DEPENDENCIES:
+  - DLRadioButton (~> 1.4)
+  - IQKeyboardManagerSwift
+  - SkyFloatingLabelTextField
+  - TextFieldEffects
+  - XLPagerTabStrip (~> 8.0)
+  - YNDropDownMenu
+
+SPEC CHECKSUMS:
+  DLRadioButton: 0d04b8259e7bfd886571a1e9173c73fee7118f50
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
+  YNDropDownMenu: 967ebe0c633ce8f40e8667574525aa230ba24560
+
+PODFILE CHECKSUM: 2fff066efe54553c635caf6698895ae64b7332c6
+
+COCOAPODS: 1.4.0
