@@ -110,7 +110,7 @@ class RegisterViewController: UIViewController {
         let DOB=Dobtxt.text
         let ReferalCode=ReferenceCodetxt.text
         
-        
+    
         
         if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!||(ReferalCode?.isEmpty)!)
         {
