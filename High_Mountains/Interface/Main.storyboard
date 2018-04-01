@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pZh-G2-G8r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -4092,7 +4092,7 @@
                                                     <constraint firstAttribute="height" constant="15" id="u0L-bL-L3z"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mywallet" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-3O-TJM">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mywallet-2" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-3O-TJM">
                                                 <rect key="frame" x="29" y="451" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="MvW-5U-ydl"/>
@@ -4283,32 +4283,24 @@
                                                     <constraint firstAttribute="width" constant="414" id="yvs-1h-4rf"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBy-l1-Xt4">
-                                                <rect key="frame" x="8" y="730" width="398" height="133"/>
-                                                <subviews>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-Ov-RgD">
-                                                        <rect key="frame" x="0.0" y="8" width="398" height="50"/>
-                                                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="Uj5-yR-f2z"/>
-                                                        </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NgO-gq-oLa">
-                                                            <size key="itemSize" width="50" height="50"/>
-                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        </collectionViewFlowLayout>
-                                                        <cells/>
-                                                    </collectionView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="XyE-Ov-RgD" secondAttribute="trailing" id="2od-XH-lXa"/>
-                                                    <constraint firstItem="XyE-Ov-RgD" firstAttribute="leading" secondItem="RBy-l1-Xt4" secondAttribute="leading" id="6x0-WY-KAF"/>
-                                                    <constraint firstItem="XyE-Ov-RgD" firstAttribute="top" secondItem="RBy-l1-Xt4" secondAttribute="top" constant="8" id="Fgh-Nn-zWS"/>
-                                                    <constraint firstAttribute="height" constant="133" id="bJa-RE-x00"/>
-                                                </constraints>
-                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HAG-xj-mPE">
+                                                <rect key="frame" x="8" y="740" width="398" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                    <segment title=""/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-7b-MeL">
+                                                <rect key="frame" x="8" y="791" width="398" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                    <segment title=""/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -4325,7 +4317,6 @@
                                             <constraint firstAttribute="trailing" secondItem="SEZ-si-aDe" secondAttribute="trailing" constant="8" id="9UM-EU-nov"/>
                                             <constraint firstItem="WG3-HO-8KU" firstAttribute="top" secondItem="gAU-6G-NzB" secondAttribute="bottom" constant="8" id="9WI-13-Qsk"/>
                                             <constraint firstItem="62S-FP-TLv" firstAttribute="leading" secondItem="77Y-3O-TJM" secondAttribute="trailing" constant="15" id="A4Q-hO-prj"/>
-                                            <constraint firstAttribute="trailing" secondItem="RBy-l1-Xt4" secondAttribute="trailing" constant="8" id="And-SP-cgD"/>
                                             <constraint firstItem="77Y-3O-TJM" firstAttribute="top" secondItem="Uns-5R-hLt" secondAttribute="bottom" constant="13" id="C3P-Ld-gio"/>
                                             <constraint firstItem="62S-FP-TLv" firstAttribute="top" secondItem="EY9-dV-5Z6" secondAttribute="bottom" constant="12" id="CJh-Aa-MjN"/>
                                             <constraint firstItem="1cQ-ni-C6s" firstAttribute="top" secondItem="cZF-fU-zBS" secondAttribute="bottom" constant="12" id="CXj-KD-u3X"/>
@@ -4338,7 +4329,6 @@
                                             <constraint firstItem="cZF-fU-zBS" firstAttribute="leading" secondItem="9O3-Cs-DdD" secondAttribute="trailing" constant="15" id="OG2-lz-OZv"/>
                                             <constraint firstItem="hSt-0v-oIK" firstAttribute="leading" secondItem="JNi-Rb-cRw" secondAttribute="trailing" constant="15" id="P7t-LV-c0B"/>
                                             <constraint firstItem="9O3-Cs-DdD" firstAttribute="top" secondItem="tr2-Ie-3HU" secondAttribute="bottom" constant="13" id="RPG-dc-Aog"/>
-                                            <constraint firstItem="RBy-l1-Xt4" firstAttribute="top" secondItem="bgf-vG-LOh" secondAttribute="bottom" constant="8" id="TDa-SQ-wxU"/>
                                             <constraint firstAttribute="trailing" secondItem="bgf-vG-LOh" secondAttribute="trailing" constant="8" id="TKa-Jm-zpd"/>
                                             <constraint firstItem="1cQ-ni-C6s" firstAttribute="leading" secondItem="CQS-jc-kp7" secondAttribute="trailing" constant="15" id="Ty1-IN-q8q"/>
                                             <constraint firstItem="Ygp-et-mXQ" firstAttribute="leading" secondItem="xoR-Xp-8eo" secondAttribute="leading" constant="56" id="Uh2-Js-qhn"/>
@@ -4376,7 +4366,6 @@
                                             <constraint firstItem="t6A-0d-5bu" firstAttribute="top" secondItem="gAU-6G-NzB" secondAttribute="bottom" constant="8" id="pwl-Zp-3zi"/>
                                             <constraint firstAttribute="trailing" secondItem="GIZ-zh-IGN" secondAttribute="trailing" id="qnn-Xb-RKB"/>
                                             <constraint firstAttribute="trailing" secondItem="Ygp-et-mXQ" secondAttribute="trailing" constant="108" id="rfd-l8-M7Z"/>
-                                            <constraint firstItem="RBy-l1-Xt4" firstAttribute="leading" secondItem="xoR-Xp-8eo" secondAttribute="leading" constant="8" id="tj5-cV-WBa"/>
                                             <constraint firstItem="Ygp-et-mXQ" firstAttribute="top" secondItem="xoR-Xp-8eo" secondAttribute="top" constant="14" id="wZO-6w-j6L"/>
                                             <constraint firstItem="aHL-cN-Rn2" firstAttribute="leading" secondItem="xoR-Xp-8eo" secondAttribute="leading" constant="36" id="wgk-Ly-HHI"/>
                                             <constraint firstItem="t1T-Zk-VNQ" firstAttribute="top" secondItem="WG3-HO-8KU" secondAttribute="bottom" constant="8" id="xd3-ia-Awe"/>
@@ -6213,7 +6202,7 @@
     <resources>
         <image name="arrow" width="48" height="48"/>
         <image name="download" width="275" height="183"/>
-        <image name="ic_mywallet" width="30" height="30"/>
+        <image name="ic_mywallet-2" width="30" height="30"/>
         <image name="ic_notification" width="30" height="30"/>
         <image name="location_red" width="30" height="30"/>
         <image name="login-1" width="720" height="1280"/>

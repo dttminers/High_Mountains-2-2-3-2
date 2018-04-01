@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+
 
 
 
@@ -85,27 +85,6 @@ class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectio
         };task.resume()
         
         
-    
-    
-   
-    
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumLineSpacing = 5.0
-        layout.minimumInteritemSpacing = 2.5
-        
-        let numberofitemperrow:CGFloat = 2.0
-        let itemawidth = (collectionView.bounds.width - layout.minimumLineSpacing) / numberofitemperrow
-        
-        return CGSize(width: itemawidth, height: itemawidth)
-    }*/
 
 }
-
-/*extension AlbumViewController : IndicatorInfoProvider{
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "sab")
-}
-}*/
 }

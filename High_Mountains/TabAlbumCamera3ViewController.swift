@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+
 class TabAlbumCamera3ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
@@ -34,11 +34,6 @@ class TabAlbumCamera3ViewController: UIViewController,UITableViewDataSource,UITa
     
 
 }
-extension TabAlbumCamera3ViewController : IndicatorInfoProvider{
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "FTab")
-    }
-    }
+
 
 

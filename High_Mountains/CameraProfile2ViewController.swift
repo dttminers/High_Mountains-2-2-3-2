@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+
 
 struct profile: Decodable{
     
@@ -89,9 +89,4 @@ class CameraProfile2ViewController: UIViewController,UITableViewDelegate,UITable
 }
 
 
-extension CameraProfile2ViewController : IndicatorInfoProvider{
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "one")
-}
-}
+

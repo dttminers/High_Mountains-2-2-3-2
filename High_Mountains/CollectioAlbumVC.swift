@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+
 class CollectioAlbumVC: UIViewController {
 
     override func viewDidLoad() {
@@ -33,9 +33,4 @@ class CollectioAlbumVC: UIViewController {
     */
     
 }
-/*extension CollectioAlbumVC : IndicatorInfoProvider{
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "two")
-    }
-}*/
+
