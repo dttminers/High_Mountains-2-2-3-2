@@ -11,6 +11,7 @@
 		460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377AD205A386D003BD529 /* DropDownFavDestionViewController.swift */; };
 		460377B0205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377AF205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift */; };
 		460377B2205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */; };
+		4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4603F2682070C2BF00D50374 /* LeftImage.swift */; };
 		4604174D206CFC7E00BA0694 /* CollectioAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */; };
 		4605030220563DBE002FDD6E /* PlanTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605030120563DBE002FDD6E /* PlanTripViewController.swift */; };
 		46050304205657DB002FDD6E /* ButtonEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46050303205657DB002FDD6E /* ButtonEffect.swift */; };
@@ -21,7 +22,6 @@
 		4605F3022053BD39002A9FD5 /* ThemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F3012053BD39002A9FD5 /* ThemesCollectionViewCell.swift */; };
 		4605F3042053BD6D002A9FD5 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */; };
 		46060F83206B8163002C440A /* Validationform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F82206B8163002C440A /* Validationform.swift */; };
-		46060F85206BBF2C002C440A /* valid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F84206BBF2C002C440A /* valid.swift */; };
 		4606A86820505DA300DB0298 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86720505DA300DB0298 /* Section.swift */; };
 		4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */; };
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
@@ -93,7 +93,7 @@
 		C1FE661320696BBB00B006D3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660820696BBB00B006D3 /* Constant.swift */; };
 		C1FE661420696BBB00B006D3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660920696BBB00B006D3 /* SwiftyJSON.swift */; };
 		C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660A20696BBB00B006D3 /* SlideMenuController.swift */; };
-		C1FE661620696BBB00B006D3 /* HoshiTextField1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660B20696BBB00B006D3 /* HoshiTextField1.swift */; };
+		C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660B20696BBB00B006D3 /* HoshiTextField.swift */; };
 		C1FE661720696BBB00B006D3 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660C20696BBB00B006D3 /* TextFieldsEffects.swift */; };
 		C1FE661820696BBB00B006D3 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660D20696BBB00B006D3 /* APISession.swift */; };
 		C1FE661920696BBB00B006D3 /* cfg.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660E20696BBB00B006D3 /* cfg.swift */; };
@@ -129,6 +129,7 @@
 		460377AD205A386D003BD529 /* DropDownFavDestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFavDestionViewController.swift; sourceTree = "<group>"; };
 		460377AF205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFavDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDwnFavDestCollectionViewCell.swift; sourceTree = "<group>"; };
+		4603F2682070C2BF00D50374 /* LeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImage.swift; sourceTree = "<group>"; };
 		4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectioAlbumVC.swift; sourceTree = "<group>"; };
 		4605030120563DBE002FDD6E /* PlanTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTripViewController.swift; sourceTree = "<group>"; };
 		46050303205657DB002FDD6E /* ButtonEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffect.swift; sourceTree = "<group>"; };
@@ -139,7 +140,6 @@
 		4605F3012053BD39002A9FD5 /* ThemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		46060F82206B8163002C440A /* Validationform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validationform.swift; sourceTree = "<group>"; };
-		46060F84206BBF2C002C440A /* valid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = valid.swift; sourceTree = "<group>"; };
 		4606A86720505DA300DB0298 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		4608AED4204E503C009E0A43 /* High_Mountains-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "High_Mountains-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		C1FE660820696BBB00B006D3 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C1FE660920696BBB00B006D3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C1FE660A20696BBB00B006D3 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
-		C1FE660B20696BBB00B006D3 /* HoshiTextField1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField1.swift; sourceTree = "<group>"; };
+		C1FE660B20696BBB00B006D3 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		C1FE660C20696BBB00B006D3 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 		C1FE660D20696BBB00B006D3 /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		C1FE660E20696BBB00B006D3 /* cfg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cfg.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				46060F82206B8163002C440A /* Validationform.swift */,
-				46060F84206BBF2C002C440A /* valid.swift */,
+				4603F2682070C2BF00D50374 /* LeftImage.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				C1FE660820696BBB00B006D3 /* Constant.swift */,
 				C1FE660920696BBB00B006D3 /* SwiftyJSON.swift */,
 				C1FE660A20696BBB00B006D3 /* SlideMenuController.swift */,
-				C1FE660B20696BBB00B006D3 /* HoshiTextField1.swift */,
+				C1FE660B20696BBB00B006D3 /* HoshiTextField.swift */,
 				C1FE660C20696BBB00B006D3 /* TextFieldsEffects.swift */,
 				C1FE660D20696BBB00B006D3 /* APISession.swift */,
 				C1FE660E20696BBB00B006D3 /* cfg.swift */,
@@ -825,13 +825,13 @@
 				4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */,
 				4613B61B205BDD6300C7245D /* CameraProfile2TableViewCell.swift in Sources */,
 				C1FE661D20696BBB00B006D3 /* ButtonClass.swift in Sources */,
-				46060F85206BBF2C002C440A /* valid.swift in Sources */,
 				466498C720515482001FEB0F /* imageCollectionViewCell.swift in Sources */,
 				4613B60F205BA0AA00C7245D /* AlbumViewController.swift in Sources */,
 				462B62762057B1EB00DE1556 /* PageProductViewController.swift in Sources */,
 				460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */,
 				460503082056750C002FDD6E /* textfieldEffect.swift in Sources */,
 				469BBD8A204D16EE00A33EF9 /* LoginVC.swift in Sources */,
+				4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */,
 				46050306205664C9002FDD6E /* cardview1.swift in Sources */,
 				461394E32052649100724B07 /* travelwithusViewController.swift in Sources */,
 				C1FE661B20696BBB00B006D3 /* AppUtility.swift in Sources */,
@@ -878,7 +878,7 @@
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,
 				C1FE661720696BBB00B006D3 /* TextFieldsEffects.swift in Sources */,
 				4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */,
-				C1FE661620696BBB00B006D3 /* HoshiTextField1.swift in Sources */,
+				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
 				460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */,

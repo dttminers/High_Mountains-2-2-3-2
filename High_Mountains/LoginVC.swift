@@ -25,13 +25,26 @@ class LoginVC: UIViewController {
      
         UsernameTxt.delegate = self
         PasswordTxt.delegate = self
+        
+        // icon added
+        let Usernameimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: UsernameTxt, andImage: Usernameimg!)
+        
+        let passwordimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: PasswordTxt, andImage: passwordimg!)
     }
     
     @IBAction func SingInbtn(_ sender: Any) {
         
        //validation method
+        let UserName = UsernameTxt.text
+        let Password = PasswordTxt.text
+    
+                if ((UserName?.isEmpty)! || (Password?.isEmpty)!){
+            
+            self.alertDialog(header: "Alert", msg: "Field can't be Empty")
         
-        
+        }
         
         
         //TextFieldDelegate

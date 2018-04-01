@@ -52,33 +52,35 @@ class RegisterViewController: UIViewController {
         
         
         // textfield icon
-       let Usernameimg = UIImage(named:"pass1")
-        addLeftImageTo(txtField: UserNametxt, andImage: Usernameimg!)
+        let Fullnameimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: UserFullNametxt, andImage: Fullnameimg!)
         
-       /* let passwordImage = UIImage(named:"pass1")
-        addLeftImageTo(txtField: Password, andImage: passwordImage!)*/
-//img.size.width
-       // img.size.height
+        let Usernameimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: UserNametxt, andImage: Usernameimg!)
+
+        let Emailimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: Emailtxt, andImage: Emailimg!)
+        
+        let passwordimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: Passwordtxt, andImage: passwordimg!)
+        
+        let MobileNoimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: MobileNotxt, andImage: MobileNoimg!)
+        
+        let Dobimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: Dobtxt, andImage:Dobimg!)
+        
+        let ReferralCodeimg = UIImage(named: "user")
+        image.addLeftImageTo(txtField: ReferenceCodetxt, andImage: ReferralCodeimg!)
     }
 
-    func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 2.0, width: 16, height: 15))
-        
-        
-        leftImageView.image = img
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
-        view.addSubview(leftImageView)
-        txtField.leftView = view
-        txtField.leftViewMode = .always
+    
         
         //Nsuser deafaults
         
        // let Jdata : Any? = UserDefaults.standard.object(forKey: "uid")
        // print(Jdata)
-        
-        
-        
-    }
+    
     
     
     // hiddin for keyboard
@@ -112,21 +114,21 @@ class RegisterViewController: UIViewController {
         
         if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!||(ReferalCode?.isEmpty)!)
         {
-           AlertMsg(title: "Warning", message: "Field Can't be Empty")
+           alertDialog(header: "Alert", msg: "Field can't be empty")
             
         }
             
             
-        else if(EmailValidator.invalid(emailid:finalemail!))
+        else if(isValidEmail(testStr: finalemail!))
         {
             print("valid")
-            AlertMsg(title: "Alert", message: "Valid")
+            alertDialog(header: "Alert", msg: "Email Id is valid")
             
             
         }
         else{
             print("ntvalid")
-            AlertMsg(title: "Alert", message: "Not Valid")
+          alertDialog(header: "Alert", msg: "Email Id is Not Valid")
             
         }
     
@@ -141,13 +143,24 @@ class RegisterViewController: UIViewController {
         //Json
          if(currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
-            let postparam = "fullname=swapnl1&&username=humangosau1r1&&email=humangosar1@.com&&password=122116&&contact_no=109&&dob=06/5/15&&referral_code=referencecode &&gender=male&&action=register";
+            let postparam = "fullname=\(UserFullNametxt.text!) &&username=\(UserNametxt.text!) &&email=\(Emailtxt.text!) &&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!) &&referral_code=\(ReferenceCodetxt.text!) &&gender=male &&action=register";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
                     print(dt)
-                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                    print(dte!)
+                    let res : AnyObject = dt.object as AnyObject
+                    if let status = res["status"] as? String{
+                        print(status)
+                 
+                        
+                            
+                        
+                        
+                      
+                    }
+                    
+                    
+                    
                 }
                 else {
                     self.alertDialog(msg: result as! String)
@@ -172,16 +185,6 @@ class RegisterViewController: UIViewController {
     }
     
     
-    // Alert function method
-    func AlertMsg(title:String, message:String){
-        
-        let myalert=UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        let okAction=UIAlertAction(title: "ok", style: .default, handler:nil)
-        myalert.addAction(okAction)
-        self.present(myalert, animated: true, completion:nil)
-        return
-    }
 }
     
 
@@ -231,11 +234,19 @@ extension RegisterViewController: UITextFieldDelegate {
             }
         }
         
-      /*  else if textField == Emailtxt {
+        else if textField == Emailtxt {
             
-            EmailLbl.text = "[A-Za-z0-9_%-]+@[A-Za-z0-9-]+\\.[A-Za-z]{2,6}"
-            NSPredicate(format: "SELF MATCHES %@",EmailLbl).evaluate(with: EmailLbl)
-            }*/
+            if (textField.text?.count)! < 8 {
+                EmailLbl.text = "Min 8 letter"
+            }
+            else if (textField.text?.count)! > 20 {
+                EmailLbl.text = "Max 20 letter"
+            }
+            else {
+                EmailLbl.text = ""
+            }
+        }
+            
             
         else if textField == MobileNotxt{
             
