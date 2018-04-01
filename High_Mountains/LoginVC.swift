@@ -36,23 +36,26 @@ class LoginVC: UIViewController {
     
     @IBAction func SingInbtn(_ sender: Any) {
         
-       //validation method
-        let UserName = UsernameTxt.text
-        let Password = PasswordTxt.text
-    
-                if ((UserName?.isEmpty)! || (Password?.isEmpty)!){
-            
-            self.alertDialog(header: "Alert", msg: "Field can't be Empty")
-        
-        }
-        
         
         //TextFieldDelegate
         self.UsernameTxt.resignFirstResponder()
         self.PasswordTxt.resignFirstResponder()
         
+       //validation method
+        let UserName = UsernameTxt.text
+        let Password = PasswordTxt.text
+//let alert = true
+    
+    
+                if ((UserName?.isEmpty)! || (Password?.isEmpty)!){
+            
+            self.alertDialog(header: "Alert", msg: "Field can't be Empty")
+         
+        }
+       
+    
         //Json fatch
-        if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
+        else if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
             let postparam = "username=\(UsernameTxt.text!) &&password=\(PasswordTxt.text!) &&action=login";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
