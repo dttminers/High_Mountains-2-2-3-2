@@ -90,13 +90,7 @@ class RegisterViewController: UIViewController {
     }
     
     
-    //function for emailvalidation
-    func invalid(emailid:String) -> Bool {
-        
-        let exp="[A-Za-z0-9_%-]+@[A-Za-z0-9-]+\\.[A-Za-z]{2,6}"
-        return NSPredicate(format: "SELF MATCHES %@", exp).evaluate(with:emailid)
-    }
-    
+
     
     @IBAction func generateotp(_ sender: Any) {
         
@@ -110,7 +104,6 @@ class RegisterViewController: UIViewController {
         let DOB=Dobtxt.text
         let ReferalCode=ReferenceCodetxt.text
         
-    
         
         if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!||(ReferalCode?.isEmpty)!)
         {
@@ -118,32 +111,23 @@ class RegisterViewController: UIViewController {
             
         }
             
+       /* else if(isValidEmail(testStr: finalemail!)){
             
-        else if(isValidEmail(testStr: finalemail!))
-        {
             print("valid")
             alertDialog(header: "Alert", msg: "Email Id is valid")
             
-            
         }
-        else{
+            else {
             print("ntvalid")
           alertDialog(header: "Alert", msg: "Email Id is Not Valid")
             
-        }
-    
-    
-        //navigation
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Otp")
-        self.present(controller, animated: true, completion: nil)
-        
+        }*/
         
         
         //Json
-         if(currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
+        else if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
-            let postparam = "fullname=\(UserFullNametxt.text!) &&username=\(UserNametxt.text!) &&email=\(Emailtxt.text!) &&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!) &&referral_code=\(ReferenceCodetxt.text!) &&gender=male &&action=register";
+            let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=male &&action=register";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
@@ -156,6 +140,10 @@ class RegisterViewController: UIViewController {
                             
                         
                         
+                        //navigation
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "Otp")
+                        self.present(controller, animated: true, completion: nil)
                       
                     }
                     
@@ -234,9 +222,9 @@ extension RegisterViewController: UITextFieldDelegate {
             }
         }
         
-        else if textField == Emailtxt {
+      /*  else if textField == Emailtxt {
             
-            if (textField.text?.count)! < 8 {
+            if (textField.text?.count)! < 3 {
                 EmailLbl.text = "Min 8 letter"
             }
             else if (textField.text?.count)! > 20 {
@@ -245,7 +233,7 @@ extension RegisterViewController: UITextFieldDelegate {
             else {
                 EmailLbl.text = ""
             }
-        }
+        }*/
             
             
         else if textField == MobileNotxt{
