@@ -55,7 +55,7 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
             messageLabel.text = "Retrieving data.\nPlease wait."
             messageLabel.numberOfLines = 0;
             messageLabel.textAlignment = .center;
-            messageLabel.font = UIFont(name: "Arial", size: 20.0)!
+            messageLabel.font = UIFont(name: "Robot", size: 20.0)!
             messageLabel.sizeToFit()
             self.tableView.backgroundView = messageLabel;
         }

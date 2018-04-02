@@ -8,50 +8,35 @@
 
 import UIKit
 
-class PopMenuViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate  {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+class PopMenuViewController: UIViewController,UITextFieldDelegate  {
+    @IBOutlet weak var GenderLbl: UILabel!
+    
+    @IBAction func GenderBtn(_ sender: Any) {
+    
+    let alret = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let Male = UIAlertAction(title: "Male", style: .default, handler: nil)
+        let Female = UIAlertAction(title: "Female", style: .default, handler: {(ACTION) in self.GenderLbl.text = "Female"})
+        let Others = UIAlertAction(title: "Other", style: .default, handler: nil)
+    alret.addAction(Male)
+    alret.addAction(Female)
+    alret.addAction(Others)
+        self.present(alret, animated: true, completion: nil)
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Gender.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        self.view.endEditing(true)
-        return Gender[row]
-        
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        self.Dropdownlisttxt.text = self.Gender[row]
-        self.pickvList.isHidden = true
-        
-    }
-
     func textFieldDidBeginEditing(_ textField: UITextField) {
     
     if textField == self.Dropdownlisttxt {
-    self.pickvList.isHidden = false
+
     textField.endEditing(true)
     }
     
     }
     @IBOutlet weak var Dropdownlisttxt: UITextField!
     
-    @IBOutlet weak var pickvList: UIPickerView!
-    var Gender = ["Male","Female","Other"]
-    //let picker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-       //DropDownPicktxt.inputView = picker
-        
-        
-        //pop background color
-      //self.view.backgroundColor = UIColorwithAlphaComponent(0.8)
         self.showAnimate()
     }
 

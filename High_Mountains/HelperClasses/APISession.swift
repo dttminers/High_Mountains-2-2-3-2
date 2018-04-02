@@ -12,7 +12,7 @@ class APISession {
     
     class func postRequets(objDic: AnyObject,APIURL: String, withAPINo apiNo: Int, completionHandler: @escaping (_ result: Any, _ status: Bool) -> Void) {
         
-        print("[\(apiNo)] Request Str : \(APIURL)")
+        print("Api NO: [\(apiNo)] Request Str : \(APIURL)")
         let pp = NSString(data: (objDic as! NSData) as Data, encoding: String.Encoding.utf8.rawValue)!
         print("[\(apiNo)] Post Params : \(pp)")
         

@@ -102,30 +102,24 @@ class RegisterViewController: UIViewController {
         let finalemail=emailid?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let MobileNo=MobileNotxt.text
         let DOB=Dobtxt.text
-        let ReferalCode=ReferenceCodetxt.text
+       // let ReferalCode=ReferenceCodetxt.text
         
-        
-        if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!||(ReferalCode?.isEmpty)!)
+        if((FullName?.isEmpty)!||(UserName?.isEmpty)!||(Password?.isEmpty)!||(finalemail?.isEmpty)!||(MobileNo?.isEmpty)!||(DOB?.isEmpty)!)
         {
            alertDialog(header: "Alert", msg: "Field can't be empty")
             
         }
             
-       /* else if(isValidEmail(testStr: finalemail!)){
-            
-            print("valid")
-            alertDialog(header: "Alert", msg: "Email Id is valid")
-            
-        }
-            else {
-            print("ntvalid")
+        else if(!isValidEmail(testStr: finalemail!)){
+            print("not svalid")
           alertDialog(header: "Alert", msg: "Email Id is Not Valid")
             
-        }*/
-        
-        
+        } else if (isValidPhone(value: MobileNo!)){
+            alertDialog(header: "Alert", msg: "Invalid Phone no")
+            }
+    
         //Json
-        else if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
+         if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
             let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=male &&action=register";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
@@ -133,18 +127,32 @@ class RegisterViewController: UIViewController {
                     let dt = JSON(data : result as! Data)
                     print(dt)
                     let res : AnyObject = dt.object as AnyObject
-                    if let status = res["status"] as? String{
+                    if let status = res["status"] as? Int as Optional{
                         print(status)
-                 
                         
+                        if(status == 1)
+                        {
+                            //navigation
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "Otp")
+                            self.present(controller, animated: true, completion: nil)
                             
+                        }
+                        else if (status == 0){
+                            
+                           self.alertDialog(header: "Alert", msg: "Registeration fail")
+                        }
+                        else if ((res["username"]as?String) != UserName) {
+    
+                            print("alerady register")
+                        }
                         
-                        
-                        //navigation
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let controller = storyboard.instantiateViewController(withIdentifier: "Otp")
-                        self.present(controller, animated: true, completion: nil)
-                      
+                        else if (((res["contact_no"]as? String)) !=  MobileNo){
+                            print("alerady register")
+                        }
+                        else if ((res["email"]as?String) != finalemail){
+                            print("alerady register")
+                        }
                     }
                     
                     
@@ -222,10 +230,10 @@ extension RegisterViewController: UITextFieldDelegate {
             }
         }
         
-      /*  else if textField == Emailtxt {
+        else if textField == Emailtxt {
             
-            if (textField.text?.count)! < 3 {
-                EmailLbl.text = "Min 8 letter"
+            if (textField.text?.count)! < 6 {
+                EmailLbl.text = "Min 6 letter"
             }
             else if (textField.text?.count)! > 20 {
                 EmailLbl.text = "Max 20 letter"
@@ -233,7 +241,7 @@ extension RegisterViewController: UITextFieldDelegate {
             else {
                 EmailLbl.text = ""
             }
-        }*/
+        }
             
             
         else if textField == MobileNotxt{

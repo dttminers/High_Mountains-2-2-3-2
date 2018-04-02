@@ -24,7 +24,7 @@ extension UIColor {
         if (hexStr.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-        if (cString.isEmpty || (cString.characters.count) != 6) {
+        if (cString.isEmpty || (cString.count) != 6) {
             return colorWithHex(rgbValue: 0xFF5300);
         } else {
             var rgbValue:UInt32 = 0

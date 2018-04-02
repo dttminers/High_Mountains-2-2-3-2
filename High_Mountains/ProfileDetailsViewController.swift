@@ -12,6 +12,10 @@ import UIKit
 
 class ProfileDetailsViewController: UIViewController {
 
+    @IBOutlet weak var Segment_1: UISegmentedControl!
+    
+    @IBOutlet weak var Segment_2: UISegmentedControl!
+    
     @IBOutlet weak var UserNamelbl: UILabel!
     //indroduction yourself
     @IBOutlet weak var Profileimg: UIImageView!

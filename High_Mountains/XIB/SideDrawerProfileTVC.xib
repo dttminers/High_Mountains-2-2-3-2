@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +51,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jB7-An-Xxr">
                                 <rect key="frame" x="0.0" y="0.0" width="184" height="23"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-dR-80v">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-dR-80v">
                                         <rect key="frame" x="4" y="2" width="28" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="3Ky-iu-PaC"/>
@@ -87,7 +87,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axo-Ik-zo9">
                                 <rect key="frame" x="0.0" y="23" width="184" height="23.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x55-WV-WYA">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mywallet-2" translatesAutoresizingMaskIntoConstraints="NO" id="x55-WV-WYA">
                                         <rect key="frame" x="4" y="2" width="28" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="Kvx-Le-5nt"/>
@@ -123,7 +123,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8T-6U-e5l">
                                 <rect key="frame" x="0.0" y="46.5" width="184" height="23"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VML-LP-gnr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_myreward" translatesAutoresizingMaskIntoConstraints="NO" id="VML-LP-gnr">
                                         <rect key="frame" x="4" y="2" width="28" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="kmQ-Ss-R7o"/>
@@ -159,7 +159,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BK1-et-HHi">
                                 <rect key="frame" x="0.0" y="69.5" width="184" height="23.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DTK-uB-VDn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_cloud" translatesAutoresizingMaskIntoConstraints="NO" id="DTK-uB-VDn">
                                         <rect key="frame" x="4" y="2" width="28" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="IVa-Tg-vNe"/>
@@ -195,7 +195,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-nC-BEI">
                                 <rect key="frame" x="0.0" y="93" width="184" height="23"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thH-iZ-cVV">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mybucketlist" translatesAutoresizingMaskIntoConstraints="NO" id="thH-iZ-cVV">
                                         <rect key="frame" x="4" y="2" width="28" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="kTj-Mk-DOA"/>
@@ -278,4 +278,11 @@
             <point key="canvasLocation" x="30" y="202"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_mybucketlist" width="30" height="30"/>
+        <image name="ic_myreward" width="30" height="30"/>
+        <image name="ic_mywallet-2" width="30" height="30"/>
+        <image name="ic_notification" width="30" height="30"/>
+        <image name="menu_cloud" width="30" height="30"/>
+    </resources>
 </document>

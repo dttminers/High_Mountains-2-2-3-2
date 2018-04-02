@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
             
             profile.target=revealViewController()
             profile.action=#selector(SWRevealViewController.rightRevealToggle(_:))
-            
+           
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
