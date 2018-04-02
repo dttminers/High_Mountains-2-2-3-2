@@ -76,19 +76,21 @@ let err_default = "Something went wrong, Please check your internet connection."
 let something_went_wrong = "Something went wrong."
 
 func createMenuView() {
-    /*let window = UIApplication.shared.windows[0]
+    let window = UIApplication.shared.windows[0]
     
     // create viewController code...
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let leftViewController = storyboard.instantiateViewController(withIdentifier: "qwe") as! MasterViewController
+    let leftViewController = storyboard.instantiateViewController(withIdentifier: "left") as! SideMenuViewController
     
-    let nvc : UINavigationController = (storyboard.instantiateViewController(withIdentifier: "customNVC") as? customNVC)! //UINavigationController(rootViewController: mainViewController)
+    let rightViewController = storyboard.instantiateViewController(withIdentifier: "right") as! profileViewController
     
-    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+    let nvc : UINavigationController = storyboard.instantiateViewController(withIdentifier: "customNVC") as! UINavigationController//(storyboard.instantiateViewController(withIdentifier: "customNVC") as? customNVC)! //UINavigationController(rootViewController: mainViewController)
+    
+    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController:rightViewController)
     slideMenuController.automaticallyAdjustsScrollViewInsets = true
     window.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     window.rootViewController = slideMenuController
-    window.makeKeyAndVisible()*/
+    window.makeKeyAndVisible()
 }
 /*
 func goToLogin() {

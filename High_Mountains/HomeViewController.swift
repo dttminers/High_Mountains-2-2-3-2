@@ -12,19 +12,36 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var menubar: UIBarButtonItem!
     @IBOutlet weak var profile: UIBarButtonItem!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-     sidemenu()
+     //sidemenu()
         
+        slidingMenus()
+    }
+    
+    func openLeftMenu() {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func openRightMenu() {
+        
+    }
+    
+    func slidingMenus()
+    {
+        menubar.target = self
+        menubar.action = #selector(SlideMenuController.openLeft)
+        
+        
+        
+        profile.target = self
+        profile.action=#selector(SlideMenuController.openRight)
     }
 
+    
 
     func sidemenu()
     {
@@ -32,13 +49,14 @@ class HomeViewController: UIViewController {
             
             menubar.target = revealViewController()
             menubar.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth=600
-            revealViewController().rearViewRevealWidth=300
+            
             
             
             profile.target=revealViewController()
             profile.action=#selector(SWRevealViewController.rightRevealToggle(_:))
-           
+            
+            revealViewController().rearViewRevealWidth=300
+            revealViewController().rightViewRevealWidth=300
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }

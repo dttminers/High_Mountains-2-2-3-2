@@ -17,12 +17,16 @@ class LoginVC: UIViewController {
     //error label
     @IBOutlet weak var UserNamelbl: UILabel!
     @IBOutlet weak var Passwordlbl: UILabel!
-     let overcastBlueColor = UIColor(red: 0, green: 187/255, blue: 204/255, alpha: 1.0)
-   
+    let overcastBlueColor = UIColor(red: 0, green: 187/255, blue: 204/255, alpha: 1.0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        if userData != nil {
+            createMenuView()
+        }
+        
         UsernameTxt.delegate = self
         PasswordTxt.delegate = self
         
@@ -36,25 +40,25 @@ class LoginVC: UIViewController {
     
     @IBAction func SingInbtn(_ sender: Any) {
         
-        
+        self.view.endEditing(true)
         //TextFieldDelegate
-        self.UsernameTxt.resignFirstResponder()
-        self.PasswordTxt.resignFirstResponder()
+        //self.UsernameTxt.resignFirstResponder()
+        //self.PasswordTxt.resignFirstResponder()
         
-       //validation method
-        let UserName = UsernameTxt.text
-        let Password = PasswordTxt.text
-//let alert = true
-    
-    
-                if ((UserName?.isEmpty)! || (Password?.isEmpty)!){
+        //validation method
+        let UserName = UsernameTxt.text!
+        let Password = PasswordTxt.text!
+        //let alert = true
+        
+        
+        if (UserName.isEmpty || Password.isEmpty){
             
             self.alertDialog(header: "Alert", msg: "Field can't be Empty")
-         
+            
         }
-       
-    
-        //Json fatch
+        else if (!UserNamelbl.text!.isEmpty || !Passwordlbl.text!.isEmpty) {
+            
+        }
         else if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
             let postparam = "username=\(UsernameTxt.text!) &&password=\(PasswordTxt.text!) &&action=login";
@@ -65,29 +69,33 @@ class LoginVC: UIViewController {
                     let res : AnyObject = dt.object as AnyObject
                     if let name = res["status"]as? Int as Optional!{
                         print(name!)
-                       if (name == 1)
-                      {
-                        //StoryBoard
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let controller = storyboard.instantiateViewController(withIdentifier: "Menu")
-                        self.present(controller, animated: true, completion: nil)
-                        
-                        }
-                      else if(name == 0){
-                        let res = dt.object as AnyObject
-                        if (res["msg"]as? String) != nil{
+                        if (name == 1)
+                        {
+                            userData = res as! [String : String]
+                            defaults.set(userData, forKey: ud_key_userData)
+                            defaults.synchronize()
+                            createMenuView()
+                            //StoryBoard
+                            /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "Menu")
+                            self.present(controller, animated: true, completion: nil)*/
                             
-                          self.alertDialog(header: "Alert", msg: "Failed")
-                            print("failed")
                         }
+                        else if(name == 0){
+                            let res = dt.object as AnyObject
+                            if (res["msg"]as? String) != nil{
+                                
+                                self.alertDialog(header: "Alert", msg: "Failed")
+                                print("failed")
+                            }
                         }
                         
                     }
                     
                     
-//                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-//                    print(dte!)
-                
+                    //                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                    //                    print(dte!)
+                    
                     
                 }
                 else {
@@ -122,7 +130,7 @@ class LoginVC: UIViewController {
     
     
     // hiddin for keyboard
-   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
     }
@@ -130,7 +138,6 @@ class LoginVC: UIViewController {
 
 //validatiion
 extension LoginVC : UITextFieldDelegate {
-    
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
@@ -142,7 +149,7 @@ extension LoginVC : UITextFieldDelegate {
                 UserNamelbl.text = "Max 20 letter"
             }
             else{
-                 UserNamelbl.text = ""
+                UserNamelbl.text = ""
             }
         }
         else if textField == PasswordTxt {
@@ -156,6 +163,16 @@ extension LoginVC : UITextFieldDelegate {
                 Passwordlbl.text = ""
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == UsernameTxt {
+            PasswordTxt.becomeFirstResponder()
+        }
+        else {
+            SingInbtn(self)
+        }
+        return true
     }
 }
 

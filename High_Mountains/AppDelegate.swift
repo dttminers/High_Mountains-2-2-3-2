@@ -21,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         
-        print("Hi, We are in AppDelegate")
-        //Dummy Commit
-        //Dummy2
-        
+        if let data = defaults.object(forKey: ud_key_userData) as? [String : String] {
+            userData = data
+        }
         
         //window?.rootViewController  = customtoolbar()
      

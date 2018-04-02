@@ -113,7 +113,7 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
             if let viewWithTag = self.view.viewWithTag(kHeaderSectionTag + section) {
                 viewWithTag.removeFromSuperview()
             }
-            let headerFrame = 300//self.view.frame.size.width
+            let headerFrame = self.view.frame.size.width
             
             let lbl : UILabel = UILabel(frame: CGRect(x: 10, y: 13, width:tableView.frame.size.width - 40, height: 18))
             lbl.text = sectionNames[section-1] as? String
