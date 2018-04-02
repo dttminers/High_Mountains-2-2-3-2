@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         
+        print("Hi, We are in AppDelegate")
+        
         //window?.rootViewController  = customtoolbar()
      
        // application.statusBarStyle = .lightContent
