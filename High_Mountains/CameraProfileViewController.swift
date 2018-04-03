@@ -11,13 +11,13 @@ import UIKit
 
 class CameraProfileViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         //self.loadDesign()
         super.viewDidLoad()
  
         
-    }
+}
 
-
-    
 }

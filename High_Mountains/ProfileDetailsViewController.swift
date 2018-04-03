@@ -12,9 +12,25 @@ import UIKit
 
 class ProfileDetailsViewController: UIViewController {
 
-    @IBOutlet weak var Segment_1: UISegmentedControl!
+  
     
-    @IBOutlet weak var Segment_2: UISegmentedControl!
+    @IBOutlet weak var segment1: UISegmentedControl!
+    
+    var segment: UIView!
+    
+    @IBAction func segmentaction(_ sender: Any) {
+        
+        if segment1.selectedSegmentIndex == 0
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "camera")
+            self.present(controller, animated: true, completion: nil)
+            
+            
+        }
+       
+    }
+    
     
     @IBOutlet weak var UserNamelbl: UILabel!
     //indroduction yourself
@@ -34,12 +50,25 @@ class ProfileDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
        //  self.loadDesign()
-        
+      
         super.viewDidLoad()
         
     
        self.downloadJsonWithURL()
        // ScrollView.contentSize.height = 1000
+        
+        
+        if let storyboard = self.storyboard {
+            
+            let firstViewController = storyboard
+                .instantiateViewController(withIdentifier: "collection1")
+            firstViewController.title = "First"
+            
+            
+            
+            
+        }
+        
         
         
         
@@ -58,133 +87,40 @@ class ProfileDetailsViewController: UIViewController {
     
     
   func downloadJsonWithURL() {
-    if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
-        let myUrl = URL(string: "http://vnoi.in/hmapi/register_login.php");
+    
+  
+    if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
         
-        print(myUrl!)
-        var request = URLRequest(url:myUrl!)
+          let postparam="action=user_info_display &&uid=68";
         
-        request.httpMethod = "post"
-        let postString="action=user_info_display&&uid=20";
-        
-        request.httpBody = postString.data(using: String.Encoding.utf8);
-        
-       
-        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-            
-            if error != nil
-            {
-                print("error=\(String(describing: error))")
-                return
-            }
-            else if response != nil{
-                
-                
-                print("response = \(String(describing: response))")
-                
-                
-                do
-                {
-                    
-                    /* let json = try JSONSerialization.jsonObject(with: data!, options: [.allowFragments])
-                     
-                     print(json)*/
-                    
-                    let myJson = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                    print(myJson)
-                    
-                    if let name = myJson["lives_in"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.LiveInlbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["from_des"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.Fromlbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["relationship_status"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.RelationStatuslbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["dob"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.Doblbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["dob"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.Doblbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["fav_quote"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.FavTravlQuoteslbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["username"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.UserNamelbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["bio"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.Biolbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["gender"]as? String{
-                        print(name)
-                        DispatchQueue.main.async {
-                            self.Genderlbl.text = name
-                        }
-                    }
-                    
-                    if let name = myJson["profile_pic"]as? String{
-                        print(name)
-                        let img = "http://vnoi.in/hmapi/"
-                        let Completeimg = img + "\(name)"
-                        print(Completeimg)
-                        DispatchQueue.main.async {
-                            self.Profileimg.downloadedFrom(link: Completeimg)
-                        }
-                    }
-                
-                }catch{
-                    print(error)
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                let res : AnyObject = dt.object as AnyObject
+                if let name = res["lives_in"] as? String{
+                    print(name)
+                    DispatchQueue.main.async {
+                        self.LiveInlbl.text = name
+                     }
                 }
+                
+                
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
             }
             
-        };task.resume()
+        })
         
-      
-        
-        print("User is connected to the internet via wifi.")
     }else {
         print("There is no internet connection")
     }
-    
-        
-        
     }
-    
-    
     
 }
 
+                    
+
+                    

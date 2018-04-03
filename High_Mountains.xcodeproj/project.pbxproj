@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4162572BA0EF80E7AA5F8234 /* Pods_High_MountainsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC93AF72F656011D86A099E /* Pods_High_MountainsTests.framework */; };
 		460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377AD205A386D003BD529 /* DropDownFavDestionViewController.swift */; };
 		460377B0205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377AF205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift */; };
 		460377B2205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */; };
@@ -102,7 +101,6 @@
 		C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE661120696BBB00B006D3 /* CAPSPageMenu.swift */; };
 		C1FE661D20696BBB00B006D3 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE661220696BBB00B006D3 /* ButtonClass.swift */; };
 		D75E6173ECDD83D5F89C4B22 /* Pods_High_Mountains.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B40E42A822A2EEC8D1CEC5A /* Pods_High_Mountains.framework */; };
-		F8238E7ADB63C87D426ABB0E /* Pods_High_MountainsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109A168ABFBCF4BE2CFE5982 /* Pods_High_MountainsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,9 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03909567827C1111B2A8F85F /* Pods-High_MountainsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_MountainsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-High_MountainsTests/Pods-High_MountainsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		109A168ABFBCF4BE2CFE5982 /* Pods_High_MountainsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_MountainsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4593478C2A0CC93E00E85CCA /* Pods-High_MountainsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_MountainsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-High_MountainsUITests/Pods-High_MountainsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		460377AD205A386D003BD529 /* DropDownFavDestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFavDestionViewController.swift; sourceTree = "<group>"; };
 		460377AF205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFavDestinationTableViewCell.swift; sourceTree = "<group>"; };
 		460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDwnFavDestCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -216,7 +212,6 @@
 		46FC1FEC2063D6E3000AAA04 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		46FC1FED2063D6E3000AAA04 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		5CC93AF72F656011D86A099E /* Pods_High_MountainsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_MountainsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		699CD98BF648FB16F2CFB4B8 /* Pods-High_MountainsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_MountainsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_MountainsTests/Pods-High_MountainsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_Mountains.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E42A822A2EEC8D1CEC5A /* Pods_High_Mountains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_Mountains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDrawerProfileTVC.swift; sourceTree = "<group>"; };
@@ -234,7 +229,6 @@
 		C1FE661120696BBB00B006D3 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C1FE661220696BBB00B006D3 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		CF9CF6EB4E486BEB40CC8487 /* Pods-High_Mountains.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_Mountains.debug.xcconfig"; path = "Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains.debug.xcconfig"; sourceTree = "<group>"; };
-		FF2C506F4B9DEC8EE175EB9D /* Pods-High_MountainsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_MountainsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_MountainsUITests/Pods-High_MountainsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +244,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4162572BA0EF80E7AA5F8234 /* Pods_High_MountainsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +251,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8238E7ADB63C87D426ABB0E /* Pods_High_MountainsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,10 +434,6 @@
 			children = (
 				CF9CF6EB4E486BEB40CC8487 /* Pods-High_Mountains.debug.xcconfig */,
 				7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */,
-				03909567827C1111B2A8F85F /* Pods-High_MountainsTests.debug.xcconfig */,
-				699CD98BF648FB16F2CFB4B8 /* Pods-High_MountainsTests.release.xcconfig */,
-				4593478C2A0CC93E00E85CCA /* Pods-High_MountainsUITests.debug.xcconfig */,
-				FF2C506F4B9DEC8EE175EB9D /* Pods-High_MountainsUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -522,12 +510,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 469BBDB2204D16EF00A33EF9 /* Build configuration list for PBXNativeTarget "High_MountainsTests" */;
 			buildPhases = (
-				E434A6AED687E09108914438 /* [CP] Check Pods Manifest.lock */,
 				469BBD97204D16EF00A33EF9 /* Sources */,
 				469BBD98204D16EF00A33EF9 /* Frameworks */,
 				469BBD99204D16EF00A33EF9 /* Resources */,
-				E26CDD083BD29823961A9DD4 /* [CP] Embed Pods Frameworks */,
-				072F214E67E4B85E14B4B236 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -543,12 +528,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 469BBDB5204D16EF00A33EF9 /* Build configuration list for PBXNativeTarget "High_MountainsUITests" */;
 			buildPhases = (
-				B6F480B31844A7246E65422D /* [CP] Check Pods Manifest.lock */,
 				469BBDA2204D16EF00A33EF9 /* Sources */,
 				469BBDA3204D16EF00A33EF9 /* Frameworks */,
 				469BBDA4204D16EF00A33EF9 /* Resources */,
-				A2CE812E0212CCE09B4F5473 /* [CP] Embed Pods Frameworks */,
-				7EEF6EF48349CCB3807480F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -649,21 +631,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		072F214E67E4B85E14B4B236 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_MountainsTests/Pods-High_MountainsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0A7268BD1975C8F1CC5BBD67 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,21 +646,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7EEF6EF48349CCB3807480F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_MountainsUITests/Pods-High_MountainsUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		867BA88E4673EADD66DB8496 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -701,58 +653,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/YNDropDownMenu/YNDropDownMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNDropDownMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2CE812E0212CCE09B4F5473 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_MountainsUITests/Pods-High_MountainsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6F480B31844A7246E65422D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-High_MountainsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C40F73B2F516DB70E24B0EBE /* [CP] Check Pods Manifest.lock */ = {
@@ -767,39 +682,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-High_Mountains-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E26CDD083BD29823961A9DD4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-High_MountainsTests/Pods-High_MountainsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E434A6AED687E09108914438 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-High_MountainsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1083,7 +965,6 @@
 		};
 		469BBDB3204D16EF00A33EF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03909567827C1111B2A8F85F /* Pods-High_MountainsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1100,7 +981,6 @@
 		};
 		469BBDB4204D16EF00A33EF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 699CD98BF648FB16F2CFB4B8 /* Pods-High_MountainsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1117,7 +997,6 @@
 		};
 		469BBDB6204D16EF00A33EF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4593478C2A0CC93E00E85CCA /* Pods-High_MountainsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1134,7 +1013,6 @@
 		};
 		469BBDB7204D16EF00A33EF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF2C506F4B9DEC8EE175EB9D /* Pods-High_MountainsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

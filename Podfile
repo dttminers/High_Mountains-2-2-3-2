@@ -6,21 +6,11 @@ target 'High_Mountains' do
   use_frameworks!
 
   # Pods for High_Mountains
-pod 'SkyFloatingLabelTextField'
+
 pod 'TextFieldEffects'
-pod 'DLRadioButton', '~> 1.4'
 pod 'YNDropDownMenu'
-pod 'XLPagerTabStrip', '~> 8.0'
+pod 'SJSegmentedScrollView’, ‘1.3.8'
 pod 'IQKeyboardManagerSwift'
 
-target 'High_MountainsTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'High_MountainsUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end

@@ -9,14 +9,30 @@
 import UIKit
 
 class PopMenuViewController: UIViewController,UITextFieldDelegate  {
+    
+    @IBOutlet weak var LiveInTxt: HoshiTextField!
+    
+    @IBOutlet weak var Fromtxt: HoshiTextField!
+    
+    @IBOutlet weak var RelationShipTxt: HoshiTextField!
+    
+    @IBOutlet weak var FavouriteTravelTxt: HoshiTextField!
+    @IBOutlet weak var BioTxt: HoshiTextField!
+    
+    
+    @IBOutlet weak var DobTxt: HoshiTextField!
+    //Gender
     @IBOutlet weak var GenderLbl: UILabel!
     
+ 
+  
+        
     @IBAction func GenderBtn(_ sender: Any) {
     
     let alret = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        let Male = UIAlertAction(title: "Male", style: .default, handler: nil)
+        let Male = UIAlertAction(title: "Male", style: .default, handler: {(ACTION) in self.GenderLbl.text = "Male"})
         let Female = UIAlertAction(title: "Female", style: .default, handler: {(ACTION) in self.GenderLbl.text = "Female"})
-        let Others = UIAlertAction(title: "Other", style: .default, handler: nil)
+        let Others = UIAlertAction(title: "Other", style: .default, handler: {(ACTION) in self.GenderLbl.text = "Other"})
     alret.addAction(Male)
     alret.addAction(Female)
     alret.addAction(Others)
@@ -38,6 +54,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
         super.viewDidLoad()
     
         self.showAnimate()
+       // self.removeAnimate()
     }
 
     
@@ -71,4 +88,52 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
    
 
 }
+    
+    @IBAction func SaveButtonBtn(_ sender: Any) {
+        
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+    let postparam="lives_in=(LiveInTxt.text!)&&from=(Fromtxt.text!)&&action=user_info_update&&gender=male&&rel_status=\(RelationShipTxt.text!)&&dob=\(DobTxt.text!)&&fav_quote=\(FavouriteTravelTxt.text!)&&bio=\(BioTxt.text!)&&id=20";
+            
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                let res : AnyObject = dt.object as AnyObject
+                if let name = res["status"]as? Int as Optional!{
+                    print(name!)
+                    if (name == 1)
+                    {
+                       
+                      print("Saved")
+                      self.alertDialog(header: "Alert", msg: "Update SuccessFul")
+                        
+                    }
+                    else if(name == 0){
+                        let res = dt.object as AnyObject
+                        if (res["msg"]as? String) != nil{
+                            
+                            print("failed")
+                        }
+                    }
+                    
+                }
+                
+                
+                //                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                //                    print(dte!)
+                
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+            
+        })
+    
+    }else {
+    print("There is no internet connection")
+    }
+}
+
 }

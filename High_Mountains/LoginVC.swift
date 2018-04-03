@@ -23,7 +23,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userData != nil {
+       if userData != nil {
             createMenuView()
         }
         
