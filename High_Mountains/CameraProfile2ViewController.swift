@@ -56,7 +56,7 @@ class CameraProfile2ViewController: UIViewController,UITableViewDelegate,UITable
         
         request.httpMethod = "post"
         
-        let postString = "action=fetch_photos&&uid=20";
+        let postString = "action=fetch_photos&&uid=2";
         
         request.httpBody = postString.data(using: String.Encoding.utf8);
         

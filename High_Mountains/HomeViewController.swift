@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
             profile.target=revealViewController()
             profile.action=#selector(SWRevealViewController.rightRevealToggle(_:))
             
-            revealViewController().rearViewRevealWidth=300
+            revealViewController().rearViewRevealWidth=400
             revealViewController().rightViewRevealWidth=300
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         

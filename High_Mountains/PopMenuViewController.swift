@@ -11,22 +11,16 @@ import UIKit
 class PopMenuViewController: UIViewController,UITextFieldDelegate  {
     
     @IBOutlet weak var LiveInTxt: HoshiTextField!
-    
     @IBOutlet weak var Fromtxt: HoshiTextField!
-    
     @IBOutlet weak var RelationShipTxt: HoshiTextField!
-    
     @IBOutlet weak var FavouriteTravelTxt: HoshiTextField!
     @IBOutlet weak var BioTxt: HoshiTextField!
-    
-    
     @IBOutlet weak var DobTxt: HoshiTextField!
+    
     //Gender
     @IBOutlet weak var GenderLbl: UILabel!
-    
  
-  
-        
+    
     @IBAction func GenderBtn(_ sender: Any) {
     
     let alret = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -55,6 +49,29 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
     
         self.showAnimate()
        // self.removeAnimate()
+        
+        
+        
+        //add icon
+        let Liveimg = UIImage(named: "location_red")
+        image.LeftImageTo(txtField: LiveInTxt, andImage: Liveimg!)
+        
+        let Fromimg = UIImage(named: "from_icon")
+        image.LeftImageTo(txtField: Fromtxt, andImage: Fromimg!)
+        
+        let RelationShipimg = UIImage(named: "location_red")
+        image.LeftImageTo(txtField: RelationShipTxt, andImage: RelationShipimg!)
+        
+        let Favourteimg = UIImage(named: "fav_quote_icon")
+        image.LeftImageTo(txtField: FavouriteTravelTxt, andImage: Favourteimg!)
+        
+        let Bioimg = UIImage(named: "bio_icon")
+        image.LeftImageTo(txtField: BioTxt, andImage: Bioimg!)
+        
+        let Dobimg = UIImage(named: "dob_icon")
+        image.LeftImageTo(txtField: DobTxt, andImage: Dobimg!)
+        
+        
     }
 
     
@@ -93,7 +110,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
         
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
-    let postparam="lives_in=(LiveInTxt.text!)&&from=(Fromtxt.text!)&&action=user_info_update&&gender=male&&rel_status=\(RelationShipTxt.text!)&&dob=\(DobTxt.text!)&&fav_quote=\(FavouriteTravelTxt.text!)&&bio=\(BioTxt.text!)&&id=20";
+    let postparam="lives_in=\(LiveInTxt.text!)&&from=\(Fromtxt.text!)&&gender=\(GenderLbl.text!)&&rel_status=\(RelationShipTxt.text!)&&dob=\(DobTxt.text!)&&fav_quote=\(FavouriteTravelTxt.text!)&&bio=\(BioTxt.text!)&&action=user_info_update&&id=20";
             
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
@@ -104,7 +121,6 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
                     print(name!)
                     if (name == 1)
                     {
-                       
                       print("Saved")
                       self.alertDialog(header: "Alert", msg: "Update SuccessFul")
                         
@@ -120,8 +136,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
                 }
                 
                 
-                //                    let dte = String(data: result as! Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-                //                    print(dte!)
+            
                 
                 
             }

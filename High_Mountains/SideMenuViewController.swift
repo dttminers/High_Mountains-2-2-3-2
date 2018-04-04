@@ -120,10 +120,10 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
             header.addSubview(lbl)
             let theImageView = UIImageView(frame: CGRect(x: headerFrame-32, y: 13, width:18, height: 18));
             theImageView.backgroundColor = UIColor.blue
-            theImageView.image = #imageLiteral(resourceName: "Chevron-Dn-Wht")//UIImage(named: "Chevron-Dn-Wht")
+            theImageView.image = #imageLiteral(resourceName: "DOWNarrow") //UIImage(named: "Chevron-Dn-Wht")
             theImageView.tag = kHeaderSectionTag + section
             if (self.expandedSectionHeaderNumber == section) {
-                theImageView.image = #imageLiteral(resourceName: "arrow")
+                theImageView.image = #imageLiteral(resourceName: "UParrow")
             }
             header.addSubview(theImageView)
             

@@ -26,6 +26,8 @@
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
+		4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609C1D12074C89B0028CA87 /* ProfileTVC.swift */; };
+		4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4609C1D22074C89B0028CA87 /* ProfileTVC.xib */; };
 		460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EB820579BC30069EECD /* SideMenuViewController.swift */; };
 		460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
@@ -143,6 +145,8 @@
 		4608AED6204E503C009E0A43 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		4608AEDC204E65B5009E0A43 /* round image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "round image.swift"; sourceTree = "<group>"; };
 		4608AEDE204E6CD3009E0A43 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
+		4609C1D12074C89B0028CA87 /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
+		4609C1D22074C89B0028CA87 /* ProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTVC.xib; sourceTree = "<group>"; };
 		460A1EB820579BC30069EECD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
@@ -443,6 +447,8 @@
 			children = (
 				C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */,
 				C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */,
+				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
+				4609C1D22074C89B0028CA87 /* ProfileTVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				C1FE660620696B9B00B006D3 /* Main.storyboard in Resources */,
 				46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */,
 				46FC1FF42063D6E4000AAA04 /* Roboto-BoldItalic.ttf in Resources */,
+				4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */,
 				46FC1FFA2063D6E4000AAA04 /* Roboto-Bold.ttf in Resources */,
 				469BBD92204D16EE00A33EF9 /* Assets.xcassets in Resources */,
 			);
@@ -755,6 +762,7 @@
 				4613B611205BA10500C7245D /* AlbumCollectionViewCell.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
+				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,
 				467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */,
 				460377B0205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift in Sources */,
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,

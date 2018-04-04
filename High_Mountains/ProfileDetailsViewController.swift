@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ProfileDetailsViewController: UIViewController {
+class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDelegate {
 
   
     @IBOutlet weak var ProfileIMG: UIImageView!
@@ -18,7 +18,7 @@ class ProfileDetailsViewController: UIViewController {
     
     
     
-    @IBAction func segmentaction(_ sender: Any) {
+  /*  @IBAction func segmentaction(_ sender: Any) {
         
         if segment1.selectedSegmentIndex == 0
         {
@@ -29,7 +29,7 @@ class ProfileDetailsViewController: UIViewController {
             
         }
        
-    }
+    }*/
     
     
     
@@ -49,27 +49,19 @@ class ProfileDetailsViewController: UIViewController {
     
     
     override func viewDidLoad() {
-       //  self.loadDesign()
         super.viewDidLoad()
-    
-       //self.downloadJsonWithURL()
+       self.downloadJsonWithURL()
+        //  self.loadDesign()
+        
        
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("ImageTapped")))
+        ProfileIMG.addGestureRecognizer(tapGesture)
         ProfileIMG.isUserInteractionEnabled = true
-        let Tapgesture = UITapGestureRecognizer(target: "<#T##Any?#>", action: <#T##Selector?#>)
-        Tapgesture.numberOfTapsRequired = 2;
-        Tapgesture.numberOfTouchesRequired = 1;
-       // scrollView.addGestureRecognizer(Tapgesture);
-        self.ProfileIMG.addGestureRecognizer(Tapgesture)
-            
+       
         }
     
    
-    func ImageTapped()
-    {
-        print("imaged Tapped")
-        self.alertDialog(header: "LL", msg: "KKK")
-    }
-
+   
 
 
     //pop button action
@@ -83,8 +75,19 @@ class ProfileDetailsViewController: UIViewController {
     }
     
     
-    
-    
+    func ImageTapped(sender: UITapGestureRecognizer)
+    {
+        print("imaged Tapped")
+        let alert = UIAlertController(title: "Image", message: "Image Change", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: {ACTION in self.ProfileIMG.image = UIImage(named: "download")
+        })
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+    }
+
     
     
   func downloadJsonWithURL() {
@@ -92,7 +95,7 @@ class ProfileDetailsViewController: UIViewController {
   
     if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
         
-          let postparam="action=user_info_display &&uid=68";
+          let postparam="action=user_info_display&&uid=2";
         
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
@@ -105,9 +108,12 @@ class ProfileDetailsViewController: UIViewController {
                         self.LiveInlbl.text = name
                      }
                 }
-                
-                
-                
+                if let name = res["from"] as? String{
+                    print(name)
+                    DispatchQueue.main.async {
+                        self.Fromlbl.text = name
+                    }
+                }
             }
             else {
                 self.alertDialog(msg: result as! String)
@@ -119,9 +125,6 @@ class ProfileDetailsViewController: UIViewController {
         print("There is no internet connection")
     }
     }
-    
+
 }
-
-                    
-
                     
