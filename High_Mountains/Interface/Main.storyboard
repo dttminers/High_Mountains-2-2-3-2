@@ -3840,7 +3840,7 @@
                                                     </navigationItem>
                                                 </items>
                                             </navigationBar>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-zh-IGN">
+                                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-zh-IGN">
                                                 <rect key="frame" x="0.0" y="48" width="414" height="220"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="414" id="J1V-Nl-0bt"/>
@@ -4256,7 +4256,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Travel Quote :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZF-fU-zBS">
-                                                <rect key="frame" x="59" y="525.66666666666663" width="160" height="14"/>
+                                                <rect key="frame" x="59.000000000000014" y="525.66666666666663" width="159.33333333333337" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="gmQ-eF-2Cp"/>
                                                 </constraints>
@@ -4265,7 +4265,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-ni-C6s">
-                                                <rect key="frame" x="59" y="551.66666666666663" width="30" height="17.666666666666629"/>
+                                                <rect key="frame" x="58.999999999999993" y="551.66666666666663" width="30.666666666666664" height="17.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4424,7 +4424,7 @@
                         <outlet property="Fromlbl" destination="9eJ-yC-92i" id="mFE-A9-YOS"/>
                         <outlet property="Genderlbl" destination="Bty-2t-hIa" id="0oL-ie-mBL"/>
                         <outlet property="LiveInlbl" destination="LE6-Oz-1F7" id="xC8-4n-LeN"/>
-                        <outlet property="Profileimg" destination="GIZ-zh-IGN" id="3i4-Qb-shH"/>
+                        <outlet property="ProfileIMG" destination="GIZ-zh-IGN" id="a9h-n5-xwS"/>
                         <outlet property="RelationStatuslbl" destination="AKp-w3-gNu" id="dfw-Fs-RFZ"/>
                         <outlet property="ScrollView" destination="1OM-t2-j3y" id="AVE-6U-Fgt"/>
                         <outlet property="UserNamelbl" destination="B3n-8D-9qJ" id="n4h-nc-RFh"/>
@@ -4433,7 +4433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyt-x7-ZzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-3548"/>
+            <point key="canvasLocation" x="2679.7101449275365" y="-3548.6413043478265"/>
         </scene>
         <!--Pop Menu View Controller-->
         <scene sceneID="OeO-Js-Srf">
@@ -4669,7 +4669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysi-6X-5ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408.6956521739135" y="-3317.1195652173915"/>
+            <point key="canvasLocation" x="3342" y="-3656"/>
         </scene>
         <!--Camera Profile View Controller-->
         <scene sceneID="xIQ-Ne-B0a">

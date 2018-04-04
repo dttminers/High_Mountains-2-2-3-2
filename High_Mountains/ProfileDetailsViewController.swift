@@ -13,10 +13,10 @@ import UIKit
 class ProfileDetailsViewController: UIViewController {
 
   
-    
+    @IBOutlet weak var ProfileIMG: UIImageView!
     @IBOutlet weak var segment1: UISegmentedControl!
     
-    var segment: UIView!
+    
     
     @IBAction func segmentaction(_ sender: Any) {
         
@@ -32,9 +32,9 @@ class ProfileDetailsViewController: UIViewController {
     }
     
     
+    
     @IBOutlet weak var UserNamelbl: UILabel!
     //indroduction yourself
-    @IBOutlet weak var Profileimg: UIImageView!
     @IBOutlet weak var Biolbl: UILabel!
     @IBOutlet weak var FavTravlQuoteslbl: UILabel!
     @IBOutlet weak var Doblbl: UILabel!
@@ -50,30 +50,28 @@ class ProfileDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
        //  self.loadDesign()
-      
         super.viewDidLoad()
-        
     
-       self.downloadJsonWithURL()
-       // ScrollView.contentSize.height = 1000
-        
-        
-        if let storyboard = self.storyboard {
-            
-            let firstViewController = storyboard
-                .instantiateViewController(withIdentifier: "collection1")
-            firstViewController.title = "First"
-            
-            
-            
+       //self.downloadJsonWithURL()
+       
+        ProfileIMG.isUserInteractionEnabled = true
+        let Tapgesture = UITapGestureRecognizer(target: "<#T##Any?#>", action: <#T##Selector?#>)
+        Tapgesture.numberOfTapsRequired = 2;
+        Tapgesture.numberOfTouchesRequired = 1;
+       // scrollView.addGestureRecognizer(Tapgesture);
+        self.ProfileIMG.addGestureRecognizer(Tapgesture)
             
         }
-        
-        
-        
-        
-    }
     
+   
+    func ImageTapped()
+    {
+        print("imaged Tapped")
+        self.alertDialog(header: "LL", msg: "KKK")
+    }
+
+
+
     //pop button action
     @IBAction func PopUpActbtn(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Popup") as! PopMenuViewController
@@ -83,6 +81,9 @@ class ProfileDetailsViewController: UIViewController {
         popOverVC.didMove(toParentViewController: self)
         
     }
+    
+    
+    
     
     
     
