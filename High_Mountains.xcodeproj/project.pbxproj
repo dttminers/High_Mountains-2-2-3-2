@@ -23,6 +23,10 @@
 		46060F83206B8163002C440A /* Validationform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F82206B8163002C440A /* Validationform.swift */; };
 		4606A86820505DA300DB0298 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86720505DA300DB0298 /* Section.swift */; };
 		4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */; };
+		460858912076202B00D63C2C /* FollowListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608588F2076202B00D63C2C /* FollowListTVC.swift */; };
+		460858922076202B00D63C2C /* FollowListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460858902076202B00D63C2C /* FollowListTVC.xib */; };
+		4608589420762B4500D63C2C /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608589320762B4500D63C2C /* Second.storyboard */; };
+		4608589620762B9C00D63C2C /* FollowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589520762B9C00D63C2C /* FollowTVC.swift */; };
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
@@ -140,6 +144,10 @@
 		46060F82206B8163002C440A /* Validationform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validationform.swift; sourceTree = "<group>"; };
 		4606A86720505DA300DB0298 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4608588F2076202B00D63C2C /* FollowListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListTVC.swift; sourceTree = "<group>"; };
+		460858902076202B00D63C2C /* FollowListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowListTVC.xib; sourceTree = "<group>"; };
+		4608589320762B4500D63C2C /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		4608589520762B9C00D63C2C /* FollowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTVC.swift; sourceTree = "<group>"; };
 		4608AED4204E503C009E0A43 /* High_Mountains-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "High_Mountains-Bridging-Header.h"; sourceTree = "<group>"; };
 		4608AED5204E503C009E0A43 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		4608AED6204E503C009E0A43 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
@@ -361,6 +369,7 @@
 				4613B614205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift */,
 				46139C1E2064CBED00418A58 /* PopMenuViewController.swift */,
 				4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */,
+				4608589520762B9C00D63C2C /* FollowTVC.swift */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
 				469BBD93204D16EE00A33EF9 /* LaunchScreen.storyboard */,
@@ -449,6 +458,8 @@
 				C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */,
 				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
 				4609C1D22074C89B0028CA87 /* ProfileTVC.xib */,
+				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
+				460858902076202B00D63C2C /* FollowListTVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -457,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				C1FE660520696B9B00B006D3 /* Main.storyboard */,
+				4608589320762B4500D63C2C /* Second.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -601,12 +613,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46FC1FF22063D6E4000AAA04 /* Roboto-Thin.ttf in Resources */,
+				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
 				469BBD95204D16EE00A33EF9 /* LaunchScreen.storyboard in Resources */,
 				46FC1FF62063D6E4000AAA04 /* Roboto-Light.ttf in Resources */,
 				46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */,
 				46FC1FF12063D6E4000AAA04 /* Roboto-Regular.ttf in Resources */,
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
+				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
@@ -708,6 +722,7 @@
 				C1FE661420696BBB00B006D3 /* SwiftyJSON.swift in Sources */,
 				46D3B8AF205FB3D9008098C3 /* Reachability.swift in Sources */,
 				4613B617205BC76400C7245D /* cardview3.swift in Sources */,
+				460858912076202B00D63C2C /* FollowListTVC.swift in Sources */,
 				4606A86820505DA300DB0298 /* Section.swift in Sources */,
 				461394E12052560600724B07 /* cardview.swift in Sources */,
 				4613B613205BBA5C00C7245D /* CameraProfile2ViewController.swift in Sources */,
@@ -751,6 +766,7 @@
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
+				4608589620762B9C00D63C2C /* FollowTVC.swift in Sources */,
 				C1FE661820696BBB00B006D3 /* APISession.swift in Sources */,
 				469BBDC0204D5D1300A33EF9 /* AllreadyReggisterViewController.swift in Sources */,
 				4605F2FC2053A09B002A9FD5 /* NotificationTableViewCell.swift in Sources */,
