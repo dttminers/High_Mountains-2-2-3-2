@@ -37,8 +37,8 @@ class HomeViewController: UIViewController {
         
         
         
-        profile.target = self
-        profile.action=#selector(SlideMenuController.openRight)
+//        profile.target = self
+//        profile.action=#selector(SlideMenuController.openRight)
     }
 
     
@@ -52,9 +52,9 @@ class HomeViewController: UIViewController {
             
             
             
-            profile.target=revealViewController()
-            profile.action=#selector(SWRevealViewController.rightRevealToggle(_:))
-            
+//            profile.target=revealViewController()
+//            profile.action=#selector(SWRevealViewController.rightRevealToggle(_:))
+
             revealViewController().rearViewRevealWidth=400
             revealViewController().rightViewRevealWidth=300
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
