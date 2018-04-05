@@ -4267,7 +4267,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Travel Quote :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZF-fU-zBS">
-                                                <rect key="frame" x="59" y="525.66666666666663" width="160" height="14"/>
+                                                <rect key="frame" x="59.000000000000014" y="525.66666666666663" width="159.33333333333337" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="gmQ-eF-2Cp"/>
                                                 </constraints>
@@ -4276,7 +4276,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-ni-C6s">
-                                                <rect key="frame" x="59" y="551.66666666666663" width="30" height="17.666666666666629"/>
+                                                <rect key="frame" x="58.999999999999993" y="551.66666666666663" width="30.666666666666664" height="17.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
