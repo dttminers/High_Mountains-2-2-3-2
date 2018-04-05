@@ -8,15 +8,10 @@
 
 import UIKit
 
-
-
-
-
-
 struct FetchPhoto: Decodable{
-  
+
     let image_url: String
-    
+
 }
 
 
@@ -45,46 +40,36 @@ class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
     }
 
-   //final let myUrl = "http://vnoi.in/hmapi/feed.php"
-
+   
     
     func downloadJsonWithURL() {
-        let myUrl = URL(string: "http://vnoi.in/hmapi/feed.php");
         
-        print(myUrl!)
-        var request = URLRequest(url: myUrl! )
-        
-        request.httpMethod = "post"
-        
-        let postString = "action=fetch_photos&&uid=2";
-        
-        request.httpBody = postString.data(using: String.Encoding.utf8);
-        
-        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-       
-            if error == nil
-            {
-                do{
-                    self.photo = try JSONDecoder().decode([FetchPhoto].self, from: data!)
-                }catch {
-                    print("error")
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+            let postparam = "action=fetch_albums&&uid=2";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    print(dt)
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    if let name = res["image_url"] as! String{
+                       print(name)
+                        
+                    }
+                }
+                    
+                
+                else {
+                    self.alertDialog(msg: result as! String)
                 }
                 
-                DispatchQueue.main.async {
-                    self.collectionview.reloadData()
-                }
-            }
-                
-            else if response != nil{
-                
-                print("response = \(String(describing: response))")
-
-            }
+            })
             
-            
-        };task.resume()
-        
-        
-
+        }else {
+            print("There is no internet connection")
+        }
+    }
+    
+    
 }
-}
+   
