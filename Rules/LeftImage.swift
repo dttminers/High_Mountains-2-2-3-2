@@ -10,16 +10,16 @@ import Foundation
 class image{
     
   class  func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
+        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 25.0))
         leftImageView.image = img
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 19))
         view.addSubview(leftImageView)
         txtField.leftView = view
         txtField.leftViewMode = .always
 }
     
     class  func LeftImageTo(txtField: UITextField, andImage img: UIImage) {
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0))
+        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 25.0))
         leftImageView.image = img
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
         view.addSubview(leftImageView)

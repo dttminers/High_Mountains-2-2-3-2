@@ -27,6 +27,7 @@
 		460858922076202B00D63C2C /* FollowListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460858902076202B00D63C2C /* FollowListTVC.xib */; };
 		4608589420762B4500D63C2C /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608589320762B4500D63C2C /* Second.storyboard */; };
 		4608589620762B9C00D63C2C /* FollowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589520762B9C00D63C2C /* FollowTVC.swift */; };
+		4608589820764C7800D63C2C /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589720764C7800D63C2C /* RadioButton.swift */; };
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
@@ -148,6 +149,7 @@
 		460858902076202B00D63C2C /* FollowListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowListTVC.xib; sourceTree = "<group>"; };
 		4608589320762B4500D63C2C /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		4608589520762B9C00D63C2C /* FollowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTVC.swift; sourceTree = "<group>"; };
+		4608589720764C7800D63C2C /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		4608AED4204E503C009E0A43 /* High_Mountains-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "High_Mountains-Bridging-Header.h"; sourceTree = "<group>"; };
 		4608AED5204E503C009E0A43 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		4608AED6204E503C009E0A43 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				46060F82206B8163002C440A /* Validationform.swift */,
 				4603F2682070C2BF00D50374 /* LeftImage.swift */,
+				4608589720764C7800D63C2C /* RadioButton.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */,
 				461394EB2052A85C00724B07 /* FriendRequestCollectionViewCell.swift in Sources */,
 				462B627C2057FC0D00DE1556 /* DestinationViewController.swift in Sources */,
+				4608589820764C7800D63C2C /* RadioButton.swift in Sources */,
 				4605030220563DBE002FDD6E /* PlanTripViewController.swift in Sources */,
 				46DF4117206E52C500F03883 /* OTPgenVC.swift in Sources */,
 				467F4B8B2059487300B5B321 /* FindGuideTableViewCell.swift in Sources */,
