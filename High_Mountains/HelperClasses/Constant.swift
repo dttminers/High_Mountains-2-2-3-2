@@ -20,6 +20,8 @@ var userData : AnyObject!
 let imageCache = NSCache<NSString, AnyObject>()
 //TODO:- Colors
 
+let DATA_MANAGER  = DataManager.shared()
+
 let themeColor = UIColor(red: 16.0/255.0, green: 16.0/255.0, blue: 16.0/255.0, alpha: 1.0)
 let orangeColor = UIColor(red: 255.0/255.0, green: 99.0/255.0, blue: 71.0/255.0, alpha: 1.0)
 let greenColor = UIColor(red: 20.0/255.0, green: 157.0/255.0, blue: 151.0/255.0, alpha: 1.0)

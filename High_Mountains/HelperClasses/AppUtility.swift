@@ -42,6 +42,8 @@ class AppUtility: NSObject {
     
     class func setShadow( _ view:AnyObject,opacity:Float, radius:CGFloat)
     {
+        (view as? UIView)!.layer.borderColor = UIColor.black.cgColor
+        (view as? UIView)!.layer.borderWidth = 1
         (view as? UIView)!.layer.shadowColor = UIColor.darkGray.cgColor
         (view as? UIView)!.layer.shadowOpacity = opacity
         //(view as? UIView)!.layer.shadowOffset = CGSize.zero
