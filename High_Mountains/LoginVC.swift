@@ -23,7 +23,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       if userData != nil {
+        if let data = defaults.object(forKey: ud_key_userData) as? NSDictionary {
+            print(data)
             createMenuView()
         }
         
@@ -71,7 +72,7 @@ class LoginVC: UIViewController {
                         print(name!)
                         if (name == 1)
                         {
-                            userData = res as! [String : String]
+                            userData = res 
                             defaults.set(userData, forKey: ud_key_userData)
                             defaults.synchronize()
                             createMenuView()

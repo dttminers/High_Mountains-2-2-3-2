@@ -15,7 +15,7 @@ let APPNAME = "HM"
 let url : String = "http://vnoi.in/hmapi/"
 
 var userId = ""
-var userData : [String : String] = [:]
+var userData : AnyObject!
 
 let imageCache = NSCache<NSString, AnyObject>()
 //TODO:- Colors
