@@ -52,25 +52,25 @@ class RegisterViewController: UIViewController {
         
         
         // textfield icon
-        let Fullnameimg = UIImage(named: "user")
+        let Fullnameimg = UIImage(named: "username")
         image.addLeftImageTo(txtField: UserFullNametxt, andImage: Fullnameimg!)
         
-        let Usernameimg = UIImage(named: "user")
+        let Usernameimg = UIImage(named: "username")
         image.addLeftImageTo(txtField: UserNametxt, andImage: Usernameimg!)
 
-        let Emailimg = UIImage(named: "user")
+        let Emailimg = UIImage(named: "mail")
         image.addLeftImageTo(txtField: Emailtxt, andImage: Emailimg!)
         
-        let passwordimg = UIImage(named: "user")
+        let passwordimg = UIImage(named: "pwd")
         image.addLeftImageTo(txtField: Passwordtxt, andImage: passwordimg!)
         
-        let MobileNoimg = UIImage(named: "user")
+        let MobileNoimg = UIImage(named: "phone")
         image.addLeftImageTo(txtField: MobileNotxt, andImage: MobileNoimg!)
         
-        let Dobimg = UIImage(named: "user")
+        let Dobimg = UIImage(named: "dob")
         image.addLeftImageTo(txtField: Dobtxt, andImage:Dobimg!)
         
-        let ReferralCodeimg = UIImage(named: "user")
+        let ReferralCodeimg = UIImage(named: "referral")
         image.addLeftImageTo(txtField: ReferenceCodetxt, andImage: ReferralCodeimg!)
     }
 

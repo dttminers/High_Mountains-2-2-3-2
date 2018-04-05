@@ -32,10 +32,10 @@ class LoginVC: UIViewController {
         PasswordTxt.delegate = self
         
         // icon added
-        let Usernameimg = UIImage(named: "user")
+        let Usernameimg = UIImage(named: "username")
         image.addLeftImageTo(txtField: UsernameTxt, andImage: Usernameimg!)
         
-        let passwordimg = UIImage(named: "user")
+        let passwordimg = UIImage(named: "pwd")
         image.addLeftImageTo(txtField: PasswordTxt, andImage: passwordimg!)
     }
     
