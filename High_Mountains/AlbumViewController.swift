@@ -51,8 +51,8 @@ class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectio
                 if status {
                     let dt = JSON(data : result as! Data)
                     print(dt)
-                    let res : [AnyObject] = dt.object as! [AnyObject]
-                    if let name = res["image_url"] as! String{
+                    let res : AnyObject = dt.object as AnyObject
+                    if let name = res ["image_url"] as? String{
                        print(name)
                         
                     }
