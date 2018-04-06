@@ -8,19 +8,21 @@
 
 import UIKit
 
-struct FetchPhoto: Decodable{
+struct FetchPhoto
+{
 
-    let image_url: String
+    let image_url = String()
 
 }
 
 
 class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     
+ 
     @IBOutlet weak var collectionview: UICollectionView!
     
      var photo = [FetchPhoto]()
-    
+  
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photo.count
@@ -30,7 +32,7 @@ class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumCell", for: indexPath)as!AlbumCollectionViewCell
         let DefaultLink = "http://vnoi.in/hmapi/"
         let CompleteLink = DefaultLink + photo[indexPath.row].image_url
-        cell.AlbumImg.downloadedFrom(link: CompleteLink)
+        cell.AlbumImg.loadImageUsingCache(withUrl: CompleteLink)
         return cell
     }
 
@@ -51,15 +53,19 @@ class AlbumViewController: UIViewController,UICollectionViewDelegate,UICollectio
                 if status {
                     let dt = JSON(data : result as! Data)
                     print(dt)
-                    let res : AnyObject = dt.object as AnyObject
-                    if let name = res ["image_url"] as? String{
-                       print(name)
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    print(res[0]["image_url"] as! String)
+                    
+                    DispatchQueue.main.async {
+                        self.collectionview.reloadData()
                         
                     }
+                    
                 }
                     
                 
-                else {
+            
+                else  {
                     self.alertDialog(msg: result as! String)
                 }
                 

@@ -121,10 +121,16 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
                     print(name!)
                     if (name == 1)
                     {
-                      print("Saved")
-                      self.alertDialog(header: "Alert", msg: "Update SuccessFul")
                         
+                       
+                      print("Saved")
+                  
+                      self.alertDialog(header: "Alert", msg: "Update SuccessFul")
+                
+                   
                     }
+                        
+                  
                     else if(name == 0){
                         let res = dt.object as AnyObject
                         if (res["msg"]as? String) != nil{

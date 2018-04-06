@@ -11,5 +11,5 @@ import UIKit
 class AlbumCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var AlbumImg: UIImageView!
     
-    
+       var obj : FollowModel!
 }

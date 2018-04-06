@@ -57,7 +57,7 @@ class FollowVC: UIViewController {
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)\(action).php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
-                let res : AnyObject = dt.object as! AnyObject
+                let res : AnyObject = dt.object as AnyObject
                 print(res)
                 self.URLDownload()
             }

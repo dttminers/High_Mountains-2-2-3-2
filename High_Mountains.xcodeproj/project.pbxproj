@@ -31,6 +31,12 @@
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
+		4609379F20773F5200B529BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
+		460937A12077805200B529BF /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A02077805200B529BF /* AlbumModels.swift */; };
+		460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A2207790C400B529BF /* ScrollViewTVC.swift */; };
+		460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460937A3207790C400B529BF /* ScrollViewTVC.xib */; };
+		460937A82077A26E00B529BF /* FollowingRequestsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */; };
+		460937A92077A26E00B529BF /* FollowingRequestsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */; };
 		4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609C1D12074C89B0028CA87 /* ProfileTVC.swift */; };
 		4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4609C1D22074C89B0028CA87 /* ProfileTVC.xib */; };
 		460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EB820579BC30069EECD /* SideMenuViewController.swift */; };
@@ -97,7 +103,6 @@
 		C1E914912076A52200A912BC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E914902076A52200A912BC /* DataManager.swift */; };
 		C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */; };
 		C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */; };
-		C1FE660620696B9B00B006D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
 		C1FE661320696BBB00B006D3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660820696BBB00B006D3 /* Constant.swift */; };
 		C1FE661420696BBB00B006D3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660920696BBB00B006D3 /* SwiftyJSON.swift */; };
 		C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE660A20696BBB00B006D3 /* SlideMenuController.swift */; };
@@ -157,6 +162,11 @@
 		4608AED6204E503C009E0A43 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		4608AEDC204E65B5009E0A43 /* round image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "round image.swift"; sourceTree = "<group>"; };
 		4608AEDE204E6CD3009E0A43 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
+		460937A02077805200B529BF /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
+		460937A2207790C400B529BF /* ScrollViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTVC.swift; sourceTree = "<group>"; };
+		460937A3207790C400B529BF /* ScrollViewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewTVC.xib; sourceTree = "<group>"; };
+		460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingRequestsTVC.swift; sourceTree = "<group>"; };
+		460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowingRequestsTVC.xib; sourceTree = "<group>"; };
 		4609C1D12074C89B0028CA87 /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		4609C1D22074C89B0028CA87 /* ProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTVC.xib; sourceTree = "<group>"; };
 		460A1EB820579BC30069EECD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -464,6 +474,7 @@
 			children = (
 				C1E9148E20769BCF00A912BC /* DataModels.swift */,
 				C1E914902076A52200A912BC /* DataManager.swift */,
+				460937A02077805200B529BF /* AlbumModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,6 +488,10 @@
 				4609C1D22074C89B0028CA87 /* ProfileTVC.xib */,
 				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
 				460858902076202B00D63C2C /* FollowListTVC.xib */,
+				460937A2207790C400B529BF /* ScrollViewTVC.swift */,
+				460937A3207790C400B529BF /* ScrollViewTVC.xib */,
+				460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */,
+				460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -631,8 +646,10 @@
 			files = (
 				46FC1FF22063D6E4000AAA04 /* Roboto-Thin.ttf in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
+				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
 				469BBD95204D16EE00A33EF9 /* LaunchScreen.storyboard in Resources */,
 				46FC1FF62063D6E4000AAA04 /* Roboto-Light.ttf in Resources */,
+				460937A92077A26E00B529BF /* FollowingRequestsTVC.xib in Resources */,
 				46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */,
 				46FC1FF12063D6E4000AAA04 /* Roboto-Regular.ttf in Resources */,
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
@@ -640,10 +657,10 @@
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
+				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
-				C1FE660620696B9B00B006D3 /* Main.storyboard in Resources */,
 				46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */,
 				46FC1FF42063D6E4000AAA04 /* Roboto-BoldItalic.ttf in Resources */,
 				4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */,
@@ -804,15 +821,18 @@
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,
 				C1FE661720696BBB00B006D3 /* TextFieldsEffects.swift in Sources */,
 				4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */,
+				460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */,
 				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
 				460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */,
+				460937A82077A26E00B529BF /* FollowingRequestsTVC.swift in Sources */,
 				466498C920515CC9001FEB0F /* collectiionimageViewController.swift in Sources */,
 				467F4B8920592B8700B5B321 /* FindGuideCollectionViewCell.swift in Sources */,
 				4613B61F205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift in Sources */,
 				460BBE55204FC15100BBE5A6 /* SWRevealViewController.m in Sources */,
 				4613B609205B899300C7245D /* ProfileDetailsViewController.swift in Sources */,
+				460937A12077805200B529BF /* AlbumModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
