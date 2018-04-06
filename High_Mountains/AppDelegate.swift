@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let data = defaults.object(forKey: ud_key_userData) as? NSDictionary {
             userData = data
+            userId = userData["id"] as! String
         }
         
         //window?.rootViewController  = customtoolbar()

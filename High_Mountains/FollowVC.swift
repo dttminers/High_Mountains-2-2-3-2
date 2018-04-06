@@ -14,7 +14,7 @@ class FollowVC: UIViewController {
     
     var followRes : [FollowModel] = []
     
-    var ListType : String = "following"      //following  | follower
+    var ListType : String = ""      //following  | follower
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,9 @@ class FollowVC: UIViewController {
         self.URLDownload()
     }
     
-    
-
     func URLDownload()
     {
-        
-        let postparam = "action=follow_\(ListType)_fetch&&uid=2";
+        let postparam = "action=follow_\(ListType)_fetch&&uid=\(userId)";
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
@@ -41,7 +38,6 @@ class FollowVC: UIViewController {
             else {
                 self.alertDialog(msg: result as! String)
             }
-            
         })
     }
     
@@ -53,7 +49,7 @@ class FollowVC: UIViewController {
         else {
             action = "follow_data"
         }
-        let postparam = "action=\(action)&&uid=2&&friend_id=\(followRes[sender.tag].uid)"
+        let postparam = "action=\(action)&&uid=\(userId)&&friend_id=\(followRes[sender.tag].uid)"
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)\(action).php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)

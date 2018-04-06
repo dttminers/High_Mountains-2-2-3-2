@@ -72,7 +72,8 @@ class LoginVC: UIViewController {
                         print(name!)
                         if (name == 1)
                         {
-                            userData = res 
+                            userData = res
+                            userId = res["id"] as! String
                             defaults.set(userData, forKey: ud_key_userData)
                             defaults.synchronize()
                             createMenuView()

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class profileViewController: UIViewController {
+class profileVC: UIViewController {
 
+    @IBOutlet weak var lblProfileName: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,12 +26,9 @@ class profileViewController: UIViewController {
     }
 
     @IBAction func ViewProfile_Btn(_ sender: Any) {
+        let vc : ProfileDetailsVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfileDetails") as! ProfileDetailsVC
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ProfileDetails")
-        self.present(controller, animated: true, completion: nil)
-        
-           }
-    
+    }
 
 }

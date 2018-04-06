@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     //bar iteam
     
     @IBOutlet weak var view2: UIView!
@@ -23,6 +23,7 @@ class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDele
     @IBOutlet weak var segment1: UISegmentedControl!
     
     
+    @IBOutlet weak var lblFollowers: UILabel!
     @IBOutlet weak var FollowingAction_lbl: UILabel!
     
     
@@ -42,34 +43,45 @@ class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDele
     //declaration
     //var profileDetails = [profile]()
     
-  
+    
     var selectedIndex: Int = 0
-      var viewControllers: [UIViewController]!
+    var viewControllers: [UIViewController]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.downloadJsonWithURL()
+        self.downloadJsonWithURL()
         //  self.loadDesign()
         
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsViewController.ImageTapped(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsVC.ImageTapped(_:)))
         ProfileIMG.addGestureRecognizer(tapGesture)
         ProfileIMG.isUserInteractionEnabled = true
         
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsViewController.Following(_:)))
-       FollowingAction_lbl.addGestureRecognizer(tap)
-     FollowingAction_lbl.isUserInteractionEnabled = true
-       
-        }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsVC.Following(_:)))
+        FollowingAction_lbl.addGestureRecognizer(tap)
+        FollowingAction_lbl.isUserInteractionEnabled = true
+        
+        let tapF = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsVC.Follow(_:)))
+        lblFollowers.addGestureRecognizer(tapF)
+        lblFollowers.isUserInteractionEnabled = true
+    }
     
-   
+    
     @objc func Following(_ sender: UITapGestureRecognizer)
     {
-        let storyboard = UIStoryboard(name: "Second", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Following")
-        self.present(controller, animated: true, completion: nil)
+        let vc : FollowVC = SECOND_STORYBOARD.instantiateViewController(withIdentifier: "Following") as! FollowVC
+        vc.ListType = "following"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
    
+    @objc func Follow(_ sender: UITapGestureRecognizer)
+    {
+        let vc : FollowVC = SECOND_STORYBOARD.instantiateViewController(withIdentifier: "Following") as! FollowVC
+        vc.ListType = "follower"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func AaractionBTN(_ sender: Any) {
         if red.isHidden {
             view2.isHidden = false
@@ -144,7 +156,7 @@ class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDele
   
     if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
         
-          let postparam="action=user_info_display&&uid=2";
+          let postparam="action=user_info_display&&uid=\(userId)";
         
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {

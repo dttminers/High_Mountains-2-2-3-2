@@ -19,7 +19,14 @@ class HomeViewController: UIViewController {
 
      //sidemenu()
         
+        //let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.red]
+        //navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         slidingMenus()
+    }
+    @IBAction func btnProfileAction(_ sender: Any) {
+        let vc : profileVC = STORY_BOARD.instantiateViewController(withIdentifier: "profileVC") as! profileVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func openLeftMenu() {

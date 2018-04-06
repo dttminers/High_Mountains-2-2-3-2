@@ -32,6 +32,8 @@ let segmentColor = UIColor(red: 74.0/255.0, green: 76.0/255.0, blue: 129.0/255.0
 let selectedSegmentColor = UIColor(red: 151.0/255.0, green: 128.0/255.0, blue: 252.0/255.0, alpha: 1.0)
 
 let STORY_BOARD = UIStoryboard(name: "Main", bundle: nil)
+let SECOND_STORYBOARD = UIStoryboard(name: "Second", bundle: nil)
+let PROFILE_STORYBOARD = UIStoryboard(name: "Profile", bundle: nil)
 let TAB_HEIGHT:CGFloat = 54.0
 let TAB_BG_COLOR = UIColor(red: 76.0/255.0, green: 76.0/255.0, blue: 129.0/255.0, alpha: 1.0)
 
@@ -84,11 +86,11 @@ func createMenuView() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let leftViewController = storyboard.instantiateViewController(withIdentifier: "left") as! SideMenuViewController
     
-    let rightViewController = storyboard.instantiateViewController(withIdentifier: "right") as! profileViewController
+    //let rightViewController = storyboard.instantiateViewController(withIdentifier: "right") as! profileViewController
     
     let nvc : UINavigationController = storyboard.instantiateViewController(withIdentifier: "customNVC") as! UINavigationController//(storyboard.instantiateViewController(withIdentifier: "customNVC") as? customNVC)! //UINavigationController(rootViewController: mainViewController)
     
-    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController:rightViewController)
+    let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)//, rightMenuViewController:rightViewController)
     slideMenuController.automaticallyAdjustsScrollViewInsets = true
     window.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     window.rootViewController = slideMenuController
