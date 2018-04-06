@@ -26,7 +26,7 @@
 		460858912076202B00D63C2C /* FollowListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608588F2076202B00D63C2C /* FollowListTVC.swift */; };
 		460858922076202B00D63C2C /* FollowListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460858902076202B00D63C2C /* FollowListTVC.xib */; };
 		4608589420762B4500D63C2C /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608589320762B4500D63C2C /* Second.storyboard */; };
-		4608589620762B9C00D63C2C /* FollowTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589520762B9C00D63C2C /* FollowTVC.swift */; };
+		4608589620762B9C00D63C2C /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589520762B9C00D63C2C /* FollowVC.swift */; };
 		4608589820764C7800D63C2C /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608589720764C7800D63C2C /* RadioButton.swift */; };
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
@@ -93,6 +93,8 @@
 		46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEB2063D6E3000AAA04 /* Roboto-Black.ttf */; };
 		46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEC2063D6E3000AAA04 /* LICENSE.txt */; };
 		46FC1FFA2063D6E4000AAA04 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FED2063D6E3000AAA04 /* Roboto-Bold.ttf */; };
+		C1E9148F20769BCF00A912BC /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9148E20769BCF00A912BC /* DataModels.swift */; };
+		C1E914912076A52200A912BC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E914902076A52200A912BC /* DataManager.swift */; };
 		C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */; };
 		C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */; };
 		C1FE660620696B9B00B006D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
@@ -148,7 +150,7 @@
 		4608588F2076202B00D63C2C /* FollowListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListTVC.swift; sourceTree = "<group>"; };
 		460858902076202B00D63C2C /* FollowListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowListTVC.xib; sourceTree = "<group>"; };
 		4608589320762B4500D63C2C /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
-		4608589520762B9C00D63C2C /* FollowTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTVC.swift; sourceTree = "<group>"; };
+		4608589520762B9C00D63C2C /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		4608589720764C7800D63C2C /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		4608AED4204E503C009E0A43 /* High_Mountains-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "High_Mountains-Bridging-Header.h"; sourceTree = "<group>"; };
 		4608AED5204E503C009E0A43 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
@@ -228,6 +230,8 @@
 		5CC93AF72F656011D86A099E /* Pods_High_MountainsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_MountainsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_Mountains.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E42A822A2EEC8D1CEC5A /* Pods_High_Mountains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_Mountains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E9148E20769BCF00A912BC /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		C1E914902076A52200A912BC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDrawerProfileTVC.swift; sourceTree = "<group>"; };
 		C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideDrawerProfileTVC.xib; sourceTree = "<group>"; };
 		C1FE660520696B9B00B006D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -372,7 +376,8 @@
 				4613B614205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift */,
 				46139C1E2064CBED00418A58 /* PopMenuViewController.swift */,
 				4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */,
-				4608589520762B9C00D63C2C /* FollowTVC.swift */,
+				4608589520762B9C00D63C2C /* FollowVC.swift */,
+				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
 				469BBD93204D16EE00A33EF9 /* LaunchScreen.storyboard */,
@@ -452,6 +457,15 @@
 				7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1E9148D20769BCF00A912BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1E9148E20769BCF00A912BC /* DataModels.swift */,
+				C1E914902076A52200A912BC /* DataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C1F4AD20206EC5F800D470BA /* XIB */ = {
@@ -720,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1FE661320696BBB00B006D3 /* Constant.swift in Sources */,
+				C1E914912076A52200A912BC /* DataManager.swift in Sources */,
 				460377B2205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift in Sources */,
 				466498C52051145E001FEB0F /* profiletvViewController.swift in Sources */,
 				C1FE661420696BBB00B006D3 /* SwiftyJSON.swift in Sources */,
@@ -770,10 +785,11 @@
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
-				4608589620762B9C00D63C2C /* FollowTVC.swift in Sources */,
+				4608589620762B9C00D63C2C /* FollowVC.swift in Sources */,
 				C1FE661820696BBB00B006D3 /* APISession.swift in Sources */,
 				469BBDC0204D5D1300A33EF9 /* AllreadyReggisterViewController.swift in Sources */,
 				4605F2FC2053A09B002A9FD5 /* NotificationTableViewCell.swift in Sources */,
+				C1E9148F20769BCF00A912BC /* DataModels.swift in Sources */,
 				4605F3022053BD39002A9FD5 /* ThemesCollectionViewCell.swift in Sources */,
 				46139C1F2064CBED00418A58 /* PopMenuViewController.swift in Sources */,
 				460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */,

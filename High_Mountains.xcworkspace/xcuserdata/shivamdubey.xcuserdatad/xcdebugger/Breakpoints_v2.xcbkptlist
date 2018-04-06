@@ -35,5 +35,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "High_Mountains/FollowVC.swift"
+            timestampString = "544651810.895282"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "URLDownload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any, Swift.Bool) -&gt; () in High_Mountains.FollowVC.URLDownload() -&gt; ()"
+                  moduleName = "High_Mountains"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamdubey/Documents/High_Mountains-2-2-3-2/High_Mountains/FollowVC.swift"
+                  timestampString = "544648111.326305"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in closure #1 (Any, Swift.Bool) -&gt; () in High_Mountains.FollowVC.URLDownload() -&gt; ()"
+                  moduleName = "High_Mountains"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamdubey/Documents/High_Mountains-2-2-3-2/High_Mountains/FollowVC.swift"
+                  timestampString = "544648111.3302619"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

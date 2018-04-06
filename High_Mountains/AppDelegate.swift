@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         
-        if let data = defaults.object(forKey: ud_key_userData) as? [String : String] {
+        if let data = defaults.object(forKey: ud_key_userData) as? NSDictionary {
             userData = data
         }
         

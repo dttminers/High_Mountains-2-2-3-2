@@ -54,7 +54,7 @@ class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDele
         //  self.loadDesign()
         
        
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("ImageTapped")))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsViewController.ImageTapped(_:)))
         ProfileIMG.addGestureRecognizer(tapGesture)
         ProfileIMG.isUserInteractionEnabled = true
        
@@ -75,7 +75,7 @@ class ProfileDetailsViewController: UIViewController,UIImagePickerControllerDele
     }
     
     
-    func ImageTapped(sender: UITapGestureRecognizer)
+    @objc func ImageTapped(_ sender: UITapGestureRecognizer)
     {
         print("imaged Tapped")
         let alert = UIAlertController(title: "Image", message: "Image Change", preferredStyle: .alert)
