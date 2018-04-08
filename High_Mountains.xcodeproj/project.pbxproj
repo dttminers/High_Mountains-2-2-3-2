@@ -99,6 +99,11 @@
 		46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEB2063D6E3000AAA04 /* Roboto-Black.ttf */; };
 		46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEC2063D6E3000AAA04 /* LICENSE.txt */; };
 		46FC1FFA2063D6E4000AAA04 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FED2063D6E3000AAA04 /* Roboto-Bold.ttf */; };
+		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
+		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
+		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
+		C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09361207A2F390071FC93 /* ProfileFeedView.swift */; };
+		C1E09364207A31810071FC93 /* ProfileFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09363207A31810071FC93 /* ProfileFeedVC.swift */; };
 		C1E3F8EC2077EFA40056BDE8 /* customNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E3F8EB2077EFA40056BDE8 /* customNVC.swift */; };
 		C1E3F8EE2077F1FD0056BDE8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */; };
 		C1E9148F20769BCF00A912BC /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E9148E20769BCF00A912BC /* DataModels.swift */; };
@@ -242,6 +247,11 @@
 		5CC93AF72F656011D86A099E /* Pods_High_MountainsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_MountainsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_Mountains.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E42A822A2EEC8D1CEC5A /* Pods_High_Mountains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_Mountains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
+		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
+		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
+		C1E09361207A2F390071FC93 /* ProfileFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedView.swift; sourceTree = "<group>"; };
+		C1E09363207A31810071FC93 /* ProfileFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedVC.swift; sourceTree = "<group>"; };
 		C1E3F8EB2077EFA40056BDE8 /* customNVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customNVC.swift; sourceTree = "<group>"; };
 		C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C1E9148E20769BCF00A912BC /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
@@ -375,6 +385,7 @@
 				461394E22052649100724B07 /* travelwithusViewController.swift */,
 				461394E8205292A800724B07 /* ProfileVC.swift */,
 				4613B608205B899300C7245D /* ProfileDetailsVC.swift */,
+				C1E09363207A31810071FC93 /* ProfileFeedVC.swift */,
 				461394EC2052AB1B00724B07 /* friendrequestViewController.swift */,
 				4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */,
 				4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */,
@@ -489,14 +500,18 @@
 			children = (
 				C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */,
 				C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */,
-				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
+				C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */,
+				C1E09361207A2F390071FC93 /* ProfileFeedView.swift */,
 				4609C1D22074C89B0028CA87 /* ProfileTVC.xib */,
-				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
+				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
+				C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */,
+				C1E09359207A2A030071FC93 /* ProfileWITVC.swift */,
 				460858902076202B00D63C2C /* FollowListTVC.xib */,
-				460937A2207790C400B529BF /* ScrollViewTVC.swift */,
+				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
 				460937A3207790C400B529BF /* ScrollViewTVC.xib */,
-				460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */,
+				460937A2207790C400B529BF /* ScrollViewTVC.swift */,
 				460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */,
+				460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -663,8 +678,10 @@
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
+				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
+				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
@@ -783,6 +800,7 @@
 				C1FE661B20696BBB00B006D3 /* AppUtility.swift in Sources */,
 				C1E3F8EC2077EFA40056BDE8 /* customNVC.swift in Sources */,
 				466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */,
+				C1E09364207A31810071FC93 /* ProfileFeedVC.swift in Sources */,
 				469BBDBA204D1D6E00A33EF9 /* singup.swift in Sources */,
 				4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */,
 				461394ED2052AB1B00724B07 /* friendrequestViewController.swift in Sources */,
@@ -801,6 +819,7 @@
 				461394E9205292A900724B07 /* ProfileVC.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
 				462B627A2057E3F700DE1556 /* mypageViewController.swift in Sources */,
+				C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */,
 				4608AEDD204E65B5009E0A43 /* round image.swift in Sources */,
 				C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */,
 				462B627E2057FC7500DE1556 /* DestinationTableViewCell.swift in Sources */,
@@ -821,6 +840,7 @@
 				C1FE661A20696BBB00B006D3 /* extensions.swift in Sources */,
 				4605F3042053BD6D002A9FD5 /* ThemesViewController.swift in Sources */,
 				4613B611205BA10500C7245D /* AlbumCollectionViewCell.swift in Sources */,
+				C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,

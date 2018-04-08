@@ -30,4 +30,11 @@ class DataManager {
         }
         return models
     }
+    
+    func setUserInfoDictionary(_ item:AnyObject) ->  UserInfoModel {
+        
+        let object =  UserInfoModel()
+        object.setDictionary(item as! [AnyHashable : Any])
+        return object
+    }
 }
