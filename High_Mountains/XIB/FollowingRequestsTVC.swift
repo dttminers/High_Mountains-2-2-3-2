@@ -10,15 +10,23 @@ import UIKit
 
 class FollowingRequestsTVC: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblCommonFriend: UILabel!
     
+    
+     var obj : FollowModel!
+    
+    func fetchrequest(_ data : FollowModel){
+        obj = data
+        AppUtility.setCornerRadius(img, radius: 20)
+        img.loadImageUsingCache(withUrl: data.profile_pic)
+        lblName.text = data.name
+        lblCommonFriend.text = "\(data.mutual_friend_count) Common Friends"
+        
+    }
+   
+    @IBAction func Confirm(_ sender: Any) {
+        
+    }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Album" customModule="High_Mountains" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-Dd-y9j">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="117"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-cE-Zue">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="117"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KHi-cE-Zue" secondAttribute="height" multiplier="190:117" id="jpy-PC-R6K"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="KHi-cE-Zue" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Mh-UH-Cti"/>
+                <constraint firstItem="ZrL-Dd-y9j" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CM6-SF-pqs"/>
+                <constraint firstAttribute="bottom" secondItem="KHi-cE-Zue" secondAttribute="bottom" id="COy-59-ZeJ"/>
+                <constraint firstItem="ZrL-Dd-y9j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CTG-AU-sSR"/>
+                <constraint firstAttribute="trailing" secondItem="ZrL-Dd-y9j" secondAttribute="trailing" id="FBE-sO-Ncj"/>
+                <constraint firstItem="KHi-cE-Zue" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TDH-3F-XVq"/>
+                <constraint firstAttribute="trailing" secondItem="KHi-cE-Zue" secondAttribute="trailing" id="iAD-qL-j5e"/>
+                <constraint firstAttribute="bottom" secondItem="ZrL-Dd-y9j" secondAttribute="bottom" id="y2X-GG-SH5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="190" height="117"/>
+            <point key="canvasLocation" x="21" y="87.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

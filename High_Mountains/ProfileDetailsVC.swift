@@ -84,19 +84,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    /*@IBAction func AaractionBTN(_ sender: Any) {
-        if red.isHidden {
-            view2.isHidden = false
-        } else if(camera.isHidden) {
-            view2.isHidden = true
-        }
-        else {
-            note.isHidden = false
-            view2.isHidden = false
-        }
-        
-    }*/
-    
+   
     
     //pop button action
     @IBAction func PopUpActbtn(_ sender: Any) {

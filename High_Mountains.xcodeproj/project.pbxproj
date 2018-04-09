@@ -39,6 +39,14 @@
 		460937A92077A26E00B529BF /* FollowingRequestsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */; };
 		4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609C1D12074C89B0028CA87 /* ProfileTVC.swift */; };
 		4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4609C1D22074C89B0028CA87 /* ProfileTVC.xib */; };
+		460A023A207B565200DA422C /* TravelBookCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0238207B565200DA422C /* TravelBookCVC.swift */; };
+		460A023B207B565200DA422C /* TravelBookCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A0239207B565200DA422C /* TravelBookCVC.xib */; };
+		460A023D207B6BA700DA422C /* TravelBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A023C207B6BA700DA422C /* TravelBookView.xib */; };
+		460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A023E207B83B500DA422C /* Travel_With_Us.storyboard */; };
+		460A0242207B8CF600DA422C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0240207B8CF600DA422C /* Album.swift */; };
+		460A0243207B8CF600DA422C /* Album.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A0241207B8CF600DA422C /* Album.xib */; };
+		460A0287207BC38E00DA422C /* FetchRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0286207BC38E00DA422C /* FetchRequestVC.swift */; };
+		460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A0288207BC3EC00DA422C /* FetchRequest.storyboard */; };
 		460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EB820579BC30069EECD /* SideMenuViewController.swift */; };
 		460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
@@ -176,6 +184,14 @@
 		460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowingRequestsTVC.xib; sourceTree = "<group>"; };
 		4609C1D12074C89B0028CA87 /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		4609C1D22074C89B0028CA87 /* ProfileTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTVC.xib; sourceTree = "<group>"; };
+		460A0238207B565200DA422C /* TravelBookCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBookCVC.swift; sourceTree = "<group>"; };
+		460A0239207B565200DA422C /* TravelBookCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelBookCVC.xib; sourceTree = "<group>"; };
+		460A023C207B6BA700DA422C /* TravelBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelBookView.xib; sourceTree = "<group>"; };
+		460A023E207B83B500DA422C /* Travel_With_Us.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Travel_With_Us.storyboard; sourceTree = "<group>"; };
+		460A0240207B8CF600DA422C /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		460A0241207B8CF600DA422C /* Album.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Album.xib; sourceTree = "<group>"; };
+		460A0286207BC38E00DA422C /* FetchRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequestVC.swift; sourceTree = "<group>"; };
+		460A0288207BC3EC00DA422C /* FetchRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FetchRequest.storyboard; sourceTree = "<group>"; };
 		460A1EB820579BC30069EECD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
@@ -403,6 +419,7 @@
 				46139C1E2064CBED00418A58 /* PopMenuViewController.swift */,
 				4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */,
 				4608589520762B9C00D63C2C /* FollowVC.swift */,
+				460A0286207BC38E00DA422C /* FetchRequestVC.swift */,
 				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
@@ -512,6 +529,11 @@
 				460937A2207790C400B529BF /* ScrollViewTVC.swift */,
 				460937A72077A26E00B529BF /* FollowingRequestsTVC.xib */,
 				460937A62077A26E00B529BF /* FollowingRequestsTVC.swift */,
+				460A0238207B565200DA422C /* TravelBookCVC.swift */,
+				460A0239207B565200DA422C /* TravelBookCVC.xib */,
+				460A023C207B6BA700DA422C /* TravelBookView.xib */,
+				460A0240207B8CF600DA422C /* Album.swift */,
+				460A0241207B8CF600DA422C /* Album.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -522,6 +544,8 @@
 				C1FE660520696B9B00B006D3 /* Main.storyboard */,
 				4608589320762B4500D63C2C /* Second.storyboard */,
 				C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */,
+				460A023E207B83B500DA422C /* Travel_With_Us.storyboard */,
+				460A0288207BC3EC00DA422C /* FetchRequest.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -674,18 +698,23 @@
 				46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */,
 				C1E3F8EE2077F1FD0056BDE8 /* Profile.storyboard in Resources */,
 				46FC1FF12063D6E4000AAA04 /* Roboto-Regular.ttf in Resources */,
+				460A023B207B565200DA422C /* TravelBookCVC.xib in Resources */,
+				460A0243207B8CF600DA422C /* Album.xib in Resources */,
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
+				460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
+				460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */,
 				46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */,
+				460A023D207B6BA700DA422C /* TravelBookView.xib in Resources */,
 				46FC1FF42063D6E4000AAA04 /* Roboto-BoldItalic.ttf in Resources */,
 				4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */,
 				46FC1FFA2063D6E4000AAA04 /* Roboto-Bold.ttf in Resources */,
@@ -793,6 +822,7 @@
 				462B62762057B1EB00DE1556 /* PageProductViewController.swift in Sources */,
 				460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */,
 				460503082056750C002FDD6E /* textfieldEffect.swift in Sources */,
+				460A023A207B565200DA422C /* TravelBookCVC.swift in Sources */,
 				469BBD8A204D16EE00A33EF9 /* LoginVC.swift in Sources */,
 				4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */,
 				46050306205664C9002FDD6E /* cardview1.swift in Sources */,
@@ -805,6 +835,7 @@
 				4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */,
 				461394ED2052AB1B00724B07 /* friendrequestViewController.swift in Sources */,
 				46050304205657DB002FDD6E /* ButtonEffect.swift in Sources */,
+				460A0242207B8CF600DA422C /* Album.swift in Sources */,
 				46060F83206B8163002C440A /* Validationform.swift in Sources */,
 				460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */,
 				460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */,
@@ -859,6 +890,7 @@
 				467F4B8920592B8700B5B321 /* FindGuideCollectionViewCell.swift in Sources */,
 				4613B61F205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift in Sources */,
 				460BBE55204FC15100BBE5A6 /* SWRevealViewController.m in Sources */,
+				460A0287207BC38E00DA422C /* FetchRequestVC.swift in Sources */,
 				4613B609205B899300C7245D /* ProfileDetailsVC.swift in Sources */,
 				460937A12077805200B529BF /* AlbumModels.swift in Sources */,
 			);
