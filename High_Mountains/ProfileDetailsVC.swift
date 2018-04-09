@@ -51,7 +51,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.downloadJsonWithURL()
+        
+        self.userInfoDisplay()
         //  self.loadDesign()
         
         
@@ -69,6 +70,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         lblFollowers.isUserInteractionEnabled = true
     }
     
+    // MARK: Button Actions
     
     @objc func Following(_ sender: UITapGestureRecognizer)
     {
@@ -83,8 +85,6 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         vc.ListType = "follower"
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-   
     
     //pop button action
     @IBAction func PopUpActbtn(_ sender: Any) {
@@ -101,18 +101,14 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             vewFeeds.alpha = 1
             vewPhotoFeeds.alpha = 0
             vewNotesFeeds.alpha = 0
+            fetchTimeline()
             
-            let vc : ProfileFeedVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfileFeedVC") as! ProfileFeedVC
-            self.addChildViewController(vc)
-            vc.view.frame = CGRect(x: 0.0, y: 0.0, width: stackVew.frame.size.width, height: 100)
-            stackVew.addSubview(vc.view)
-            vc.didMove(toParentViewController: self)
-            htConst.constant = 100
         }
         else if sender.tag == 2 {
             vewFeeds.alpha = 0
             vewPhotoFeeds.alpha = 1
             vewNotesFeeds.alpha = 0
+            htConst.constant = 300
         }
         else if sender.tag == 3 {
             vewFeeds.alpha = 0
@@ -163,15 +159,11 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         picker.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: API Requests
     
-    
-    func downloadJsonWithURL() {
-        
-        
+    func userInfoDisplay() {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
-            
             let postparam="action=user_info_display&&uid=\(userId)";
-            
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
@@ -184,10 +176,38 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     self.alertDialog(msg: result as! String)
                 }
             })
-            
         }else {
             print("There is no internet connection")
         }
+    }
+    
+    func fetchTimeline() {
+        let postparam="action=fetch_timeline&&uid=\(userId)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    let model = DATA_MANAGER.setTimelineDictionary(res)
+                    self.setTimeline(model)
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
+    
+    func setTimeline(_ tableFeeds : [TimelineModel]) {
+        let vc : ProfileFeedVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfileFeedVC") as! ProfileFeedVC
+        vc.timelineRes = tableFeeds
+        self.addChildViewController(vc)
+        vc.view.frame = CGRect(x: 0.0, y: 0.0, width: stackVew.frame.size.width, height: 0)
+        stackVew.addSubview(vc.view)
+        vc.didMove(toParentViewController: self)
+        htConst.constant = SCREEN_HEIGHT
     }
     
     func populateUserData() {

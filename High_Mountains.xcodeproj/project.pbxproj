@@ -107,6 +107,9 @@
 		46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEB2063D6E3000AAA04 /* Roboto-Black.ttf */; };
 		46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FEC2063D6E3000AAA04 /* LICENSE.txt */; };
 		46FC1FFA2063D6E4000AAA04 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FED2063D6E3000AAA04 /* Roboto-Bold.ttf */; };
+		C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */; };
+		C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */; };
+		C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1162292207BF69B007CEDE0 /* KingfisherSource.swift */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -263,6 +266,9 @@
 		5CC93AF72F656011D86A099E /* Pods_High_MountainsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_MountainsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High_Mountains.release.xcconfig"; path = "Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E42A822A2EEC8D1CEC5A /* Pods_High_Mountains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_Mountains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedAlbumTVC.swift; sourceTree = "<group>"; };
+		C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedAlbumTVC.xib; sourceTree = "<group>"; };
+		C1162292207BF69B007CEDE0 /* KingfisherSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -523,6 +529,8 @@
 				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
 				C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */,
 				C1E09359207A2A030071FC93 /* ProfileWITVC.swift */,
+				C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */,
+				C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */,
 				460858902076202B00D63C2C /* FollowListTVC.xib */,
 				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
 				460937A3207790C400B529BF /* ScrollViewTVC.xib */,
@@ -564,6 +572,7 @@
 				C1FE661020696BBB00B006D3 /* AppUtility.swift */,
 				C1FE661120696BBB00B006D3 /* CAPSPageMenu.swift */,
 				C1FE661220696BBB00B006D3 /* ButtonClass.swift */,
+				C1162292207BF69B007CEDE0 /* KingfisherSource.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -712,6 +721,7 @@
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
+				C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */,
 				460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */,
 				46FC1FF82063D6E4000AAA04 /* Roboto-Black.ttf in Resources */,
 				460A023D207B6BA700DA422C /* TravelBookView.xib in Resources */,
@@ -762,6 +772,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-High_Mountains/Pods-High_Mountains-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SJSegmentedScrollView/SJSegmentedScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/YNDropDownMenu/YNDropDownMenu.framework",
@@ -769,6 +781,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJSegmentedScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNDropDownMenu.framework",
@@ -847,6 +861,7 @@
 				467F4B8B2059487300B5B321 /* FindGuideTableViewCell.swift in Sources */,
 				469BBD88204D16EE00A33EF9 /* AppDelegate.swift in Sources */,
 				469BBDC2204D6AB600A33EF9 /* RegisterViewController.swift in Sources */,
+				C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */,
 				461394E9205292A900724B07 /* ProfileVC.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
 				462B627A2057E3F700DE1556 /* mypageViewController.swift in Sources */,
@@ -883,6 +898,7 @@
 				460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */,
 				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
+				C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
 				460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */,
 				460937A82077A26E00B529BF /* FollowingRequestsTVC.swift in Sources */,

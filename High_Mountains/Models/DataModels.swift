@@ -90,3 +90,31 @@ class UserInfoModel : NSObject {
         dob = dictionary["dob"] as? String
     }
 }
+
+class TimelineModel : NSObject {
+     var activity : String?
+     var id : Int?
+     var timeline_id : Int?
+     var post : String?
+     var like_count : String?
+     var comment_count : String?
+     var share_count : String?
+     var time : String?
+     var isliked : String?
+    var image : String?
+    var caption : String?
+    
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        activity = dictionary["activity"] as? String
+        id = dictionary["id"] as? Int
+        timeline_id = dictionary["timeline_id"] as? Int
+        post = dictionary["post"] as? String
+        like_count = dictionary["like_count"] as? String
+        comment_count = dictionary["comment_count"] as? String
+        share_count = dictionary["share_count"] as? String
+        time = dictionary["time"] as? String
+        isliked = dictionary["isliked"] as? String
+        image = dictionary["image"] as? String
+        caption = dictionary["caption"] as? String
+    }
+}

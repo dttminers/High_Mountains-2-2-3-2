@@ -11,6 +11,7 @@ pod 'TextFieldEffects'
 pod 'YNDropDownMenu'
 pod 'SJSegmentedScrollView’, ‘1.3.8'
 pod 'IQKeyboardManagerSwift'
-
+pod 'ImageSlideshow'
+pod 'Kingfisher'
 
 end

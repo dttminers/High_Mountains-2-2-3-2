@@ -20,7 +20,6 @@ class DataManager {
     }
     
     func setFollowDictionary(_ array:[AnyObject]) ->  [FollowModel] {
-        
         var models:[FollowModel] = []
         for item in array
         {
@@ -32,9 +31,19 @@ class DataManager {
     }
     
     func setUserInfoDictionary(_ item:AnyObject) ->  UserInfoModel {
-        
         let object =  UserInfoModel()
         object.setDictionary(item as! [AnyHashable : Any])
         return object
+    }
+    
+    func setTimelineDictionary(_ array:[AnyObject]) ->  [TimelineModel] {
+        var models:[TimelineModel] = []
+        for item in array
+        {
+            let object =  TimelineModel()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
     }
 }

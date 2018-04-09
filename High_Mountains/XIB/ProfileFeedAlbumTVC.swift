@@ -1,17 +1,19 @@
 //
-//  ProfileWITVC.swift
+//  ProfileFeedAlbumTVC.swift
 //  High_Mountains
 //
-//  Created by Shivam Dubey on 08/04/18.
+//  Created by Shivam Dubey on 10/04/18.
 //  Copyright © 2018 Abhishek. All rights reserved.
 //
 
 import UIKit
+import ImageSlideshow
 
-class ProfileWITVC: UITableViewCell {
+class ProfileFeedAlbumTVC: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var imgPost: ImageSlideshow!
     
     @IBOutlet weak var lblLikeCount: UILabel!
     @IBOutlet weak var lblCommentCount: UILabel!
@@ -22,7 +24,15 @@ class ProfileWITVC: UITableViewCell {
     @IBOutlet weak var btnShare: UIButton!
     
     func populate(_ data : TimelineModel) {
-        lblTitle.text = data.post
+        lblTitle.text = data.caption
+        var arrSource : [InputSource] = []
+        let imgDt = data.image!.components(separatedBy: ",")
+        for obj in imgDt {
+            arrSource.append(KingfisherSource(urlString: "\(url)\(obj)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!)
+        }
+        imgPost.draggingEnabled = false
+        imgPost.circular = true
+        imgPost.setImageInputs(arrSource)
         
         lblLikeCount.text = "\(data.like_count!)"
         lblCommentCount.text = "\(data.comment_count!)"
