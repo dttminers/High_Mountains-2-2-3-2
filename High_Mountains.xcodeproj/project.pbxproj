@@ -49,6 +49,7 @@
 		460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A0288207BC3EC00DA422C /* FetchRequest.storyboard */; };
 		460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EB820579BC30069EECD /* SideMenuViewController.swift */; };
 		460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */; };
+		460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A5F77207C878300E7B213 /* Plan_Trip.storyboard */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
 		460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE51204FBB4400BBE5A6 /* Extensions.swift */; };
 		460BBE55204FC15100BBE5A6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE54204FC15100BBE5A6 /* SWRevealViewController.m */; };
@@ -197,6 +198,7 @@
 		460A0288207BC3EC00DA422C /* FetchRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FetchRequest.storyboard; sourceTree = "<group>"; };
 		460A1EB820579BC30069EECD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		460A5F77207C878300E7B213 /* Plan_Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Plan_Trip.storyboard; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
 		460BBE51204FBB4400BBE5A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		460BBE53204FC15000BBE5A6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */,
 				460A023E207B83B500DA422C /* Travel_With_Us.storyboard */,
 				460A0288207BC3EC00DA422C /* FetchRequest.storyboard */,
+				460A5F77207C878300E7B213 /* Plan_Trip.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
+				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
