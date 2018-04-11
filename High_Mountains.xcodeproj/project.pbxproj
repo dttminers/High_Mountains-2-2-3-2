@@ -23,6 +23,8 @@
 		46060F83206B8163002C440A /* Validationform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F82206B8163002C440A /* Validationform.swift */; };
 		4606A86820505DA300DB0298 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86720505DA300DB0298 /* Section.swift */; };
 		4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */; };
+		4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4607F204207D69AB00432C74 /* All_Destination.storyboard */; };
+		4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607F206207D6E0800432C74 /* All_DestinationVC.swift */; };
 		460858912076202B00D63C2C /* FollowListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608588F2076202B00D63C2C /* FollowListTVC.swift */; };
 		460858922076202B00D63C2C /* FollowListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460858902076202B00D63C2C /* FollowListTVC.xib */; };
 		4608589420762B4500D63C2C /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608589320762B4500D63C2C /* Second.storyboard */; };
@@ -171,6 +173,8 @@
 		46060F82206B8163002C440A /* Validationform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validationform.swift; sourceTree = "<group>"; };
 		4606A86720505DA300DB0298 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4607F204207D69AB00432C74 /* All_Destination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = All_Destination.storyboard; sourceTree = "<group>"; };
+		4607F206207D6E0800432C74 /* All_DestinationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_DestinationVC.swift; sourceTree = "<group>"; };
 		4608588F2076202B00D63C2C /* FollowListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListTVC.swift; sourceTree = "<group>"; };
 		460858902076202B00D63C2C /* FollowListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowListTVC.xib; sourceTree = "<group>"; };
 		4608589320762B4500D63C2C /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */,
 				4608589520762B9C00D63C2C /* FollowVC.swift */,
 				460A0286207BC38E00DA422C /* FetchRequestVC.swift */,
+				4607F206207D6E0800432C74 /* All_DestinationVC.swift */,
 				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
@@ -557,6 +562,7 @@
 				460A023E207B83B500DA422C /* Travel_With_Us.storyboard */,
 				460A0288207BC3EC00DA422C /* FetchRequest.storyboard */,
 				460A5F77207C878300E7B213 /* Plan_Trip.storyboard */,
+				4607F204207D69AB00432C74 /* All_Destination.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -715,6 +721,7 @@
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
+				4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
@@ -877,6 +884,7 @@
 				461394E52052675300724B07 /* travelwiyhusTableViewCell.swift in Sources */,
 				4605F3002053A16C002A9FD5 /* NotificationViewController.swift in Sources */,
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
+				4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
 				4608589620762B9C00D63C2C /* FollowVC.swift in Sources */,
