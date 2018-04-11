@@ -41,13 +41,33 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBOutlet weak var vewPhotoFeeds: UIView!
     @IBOutlet weak var vewNotesFeeds: UIView!
     
+    @IBOutlet weak var btnFeeds: UIButton!
+    @IBOutlet weak var btnPhotoFeeds: UIButton!
+    @IBOutlet weak var btnNotesFeeds: UIButton!
+    
     @IBOutlet weak var stackVew: UIStackView!
     @IBOutlet weak var htConst: NSLayoutConstraint!
     
+    @IBOutlet weak var vewPhotoTabs: UIView!
+    
+    @IBOutlet weak var vewGrid: UIView!
+    @IBOutlet weak var vewList: UIView!
+    @IBOutlet weak var vewAlbum: UIView!
+    @IBOutlet weak var vewGroup: UIView!
+    
+    @IBOutlet weak var btnGrid: UIButton!
+    @IBOutlet weak var btnList: UIButton!
+    @IBOutlet weak var btnAlbum: UIButton!
+    @IBOutlet weak var btnGroup: UIButton!
+    
+    @IBOutlet weak var tableFeeds: UITableView!
+    @IBOutlet weak var collectionFeeds: UICollectionView!
+    
     var userInfo : UserInfoModel!
     
-    var selectedIndex: Int = 0
-    var viewControllers: [UIViewController]!
+    var timelineRes : [TimelineModel] = []
+    var selectedIndex : Int = 1
+    var selectedPhotoIndex : Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +88,12 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         let tapF = UITapGestureRecognizer(target: self, action: #selector(ProfileDetailsVC.Follow(_:)))
         lblFollowers.addGestureRecognizer(tapF)
         lblFollowers.isUserInteractionEnabled = true
+        
+        tableFeeds.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
+        tableFeeds.register(UINib(nibName : "ProfileWITVC", bundle:nil), forCellReuseIdentifier: "ProfileWITVC")
+        tableFeeds.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
+        
+        btnFeedsActbtn(btnFeeds)
     }
     
     // MARK: Button Actions
@@ -97,23 +123,64 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     }
     
     @IBAction func btnFeedsActbtn(_ sender: UIButton) {
+        selectedIndex = sender.tag
         if sender.tag == 1 {
             vewFeeds.alpha = 1
             vewPhotoFeeds.alpha = 0
             vewNotesFeeds.alpha = 0
             fetchTimeline()
-            
+            vewPhotoTabs.isHidden = true
+            tableFeeds.isHidden = false
+            collectionFeeds.isHidden = true
         }
         else if sender.tag == 2 {
+            selectedPhotoIndex = 1
             vewFeeds.alpha = 0
             vewPhotoFeeds.alpha = 1
             vewNotesFeeds.alpha = 0
-            htConst.constant = 300
+            fetchPhotos()
+            vewPhotoTabs.isHidden = false
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = true
         }
         else if sender.tag == 3 {
             vewFeeds.alpha = 0
             vewPhotoFeeds.alpha = 0
             vewNotesFeeds.alpha = 1
+            vewPhotoTabs.isHidden = true
+        }
+    }
+    
+    @IBAction func btnPhotoFeedsActbtn(_ sender: UIButton) {
+        selectedPhotoIndex = sender.tag
+        if sender.tag == 1 {
+            vewGrid.alpha = 1
+            vewList.alpha = 0
+            vewAlbum.alpha = 0
+            vewGroup.alpha = 0
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
+        }
+        else if sender.tag == 2 {
+            vewGrid.alpha = 0
+            vewList.alpha = 1
+            vewAlbum.alpha = 0
+            vewGroup.alpha = 0
+            tableFeeds.isHidden = false
+            collectionFeeds.isHidden = true
+            tableFeeds.reloadData()
+        }
+        else if sender.tag == 3 {
+            vewGrid.alpha = 0
+            vewList.alpha = 0
+            vewAlbum.alpha = 1
+            vewGroup.alpha = 0
+        }
+        else if sender.tag == 4 {
+            vewGrid.alpha = 0
+            vewList.alpha = 0
+            vewAlbum.alpha = 0
+            vewGroup.alpha = 1
         }
     }
     
@@ -189,8 +256,29 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                 print(dt)
                 if dt != nil {
                     let res : [AnyObject] = dt.object as! [AnyObject]
-                    let model = DATA_MANAGER.setTimelineDictionary(res)
-                    self.setTimeline(model)
+                    self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
+                    //self.setTimeline(model)
+                    self.tableFeeds.reloadData()
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
+    
+    func fetchPhotos() {
+        let postparam="action=fetch_photos&&uid=\(userId)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
+                    //self.setPhotos(model)
+                    self.tableFeeds.reloadData()
                 }
                 
             }
@@ -204,10 +292,22 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         let vc : ProfileFeedVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfileFeedVC") as! ProfileFeedVC
         vc.timelineRes = tableFeeds
         self.addChildViewController(vc)
-        vc.view.frame = CGRect(x: 0.0, y: 0.0, width: stackVew.frame.size.width, height: 0)
+        vc.view.frame = CGRect(x: 0.0, y: 0.0, width: stackVew.frame.size.width, height: SCREEN_HEIGHT)
         stackVew.addSubview(vc.view)
         vc.didMove(toParentViewController: self)
-        htConst.constant = SCREEN_HEIGHT
+        stackVew.translatesAutoresizingMaskIntoConstraints = false
+        //htConst.constant = SCREEN_HEIGHT
+    }
+    
+    func setPhotos(_ tableFeeds : [TimelineModel]) {
+        let vc : ProfilePhotoVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfilePhotoVC") as! ProfilePhotoVC
+        vc.timelineRes = tableFeeds
+        self.addChildViewController(vc)
+        vc.view.frame = CGRect(x: 0.0, y: 0.0, width: stackVew.frame.size.width, height: SCREEN_HEIGHT)
+        stackVew.addSubview(vc.view)
+        vc.didMove(toParentViewController: self)
+        stackVew.translatesAutoresizingMaskIntoConstraints = false
+        //htConst.constant = SCREEN_HEIGHT
     }
     
     func populateUserData() {
@@ -223,3 +323,59 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     }
 }
 
+extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedIndex == 1 {
+            return timelineRes.count
+        }
+        else if selectedIndex == 2 {
+            return timelineRes.count
+        }
+        else {
+            return 0
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if selectedIndex == 1 {
+            if timelineRes[indexPath.row].activity == "photo" {
+                let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+                cell.populate(timelineRes[indexPath.row])
+                
+                return cell
+            }
+            else if timelineRes[indexPath.row].activity == "album" {
+                let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
+                cell.populate(timelineRes[indexPath.row])
+                
+                return cell
+            }
+            else {
+                let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
+                cell.populate(timelineRes[indexPath.row])
+                
+                return cell
+            }
+        }
+        else if selectedIndex == 2 {
+            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+            cell.populate(timelineRes[indexPath.row])
+            
+            return cell
+        }
+        else {
+            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+}
