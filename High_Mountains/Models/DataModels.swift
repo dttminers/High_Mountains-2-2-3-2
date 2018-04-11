@@ -118,3 +118,48 @@ class TimelineModel : NSObject {
         caption = dictionary["caption"] as? String
     }
 }
+
+class AllDestination : NSObject{
+    
+    var id : Int?
+    var title: String?
+    var country: String?
+    var state: String?
+    var city: String?
+    var details: String?
+    var continent: String?
+    var image_url: String?
+    var status: Int?
+    
+
+func setDictionary(_ dictionary:[AnyHashable : Any]){
+    
+    id = dictionary["id"] as? Int
+    title = dictionary["title"]as? String
+    country = dictionary["country"] as? String
+    state = dictionary["state"] as? String
+    city = dictionary["city"] as? String
+    details = dictionary["details"] as? String
+    continent = dictionary["continent"] as? String
+    image_url = dictionary["image_url"] as? String
+    status  = dictionary["status"] as? Int
+}
+}
+
+class TravelTheme : NSObject{
+    
+    var id: Int?
+    var title: String?
+    var theme_image: String?
+    var status: Int?
+    
+
+func setDictionary(_ dictionary:[AnyHashable : Any]){
+    
+    id = dictionary["id"] as? Int
+    title = dictionary["title"] as? String
+    theme_image = dictionary["theme_image"] as? String
+    status = dictionary["status"] as? Int
+    
+}
+}
