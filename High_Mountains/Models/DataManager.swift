@@ -46,4 +46,26 @@ class DataManager {
         }
         return models
     }
+    
+    func setDestinationDictionary(_ array:[AnyObject]) ->  [AllDestination] {
+        var models:[AllDestination] = []
+        for item in array
+        {
+            let object = AllDestination()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
+    }
+    
+    func setThemesDictionary(_ array:[AnyObject]) ->  [TravelTheme] {
+        var models:[TravelTheme] = []
+        for item in array
+        {
+            let object = TravelTheme()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
+    }
 }

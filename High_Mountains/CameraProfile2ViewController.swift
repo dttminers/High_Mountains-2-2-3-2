@@ -40,7 +40,7 @@ class CameraProfile2ViewController: UIViewController,UITableViewDelegate,UITable
         cell.profilenamelbl.text = CProfile[indexPath.row].usrename.capitalized
         let Defaultlink = "http://vnoi.in/hmapi/"
         let Compeletelink = Defaultlink + CProfile[indexPath.row].image_url
-        cell.uploadimg.downloadedFrom(link: Compeletelink)
+        //cell.uploadimg.downloadedFrom(link: Compeletelink)
         cell.likeslbl.text = CProfile[indexPath.row].like_count
         cell.commentlbl.text = CProfile[indexPath.row].comment_count
         cell.sharelbl.text = CProfile[indexPath.row].share_count

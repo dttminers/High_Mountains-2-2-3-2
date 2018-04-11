@@ -12,17 +12,17 @@
 		460377B2205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */; };
 		4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4603F2682070C2BF00D50374 /* LeftImage.swift */; };
 		4604174D206CFC7E00BA0694 /* CollectioAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */; };
-		4605030220563DBE002FDD6E /* PlanTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605030120563DBE002FDD6E /* PlanTripViewController.swift */; };
 		46050304205657DB002FDD6E /* ButtonEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46050303205657DB002FDD6E /* ButtonEffect.swift */; };
 		46050306205664C9002FDD6E /* cardview1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46050305205664C9002FDD6E /* cardview1.swift */; };
 		460503082056750C002FDD6E /* textfieldEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460503072056750C002FDD6E /* textfieldEffect.swift */; };
 		4605F2FC2053A09B002A9FD5 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F2FB2053A09B002A9FD5 /* NotificationTableViewCell.swift */; };
 		4605F3002053A16C002A9FD5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */; };
 		4605F3022053BD39002A9FD5 /* ThemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F3012053BD39002A9FD5 /* ThemesCollectionViewCell.swift */; };
-		4605F3042053BD6D002A9FD5 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */; };
 		46060F83206B8163002C440A /* Validationform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F82206B8163002C440A /* Validationform.swift */; };
 		4606A86820505DA300DB0298 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86720505DA300DB0298 /* Section.swift */; };
 		4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */; };
+		4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4607F204207D69AB00432C74 /* All_Destination.storyboard */; };
+		4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607F206207D6E0800432C74 /* All_DestinationVC.swift */; };
 		460858912076202B00D63C2C /* FollowListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608588F2076202B00D63C2C /* FollowListTVC.swift */; };
 		460858922076202B00D63C2C /* FollowListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460858902076202B00D63C2C /* FollowListTVC.xib */; };
 		4608589420762B4500D63C2C /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608589320762B4500D63C2C /* Second.storyboard */; };
@@ -72,9 +72,6 @@
 		4613B61B205BDD6300C7245D /* CameraProfile2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613B61A205BDD6300C7245D /* CameraProfile2TableViewCell.swift */; };
 		4613B61F205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613B61E205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift */; };
 		462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */; };
-		462B62762057B1EB00DE1556 /* PageProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B62752057B1EB00DE1556 /* PageProductViewController.swift */; };
-		462B627A2057E3F700DE1556 /* mypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B62792057E3F700DE1556 /* mypageViewController.swift */; };
-		462B627C2057FC0D00DE1556 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B627B2057FC0D00DE1556 /* DestinationViewController.swift */; };
 		462B627E2057FC7500DE1556 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */; };
 		466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C2205112FB001FEB0F /* profileTableViewCell.swift */; };
 		466498C52051145E001FEB0F /* profiletvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C42051145E001FEB0F /* profiletvViewController.swift */; };
@@ -83,6 +80,13 @@
 		467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8620592AC000B5B321 /* FindGuideViewController.swift */; };
 		467F4B8920592B8700B5B321 /* FindGuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8820592B8700B5B321 /* FindGuideCollectionViewCell.swift */; };
 		467F4B8B2059487300B5B321 /* FindGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8A2059487300B5B321 /* FindGuideTableViewCell.swift */; };
+		468A7765207DD37B0049BDAD /* DropMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A7764207DD37B0049BDAD /* DropMenuButton.swift */; };
+		468A7768207DE2D00049BDAD /* All_DestinationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */; };
+		468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468A7767207DE2D00049BDAD /* All_DestinationTVC.xib */; };
+		468A776C207DFDFF0049BDAD /* Travel_ThemesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A776A207DFDFF0049BDAD /* Travel_ThemesCVC.swift */; };
+		468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468A776B207DFDFF0049BDAD /* Travel_ThemesCVC.xib */; };
+		468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468A776E207E056F0049BDAD /* Travel_Themes.storyboard */; };
+		468A7771207E09140049BDAD /* Travel_ThemesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A7770207E09140049BDAD /* Travel_ThemesVC.swift */; };
 		469BBD88204D16EE00A33EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BBD87204D16EE00A33EF9 /* AppDelegate.swift */; };
 		469BBD8A204D16EE00A33EF9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BBD89204D16EE00A33EF9 /* LoginVC.swift */; };
 		469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469BBD8E204D16EE00A33EF9 /* High_Mountains.xcdatamodeld */; };
@@ -161,17 +165,17 @@
 		460377B1205A662F003BD529 /* DropDwnFavDestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDwnFavDestCollectionViewCell.swift; sourceTree = "<group>"; };
 		4603F2682070C2BF00D50374 /* LeftImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImage.swift; sourceTree = "<group>"; };
 		4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectioAlbumVC.swift; sourceTree = "<group>"; };
-		4605030120563DBE002FDD6E /* PlanTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTripViewController.swift; sourceTree = "<group>"; };
 		46050303205657DB002FDD6E /* ButtonEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffect.swift; sourceTree = "<group>"; };
 		46050305205664C9002FDD6E /* cardview1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardview1.swift; sourceTree = "<group>"; };
 		460503072056750C002FDD6E /* textfieldEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldEffect.swift; sourceTree = "<group>"; };
 		4605F2FB2053A09B002A9FD5 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		4605F3012053BD39002A9FD5 /* ThemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionViewCell.swift; sourceTree = "<group>"; };
-		4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		46060F82206B8163002C440A /* Validationform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validationform.swift; sourceTree = "<group>"; };
 		4606A86720505DA300DB0298 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4607F204207D69AB00432C74 /* All_Destination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = All_Destination.storyboard; sourceTree = "<group>"; };
+		4607F206207D6E0800432C74 /* All_DestinationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_DestinationVC.swift; sourceTree = "<group>"; };
 		4608588F2076202B00D63C2C /* FollowListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListTVC.swift; sourceTree = "<group>"; };
 		460858902076202B00D63C2C /* FollowListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowListTVC.xib; sourceTree = "<group>"; };
 		4608589320762B4500D63C2C /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
@@ -223,9 +227,6 @@
 		4613B61A205BDD6300C7245D /* CameraProfile2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProfile2TableViewCell.swift; sourceTree = "<group>"; };
 		4613B61E205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAlbumCamera3CollectionViewCell.swift; sourceTree = "<group>"; };
 		462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrolimgViewController.swift; sourceTree = "<group>"; };
-		462B62752057B1EB00DE1556 /* PageProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageProductViewController.swift; sourceTree = "<group>"; };
-		462B62792057E3F700DE1556 /* mypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mypageViewController.swift; sourceTree = "<group>"; };
-		462B627B2057FC0D00DE1556 /* DestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
 		466498C2205112FB001FEB0F /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
 		466498C42051145E001FEB0F /* profiletvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profiletvViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +235,13 @@
 		467F4B8620592AC000B5B321 /* FindGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideViewController.swift; sourceTree = "<group>"; };
 		467F4B8820592B8700B5B321 /* FindGuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		467F4B8A2059487300B5B321 /* FindGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideTableViewCell.swift; sourceTree = "<group>"; };
+		468A7764207DD37B0049BDAD /* DropMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropMenuButton.swift; sourceTree = "<group>"; };
+		468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_DestinationTVC.swift; sourceTree = "<group>"; };
+		468A7767207DE2D00049BDAD /* All_DestinationTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = All_DestinationTVC.xib; sourceTree = "<group>"; };
+		468A776A207DFDFF0049BDAD /* Travel_ThemesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ThemesCVC.swift; sourceTree = "<group>"; };
+		468A776B207DFDFF0049BDAD /* Travel_ThemesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Travel_ThemesCVC.xib; sourceTree = "<group>"; };
+		468A776E207E056F0049BDAD /* Travel_Themes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Travel_Themes.storyboard; sourceTree = "<group>"; };
+		468A7770207E09140049BDAD /* Travel_ThemesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ThemesVC.swift; sourceTree = "<group>"; };
 		469BBD84204D16EE00A33EF9 /* High_Mountains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = High_Mountains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469BBD87204D16EE00A33EF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469BBD89204D16EE00A33EF9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -331,6 +339,7 @@
 				46060F82206B8163002C440A /* Validationform.swift */,
 				4603F2682070C2BF00D50374 /* LeftImage.swift */,
 				4608589720764C7800D63C2C /* RadioButton.swift */,
+				468A7764207DD37B0049BDAD /* DropMenuButton.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -412,12 +421,8 @@
 				C1A83CBB207D3CB000CD9C9F /* Profile */,
 				461394EC2052AB1B00724B07 /* friendrequestViewController.swift */,
 				4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */,
-				4605F3032053BD6D002A9FD5 /* ThemesViewController.swift */,
-				4605030120563DBE002FDD6E /* PlanTripViewController.swift */,
 				460A1EB820579BC30069EECD /* SideMenuViewController.swift */,
 				462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */,
-				462B62752057B1EB00DE1556 /* PageProductViewController.swift */,
-				462B627B2057FC0D00DE1556 /* DestinationViewController.swift */,
 				467F4B8620592AC000B5B321 /* FindGuideViewController.swift */,
 				460377AD205A386D003BD529 /* DropDownFavDestionViewController.swift */,
 				4613B60A205B99B000C7245D /* CameraProfileViewController.swift */,
@@ -428,6 +433,8 @@
 				4604174C206CFC7E00BA0694 /* CollectioAlbumVC.swift */,
 				4608589520762B9C00D63C2C /* FollowVC.swift */,
 				460A0286207BC38E00DA422C /* FetchRequestVC.swift */,
+				4607F206207D6E0800432C74 /* All_DestinationVC.swift */,
+				468A7770207E09140049BDAD /* Travel_ThemesVC.swift */,
 				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
@@ -439,7 +446,6 @@
 				4608AED6204E503C009E0A43 /* DLRadioButton.m */,
 				469BBD8E204D16EE00A33EF9 /* High_Mountains.xcdatamodeld */,
 				4608AED4204E503C009E0A43 /* High_Mountains-Bridging-Header.h */,
-				462B62792057E3F700DE1556 /* mypageViewController.swift */,
 			);
 			path = High_Mountains;
 			sourceTree = "<group>";
@@ -555,6 +561,10 @@
 				460A023C207B6BA700DA422C /* TravelBookView.xib */,
 				460A0240207B8CF600DA422C /* Album.swift */,
 				460A0241207B8CF600DA422C /* Album.xib */,
+				468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */,
+				468A7767207DE2D00049BDAD /* All_DestinationTVC.xib */,
+				468A776A207DFDFF0049BDAD /* Travel_ThemesCVC.swift */,
+				468A776B207DFDFF0049BDAD /* Travel_ThemesCVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -568,6 +578,8 @@
 				460A023E207B83B500DA422C /* Travel_With_Us.storyboard */,
 				460A0288207BC3EC00DA422C /* FetchRequest.storyboard */,
 				460A5F77207C878300E7B213 /* Plan_Trip.storyboard */,
+				4607F204207D69AB00432C74 /* All_Destination.storyboard */,
+				468A776E207E056F0049BDAD /* Travel_Themes.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -715,6 +727,7 @@
 				46FC1FF22063D6E4000AAA04 /* Roboto-Thin.ttf in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
 				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
+				468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */,
 				469BBD95204D16EE00A33EF9 /* LaunchScreen.storyboard in Resources */,
 				46FC1FF62063D6E4000AAA04 /* Roboto-Light.ttf in Resources */,
 				460937A92077A26E00B529BF /* FollowingRequestsTVC.xib in Resources */,
@@ -726,6 +739,8 @@
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
+				468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */,
+				4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */,
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
@@ -735,6 +750,7 @@
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46FC1FF32063D6E4000AAA04 /* Roboto-ThinItalic.ttf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
+				468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */,
 				46FC1FF52063D6E4000AAA04 /* Roboto-Medium.ttf in Resources */,
 				C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */,
 				460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */,
@@ -849,7 +865,6 @@
 				C1FE661D20696BBB00B006D3 /* ButtonClass.swift in Sources */,
 				466498C720515482001FEB0F /* imageCollectionViewCell.swift in Sources */,
 				4613B60F205BA0AA00C7245D /* AlbumViewController.swift in Sources */,
-				462B62762057B1EB00DE1556 /* PageProductViewController.swift in Sources */,
 				460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */,
 				460503082056750C002FDD6E /* textfieldEffect.swift in Sources */,
 				460A023A207B565200DA422C /* TravelBookCVC.swift in Sources */,
@@ -860,6 +875,7 @@
 				C1FE661B20696BBB00B006D3 /* AppUtility.swift in Sources */,
 				C1E3F8EC2077EFA40056BDE8 /* customNVC.swift in Sources */,
 				466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */,
+				468A7768207DE2D00049BDAD /* All_DestinationTVC.swift in Sources */,
 				C1E09364207A31810071FC93 /* ProfileFeedVC.swift in Sources */,
 				469BBDBA204D1D6E00A33EF9 /* singup.swift in Sources */,
 				4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */,
@@ -870,9 +886,7 @@
 				460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */,
 				460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */,
 				461394EB2052A85C00724B07 /* FriendRequestCollectionViewCell.swift in Sources */,
-				462B627C2057FC0D00DE1556 /* DestinationViewController.swift in Sources */,
 				4608589820764C7800D63C2C /* RadioButton.swift in Sources */,
-				4605030220563DBE002FDD6E /* PlanTripViewController.swift in Sources */,
 				46DF4117206E52C500F03883 /* OTPgenVC.swift in Sources */,
 				467F4B8B2059487300B5B321 /* FindGuideTableViewCell.swift in Sources */,
 				469BBD88204D16EE00A33EF9 /* AppDelegate.swift in Sources */,
@@ -880,7 +894,6 @@
 				C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */,
 				461394E9205292A900724B07 /* ProfileVC.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
-				462B627A2057E3F700DE1556 /* mypageViewController.swift in Sources */,
 				C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */,
 				4608AEDD204E65B5009E0A43 /* round image.swift in Sources */,
 				C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */,
@@ -889,23 +902,26 @@
 				461394E52052675300724B07 /* travelwiyhusTableViewCell.swift in Sources */,
 				4605F3002053A16C002A9FD5 /* NotificationViewController.swift in Sources */,
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
+				4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
+				468A7765207DD37B0049BDAD /* DropMenuButton.swift in Sources */,
 				4608589620762B9C00D63C2C /* FollowVC.swift in Sources */,
 				C1FE661820696BBB00B006D3 /* APISession.swift in Sources */,
 				469BBDC0204D5D1300A33EF9 /* AllreadyReggisterViewController.swift in Sources */,
+				468A776C207DFDFF0049BDAD /* Travel_ThemesCVC.swift in Sources */,
 				4605F2FC2053A09B002A9FD5 /* NotificationTableViewCell.swift in Sources */,
 				C1E9148F20769BCF00A912BC /* DataModels.swift in Sources */,
 				4605F3022053BD39002A9FD5 /* ThemesCollectionViewCell.swift in Sources */,
 				46139C1F2064CBED00418A58 /* PopMenuViewController.swift in Sources */,
 				460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */,
 				C1FE661A20696BBB00B006D3 /* extensions.swift in Sources */,
-				4605F3042053BD6D002A9FD5 /* ThemesViewController.swift in Sources */,
 				4613B611205BA10500C7245D /* AlbumCollectionViewCell.swift in Sources */,
 				C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,
+				468A7771207E09140049BDAD /* Travel_ThemesVC.swift in Sources */,
 				467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */,
 				460377B0205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift in Sources */,
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,
