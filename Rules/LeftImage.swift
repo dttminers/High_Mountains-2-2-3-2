@@ -18,8 +18,8 @@ class image{
         txtField.leftViewMode = .always
 }
     
-    class  func LeftImageTo(txtField: UITextField, andImage img: UIImage) {
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 20.0, height: 25.0))
+    class  func rightImageTo(txtField: UITextField, andImage img: UIImage) {
+        let leftImageView = UIImageView(frame: CGRect(x: 120.0, y: 0.0, width: 20.0, height: 25.0))
         leftImageView.image = img
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
         view.addSubview(leftImageView)

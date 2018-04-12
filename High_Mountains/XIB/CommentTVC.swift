@@ -1,5 +1,5 @@
 //
-//  TravelPartHeaderTVC.swift
+//  CommentTVC.swift
 //  High_Mountains
 //
 //  Created by Abhishek on 12/04/18.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class TravelPartHeaderTVC: UITableViewCell {
+class CommentTVC: UITableViewCell {
 
-    @IBOutlet weak var lblHeader: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -22,8 +22,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94g-Kb-fDy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkP-4f-eEJ">
-                                <rect key="frame" x="5" y="0.0" width="310" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkP-4f-eEJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,9 +32,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rkP-4f-eEJ" firstAttribute="leading" secondItem="94g-Kb-fDy" secondAttribute="leading" constant="5" id="GHF-jy-fl7"/>
+                            <constraint firstItem="rkP-4f-eEJ" firstAttribute="leading" secondItem="94g-Kb-fDy" secondAttribute="leading" id="GHF-jy-fl7"/>
                             <constraint firstItem="rkP-4f-eEJ" firstAttribute="top" secondItem="94g-Kb-fDy" secondAttribute="top" id="TUo-fF-hwK"/>
-                            <constraint firstAttribute="trailing" secondItem="rkP-4f-eEJ" secondAttribute="trailing" constant="5" id="pto-Yd-ysM"/>
+                            <constraint firstAttribute="trailing" secondItem="rkP-4f-eEJ" secondAttribute="trailing" id="pto-Yd-ysM"/>
                             <constraint firstAttribute="bottom" secondItem="rkP-4f-eEJ" secondAttribute="bottom" id="trS-NW-7uO"/>
                         </constraints>
                     </view>
@@ -46,6 +47,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblHeader" destination="rkP-4f-eEJ" id="YQc-OY-7Wb"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="50"/>
         </tableViewCell>
     </objects>
 </document>

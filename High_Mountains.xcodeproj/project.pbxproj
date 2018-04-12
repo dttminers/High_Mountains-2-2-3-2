@@ -33,6 +33,8 @@
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
 		4608DFDF207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */; };
 		4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */; };
+		4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */; };
+		4608DFE4207F2C1300FEBBE2 /* TravelPackagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */; };
 		4609379F20773F5200B529BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
 		460937A12077805200B529BF /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A02077805200B529BF /* AlbumModels.swift */; };
 		460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A2207790C400B529BF /* ScrollViewTVC.swift */; };
@@ -44,7 +46,6 @@
 		460A023A207B565200DA422C /* TravelBookCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0238207B565200DA422C /* TravelBookCVC.swift */; };
 		460A023B207B565200DA422C /* TravelBookCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A0239207B565200DA422C /* TravelBookCVC.xib */; };
 		460A023D207B6BA700DA422C /* TravelBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A023C207B6BA700DA422C /* TravelBookView.xib */; };
-		460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A023E207B83B500DA422C /* Travel_With_Us.storyboard */; };
 		460A0242207B8CF600DA422C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0240207B8CF600DA422C /* Album.swift */; };
 		460A0243207B8CF600DA422C /* Album.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A0241207B8CF600DA422C /* Album.xib */; };
 		460A0287207BC38E00DA422C /* FetchRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A0286207BC38E00DA422C /* FetchRequestVC.swift */; };
@@ -57,7 +58,6 @@
 		460BBE55204FC15100BBE5A6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE54204FC15100BBE5A6 /* SWRevealViewController.m */; };
 		460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */; };
 		461394E12052560600724B07 /* cardview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461394E02052560600724B07 /* cardview.swift */; };
-		461394E32052649100724B07 /* travelwithusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461394E22052649100724B07 /* travelwithusViewController.swift */; };
 		461394E52052675300724B07 /* travelwiyhusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461394E42052675300724B07 /* travelwiyhusTableViewCell.swift */; };
 		461394E9205292A900724B07 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461394E8205292A800724B07 /* ProfileVC.swift */; };
 		461394EB2052A85C00724B07 /* FriendRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461394EA2052A85C00724B07 /* FriendRequestCollectionViewCell.swift */; };
@@ -99,6 +99,11 @@
 		469BBDBA204D1D6E00A33EF9 /* singup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BBDB9204D1D6E00A33EF9 /* singup.swift */; };
 		469BBDC0204D5D1300A33EF9 /* AllreadyReggisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BBDBF204D5D1300A33EF9 /* AllreadyReggisterViewController.swift */; };
 		469BBDC2204D6AB600A33EF9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469BBDC1204D6AB600A33EF9 /* RegisterViewController.swift */; };
+		469F1803207F419200FBD9C1 /* CommentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1801207F419200FBD9C1 /* CommentTVC.swift */; };
+		469F1804207F419200FBD9C1 /* CommentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469F1802207F419200FBD9C1 /* CommentTVC.xib */; };
+		469F1806207F515100FBD9C1 /* Cradview4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1805207F515100FBD9C1 /* Cradview4.swift */; };
+		469F1808207F562800FBD9C1 /* CommentTxtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469F1807207F562800FBD9C1 /* CommentTxtView.xib */; };
+		469F180A207F75D500FBD9C1 /* PlanTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1809207F75D500FBD9C1 /* PlanTripVC.swift */; };
 		46D3B8AF205FB3D9008098C3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B8AE205FB3D9008098C3 /* Reachability.swift */; };
 		46DF4117206E52C500F03883 /* OTPgenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DF4116206E52C500F03883 /* OTPgenVC.swift */; };
 		46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FC1FE12063D6DF000AAA04 /* Roboto-Italic.ttf */; };
@@ -190,6 +195,8 @@
 		4608AEDE204E6CD3009E0A43 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
 		4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPartHeaderTVC.swift; sourceTree = "<group>"; };
 		4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelPartHeaderTVC.xib; sourceTree = "<group>"; };
+		4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelPackages.storyboard; sourceTree = "<group>"; };
+		4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPackagesVC.swift; sourceTree = "<group>"; };
 		460937A02077805200B529BF /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		460937A2207790C400B529BF /* ScrollViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTVC.swift; sourceTree = "<group>"; };
 		460937A3207790C400B529BF /* ScrollViewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewTVC.xib; sourceTree = "<group>"; };
@@ -200,7 +207,6 @@
 		460A0238207B565200DA422C /* TravelBookCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBookCVC.swift; sourceTree = "<group>"; };
 		460A0239207B565200DA422C /* TravelBookCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelBookCVC.xib; sourceTree = "<group>"; };
 		460A023C207B6BA700DA422C /* TravelBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelBookView.xib; sourceTree = "<group>"; };
-		460A023E207B83B500DA422C /* Travel_With_Us.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Travel_With_Us.storyboard; sourceTree = "<group>"; };
 		460A0240207B8CF600DA422C /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		460A0241207B8CF600DA422C /* Album.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Album.xib; sourceTree = "<group>"; };
 		460A0286207BC38E00DA422C /* FetchRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequestVC.swift; sourceTree = "<group>"; };
@@ -214,7 +220,6 @@
 		460BBE54204FC15100BBE5A6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		461394E02052560600724B07 /* cardview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardview.swift; sourceTree = "<group>"; };
-		461394E22052649100724B07 /* travelwithusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travelwithusViewController.swift; sourceTree = "<group>"; };
 		461394E42052675300724B07 /* travelwiyhusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travelwiyhusTableViewCell.swift; sourceTree = "<group>"; };
 		461394E8205292A800724B07 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		461394EA2052A85C00724B07 /* FriendRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -262,6 +267,11 @@
 		469BBDB9204D1D6E00A33EF9 /* singup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singup.swift; sourceTree = "<group>"; };
 		469BBDBF204D5D1300A33EF9 /* AllreadyReggisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllreadyReggisterViewController.swift; sourceTree = "<group>"; };
 		469BBDC1204D6AB600A33EF9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		469F1801207F419200FBD9C1 /* CommentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTVC.swift; sourceTree = "<group>"; };
+		469F1802207F419200FBD9C1 /* CommentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTVC.xib; sourceTree = "<group>"; };
+		469F1805207F515100FBD9C1 /* Cradview4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cradview4.swift; sourceTree = "<group>"; };
+		469F1807207F562800FBD9C1 /* CommentTxtView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTxtView.xib; sourceTree = "<group>"; };
+		469F1809207F75D500FBD9C1 /* PlanTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTripVC.swift; sourceTree = "<group>"; };
 		46D3B8AE205FB3D9008098C3 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		46DF4116206E52C500F03883 /* OTPgenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPgenVC.swift; sourceTree = "<group>"; };
 		46F96C7D2059B1D6004F4300 /* ExpandableHeaders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpandableHeaders.entitlements; sourceTree = "<group>"; };
@@ -421,7 +431,6 @@
 				466498C42051145E001FEB0F /* profiletvViewController.swift */,
 				460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */,
 				466498C820515CC9001FEB0F /* collectiionimageViewController.swift */,
-				461394E22052649100724B07 /* travelwithusViewController.swift */,
 				C1A83CBB207D3CB000CD9C9F /* Profile */,
 				461394EC2052AB1B00724B07 /* friendrequestViewController.swift */,
 				4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */,
@@ -439,6 +448,8 @@
 				460A0286207BC38E00DA422C /* FetchRequestVC.swift */,
 				4607F206207D6E0800432C74 /* All_DestinationVC.swift */,
 				468A7770207E09140049BDAD /* Travel_ThemesVC.swift */,
+				4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */,
+				469F1809207F75D500FBD9C1 /* PlanTripVC.swift */,
 				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
@@ -487,6 +498,7 @@
 				460503072056750C002FDD6E /* textfieldEffect.swift */,
 				4613B616205BC76400C7245D /* cardview3.swift */,
 				4613B61E205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift */,
+				469F1805207F515100FBD9C1 /* Cradview4.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -571,6 +583,9 @@
 				468A776B207DFDFF0049BDAD /* Travel_ThemesCVC.xib */,
 				4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */,
 				4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */,
+				469F1801207F419200FBD9C1 /* CommentTVC.swift */,
+				469F1802207F419200FBD9C1 /* CommentTVC.xib */,
+				469F1807207F562800FBD9C1 /* CommentTxtView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -581,11 +596,11 @@
 				C1FE660520696B9B00B006D3 /* Main.storyboard */,
 				4608589320762B4500D63C2C /* Second.storyboard */,
 				C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */,
-				460A023E207B83B500DA422C /* Travel_With_Us.storyboard */,
 				460A0288207BC3EC00DA422C /* FetchRequest.storyboard */,
 				460A5F77207C878300E7B213 /* Plan_Trip.storyboard */,
 				4607F204207D69AB00432C74 /* All_Destination.storyboard */,
 				468A776E207E056F0049BDAD /* Travel_Themes.storyboard */,
+				4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -731,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46FC1FF22063D6E4000AAA04 /* Roboto-Thin.ttf in Resources */,
+				469F1808207F562800FBD9C1 /* CommentTxtView.xib in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
 				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
 				468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */,
@@ -739,10 +755,12 @@
 				460937A92077A26E00B529BF /* FollowingRequestsTVC.xib in Resources */,
 				46FC1FF92063D6E4000AAA04 /* LICENSE.txt in Resources */,
 				C1E3F8EE2077F1FD0056BDE8 /* Profile.storyboard in Resources */,
+				469F1804207F419200FBD9C1 /* CommentTVC.xib in Resources */,
 				46FC1FF12063D6E4000AAA04 /* Roboto-Regular.ttf in Resources */,
 				460A023B207B565200DA422C /* TravelBookCVC.xib in Resources */,
 				460A0243207B8CF600DA422C /* Album.xib in Resources */,
 				46FC1FEF2063D6E4000AAA04 /* Roboto-MediumItalic.ttf in Resources */,
+				4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */,
 				46FC1FF02063D6E4000AAA04 /* Roboto-LightItalic.ttf in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */,
@@ -750,7 +768,6 @@
 				46FC1FF72063D6E4000AAA04 /* Roboto-BlackItalic.ttf in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
-				460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */,
 				4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
@@ -866,6 +883,7 @@
 				4606A86820505DA300DB0298 /* Section.swift in Sources */,
 				C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */,
 				461394E12052560600724B07 /* cardview.swift in Sources */,
+				469F1803207F419200FBD9C1 /* CommentTVC.swift in Sources */,
 				4613B613205BBA5C00C7245D /* CameraProfile2ViewController.swift in Sources */,
 				4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */,
 				4613B61B205BDD6300C7245D /* CameraProfile2TableViewCell.swift in Sources */,
@@ -878,7 +896,6 @@
 				469BBD8A204D16EE00A33EF9 /* LoginVC.swift in Sources */,
 				4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */,
 				46050306205664C9002FDD6E /* cardview1.swift in Sources */,
-				461394E32052649100724B07 /* travelwithusViewController.swift in Sources */,
 				C1FE661B20696BBB00B006D3 /* AppUtility.swift in Sources */,
 				C1E3F8EC2077EFA40056BDE8 /* customNVC.swift in Sources */,
 				466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */,
@@ -887,6 +904,7 @@
 				469BBDBA204D1D6E00A33EF9 /* singup.swift in Sources */,
 				4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */,
 				461394ED2052AB1B00724B07 /* friendrequestViewController.swift in Sources */,
+				469F180A207F75D500FBD9C1 /* PlanTripVC.swift in Sources */,
 				46050304205657DB002FDD6E /* ButtonEffect.swift in Sources */,
 				460A0242207B8CF600DA422C /* Album.swift in Sources */,
 				46060F83206B8163002C440A /* Validationform.swift in Sources */,
@@ -911,6 +929,7 @@
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
 				4608DFDF207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift in Sources */,
 				4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */,
+				4608DFE4207F2C1300FEBBE2 /* TravelPackagesVC.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
 				468A7765207DD37B0049BDAD /* DropMenuButton.swift in Sources */,
@@ -937,6 +956,7 @@
 				4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */,
 				460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */,
 				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
+				469F1806207F515100FBD9C1 /* Cradview4.swift in Sources */,
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
 				C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
