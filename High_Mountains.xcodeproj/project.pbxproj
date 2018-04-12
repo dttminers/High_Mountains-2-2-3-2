@@ -31,6 +31,8 @@
 		4608AED7204E503D009E0A43 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4608AED6204E503C009E0A43 /* DLRadioButton.m */; };
 		4608AEDD204E65B5009E0A43 /* round image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDC204E65B5009E0A43 /* round image.swift */; };
 		4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608AEDE204E6CD3009E0A43 /* circle.swift */; };
+		4608DFDF207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */; };
+		4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */; };
 		4609379F20773F5200B529BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
 		460937A12077805200B529BF /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A02077805200B529BF /* AlbumModels.swift */; };
 		460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A2207790C400B529BF /* ScrollViewTVC.swift */; };
@@ -185,6 +187,8 @@
 		4608AED6204E503C009E0A43 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		4608AEDC204E65B5009E0A43 /* round image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "round image.swift"; sourceTree = "<group>"; };
 		4608AEDE204E6CD3009E0A43 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
+		4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPartHeaderTVC.swift; sourceTree = "<group>"; };
+		4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelPartHeaderTVC.xib; sourceTree = "<group>"; };
 		460937A02077805200B529BF /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		460937A2207790C400B529BF /* ScrollViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTVC.swift; sourceTree = "<group>"; };
 		460937A3207790C400B529BF /* ScrollViewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewTVC.xib; sourceTree = "<group>"; };
@@ -554,6 +558,8 @@
 				468A7767207DE2D00049BDAD /* All_DestinationTVC.xib */,
 				468A776A207DFDFF0049BDAD /* Travel_ThemesCVC.swift */,
 				468A776B207DFDFF0049BDAD /* Travel_ThemesCVC.xib */,
+				4608DFDD207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift */,
+				4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -734,6 +740,7 @@
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				46FC1FEE2063D6E4000AAA04 /* Roboto-Italic.ttf in Resources */,
 				460A023F207B83B500DA422C /* Travel_With_Us.storyboard in Resources */,
+				4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
@@ -890,6 +897,7 @@
 				461394E52052675300724B07 /* travelwiyhusTableViewCell.swift in Sources */,
 				4605F3002053A16C002A9FD5 /* NotificationViewController.swift in Sources */,
 				461394EF2052BAE100724B07 /* friendRquestTableViewCell.swift in Sources */,
+				4608DFDF207F26BA00FEBBE2 /* TravelPartHeaderTVC.swift in Sources */,
 				4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
