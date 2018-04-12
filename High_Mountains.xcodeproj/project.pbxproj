@@ -117,6 +117,7 @@
 		C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */; };
 		C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */; };
 		C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1162292207BF69B007CEDE0 /* KingfisherSource.swift */; };
+		C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -283,6 +284,7 @@
 		C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedAlbumTVC.swift; sourceTree = "<group>"; };
 		C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedAlbumTVC.xib; sourceTree = "<group>"; };
 		C1162292207BF69B007CEDE0 /* KingfisherSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
+		C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoVC.swift; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -420,9 +422,7 @@
 				460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */,
 				466498C820515CC9001FEB0F /* collectiionimageViewController.swift */,
 				461394E22052649100724B07 /* travelwithusViewController.swift */,
-				461394E8205292A800724B07 /* ProfileVC.swift */,
-				4613B608205B899300C7245D /* ProfileDetailsVC.swift */,
-				C1E09363207A31810071FC93 /* ProfileFeedVC.swift */,
+				C1A83CBB207D3CB000CD9C9F /* Profile */,
 				461394EC2052AB1B00724B07 /* friendrequestViewController.swift */,
 				4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */,
 				460A1EB820579BC30069EECD /* SideMenuViewController.swift */,
@@ -518,6 +518,17 @@
 				7652120B39B17A031EEF02F7 /* Pods-High_Mountains.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1A83CBB207D3CB000CD9C9F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				461394E8205292A800724B07 /* ProfileVC.swift */,
+				4613B608205B899300C7245D /* ProfileDetailsVC.swift */,
+				C1E09363207A31810071FC93 /* ProfileFeedVC.swift */,
+				C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		C1E9148D20769BCF00A912BC /* Models */ = {
@@ -853,6 +864,7 @@
 				4613B617205BC76400C7245D /* cardview3.swift in Sources */,
 				460858912076202B00D63C2C /* FollowListTVC.swift in Sources */,
 				4606A86820505DA300DB0298 /* Section.swift in Sources */,
+				C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */,
 				461394E12052560600724B07 /* cardview.swift in Sources */,
 				4613B613205BBA5C00C7245D /* CameraProfile2ViewController.swift in Sources */,
 				4608AEDF204E6CD3009E0A43 /* circle.swift in Sources */,
