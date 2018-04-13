@@ -11,6 +11,21 @@ import CoreData
 
 class RegisterViewController: UIViewController {
     
+    //Radio button
+    lazy var radioButtons: [RadioButton] = {
+        return [
+            self.Female,
+            self.Male,
+            self.other,
+            
+            ]
+    }()
+    
+   
+    
+    @IBOutlet weak var other: RadioButton!
+    @IBOutlet weak var Female: RadioButton!
+    @IBOutlet weak var Male: RadioButton!
     
     //Textfield
     @IBOutlet weak var UserFullNametxt: HoshiTextField!
@@ -30,6 +45,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var Doblbl: UILabel!
     @IBOutlet weak var ReferenceCodelbl: UILabel!
     
+     let Dob = UIDatePicker()
+      var gender : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +89,8 @@ class RegisterViewController: UIViewController {
         
         let ReferralCodeimg = UIImage(named: "referral")
         image.addLeftImageTo(txtField: ReferenceCodetxt, andImage: ReferralCodeimg!)
+        
+        CreateDatepicker()
     }
 
     
@@ -117,11 +136,11 @@ class RegisterViewController: UIViewController {
         } else if (isValidPhone(value: MobileNo!)){
             alertDialog(header: "Alert", msg: "Invalid Phone no")
             }
-    
+     
         //Json
        else if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
-            let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=male &&action=register";
+            let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=\(gender) &&action=register";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
@@ -180,7 +199,57 @@ class RegisterViewController: UIViewController {
         
     }
     
+    //radio button
+  
+    @IBAction func Genderbtn(_ sender: Any) {
+        updateRadioButton(sender as! RadioButton)
+        if ((sender as AnyObject).tag == 0){
+            
+           gender = "Male"
+            
+        }
+        else if ((sender as AnyObject).tag == 1){
+            gender = "female"
+        }
+        else if ((sender as AnyObject).tag == 2){
+            gender = "other"
+        }
+    }
+    func updateRadioButton(_ sender: RadioButton){
+        radioButtons.forEach { $0.isSelected = false }
+        sender.isSelected = !sender.isSelected
+        
+    }
     
+    func getSelectedRadioButton() -> RadioButton? {
+        var radioButton: RadioButton?
+        radioButtons.forEach { if($0.isSelected){ radioButton =  $0 } }
+        return radioButton
+    }
+    
+    func CreateDatepicker(){
+        
+        Dob.datePickerMode = .date
+        Dob.maximumDate = Calendar.current.date(byAdding: .year, value: -0, to: Date())
+
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donepressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        Dobtxt.inputAccessoryView = toolbar
+        Dobtxt.inputView = Dob
+    }
+    @objc func donepressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        Dobtxt.text = dateFormatter.string(from: Dob.date)
+        self.view.endEditing(true)
+        
+    }
 }
     
 
@@ -223,26 +292,14 @@ extension RegisterViewController: UITextFieldDelegate {
                 Passwordlbl.text = "Min 8 letter"
             }
             else if (textField.text?.count)! > 20 {
-                Passwordlbl.text = "Max 20 letter"
+                Passwordlbl.text = "Max 25 letter"
             }
             else {
                 Passwordlbl.text = ""
             }
         }
         
-        else if textField == Emailtxt {
-            
-            if (textField.text?.count)! < 6 {
-                EmailLbl.text = "Min 6 letter"
-            }
-            else if (textField.text?.count)! > 20 {
-                EmailLbl.text = "Max 20 letter"
-            }
-            else {
-                EmailLbl.text = ""
-            }
-        }
-            
+       
             
         else if textField == MobileNotxt{
             
@@ -255,30 +312,34 @@ extension RegisterViewController: UITextFieldDelegate {
             
         }
         
-        else if textField == Dobtxt {
-            if (textField.text?.count)! < 8 {
-               Doblbl.text = "Min 8 letter"
-            }
-            else if (textField.text?.count)! > 20 {
-               Doblbl.text = "Max 20 letter"
-            }
-            else {
-                Doblbl.text = ""
-            }
-            
+
+
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == UserFullNametxt {
+            UserNametxt.becomeFirstResponder()
         }
-            else if textField == ReferenceCodetxt {
-                if (textField.text?.count)! < 8 {
-                    ReferenceCodelbl.text = "Min 8 letter"
-                }
-                else if (textField.text?.count)! > 20 {
-                    ReferenceCodelbl.text = "Max 20 letter"
-                }
-                else {
-                    ReferenceCodelbl.text = ""
-                }
+        else if textField == UserNametxt {
+            Emailtxt.becomeFirstResponder()
         }
+        else if textField == Emailtxt{
+           Passwordtxt.becomeFirstResponder()
+        }
+        else if textField == Passwordtxt {
+            MobileNotxt.becomeFirstResponder()
+        }
+        else if textField == MobileNotxt {
+            Dobtxt.becomeFirstResponder()
+        }
+        
+        else {
+            generateotp(self)
+        }
+        return true
     }
 }
+
+
 
 

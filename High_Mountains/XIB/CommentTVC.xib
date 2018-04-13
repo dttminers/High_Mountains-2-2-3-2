@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="68" width="330" height="33"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-nD-zCq">
-                                        <rect key="frame" x="66" y="0.0" width="72" height="36"/>
+                                        <rect key="frame" x="86" y="0.0" width="72" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/03/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C3-P0-Y6G">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="23"/>
@@ -122,7 +122,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydh-Wt-xnq">
-                                        <rect key="frame" x="139" y="0.0" width="53" height="36"/>
+                                        <rect key="frame" x="159" y="0.0" width="53" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-4q-CfD">
                                                 <rect key="frame" x="0.0" y="0.0" width="53" height="23"/>
@@ -141,7 +141,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-ox-y3C">
-                                        <rect key="frame" x="192" y="0.0" width="68" height="36"/>
+                                        <rect key="frame" x="212" y="0.0" width="68" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Reply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-4C-YqZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="23"/>
@@ -163,7 +163,7 @@
                                 <constraints>
                                     <constraint firstItem="d4w-ox-y3C" firstAttribute="leading" secondItem="Ydh-Wt-xnq" secondAttribute="trailing" id="06c-ZW-dvk"/>
                                     <constraint firstItem="Ydh-Wt-xnq" firstAttribute="top" secondItem="cF1-cE-FPL" secondAttribute="top" id="1cY-sX-BEd"/>
-                                    <constraint firstItem="8lo-nD-zCq" firstAttribute="leading" secondItem="cF1-cE-FPL" secondAttribute="leading" constant="66" id="3Ga-V1-hbW"/>
+                                    <constraint firstItem="8lo-nD-zCq" firstAttribute="leading" secondItem="cF1-cE-FPL" secondAttribute="leading" constant="86" id="3Ga-V1-hbW"/>
                                     <constraint firstItem="Ydh-Wt-xnq" firstAttribute="leading" secondItem="8lo-nD-zCq" secondAttribute="trailing" constant="1" id="Sih-qn-vyb"/>
                                     <constraint firstItem="d4w-ox-y3C" firstAttribute="top" secondItem="cF1-cE-FPL" secondAttribute="top" id="hVq-vk-ieh"/>
                                     <constraint firstItem="8lo-nD-zCq" firstAttribute="top" secondItem="cF1-cE-FPL" secondAttribute="top" id="qJJ-3h-xh8"/>

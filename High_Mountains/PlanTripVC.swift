@@ -19,6 +19,7 @@ class PlanTripVC: UIViewController {
     @IBOutlet weak var BudgetTxt: HoshiTextField!
     @IBOutlet weak var TotalNumberOfRoomTxt: HoshiTextField!
     
+   
     
     
     override func viewDidLoad() {

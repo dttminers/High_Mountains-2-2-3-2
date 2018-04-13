@@ -50,26 +50,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
         self.showAnimate()
        // self.removeAnimate()
         
-        
-        
-        //add icon
-        let Liveimg = UIImage(named: "location_red")
-        image.addLeftImageTo(txtField: LiveInTxt, andImage: Liveimg!)
-        
-        let Fromimg = UIImage(named: "from_icon")
-        image.addLeftImageTo(txtField: Fromtxt, andImage: Fromimg!)
-        
-        let RelationShipimg = UIImage(named: "location_red")
-        image.addLeftImageTo(txtField: RelationShipTxt, andImage: RelationShipimg!)
-        
-        let Favourteimg = UIImage(named: "fav_quote_icon")
-        image.addLeftImageTo(txtField: FavouriteTravelTxt, andImage: Favourteimg!)
-        
-        let Bioimg = UIImage(named: "bio_icon")
-        image.addLeftImageTo(txtField: BioTxt, andImage: Bioimg!)
-        
-        let Dobimg = UIImage(named: "dob_icon")
-        image.addLeftImageTo(txtField: DobTxt, andImage: Dobimg!)
+
         
         
     }

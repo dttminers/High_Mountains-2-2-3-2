@@ -57,9 +57,9 @@ class LoginVC: UIViewController {
             self.alertDialog(header: "Alert", msg: "Field can't be Empty")
             
         }
-        else if (!UserNamelbl.text!.isEmpty || !Passwordlbl.text!.isEmpty) {
-            
-        }
+//        else if (!UserNamelbl.text!.isEmpty || !Passwordlbl.text!.isEmpty) {
+//
+//        }
         else if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
             let postparam = "username=\(UsernameTxt.text!) &&password=\(PasswordTxt.text!) &&action=login";
@@ -87,7 +87,7 @@ class LoginVC: UIViewController {
                             let res = dt.object as AnyObject
                             if (res["msg"]as? String) != nil{
                                 
-                                self.alertDialog(header: "Alert", msg: "Failed")
+                                self.alertDialog(header: "Alert", msg: "Please Check Username && Password")
                                 print("failed")
                             }
                         }

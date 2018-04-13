@@ -468,7 +468,7 @@
                                                 <rect key="frame" x="1" y="136" width="373.5" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Pi-nWv" customClass="HoshiTextField" customModule="High_Mountains" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="10" width="167.5" height="32"/>
+                                                        <rect key="frame" x="8" y="10" width="167" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="G4E-09-R6a"/>
                                                         </constraints>
@@ -477,7 +477,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTr-J4-20f" customClass="HoshiTextField" customModule="High_Mountains" customModuleProvider="target">
-                                                        <rect key="frame" x="200.5" y="10" width="166.5" height="30"/>
+                                                        <rect key="frame" x="200" y="10" width="166.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="hNt-d1-3Nm"/>
                                                         </constraints>
