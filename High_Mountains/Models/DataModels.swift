@@ -163,3 +163,20 @@ func setDictionary(_ dictionary:[AnyHashable : Any]){
     
 }
 }
+
+class FetchRequest : NSObject{
+    var name : String?
+    var uid : Int?
+    var profile_pic : String?
+    var mutual_friend_count : Int?
+    
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        
+        name = dictionary["name"] as? String
+        uid = dictionary["uid"] as? Int
+        profile_pic = dictionary["profile_pic"] as? String
+       mutual_friend_count = dictionary["mutual friend count"] as? Int
+        
+    }
+}
+

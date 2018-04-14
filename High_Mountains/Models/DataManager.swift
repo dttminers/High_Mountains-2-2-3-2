@@ -68,4 +68,17 @@ class DataManager {
         }
         return models
     }
+
+
+func setFetchRequestDictionary(_ array:[AnyObject]) ->  [FetchRequest] {
+    var models:[FetchRequest] = []
+    for item in array
+    {
+        let object = FetchRequest()
+        object.setDictionary(item as! [AnyHashable : Any])
+        models.append(object)
+    }
+    return models
+}
+
 }

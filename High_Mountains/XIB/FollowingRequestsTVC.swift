@@ -15,14 +15,14 @@ class FollowingRequestsTVC: UITableViewCell {
     @IBOutlet weak var lblCommonFriend: UILabel!
     
     
-     var obj : FollowModel!
+     var obj : FetchRequest!
     
-    func fetchrequest(_ data : FollowModel){
+    func populateData(_ data : FetchRequest){
         obj = data
         AppUtility.setCornerRadius(img, radius: 20)
-        img.loadImageUsingCache(withUrl: data.profile_pic)
+        img.loadImageUsingCache(withUrl: data.profile_pic!)
         lblName.text = data.name
-        lblCommonFriend.text = "\(data.mutual_friend_count) Common Friends"
+        lblCommonFriend.text = "\(String(describing: data.mutual_friend_count)) Common Friends"
         
     }
    
@@ -30,3 +30,4 @@ class FollowingRequestsTVC: UITableViewCell {
         
     }
 }
+
