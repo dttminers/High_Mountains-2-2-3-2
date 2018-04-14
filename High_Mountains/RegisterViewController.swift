@@ -146,11 +146,12 @@ class RegisterViewController: UIViewController {
             alertDialog(header: "Alert", msg: "UserName Should Not Less then 3 ")
         }
         else if ((UserNametxt.text?.count)! > 20){
-            alertDialog(header: "Alert", msg: "UserName Should Not More then 3 ")
+            alertDialog(header: "Alert", msg: "UserName Should Not More then 20 ")
         }
         else if(gender == nil){
             alertDialog(header: "Alert", msg: "Selcet Gender ")
         }
+       
             
         //Json
        else if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
@@ -176,15 +177,17 @@ class RegisterViewController: UIViewController {
                             
                            self.alertDialog(header: "Alert", msg: "Registeration fail")
                         }
-                        else if ((res["username"]as?String) != UserName) {
-    
+                        else if ((res["username"]as?String)! == UserName) {
+                            self.alertDialog(header: "Alert", msg: "UserName AllReady Register")
                             print("alerady register")
                         }
                         
-                        else if (((res["contact_no"]as? String)) !=  MobileNo){
+                        else if (((res["contact_no"]as? String))! ==  MobileNo){
+                            self.alertDialog(header: "Alert", msg: "Contact No AllReady Register")
                             print("alerady register")
                         }
                         else if ((res["email"]as?String) != finalemail){
+                            self.alertDialog(header: "Alert", msg: "EmailID AllReady Register")
                             print("alerady register")
                         }
                     }
