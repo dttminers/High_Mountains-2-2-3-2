@@ -133,14 +133,29 @@ class RegisterViewController: UIViewController {
             print("not svalid")
           alertDialog(header: "Alert", msg: "Email Id is Not Valid")
             
-        } else if (isValidPhone(value: MobileNo!)){
+        } else if (!isValidPhone(value: MobileNo!)){
             alertDialog(header: "Alert", msg: "Invalid Phone no")
             }
-     
+        else if ((UserFullNametxt.text?.count)! < 3){
+            alertDialog(header: "Alert", msg: "UserFullName Should Not Less then 3 ")
+        }
+        else if ((UserFullNametxt.text?.count)! > 20){
+            alertDialog(header: "Alert", msg: "UserFullName Should Not more then 20 ")
+        }
+        else if ((UserNametxt.text?.count)! < 3){
+            alertDialog(header: "Alert", msg: "UserName Should Not Less then 3 ")
+        }
+        else if ((UserNametxt.text?.count)! > 20){
+            alertDialog(header: "Alert", msg: "UserName Should Not More then 3 ")
+        }
+        else if(gender == nil){
+            alertDialog(header: "Alert", msg: "Selcet Gender ")
+        }
+            
         //Json
        else if (currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN){
             
-            let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=\(gender) &&action=register";
+            let postparam = "fullname=\(UserFullNametxt.text!)&&username=\(UserNametxt.text!)&&email=\(Emailtxt.text!)&&password=\(Passwordtxt.text!)&&contact_no=\(MobileNotxt.text!)&&dob=\(Dobtxt.text!)&&referral_code=\(ReferenceCodetxt.text!)&&gender=\(gender!) &&action=register";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)register_login.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
@@ -231,13 +246,19 @@ class RegisterViewController: UIViewController {
         
         Dob.datePickerMode = .date
         Dob.maximumDate = Calendar.current.date(byAdding: .year, value: -0, to: Date())
-
+        Dob.backgroundColor = UIColor.black
+        Dob.setValue(UIColor.white, forKeyPath: "textColor")
+        Dob.setValue(0.8, forKeyPath: "alpha")
+        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
+        toolbar.tintColor = UIColor.white
+        toolbar.barTintColor = UIColor.black
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donepressed))
-        toolbar.setItems([doneButton], animated: false)
-        
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelDatePicker))
+         toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
         Dobtxt.inputAccessoryView = toolbar
         Dobtxt.inputView = Dob
     }
@@ -250,7 +271,12 @@ class RegisterViewController: UIViewController {
         self.view.endEditing(true)
         
     }
+    @objc func cancelDatePicker(){
+        //cancel button dismiss datepicker dialog
+        self.view.endEditing(true)
+    }
 }
+
     
 
 
