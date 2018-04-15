@@ -962,6 +962,10 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         enableContentInteraction()
     }
     
+    @objc public func openLeft2() {
+        slideMenuController()?.openLeft()
+    }
+    
     // MARK: UIGestureRecognizerDelegate
     open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         

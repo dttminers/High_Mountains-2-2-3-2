@@ -20,8 +20,10 @@ class profileVC: UIViewController {
         profileImg.clipsToBounds = true
       //  self.profileImg.layer.borderWidth = 3.0
        
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: true)
         
     }
 

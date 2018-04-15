@@ -181,12 +181,16 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             vewList.alpha = 0
             vewAlbum.alpha = 1
             vewGroup.alpha = 0
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
         }
         else if sender.tag == 4 {
             vewGrid.alpha = 0
             vewList.alpha = 0
             vewAlbum.alpha = 0
             vewGroup.alpha = 1
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
         }
     }
     

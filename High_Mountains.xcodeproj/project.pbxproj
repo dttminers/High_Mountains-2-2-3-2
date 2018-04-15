@@ -119,6 +119,8 @@
 		C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */; };
 		C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */; };
 		C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1162292207BF69B007CEDE0 /* KingfisherSource.swift */; };
+		C1622D1A2083A01500DA42B2 /* navView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1622D182083A01400DA42B2 /* navView.swift */; };
+		C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1622D192083A01400DA42B2 /* navVew.xib */; };
 		C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
@@ -288,6 +290,8 @@
 		C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedAlbumTVC.swift; sourceTree = "<group>"; };
 		C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedAlbumTVC.xib; sourceTree = "<group>"; };
 		C1162292207BF69B007CEDE0 /* KingfisherSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherSource.swift; sourceTree = "<group>"; };
+		C1622D182083A01400DA42B2 /* navView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navView.swift; sourceTree = "<group>"; };
+		C1622D192083A01400DA42B2 /* navVew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = navVew.xib; sourceTree = "<group>"; };
 		C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoVC.swift; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
@@ -547,6 +551,8 @@
 		C1F4AD20206EC5F800D470BA /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				C1622D192083A01400DA42B2 /* navVew.xib */,
+				C1622D182083A01400DA42B2 /* navView.swift */,
 				C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */,
 				C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */,
 				C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */,
@@ -762,6 +768,7 @@
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46080DDB2080A92B00641A20 /* Montserrat-SemiBold.otf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
+				C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */,
 				468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */,
 				C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */,
 				46080DD82080A92B00641A20 /* Montserrat-Bold.otf in Resources */,
@@ -942,6 +949,7 @@
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,
 				C1FE661720696BBB00B006D3 /* TextFieldsEffects.swift in Sources */,
 				4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */,
+				C1622D1A2083A01500DA42B2 /* navView.swift in Sources */,
 				460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */,
 				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
 				469F1806207F515100FBD9C1 /* Cradview4.swift in Sources */,

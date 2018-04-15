@@ -133,6 +133,33 @@ extension UIViewController {
 			
 		}
 	}
+    
+    func configureNavView(_ vc : AnyObject,isBack : Bool){
+        
+        navView.delegateSlide = vc as! slideMenuDelegate
+        //navView.check = check
+        //navView.ref = vc
+        
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: isBack)
+        
+        /*if check == true {
+         
+         let swipeRight = UISwipeGestureRecognizer(target: vc, action: #selector(swiped(_:)))
+         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+         vc.view.addGestureRecognizer(swipeRight)
+         
+         }*/
+        
+        self.slideMenuController()?.addLeftGestures()
+        self.slideMenuController()?.addRightGestures()
+        if isBack {
+            self.slideMenuController()?.removeLeftGestures()
+            self.slideMenuController()?.removeRightGestures()
+            //navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        }
+        
+        
+    }
 }
 
 extension String {
