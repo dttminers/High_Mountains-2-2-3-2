@@ -16,18 +16,47 @@ class FollowingRequestsTVC: UITableViewCell {
     
     
      var obj : FetchRequest!
+
     
     func populateData(_ data : FetchRequest){
         obj = data
         AppUtility.setCornerRadius(img, radius: 20)
-        img.loadImageUsingCache(withUrl: data.profile_pic!)
-        lblName.text = data.name
-        lblCommonFriend.text = "\(String(describing: data.mutual_friend_count)) Common Friends"
-        
+        img.loadImageUsingCache(withUrl:"\(url)\(data.profile_pic!)")
+        lblName.text = data.name?.capitalized
+        lblCommonFriend.text = "\(data.mutual_friend_count ?? 0) Common Friends"
+      
     }
    
-    @IBAction func Confirm(_ sender: Any) {
-        
-    }
+    @IBAction func Confirm(_ sender: UIButton) {
+       
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+            let postparam = "action=follow_accept_data&&friend_id=\(obj.uid ?? 0)&&uid=\(userId)";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    print(dt)
+                    let res : AnyObject = dt.object as AnyObject
+                    if let name = res["status"]as? Int as Optional!{
+                        print(name!)
+                        if (name == 1)
+                        {
+                            print("confirm")
+                            
+                        }
+                    }
+                    
+                    
+                }
+                else {
+                    print("fsil")
+                }
+                
+            })
+            
+        }else {
+            print("There is no internet connection")
+        }
+       
 }
-
+}

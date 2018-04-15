@@ -491,7 +491,7 @@
                                                                 <rect key="frame" x="271" y="0.0" width="65" height="38"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km2-bU-dZS">
-                                                                        <rect key="frame" x="-6" y="8" width="49" height="22"/>
+                                                                        <rect key="frame" x="-6" y="8" width="43" height="22"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="22" id="Y7c-SI-5Z8"/>
                                                                         </constraints>
@@ -500,7 +500,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E50-wv-2wx" customClass="RadioButton" customModule="High_Mountains" customModuleProvider="target">
-                                                                        <rect key="frame" x="48" y="8" width="20" height="22"/>
+                                                                        <rect key="frame" x="42" y="8" width="20" height="22"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="PTZ-ZF-zMg"/>
                                                                         </constraints>

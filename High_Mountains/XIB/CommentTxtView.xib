@@ -38,9 +38,9 @@
                             <rect key="frame" x="60" y="0.0" width="221" height="52"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="345-Jx-V3d">
-                                    <rect key="frame" x="6" y="11" width="209" height="35"/>
+                                    <rect key="frame" x="6" y="11" width="209" height="30"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
@@ -49,7 +49,7 @@
                                 <constraint firstAttribute="width" constant="221" id="3sr-zT-fY3"/>
                                 <constraint firstItem="345-Jx-V3d" firstAttribute="leading" secondItem="ef9-yG-yTp" secondAttribute="leading" constant="6" id="5U4-OJ-LVR"/>
                                 <constraint firstAttribute="trailing" secondItem="345-Jx-V3d" secondAttribute="trailing" constant="6" id="HOT-m8-qmK"/>
-                                <constraint firstAttribute="bottom" secondItem="345-Jx-V3d" secondAttribute="bottom" constant="6" id="ynP-wi-CPY"/>
+                                <constraint firstAttribute="bottom" secondItem="345-Jx-V3d" secondAttribute="bottom" constant="11" id="ynP-wi-CPY"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frN-Wf-E8D">

@@ -24,7 +24,7 @@ class FetchRequestVC: UIViewController{
 
     func URLDownload()
     {
-        let postparam = "action=follow_request_fetch&&uid=14";
+        let postparam = "action=follow_request_fetch&&uid=\(userId)";
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
@@ -40,6 +40,7 @@ class FetchRequestVC: UIViewController{
         })
     }
 
+ 
     
 
 }
