@@ -119,6 +119,32 @@ class TimelineModel : NSObject {
     }
 }
 
+class PhotoModel : NSObject {
+     var like_count : String?
+     var id : Int?
+     var image_url : String?
+     var share_count : String?
+     var time : String?
+     var username : String?
+     var comment_count : String?
+     var uid : Int?
+     var timeline_id : Int?
+     var caption : String?
+    
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        like_count = dictionary["like_count"] as? String
+        id = dictionary["id"] as? Int
+        image_url = dictionary["image_url"] as? String
+        share_count = dictionary["share_count"] as? String
+        time = dictionary["time"] as? String
+        username = dictionary["username"] as? String
+        comment_count = dictionary["comment_count"] as? String
+        uid = dictionary["Uid"] as? Int
+        timeline_id = dictionary["timeline_id"] as? Int
+        caption = dictionary["caption"] as? String
+    }
+}
+
 class AllDestination : NSObject{
     
     var id : Int?
