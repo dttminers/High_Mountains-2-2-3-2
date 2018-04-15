@@ -46,7 +46,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBOutlet weak var btnNotesFeeds: UIButton!
     
     @IBOutlet weak var stackVew: UIStackView!
-    @IBOutlet weak var htConst: NSLayoutConstraint!
+    @IBOutlet weak var htTableConst: NSLayoutConstraint!
+    @IBOutlet weak var htCollectionConst: NSLayoutConstraint!
     
     @IBOutlet weak var vewPhotoTabs: UIView!
     
@@ -66,6 +67,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     var userInfo : UserInfoModel!
     
     var timelineRes : [TimelineModel] = []
+    var photoRes : [PhotoModel] = []
     var selectedIndex : Int = 1
     var selectedPhotoIndex : Int = 1
     
@@ -93,7 +95,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         tableFeeds.register(UINib(nibName : "ProfileWITVC", bundle:nil), forCellReuseIdentifier: "ProfileWITVC")
         tableFeeds.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
         
-        btnFeedsActbtn(btnFeeds)
+        collectionFeeds.register(UINib(nibName : "Album", bundle:nil), forCellWithReuseIdentifier: "Album")
+        
+        btnFeedsActbtn(btnPhotoFeeds)
     }
     
     // MARK: Button Actions
@@ -138,10 +142,10 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             vewFeeds.alpha = 0
             vewPhotoFeeds.alpha = 1
             vewNotesFeeds.alpha = 0
-            fetchPhotos()
             vewPhotoTabs.isHidden = false
             tableFeeds.isHidden = true
             collectionFeeds.isHidden = true
+            btnPhotoFeedsActbtn(btnGrid)
         }
         else if sender.tag == 3 {
             vewFeeds.alpha = 0
@@ -154,6 +158,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBAction func btnPhotoFeedsActbtn(_ sender: UIButton) {
         selectedPhotoIndex = sender.tag
         if sender.tag == 1 {
+            fetchPhotos()
             vewGrid.alpha = 1
             vewList.alpha = 0
             vewAlbum.alpha = 0
@@ -168,19 +173,24 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             vewGroup.alpha = 0
             tableFeeds.isHidden = false
             collectionFeeds.isHidden = true
-            tableFeeds.reloadData()
+            self.tableFeeds.reloadData()
+            self.htTableConst.constant = self.tableViewHeight
         }
         else if sender.tag == 3 {
             vewGrid.alpha = 0
             vewList.alpha = 0
             vewAlbum.alpha = 1
             vewGroup.alpha = 0
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
         }
         else if sender.tag == 4 {
             vewGrid.alpha = 0
             vewList.alpha = 0
             vewAlbum.alpha = 0
             vewGroup.alpha = 1
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
         }
     }
     
@@ -259,6 +269,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
                     //self.setTimeline(model)
                     self.tableFeeds.reloadData()
+                    self.htTableConst.constant = self.tableViewHeight
                 }
                 
             }
@@ -276,9 +287,28 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                 print(dt)
                 if dt != nil {
                     let res : [AnyObject] = dt.object as! [AnyObject]
-                    self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
+                    self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
                     //self.setPhotos(model)
-                    self.tableFeeds.reloadData()
+                    self.collectionFeeds.reloadData()
+                    self.htCollectionConst.constant = self.collectionViewHeight
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
+    
+    func likeData(_ tid : String, completionHandler: @escaping (_ result: Any) -> Void) {
+        let postparam="action=like_data&&uid=\(userId)&&timeline_id=\(tid)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : AnyObject = dt.object as AnyObject
+                    completionHandler(res)
                 }
                 
             }
@@ -325,6 +355,12 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
 
 extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
     
+    var tableViewHeight: CGFloat {
+        tableFeeds.layoutIfNeeded()
+        
+        return tableFeeds.contentSize.height
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -334,13 +370,12 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
             return timelineRes.count
         }
         else if selectedIndex == 2 {
-            return timelineRes.count
+            return photoRes.count
         }
         else {
             return 0
         }
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if selectedIndex == 1 {
@@ -365,7 +400,7 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
         }
         else if selectedIndex == 2 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-            cell.populate(timelineRes[indexPath.row])
+            cell.populate(photoRes[indexPath.row])
             
             return cell
         }
@@ -377,5 +412,31 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+}
+
+extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var collectionViewHeight: CGFloat {
+        collectionFeeds.layoutIfNeeded()
+        
+        return collectionFeeds.contentSize.height
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photoRes.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : Album = collectionView.dequeueReusableCell(withReuseIdentifier: "Album", for: indexPath) as! Album
+        cell.populate(photoRes[indexPath.row])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //let cells = floor(collectionView.frame.width/80) - 10
+        let wd = (collectionView.frame.width-20)/3
+        return CGSize(width: wd, height: 80)
     }
 }

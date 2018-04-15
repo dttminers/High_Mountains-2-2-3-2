@@ -22,9 +22,14 @@ class ProfileTVC: UITableViewCell {
     @IBOutlet weak var btnComment: UIButton!
     @IBOutlet weak var btnShare: UIButton!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        img.layer.cornerRadius = self.img.frame.size.width/2
+        img.clipsToBounds = true
+    }
+    
     func populate(_ data : TimelineModel) {
-        
-        
         lblTitle.text = data.caption
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
         
@@ -40,18 +45,20 @@ class ProfileTVC: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func populate(_ data : PhotoModel) {
+        lblTitle.text = data.caption
+        imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         
-        img.layer.cornerRadius = self.img.frame.size.width/2
-        img.clipsToBounds = true
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        lblLikeCount.text = "\(data.like_count!)"
+        lblCommentCount.text = "\(data.comment_count!)"
+        lblShareCount.text = "\(data.share_count!)"
+        
+        /*if data.isliked! == "true" {
+            btnLike.isSelected = true
+        }
+        else {
+            btnLike.isSelected = false
+        }*/
     }
     
 }

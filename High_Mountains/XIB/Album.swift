@@ -10,9 +10,15 @@ import UIKit
 
 class Album: UICollectionViewCell {
 
+    @IBOutlet weak var imgPost: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func populate(_ data : PhotoModel) {
+        imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
+        
+    }
 }

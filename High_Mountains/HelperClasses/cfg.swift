@@ -16,3 +16,10 @@ var smallText = AppUtility.isIpad() ? 14 : 12
 
 
 var rowHeight = AppUtility.isIpad() ? 70 : 70
+
+
+@objc
+protocol slideMenuDelegate {
+    func open()
+    @objc optional func search()
+}
