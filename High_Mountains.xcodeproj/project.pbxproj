@@ -124,6 +124,8 @@
 		C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */; };
 		C1B13040208473F000374B73 /* AlbumTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1303E208473F000374B73 /* AlbumTitle.swift */; };
 		C1B13041208473F000374B73 /* AlbumTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B1303F208473F000374B73 /* AlbumTitle.xib */; };
+		C1B1304320848A8E00374B73 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B1304220848A8E00374B73 /* Login.storyboard */; };
+		C1B1304620848B7300374B73 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1304520848B7300374B73 /* SplashVC.swift */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -297,6 +299,8 @@
 		C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoVC.swift; sourceTree = "<group>"; };
 		C1B1303E208473F000374B73 /* AlbumTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTitle.swift; sourceTree = "<group>"; };
 		C1B1303F208473F000374B73 /* AlbumTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTitle.xib; sourceTree = "<group>"; };
+		C1B1304220848A8E00374B73 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C1B1304520848B7300374B73 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -443,10 +447,7 @@
 				C1FE660720696BBB00B006D3 /* HelperClasses */,
 				469BBD87204D16EE00A33EF9 /* AppDelegate.swift */,
 				C1E3F8EB2077EFA40056BDE8 /* customNVC.swift */,
-				469BBD89204D16EE00A33EF9 /* LoginVC.swift */,
-				469BBDC1204D6AB600A33EF9 /* RegisterViewController.swift */,
-				46DF4116206E52C500F03883 /* OTPgenVC.swift */,
-				469BBDBF204D5D1300A33EF9 /* AllreadyReggisterViewController.swift */,
+				C1B1304420848B4400374B73 /* Login */,
 				466498C42051145E001FEB0F /* profiletvViewController.swift */,
 				460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */,
 				466498C820515CC9001FEB0F /* collectiionimageViewController.swift */,
@@ -542,6 +543,18 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		C1B1304420848B4400374B73 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				469BBD89204D16EE00A33EF9 /* LoginVC.swift */,
+				C1B1304520848B7300374B73 /* SplashVC.swift */,
+				469BBDC1204D6AB600A33EF9 /* RegisterViewController.swift */,
+				46DF4116206E52C500F03883 /* OTPgenVC.swift */,
+				469BBDBF204D5D1300A33EF9 /* AllreadyReggisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C1E9148D20769BCF00A912BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +609,7 @@
 		C1FE660420696B9B00B006D3 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				C1B1304220848A8E00374B73 /* Login.storyboard */,
 				C1FE660520696B9B00B006D3 /* Main.storyboard */,
 				4608589320762B4500D63C2C /* Second.storyboard */,
 				C1E3F8ED2077F1FD0056BDE8 /* Profile.storyboard */,
@@ -786,6 +800,7 @@
 				46080DDC2080A92B00641A20 /* Montserrat-Thin.ttf in Resources */,
 				469BBD92204D16EE00A33EF9 /* Assets.xcassets in Resources */,
 				46080DE02080A92B00641A20 /* Montserrat-Regular.otf in Resources */,
+				C1B1304320848A8E00374B73 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,6 +970,7 @@
 				467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */,
 				460377B0205A38E7003BD529 /* DropDownFavDestinationTableViewCell.swift in Sources */,
 				462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */,
+				C1B1304620848B7300374B73 /* SplashVC.swift in Sources */,
 				C1FE661720696BBB00B006D3 /* TextFieldsEffects.swift in Sources */,
 				4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */,
 				C1622D1A2083A01500DA42B2 /* navView.swift in Sources */,

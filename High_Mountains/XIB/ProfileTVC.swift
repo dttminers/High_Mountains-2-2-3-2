@@ -60,5 +60,8 @@ class ProfileTVC: UITableViewCell {
             btnLike.isSelected = false
         }*/
     }
+        
+    @IBAction func btnLikeAction(_ sender: Any) {
+    }
     
 }
