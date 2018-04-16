@@ -96,6 +96,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         tableFeeds.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
         
         collectionFeeds.register(UINib(nibName : "Album", bundle:nil), forCellWithReuseIdentifier: "Album")
+        collectionFeeds.register(UINib(nibName : "AlbumTitle", bundle:nil), forCellWithReuseIdentifier: "AlbumTitle")
         
         btnFeedsActbtn(btnPhotoFeeds)
     }
@@ -158,6 +159,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBAction func btnPhotoFeedsActbtn(_ sender: UIButton) {
         selectedPhotoIndex = sender.tag
         if sender.tag == 1 {
+            photoRes = []
+            collectionFeeds.reloadData()
             fetchPhotos()
             vewGrid.alpha = 1
             vewList.alpha = 0
@@ -167,6 +170,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             collectionFeeds.isHidden = false
         }
         else if sender.tag == 2 {
+            photoRes = []
+            tableFeeds.reloadData()
+            fetchPhotos()
             vewGrid.alpha = 0
             vewList.alpha = 1
             vewAlbum.alpha = 0
@@ -177,6 +183,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             self.htTableConst.constant = self.tableViewHeight
         }
         else if sender.tag == 3 {
+            timelineRes = []
+            collectionFeeds.reloadData()
+            fetchTagData()
             vewGrid.alpha = 0
             vewList.alpha = 0
             vewAlbum.alpha = 1
@@ -185,6 +194,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             collectionFeeds.isHidden = false
         }
         else if sender.tag == 4 {
+            photoRes = []
+            collectionFeeds.reloadData()
+            fetchAlbum()
             vewGrid.alpha = 0
             vewList.alpha = 0
             vewAlbum.alpha = 0
@@ -288,6 +300,48 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                 if dt != nil {
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
+                    //self.setPhotos(model)
+                    self.collectionFeeds.reloadData()
+                    self.htCollectionConst.constant = self.collectionViewHeight
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
+    
+    func fetchAlbum() {
+        let postparam="action=fetch_albums&&uid=\(userId)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
+                    //self.setPhotos(model)
+                    self.collectionFeeds.reloadData()
+                    self.htCollectionConst.constant = self.collectionViewHeight
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
+    
+    func fetchTagData() {
+        let postparam="action=tag_data&&uid=\(userId)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
                     //self.setPhotos(model)
                     self.collectionFeeds.reloadData()
                     self.htCollectionConst.constant = self.collectionViewHeight
@@ -424,19 +478,36 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if selectedPhotoIndex == 3 {
+            return timelineRes.count
+        }
         return photoRes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : Album = collectionView.dequeueReusableCell(withReuseIdentifier: "Album", for: indexPath) as! Album
-        cell.populate(photoRes[indexPath.row])
-        
-        return cell
+        if selectedPhotoIndex == 1 {
+            let cell : Album = collectionView.dequeueReusableCell(withReuseIdentifier: "Album", for: indexPath) as! Album
+            cell.populate(photoRes[indexPath.row])
+            
+            return cell
+        }
+        else if selectedPhotoIndex == 3 {
+            let cell : AlbumTitle = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumTitle", for: indexPath) as! AlbumTitle
+            cell.populate(timelineRes[indexPath.row])
+            
+            return cell
+        }
+        else {
+            let cell : AlbumTitle = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumTitle", for: indexPath) as! AlbumTitle
+            cell.populate(photoRes[indexPath.row])
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //let cells = floor(collectionView.frame.width/80) - 10
         let wd = (collectionView.frame.width-20)/3
-        return CGSize(width: wd, height: 80)
+        return CGSize(width: wd, height: 100)
     }
 }

@@ -128,6 +128,8 @@
 		C1622D1A2083A01500DA42B2 /* navView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1622D182083A01400DA42B2 /* navView.swift */; };
 		C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1622D192083A01400DA42B2 /* navVew.xib */; };
 		C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */; };
+		C1B13040208473F000374B73 /* AlbumTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1303E208473F000374B73 /* AlbumTitle.swift */; };
+		C1B13041208473F000374B73 /* AlbumTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B1303F208473F000374B73 /* AlbumTitle.xib */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -305,6 +307,8 @@
 		C1622D182083A01400DA42B2 /* navView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navView.swift; sourceTree = "<group>"; };
 		C1622D192083A01400DA42B2 /* navVew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = navVew.xib; sourceTree = "<group>"; };
 		C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoVC.swift; sourceTree = "<group>"; };
+		C1B1303E208473F000374B73 /* AlbumTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTitle.swift; sourceTree = "<group>"; };
+		C1B1303F208473F000374B73 /* AlbumTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTitle.xib; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -589,6 +593,8 @@
 				460A023C207B6BA700DA422C /* TravelBookView.xib */,
 				460A0240207B8CF600DA422C /* Album.swift */,
 				460A0241207B8CF600DA422C /* Album.xib */,
+				C1B1303E208473F000374B73 /* AlbumTitle.swift */,
+				C1B1303F208473F000374B73 /* AlbumTitle.xib */,
 				468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */,
 				468A7767207DE2D00049BDAD /* All_DestinationTVC.xib */,
 				468A776A207DFDFF0049BDAD /* Travel_ThemesCVC.swift */,
@@ -772,6 +778,7 @@
 				469F1804207F419200FBD9C1 /* CommentTVC.xib in Resources */,
 				460A023B207B565200DA422C /* TravelBookCVC.xib in Resources */,
 				460A0243207B8CF600DA422C /* Album.xib in Resources */,
+				C1B13041208473F000374B73 /* AlbumTitle.xib in Resources */,
 				4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */,
@@ -895,6 +902,7 @@
 				46D3B8AF205FB3D9008098C3 /* Reachability.swift in Sources */,
 				460A26E320847A1300757B72 /* CommentVC.swift in Sources */,
 				4613B617205BC76400C7245D /* cardview3.swift in Sources */,
+				C1B13040208473F000374B73 /* AlbumTitle.swift in Sources */,
 				460858912076202B00D63C2C /* FollowListTVC.swift in Sources */,
 				4606A86820505DA300DB0298 /* Section.swift in Sources */,
 				C1A83CBA207D3C9A00CD9C9F /* ProfilePhotoVC.swift in Sources */,

@@ -93,8 +93,8 @@ class UserInfoModel : NSObject {
 
 class TimelineModel : NSObject {
      var activity : String?
-     var id : Int?
-     var timeline_id : Int?
+     var id : String?
+     var timeline_id : String?
      var post : String?
      var like_count : String?
      var comment_count : String?
@@ -107,8 +107,8 @@ class TimelineModel : NSObject {
    
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         activity = dictionary["activity"] as? String
-        id = dictionary["id"] as? Int
-        timeline_id = dictionary["timeline_id"] as? Int
+        id = dictionary["id"] as? String
+        timeline_id = dictionary["timeline_id"] as? String
         post = dictionary["post"] as? String
         like_count = dictionary["like_count"] as? String
         comment_count = dictionary["comment_count"] as? String
@@ -123,26 +123,26 @@ class TimelineModel : NSObject {
 
 class PhotoModel : NSObject {
      var like_count : String?
-     var id : Int?
+     var id : String?
      var image_url : String?
      var share_count : String?
      var time : String?
      var username : String?
      var comment_count : String?
-     var uid : Int?
-     var timeline_id : Int?
+     var uid : String?
+     var timeline_id : String?
      var caption : String?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         like_count = dictionary["like_count"] as? String
-        id = dictionary["id"] as? Int
+        id = dictionary["id"] as? String
         image_url = dictionary["image_url"] as? String
         share_count = dictionary["share_count"] as? String
         time = dictionary["time"] as? String
         username = dictionary["username"] as? String
         comment_count = dictionary["comment_count"] as? String
-        uid = dictionary["Uid"] as? Int
-        timeline_id = dictionary["timeline_id"] as? Int
+        uid = dictionary["Uid"] as? String
+        timeline_id = dictionary["timeline_id"] as? String
         caption = dictionary["caption"] as? String
     }
 }
