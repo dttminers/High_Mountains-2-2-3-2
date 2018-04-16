@@ -26,13 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userId = userData["id"] as! String
         }
         
-        //window?.rootViewController  = customtoolbar()
-     
-       // application.statusBarStyle = .lightContent
-        
-       // UITabBar.appearance().tintColor = UIColor.returnRGBColor(r: 70, g: 146, b: 250, alpha: 1)
-        //UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 149/255, alpha: 1)
-        //UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let mainVC = HomeViewController()
+        window?.rootViewController = mainVC
         return true
     }
 

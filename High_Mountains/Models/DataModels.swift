@@ -104,6 +104,7 @@ class TimelineModel : NSObject {
     var image : String?
     var caption : String?
     
+   
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         activity = dictionary["activity"] as? String
         id = dictionary["id"] as? Int
@@ -116,6 +117,7 @@ class TimelineModel : NSObject {
         isliked = dictionary["isliked"] as? String
         image = dictionary["image"] as? String
         caption = dictionary["caption"] as? String
+       
     }
 }
 
@@ -204,5 +206,32 @@ class FetchRequest : NSObject{
        mutual_friend_count = dictionary["mutual friend count"] as? Int
         
     }
+}
+
+class SendComment : NSObject{
+    var id : String?
+    var timeline_id : String?
+    var uid : String?
+    var comment : String?
+    var like_count : String?
+    var reply_count : String?
+    var time : String?
+    var username : String?
+    var profile_pic : String?
+    
+    
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        
+       id = dictionary["id"] as? String
+       timeline_id = dictionary["timeline_id"] as? String
+       uid = dictionary["uid"] as? String
+       comment = dictionary["comment"] as? String
+       like_count = dictionary["like_count"] as? String
+       reply_count = dictionary["reply_count"] as? String
+       time = dictionary["time"] as? String
+       username = dictionary["username"] as? String
+       profile_pic = dictionary["profile_pic"] as? String
+    }
+    
 }
 

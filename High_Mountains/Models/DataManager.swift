@@ -92,4 +92,16 @@ func setFetchRequestDictionary(_ array:[AnyObject]) ->  [FetchRequest] {
     return models
 }
 
+
+func sendCommentDictionary(_ array:[AnyObject]) ->  [SendComment] {
+    var models:[SendComment] = []
+    for item in array
+    {
+        let object = SendComment()
+        object.setDictionary(item as! [AnyHashable : Any])
+        models.append(object)
+    }
+    return models
+}
+
 }

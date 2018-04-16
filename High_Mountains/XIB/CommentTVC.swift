@@ -10,15 +10,24 @@ import UIKit
 
 class CommentTVC: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var Comment_img: UIImageView!
+    @IBOutlet weak var lblComment: UILabel!
+    @IBOutlet weak var lblmsgComment: UILabel!
+    @IBOutlet weak var lblCommentRply: UILabel!
+    @IBOutlet weak var lblCommentLike: UILabel!
+    @IBOutlet weak var CommentDate: UILabel!
+    
+    var obj : SendComment!
+    
+    func populateData(_ data : SendComment) {
+        obj = data
+        AppUtility.setCornerRadius(Comment_img, radius: 25)
+        Comment_img.loadImageUsingCache(withUrl:"\(url)\(data.profile_pic!)")
+        lblComment.text = data.username?.capitalized
+        lblmsgComment.text = data.comment
+        lblCommentRply.text = "\(data.reply_count ?? "0")Reply"
+        lblCommentLike.text = "\(data.like_count ?? "0")Like"
+        CommentDate.text = data.time
     }
     
 }

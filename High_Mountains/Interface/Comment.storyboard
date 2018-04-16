@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZCs-UW-CO7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CommentVC-->
+        <scene sceneID="2Hl-e7-0gz">
+            <objects>
+                <viewController id="ZCs-UW-CO7" customClass="CommentVC" customModule="High_Mountains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cLU-Mp-22m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzf-9Y-EVb">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="gre-wh-iMA"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-Yl-6cs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZCs-UW-CO7" id="U7G-nn-Bdw"/>
+                                    <outlet property="delegate" destination="ZCs-UW-CO7" id="mg2-RJ-jmO"/>
+                                    <outlet property="prefetchDataSource" destination="ZCs-UW-CO7" id="f1X-Sz-p3U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sdY-Yl-6cs" firstAttribute="top" secondItem="cLU-Mp-22m" secondAttribute="top" id="2z0-c6-g9t"/>
+                            <constraint firstAttribute="bottom" secondItem="lzf-9Y-EVb" secondAttribute="bottom" id="UXS-Ri-hza"/>
+                            <constraint firstItem="lzf-9Y-EVb" firstAttribute="leading" secondItem="cLU-Mp-22m" secondAttribute="leading" id="Wku-Do-5dP"/>
+                            <constraint firstItem="lzf-9Y-EVb" firstAttribute="top" secondItem="sdY-Yl-6cs" secondAttribute="bottom" id="cqL-5W-I60"/>
+                            <constraint firstItem="sdY-Yl-6cs" firstAttribute="leading" secondItem="cLU-Mp-22m" secondAttribute="leading" id="hcI-gJ-phE"/>
+                            <constraint firstAttribute="trailing" secondItem="lzf-9Y-EVb" secondAttribute="trailing" id="oQw-jq-v0Y"/>
+                            <constraint firstAttribute="trailing" secondItem="sdY-Yl-6cs" secondAttribute="trailing" id="odi-ta-G0Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vPe-yf-v3E"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="commentview" destination="lzf-9Y-EVb" id="jMt-Vh-SLh"/>
+                        <outlet property="tableview" destination="sdY-Yl-6cs" id="g62-GX-QBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ya-9W-0rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074.4000000000001" y="-66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
