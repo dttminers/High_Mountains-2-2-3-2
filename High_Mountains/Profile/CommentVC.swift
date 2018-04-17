@@ -22,9 +22,9 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             Comment.bbtn.addTarget(self, action: #selector(CommentVC.sendComment(sender:)) , for: .touchUpInside)
             //Comment.frame.origin.y = 667
             
-            self.commentview.addSubview(Comment)
+            self.commentview?.addSubview(Comment)
         }
-        tableview.register(UINib(nibName : "CommentTVC", bundle:nil), forCellReuseIdentifier: "CommentTVC")
+        tableview?.register(UINib(nibName : "CommentTVC", bundle:nil), forCellReuseIdentifier: "CommentTVC")
         self.URLDownload()
     }
     
@@ -91,7 +91,7 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 print(res)
                 
                 self.Comment = DATA_MANAGER.sendCommentDictionary(res)
-                self.tableview.reloadData()
+                self.tableview?.reloadData()
             }
             else {
                 self.alertDialog(msg: result as! String)

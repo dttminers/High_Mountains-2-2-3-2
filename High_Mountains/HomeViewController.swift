@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController{
+class HomeViewController: UIViewController{
     
     @IBOutlet weak var menubar: UIBarButtonItem!
     @IBOutlet weak var profile: UIBarButtonItem!
@@ -16,9 +16,10 @@ class HomeViewController: UITabBarController{
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        tabBar.barTintColor = UIColor(red: 38/255, green: 196/255, blue: 133/255, alpha: 1)
-        //sidemenu()
-        
+//         tabBar.barTintColor = UIColor(red: 38/255, green: 196/255, blue: 133/255, alpha: 1)
+//
+//        //sidemenu()
+//        setupTabBar()
         //let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.red]
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
@@ -76,21 +77,21 @@ class HomeViewController: UITabBarController{
         }
         
     }
-    func setupTabBar() {
-        
-        let videoController = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "video_white"), unselected: #imageLiteral(resourceName: "video_black"))
-        let favoriteController = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "star_white"), unselected: #imageLiteral(resourceName: "star_black"))
-        let favoriteController1 = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "star_white"), unselected: #imageLiteral(resourceName: "star_black"))
-        let favoriteController2 = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "star_white"), unselected: #imageLiteral(resourceName: "star_black"))
-        viewControllers = [videoController, favoriteController,favoriteController1,favoriteController2]
-        
-        guard let items = tabBar.items else { return }
-        
-        for item in items {
-            item.imageInsets = UIEdgeInsetsMake(4, 0, -4, 0)
-        }
-    }
-    
+//    func setupTabBar() {
+//
+//        let videoController = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
+//        let favoriteController = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
+//        let favoriteController1 = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
+//        let favoriteController2 = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
+//        viewControllers = [videoController,favoriteController,favoriteController1,favoriteController2]
+//
+//        guard let items = tabBar.items else { return }
+//
+//        for item in items {
+//            item.imageInsets = UIEdgeInsetsMake(4, 0, -4, 0)
+//        }
+//    }
+
 
 }
 
@@ -100,13 +101,14 @@ extension HomeViewController : slideMenuDelegate {
         
     }
 }
-extension UITabBarController {
-    
-    func createNavController(vc: UIViewController, selected: UIImage, unselected: UIImage) -> UINavigationController {
-        let viewController = vc
-        let navController = UINavigationController(rootViewController: viewController)
-        navController.tabBarItem.image = unselected
-        navController.tabBarItem.selectedImage = selected
-        return navController
-    }
-}
+//extension UITabBarController {
+//
+//    func createNavController(vc: UIViewController, selected: UIImage, unselected: UIImage) -> UINavigationController {
+//        let viewController = vc
+//        let navController = UINavigationController(rootViewController: viewController)
+//        navController.tabBarItem.image = unselected
+//        navController.tabBarItem.selectedImage = selected
+//        return navController
+//    }
+//}
+

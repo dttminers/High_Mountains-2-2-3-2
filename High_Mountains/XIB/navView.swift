@@ -33,7 +33,7 @@ class navView: UIView {
     
     override func didMoveToWindow() {
         if isBack! {
-            btnLeft.setImage(#imageLiteral(resourceName: "cross"), for: .normal)
+            btnLeft.setImage(#imageLiteral(resourceName: "Backicon"), for: .normal)
             btnRight.isHidden = true
             viewSearch.isHidden = true
             viewHeading.isHidden = false
@@ -50,13 +50,13 @@ class navView: UIView {
     
     @IBAction func btnSearchAction(_ sender: Any) {
         if viewHeading.isHidden {
-            btnLeft.setImage(#imageLiteral(resourceName: "home"), for: .normal)
+            btnLeft.setImage(#imageLiteral(resourceName: "slide-1"), for: .normal)
             viewSearch.isHidden = true
             viewHeading.isHidden = false
             self.endEditing(true)
         }
         else {
-            btnLeft.setImage(#imageLiteral(resourceName: "back"), for: .normal)
+            btnLeft.setImage(#imageLiteral(resourceName: "RightArrow"), for: .normal)
             viewSearch.isHidden = false
             viewHeading.isHidden = true
             search.becomeFirstResponder()
