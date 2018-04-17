@@ -8,12 +8,13 @@
 
 import UIKit
 
-class customNVC: UINavigationController {
+class customNVC: UINavigationController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.backItem?.title = "Anything Else"
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,14 +27,8 @@ class customNVC: UINavigationController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
+    
 
 }
+

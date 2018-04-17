@@ -18,7 +18,7 @@ class FetchRequestVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       tableview.register(UINib(nibName : "FollowingRequestsTVC", bundle:nil), forCellReuseIdentifier: "FollowingRequestsTVC")
+       tableview?.register(UINib(nibName : "FollowingRequestsTVC", bundle:nil), forCellReuseIdentifier: "FollowingRequestsTVC")
         self.URLDownload()
     }
 
@@ -32,7 +32,7 @@ class FetchRequestVC: UIViewController{
                 print(res)
                 
                 self.fetchreq = DATA_MANAGER.setFetchRequestDictionary(res)
-                self.tableview.reloadData()
+                self.tableview?.reloadData()
             }
             else {
                 self.alertDialog(msg: result as! String)
