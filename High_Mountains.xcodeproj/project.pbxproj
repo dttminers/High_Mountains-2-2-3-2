@@ -62,6 +62,13 @@
 		460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A0288207BC3EC00DA422C /* FetchRequest.storyboard */; };
 		460A1EB920579BC30069EECD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EB820579BC30069EECD /* SideMenuViewController.swift */; };
 		460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */; };
+		460A26DF208471EA00757B72 /* Comment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A26DE208471EA00757B72 /* Comment.storyboard */; };
+		460A26E320847A1300757B72 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A26E220847A1300757B72 /* CommentVC.swift */; };
+		460A27232084832600757B72 /* CommentsendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A27222084832600757B72 /* CommentsendView.xib */; };
+		460A2725208484A500757B72 /* CommentsendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A2724208484A500757B72 /* CommentsendView.swift */; };
+		460A27272084B29600757B72 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A27262084B29600757B72 /* Tabbar.storyboard */; };
+		460A27292084B41C00757B72 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A27282084B41C00757B72 /* TabbarVC.swift */; };
+		460A272B2084B4E400757B72 /* tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A272A2084B4E400757B72 /* tab1VC.swift */; };
 		460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A5F77207C878300E7B213 /* Plan_Trip.storyboard */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
 		460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE51204FBB4400BBE5A6 /* Extensions.swift */; };
@@ -112,7 +119,6 @@
 		469F1803207F419200FBD9C1 /* CommentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1801207F419200FBD9C1 /* CommentTVC.swift */; };
 		469F1804207F419200FBD9C1 /* CommentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469F1802207F419200FBD9C1 /* CommentTVC.xib */; };
 		469F1806207F515100FBD9C1 /* Cradview4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1805207F515100FBD9C1 /* Cradview4.swift */; };
-		469F1808207F562800FBD9C1 /* CommentTxtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469F1807207F562800FBD9C1 /* CommentTxtView.xib */; };
 		469F180A207F75D500FBD9C1 /* PlanTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F1809207F75D500FBD9C1 /* PlanTripVC.swift */; };
 		46D3B8AF205FB3D9008098C3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B8AE205FB3D9008098C3 /* Reachability.swift */; };
 		46DF4117206E52C500F03883 /* OTPgenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DF4116206E52C500F03883 /* OTPgenVC.swift */; };
@@ -226,6 +232,13 @@
 		460A0288207BC3EC00DA422C /* FetchRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FetchRequest.storyboard; sourceTree = "<group>"; };
 		460A1EB820579BC30069EECD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		460A26DE208471EA00757B72 /* Comment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comment.storyboard; sourceTree = "<group>"; };
+		460A26E220847A1300757B72 /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
+		460A27222084832600757B72 /* CommentsendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsendView.xib; sourceTree = "<group>"; };
+		460A2724208484A500757B72 /* CommentsendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsendView.swift; sourceTree = "<group>"; };
+		460A27262084B29600757B72 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		460A27282084B41C00757B72 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		460A272A2084B4E400757B72 /* tab1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab1VC.swift; sourceTree = "<group>"; };
 		460A5F77207C878300E7B213 /* Plan_Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Plan_Trip.storyboard; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
 		460BBE51204FBB4400BBE5A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -283,7 +296,6 @@
 		469F1801207F419200FBD9C1 /* CommentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTVC.swift; sourceTree = "<group>"; };
 		469F1802207F419200FBD9C1 /* CommentTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTVC.xib; sourceTree = "<group>"; };
 		469F1805207F515100FBD9C1 /* Cradview4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cradview4.swift; sourceTree = "<group>"; };
-		469F1807207F562800FBD9C1 /* CommentTxtView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTxtView.xib; sourceTree = "<group>"; };
 		469F1809207F75D500FBD9C1 /* PlanTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTripVC.swift; sourceTree = "<group>"; };
 		46D3B8AE205FB3D9008098C3 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		46DF4116206E52C500F03883 /* OTPgenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPgenVC.swift; sourceTree = "<group>"; };
@@ -470,6 +482,7 @@
 				468A7770207E09140049BDAD /* Travel_ThemesVC.swift */,
 				4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */,
 				469F1809207F75D500FBD9C1 /* PlanTripVC.swift */,
+				460A27282084B41C00757B72 /* TabbarVC.swift */,
 				C1E9148D20769BCF00A912BC /* Models */,
 				C1F4AD20206EC5F800D470BA /* XIB */,
 				469BBD91204D16EE00A33EF9 /* Assets.xcassets */,
@@ -539,6 +552,8 @@
 				4613B608205B899300C7245D /* ProfileDetailsVC.swift */,
 				C1E09363207A31810071FC93 /* ProfileFeedVC.swift */,
 				C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */,
+				460A26E220847A1300757B72 /* CommentVC.swift */,
+				460A272A2084B4E400757B72 /* tab1VC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -601,7 +616,8 @@
 				4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */,
 				469F1801207F419200FBD9C1 /* CommentTVC.swift */,
 				469F1802207F419200FBD9C1 /* CommentTVC.xib */,
-				469F1807207F562800FBD9C1 /* CommentTxtView.xib */,
+				460A27222084832600757B72 /* CommentsendView.xib */,
+				460A2724208484A500757B72 /* CommentsendView.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -618,6 +634,8 @@
 				4607F204207D69AB00432C74 /* All_Destination.storyboard */,
 				468A776E207E056F0049BDAD /* Travel_Themes.storyboard */,
 				4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */,
+				460A26DE208471EA00757B72 /* Comment.storyboard */,
+				460A27262084B29600757B72 /* Tabbar.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -762,9 +780,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469F1808207F562800FBD9C1 /* CommentTxtView.xib in Resources */,
 				46080DDD2080A92B00641A20 /* Montserrat-UltraLight.otf in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
+				460A27232084832600757B72 /* CommentsendView.xib in Resources */,
 				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
 				468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */,
 				46080DDF2080A92B00641A20 /* Montserrat-Light.otf in Resources */,
@@ -778,6 +796,7 @@
 				4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */,
+				460A27272084B29600757B72 /* Tabbar.storyboard in Resources */,
 				4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */,
@@ -789,6 +808,7 @@
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46080DDB2080A92B00641A20 /* Montserrat-SemiBold.otf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
+				460A26DF208471EA00757B72 /* Comment.storyboard in Resources */,
 				C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */,
 				468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */,
 				C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */,
@@ -895,6 +915,7 @@
 				466498C52051145E001FEB0F /* profiletvViewController.swift in Sources */,
 				C1FE661420696BBB00B006D3 /* SwiftyJSON.swift in Sources */,
 				46D3B8AF205FB3D9008098C3 /* Reachability.swift in Sources */,
+				460A26E320847A1300757B72 /* CommentVC.swift in Sources */,
 				4613B617205BC76400C7245D /* cardview3.swift in Sources */,
 				C1B13040208473F000374B73 /* AlbumTitle.swift in Sources */,
 				460858912076202B00D63C2C /* FollowListTVC.swift in Sources */,
@@ -938,6 +959,7 @@
 				461394E9205292A900724B07 /* ProfileVC.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
 				C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */,
+				460A2725208484A500757B72 /* CommentsendView.swift in Sources */,
 				4608AEDD204E65B5009E0A43 /* round image.swift in Sources */,
 				C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */,
 				462B627E2057FC7500DE1556 /* DestinationTableViewCell.swift in Sources */,
@@ -957,6 +979,7 @@
 				468A776C207DFDFF0049BDAD /* Travel_ThemesCVC.swift in Sources */,
 				4605F2FC2053A09B002A9FD5 /* NotificationTableViewCell.swift in Sources */,
 				C1E9148F20769BCF00A912BC /* DataModels.swift in Sources */,
+				460A27292084B41C00757B72 /* TabbarVC.swift in Sources */,
 				4605F3022053BD39002A9FD5 /* ThemesCollectionViewCell.swift in Sources */,
 				46139C1F2064CBED00418A58 /* PopMenuViewController.swift in Sources */,
 				460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */,
@@ -980,6 +1003,7 @@
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
 				C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
+				460A272B2084B4E400757B72 /* tab1VC.swift in Sources */,
 				460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */,
 				460937A82077A26E00B529BF /* FollowingRequestsTVC.swift in Sources */,
 				466498C920515CC9001FEB0F /* collectiionimageViewController.swift in Sources */,

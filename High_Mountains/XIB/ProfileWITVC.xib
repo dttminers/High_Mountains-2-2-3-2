@@ -220,7 +220,7 @@
                 <outlet property="lblShareCount" destination="sWN-Tg-bSv" id="DZc-tG-o83"/>
                 <outlet property="lblTitle" destination="i8a-gY-rx7" id="1gx-hq-tme"/>
             </connections>
-            <point key="canvasLocation" x="84.5" y="91.5"/>
+            <point key="canvasLocation" x="72" y="42"/>
         </tableViewCell>
     </objects>
     <resources>
