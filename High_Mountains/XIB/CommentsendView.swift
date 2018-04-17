@@ -13,5 +13,5 @@ class CommentsendView: UIView {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var tet: UITextField!
     @IBOutlet weak var bbtn: UIButton!
-   
+  
 }

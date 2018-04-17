@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i3-93-Wlm">
                                 <rect key="frame" x="8" y="4" width="50" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYp-07-igR">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userimg" translatesAutoresizingMaskIntoConstraints="NO" id="hYp-07-igR">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     </imageView>
                                 </subviews>
@@ -202,4 +202,7 @@
             <point key="canvasLocation" x="-41" y="103"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="userimg" width="240" height="240"/>
+    </resources>
 </document>

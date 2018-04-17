@@ -90,6 +90,9 @@
 		4613B617205BC76400C7245D /* cardview3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613B616205BC76400C7245D /* cardview3.swift */; };
 		4613B61B205BDD6300C7245D /* CameraProfile2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613B61A205BDD6300C7245D /* CameraProfile2TableViewCell.swift */; };
 		4613B61F205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613B61E205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift */; };
+		461786742085C7B400DE1708 /* ClickLargeImgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461786732085C7B400DE1708 /* ClickLargeImgVC.swift */; };
+		461786762085CF4E00DE1708 /* FetchPhotoLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */; };
+		461786782085D14200DE1708 /* FetchPhotoLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461786772085D14200DE1708 /* FetchPhotoLargeView.swift */; };
 		462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */; };
 		462B627E2057FC7500DE1556 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */; };
 		466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C2205112FB001FEB0F /* profileTableViewCell.swift */; };
@@ -261,6 +264,9 @@
 		4613B616205BC76400C7245D /* cardview3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardview3.swift; sourceTree = "<group>"; };
 		4613B61A205BDD6300C7245D /* CameraProfile2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProfile2TableViewCell.swift; sourceTree = "<group>"; };
 		4613B61E205BDF6A00C7245D /* TabAlbumCamera3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAlbumCamera3CollectionViewCell.swift; sourceTree = "<group>"; };
+		461786732085C7B400DE1708 /* ClickLargeImgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLargeImgVC.swift; sourceTree = "<group>"; };
+		461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchPhotoLargeView.xib; sourceTree = "<group>"; };
+		461786772085D14200DE1708 /* FetchPhotoLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotoLargeView.swift; sourceTree = "<group>"; };
 		462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrolimgViewController.swift; sourceTree = "<group>"; };
 		462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
 		466498C2205112FB001FEB0F /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
@@ -554,6 +560,7 @@
 				C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */,
 				460A26E220847A1300757B72 /* CommentVC.swift */,
 				460A272A2084B4E400757B72 /* tab1VC.swift */,
+				461786732085C7B400DE1708 /* ClickLargeImgVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -618,6 +625,8 @@
 				469F1802207F419200FBD9C1 /* CommentTVC.xib */,
 				460A27222084832600757B72 /* CommentsendView.xib */,
 				460A2724208484A500757B72 /* CommentsendView.swift */,
+				461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */,
+				461786772085D14200DE1708 /* FetchPhotoLargeView.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -808,6 +817,7 @@
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46080DDB2080A92B00641A20 /* Montserrat-SemiBold.otf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
+				461786762085CF4E00DE1708 /* FetchPhotoLargeView.xib in Resources */,
 				460A26DF208471EA00757B72 /* Comment.storyboard in Resources */,
 				C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */,
 				468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */,
@@ -931,6 +941,7 @@
 				4613B60F205BA0AA00C7245D /* AlbumViewController.swift in Sources */,
 				460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */,
 				460503082056750C002FDD6E /* textfieldEffect.swift in Sources */,
+				461786742085C7B400DE1708 /* ClickLargeImgVC.swift in Sources */,
 				460A023A207B565200DA422C /* TravelBookCVC.swift in Sources */,
 				469BBD8A204D16EE00A33EF9 /* LoginVC.swift in Sources */,
 				4603F2692070C2BF00D50374 /* LeftImage.swift in Sources */,
@@ -972,6 +983,7 @@
 				4608DFE4207F2C1300FEBBE2 /* TravelPackagesVC.swift in Sources */,
 				C1FE661520696BBB00B006D3 /* SlideMenuController.swift in Sources */,
 				460377AE205A386D003BD529 /* DropDownFavDestionViewController.swift in Sources */,
+				461786782085D14200DE1708 /* FetchPhotoLargeView.swift in Sources */,
 				468A7765207DD37B0049BDAD /* DropMenuButton.swift in Sources */,
 				4608589620762B9C00D63C2C /* FollowVC.swift in Sources */,
 				C1FE661820696BBB00B006D3 /* APISession.swift in Sources */,

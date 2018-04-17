@@ -13,7 +13,7 @@
         <!--CommentVC-->
         <scene sceneID="2Hl-e7-0gz">
             <objects>
-                <viewController id="ZCs-UW-CO7" customClass="CommentVC" customModule="High_Mountains" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Comment" id="ZCs-UW-CO7" customClass="CommentVC" customModule="High_Mountains" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cLU-Mp-22m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -27,8 +27,7 @@ class navView: UIView {
     var isBack : Bool?
     
     override func awakeFromNib() {
-        
-        
+         AppUtility.setCornerRadius(btnRight, radius: 20)
     }
     
     override func didMoveToWindow() {
