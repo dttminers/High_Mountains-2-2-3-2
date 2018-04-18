@@ -11,7 +11,7 @@ import UIKit
 class ClickLargeImgVC: UIViewController {
  
      var Image: [PhotoModel] = []
-       var obj : PhotoModel!
+       //var obj : PhotoModel!
     
     @IBOutlet weak var LArgeImgView: UIView!
     override func viewDidLoad() {
@@ -20,13 +20,13 @@ class ClickLargeImgVC: UIViewController {
         if let Comment: FetchPhotoLargeView = Bundle.main.loadNibNamed("FetchPhotoLargeView", owner: self, options: nil)?.first as?FetchPhotoLargeView{
          Comment.Commentbtn.addTarget(self, action: #selector(ClickLargeImgVC.sendComment(sender:)) , for: .touchUpInside)
          Comment.sharebtn.addTarget(self, action: #selector(ClickLargeImgVC.share(sender:)) , for: .touchUpInside)
-            //Comment.Profileimg.loadImageUsingCache(withUrl: obj.("\(url)\(image_url!)")
-            //Comment.lbltitile.text = obj!.username
+            //Comment.Profileimg.loadImageUsingCache(withUrl: ("\(url)\(image_url!)")
             //Comment.frame.origin.y = 667
             self.URLDownload()
             self.LArgeImgView.addSubview(Comment)
+            
         }
-       
+     
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,6 +13,7 @@ import UIKit
 class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     //bar iteam
     
+    @IBOutlet weak var lblPosts: UILabel!
     @IBOutlet weak var view2: UIView!
     
     //
@@ -403,6 +404,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             Doblbl.text = userInfo.dob
             Biolbl.text = userInfo.bio
             FavTravlQuoteslbl.text = userInfo.fav_quote
+            FollowingAction_lbl.text = "Following\(userInfo.following_count ?? 3)"
+            lblFollowers.text = "Followers\(userInfo.followers_count ?? 4)"
+            lblPosts.text  = "Posts\(userInfo.post_count ?? 12)"
         }
     }
 }
@@ -454,7 +458,7 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
         }
         else if selectedIndex == 2 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-            cell.populate(photoRes[indexPath.row])
+            cell.populate(timelineRes[indexPath.row])
             
             return cell
         }
@@ -512,8 +516,10 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let mainstoryboard : UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let desVC = mainstoryboard.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
+      
+        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
+        desVC.Image = [photoRes[indexPath.row]]
+    
         self.navigationController?.pushViewController(desVC, animated: true)
     }
 }

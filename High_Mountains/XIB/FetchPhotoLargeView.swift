@@ -23,13 +23,20 @@ class FetchPhotoLargeView: UIView {
     @IBOutlet weak var Commentbtn: UIButton!
     
     var obj : PhotoModel!
-    
-  @objc func populateData(_ data : PhotoModel) {
-        obj = data
-        AppUtility.setCornerRadius(Profileimg, radius: 25)
-        Profileimg.loadImageUsingCache(withUrl:"\(url)\(data.image_url ?? "0")")
-        
+//    override func didMoveToWindow() {
+//
+//        func populateData(_ data : PhotoModel) {
+//        obj = data
+//        AppUtility.setCornerRadius(Profileimg, radius: 25)
+//        Profileimg.loadImageUsingCache(withUrl:"\(url)\(data.image_url ?? "0")")
+//
+//    }
+//}
+    override func awakeFromNib() {
+        func populateData(_ data : PhotoModel) {
+            obj = data
+            AppUtility.setCornerRadius(Profileimg, radius: 25)
+            Profileimg.loadImageUsingCache(withUrl:"\(url)\(data.image_url)")
+    }
     }
 }
-
-

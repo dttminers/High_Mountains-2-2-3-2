@@ -53,6 +53,9 @@
                                         <constraint firstAttribute="height" constant="33" id="xYE-9V-ICY"/>
                                     </constraints>
                                     <state key="normal" title="Send"/>
+                                    <connections>
+                                        <action selector="Sendbutton:" destination="iN0-l3-epB" eventType="touchUpInside" id="yYs-gK-bgE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
