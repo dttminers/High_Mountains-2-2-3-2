@@ -18,15 +18,18 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
     var expandedSectionHeader: UITableViewHeaderFooterView!
     var sectionItems: Array<Any> = []
     var sectionNames: Array<Any> = []
+    var sectionImages: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         tableView.register(UINib(nibName : "SideDrawerProfileTVC", bundle:nil), forCellReuseIdentifier: "SideDrawerProfileTVC")
-        
+        tableView.register(UINib(nibName : "SideDrawerSectionTVC", bundle:nil), forCellReuseIdentifier: "SideDrawerSectionTVC")
+        tableView.register(UINib(nibName : "SideDrawerTVC", bundle:nil), forCellReuseIdentifier: "SideDrawerTVC")
         
         sectionNames = [ "Travel Book", "Shop with us", "Be Entrepreneur", "Lets's Socailze", "Our Services"];
+        sectionImages = [#imageLiteral(resourceName: "t1"),#imageLiteral(resourceName: "t1"),#imageLiteral(resourceName: "t1"),#imageLiteral(resourceName: "t1"),#imageLiteral(resourceName: "t1")]
         sectionItems = [ ["Travel with us", "Destinations", "Plan Trip", "iPhone 6 Plus", "Activities", "Theme", "Rentouts", "Find Guide", "Travel Bible", "Near By"],["All Products","Gift Cards"],["Refer A Friend", "Be A Guide", "Start A Blogging", "Give Rentouts"],
                          ["Let's Barter", "Let's Find Neighbour", "Let's Discuss","Let's Travel", "Get Help"],
                          ["Distance Calculator", "Trekking Routes", "Currency Converter", "Language Translator", "Travel Budget", "Offline Map"]
@@ -106,27 +109,16 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section != 0 {
-            let header: UIView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 35))//UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-            //header.contentView.backgroundColor = UIColor.colorWithHexString(hexStr: "#408000")
-            //header.textLabel?.textColor = UIColor.black
             
-            if let viewWithTag = self.view.viewWithTag(kHeaderSectionTag + section) {
-                viewWithTag.removeFromSuperview()
-            }
-            let headerFrame = self.view.frame.size.width
-            
-            let lbl : UILabel = UILabel(frame: CGRect(x: 10, y: 13, width:tableView.frame.size.width - 40, height: 18))
-            lbl.text = sectionNames[section-1] as? String
-            header.addSubview(lbl)
-            let theImageView = UIImageView(frame: CGRect(x: headerFrame-32, y: 13, width:18, height: 18));
-            theImageView.backgroundColor = UIColor.blue
-            theImageView.image = #imageLiteral(resourceName: "DOWNarrow") //UIImage(named: "Chevron-Dn-Wht")
-            theImageView.tag = kHeaderSectionTag + section
+            let header = tableView.dequeueReusableCell(withIdentifier: "SideDrawerSectionTVC") as! SideDrawerSectionTVC
+            header.lblTitle.text = sectionNames[section-1] as? String
+            header.imgArrow.image = #imageLiteral(resourceName: "DOWNarrow")
+            header.img.image = sectionImages[section-1]
+            header.viewStatus.isHidden = true
             if (self.expandedSectionHeaderNumber == section) {
-                theImageView.image = #imageLiteral(resourceName: "UParrow")
+                header.imgArrow.image = #imageLiteral(resourceName: "UParrow")
+                header.viewStatus.isHidden = false
             }
-            header.addSubview(theImageView)
-            
             // make headers touchable
             header.tag = section
             let headerTapGesture = UITapGestureRecognizer()
@@ -145,10 +137,10 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+            let cell : SideDrawerTVC = tableView.dequeueReusableCell(withIdentifier: "SideDrawerTVC", for: indexPath) as! SideDrawerTVC
             let section = self.sectionItems[indexPath.section-1] as! NSArray
-            cell.textLabel?.textColor = UIColor.black
-            cell.textLabel?.text = section[indexPath.row] as? String
+            //cell.textLabel?.textColor = UIColor.black
+            cell.lblTitle.text = section[indexPath.row] as? String
             
             return cell
         }
@@ -164,37 +156,36 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
     @objc func sectionHeaderWasTouched(_ sender: UITapGestureRecognizer) {
         let headerView : UIView = sender.view! //as! UITableViewHeaderFooterView
         let section    = headerView.tag
-        let eImageView = headerView.viewWithTag(kHeaderSectionTag + section) as? UIImageView
         
         if (self.expandedSectionHeaderNumber == -1) {
             self.expandedSectionHeaderNumber = section
-            tableViewExpandSection(section, imageView: eImageView!)
+            tableViewExpandSection(section)
         } else {
             if (self.expandedSectionHeaderNumber == section) {
-                tableViewCollapeSection(section, imageView: eImageView!)
+                tableViewCollapeSection(section)
             } else {
-                let cImageView = self.view.viewWithTag(kHeaderSectionTag + self.expandedSectionHeaderNumber) as? UIImageView
-                tableViewCollapeSection(self.expandedSectionHeaderNumber, imageView: cImageView!)
-                tableViewExpandSection(section, imageView: eImageView!)
+                //let cImageView = self.view.viewWithTag(kHeaderSectionTag + self.expandedSectionHeaderNumber) as? UIImageView
+                tableViewCollapeSection(self.expandedSectionHeaderNumber)
+                tableViewExpandSection(section)
             }
         }
     }
     
-    func tableViewCollapeSection(_ section: Int, imageView: UIImageView) {
+    func tableViewCollapeSection(_ section: Int) {
         let sectionData = self.sectionItems[section-1] as! NSArray
         
         self.expandedSectionHeaderNumber = -1;
         if (sectionData.count == 0) {
             return;
         } else {
-            UIView.animate(withDuration: 0.4, animations: {
+            /*UIView.animate(withDuration: 0.4, animations: {
                 imageView.transform = CGAffineTransform(rotationAngle: (0.0 * CGFloat(Double.pi)) / 180.0)
             })
             var indexesPath = [IndexPath]()
             for i in 0 ..< sectionData.count {
                 let index = IndexPath(row: i, section: section)
                 indexesPath.append(index)
-            }
+            }*/
             //self.tableView!.beginUpdates()
             //self.tableView!.deleteRows(at: indexesPath, with: UITableViewRowAnimation.fade)
             //self.tableView!.endUpdates()
@@ -202,21 +193,21 @@ class SideMenuViewController: UIViewController,UITableViewDelegate, UITableViewD
         }
     }
     
-    func tableViewExpandSection(_ section: Int, imageView: UIImageView) {
+    func tableViewExpandSection(_ section: Int) {
         let sectionData = self.sectionItems[section-1] as! NSArray
         
         if (sectionData.count == 0) {
             self.expandedSectionHeaderNumber = -1;
             return;
         } else {
-            UIView.animate(withDuration: 0.4, animations: {
+            /*UIView.animate(withDuration: 0.4, animations: {
                 imageView.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(Double.pi)) / 180.0)
             })
             var indexesPath = [IndexPath]()
             for i in 0 ..< sectionData.count {
                 let index = IndexPath(row: i, section: section)
                 indexesPath.append(index)
-            }
+            }*/
             self.expandedSectionHeaderNumber = section
             //self.tableView!.beginUpdates()
             //self.tableView!.insertRows(at: indexesPath, with: UITableViewRowAnimation.fade)
