@@ -14,14 +14,15 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var commentview: UIView!
     
   var Comment: [SendComment] = []
- 
+    var text1 = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let Comment = Bundle.main.loadNibNamed("CommentsendView", owner: self, options: nil)?.first as?CommentsendView {
             Comment.bbtn.addTarget(self, action: #selector(CommentVC.sendComment(sender:)) , for: .touchUpInside)
             //Comment.frame.origin.y = 667
-            
+            text1 = Comment.tet.text!
+            AppUtility.setCornerRadius(Comment.img, radius: 20)
             self.commentview?.addSubview(Comment)
         }
         tableview?.register(UINib(nibName : "CommentTVC", bundle:nil), forCellReuseIdentifier: "CommentTVC")
@@ -52,19 +53,13 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
         
-            let postparam = "action=comment_data&&uid=26&&timeline_id=101&&comment=goaiabhi";
+            let postparam = "action=comment_data&&uid=26&&timeline_id=101&&comment=\(text1)";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
                     print(dt)
                     let res : AnyObject = dt.object as AnyObject
-                    if let name = res["msg"]as?String{
-                        print(name)
-                       
-                        
-                        
-                    }
-                    
+                  print(res)
                   
                     
                     

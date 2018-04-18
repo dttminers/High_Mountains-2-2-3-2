@@ -22,12 +22,16 @@ class CommentTVC: UITableViewCell {
     func populateData(_ data : SendComment) {
         obj = data
         AppUtility.setCornerRadius(Comment_img, radius: 25)
+        
         Comment_img.loadImageUsingCache(withUrl:"\(url)\(data.profile_pic!)")
+        
+      // Comment_img.loadImageUsingCache(withUrl:"\(data.profile_pic!)")
         lblComment.text = data.username?.capitalized
         lblmsgComment.text = data.comment
         lblCommentRply.text = "\(data.reply_count ?? "0")Reply"
         lblCommentLike.text = "\(data.like_count ?? "0")Like"
-        CommentDate.text = data.time
-    }
+       
+   
     
+}
 }

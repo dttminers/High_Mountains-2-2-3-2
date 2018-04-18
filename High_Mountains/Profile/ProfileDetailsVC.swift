@@ -510,4 +510,10 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
         let wd = (collectionView.frame.width-20)/3
         return CGSize(width: wd, height: 100)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainstoryboard : UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let desVC = mainstoryboard.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
 }

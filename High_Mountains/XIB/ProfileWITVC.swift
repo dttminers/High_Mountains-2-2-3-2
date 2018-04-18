@@ -13,6 +13,7 @@ class ProfileWITVC: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     
+    @IBOutlet weak var Profileimg: UIView!
     @IBOutlet weak var lblLikeCount: UILabel!
     @IBOutlet weak var lblCommentCount: UILabel!
     @IBOutlet weak var lblShareCount: UILabel!
@@ -43,10 +44,7 @@ class ProfileWITVC: UITableViewCell {
         img.clipsToBounds = true
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
+    
     
 }
