@@ -139,6 +139,10 @@
 		C1B13041208473F000374B73 /* AlbumTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B1303F208473F000374B73 /* AlbumTitle.xib */; };
 		C1B1304320848A8E00374B73 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B1304220848A8E00374B73 /* Login.storyboard */; };
 		C1B1304620848B7300374B73 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1304520848B7300374B73 /* SplashVC.swift */; };
+		C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1305120860FE200374B73 /* SideDrawerTVC.swift */; };
+		C1B1305420860FE200374B73 /* SideDrawerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B1305220860FE200374B73 /* SideDrawerTVC.xib */; };
+		C1B130572086102C00374B73 /* SideDrawerSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B130552086102C00374B73 /* SideDrawerSectionTVC.swift */; };
+		C1B130582086102C00374B73 /* SideDrawerSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B130562086102C00374B73 /* SideDrawerSectionTVC.xib */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -327,6 +331,10 @@
 		C1B1303F208473F000374B73 /* AlbumTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTitle.xib; sourceTree = "<group>"; };
 		C1B1304220848A8E00374B73 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C1B1304520848B7300374B73 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		C1B1305120860FE200374B73 /* SideDrawerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDrawerTVC.swift; sourceTree = "<group>"; };
+		C1B1305220860FE200374B73 /* SideDrawerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideDrawerTVC.xib; sourceTree = "<group>"; };
+		C1B130552086102C00374B73 /* SideDrawerSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDrawerSectionTVC.swift; sourceTree = "<group>"; };
+		C1B130562086102C00374B73 /* SideDrawerSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideDrawerSectionTVC.xib; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -603,6 +611,10 @@
 				C1622D182083A01400DA42B2 /* navView.swift */,
 				C1F4AD1D206EC5F200D470BA /* SideDrawerProfileTVC.xib */,
 				C1F4AD1C206EC5F200D470BA /* SideDrawerProfileTVC.swift */,
+				C1B130562086102C00374B73 /* SideDrawerSectionTVC.xib */,
+				C1B130552086102C00374B73 /* SideDrawerSectionTVC.swift */,
+				C1B1305220860FE200374B73 /* SideDrawerTVC.xib */,
+				C1B1305120860FE200374B73 /* SideDrawerTVC.swift */,
 				C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */,
 				C1E09361207A2F390071FC93 /* ProfileFeedView.swift */,
 				4609C1D22074C89B0028CA87 /* ProfileTVC.xib */,
@@ -823,6 +835,7 @@
 				4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */,
+				C1B130582086102C00374B73 /* SideDrawerSectionTVC.xib in Resources */,
 				4609379F20773F5200B529BF /* Main.storyboard in Resources */,
 				46080DDE2080A92B00641A20 /* Montserrat-Black.otf in Resources */,
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
@@ -842,6 +855,7 @@
 				4609C1D42074C89B0028CA87 /* ProfileTVC.xib in Resources */,
 				46080DD92080A92B00641A20 /* sharefonts.net.txt in Resources */,
 				46080DDC2080A92B00641A20 /* Montserrat-Thin.ttf in Resources */,
+				C1B1305420860FE200374B73 /* SideDrawerTVC.xib in Resources */,
 				469BBD92204D16EE00A33EF9 /* Assets.xcassets in Resources */,
 				46080DE02080A92B00641A20 /* Montserrat-Regular.otf in Resources */,
 				C1B1304320848A8E00374B73 /* Login.storyboard in Resources */,
@@ -1014,6 +1028,7 @@
 				4613B611205BA10500C7245D /* AlbumCollectionViewCell.swift in Sources */,
 				C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
+				C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,
 				468A7771207E09140049BDAD /* Travel_ThemesVC.swift in Sources */,
@@ -1041,6 +1056,7 @@
 				460A0287207BC38E00DA422C /* FetchRequestVC.swift in Sources */,
 				4613B609205B899300C7245D /* ProfileDetailsVC.swift in Sources */,
 				460937A12077805200B529BF /* AlbumModels.swift in Sources */,
+				C1B130572086102C00374B73 /* SideDrawerSectionTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
