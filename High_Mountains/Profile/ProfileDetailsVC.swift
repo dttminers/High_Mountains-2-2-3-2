@@ -302,6 +302,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
                     //self.setPhotos(model)
+                    self.tableFeeds.reloadData()
+                    self.htTableConst.constant = self.tableViewHeight
                     self.collectionFeeds.reloadData()
                     self.htCollectionConst.constant = self.collectionViewHeight
                 }
@@ -323,6 +325,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
                     //self.setPhotos(model)
+                    
                     self.collectionFeeds.reloadData()
                     self.htCollectionConst.constant = self.collectionViewHeight
                 }
