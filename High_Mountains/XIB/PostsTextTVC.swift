@@ -10,16 +10,22 @@ import UIKit
 
 class PostsTextTVC: UITableViewCell {
     
+    @IBOutlet weak var lblpost: UILabel!
     
-    @IBOutlet weak var lbltext: UITextField!
+  
     @IBOutlet weak var lblcomment: UILabel!
     @IBOutlet weak var lbllikes: UILabel!
     @IBOutlet weak var lbltime: UILabel!
     @IBOutlet weak var lbltitle: UILabel!
     @IBOutlet weak var profileimg: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let greet4Height = lblpost.optimalHeight
+        lblpost.frame = CGRect(x: lblpost.frame.origin.x, y: lblpost.frame.origin.y, width: lblpost.frame.width, height: greet4Height)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,12 +36,12 @@ class PostsTextTVC: UITableViewCell {
      var obj : TimelineModel!
     
     func populateData(_ data : TimelineModel){
-        
         obj = data
-        profileimg.loadImageUsingCache(withUrl: data.image!)
-        lbltime.text = data.time
-        lbllikes.text = data.like_count
-        lblcomment.text = data.comment_count
-        lbltext.text = data.post
+        if (obj.activity?.contains("post"))!{
+        lbltime.text = obj.time
+            lbllikes.text = "\(obj.like_count ?? "0") Likes"
+            lblcomment.text = "\(obj.comment_count ?? "0") Commets"
+        lblpost.text = obj.post
+    }
     }
 }

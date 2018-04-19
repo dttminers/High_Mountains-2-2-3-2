@@ -52,21 +52,16 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if Home[indexPath.row].activity == "post" {
-            let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
-            cell.populateData(Home[indexPath.row])
-            
-            return cell
-        }else if Home[indexPath.row].activity == "photo" {
+        
+        if Home[indexPath.row].activity == "photo"{
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC1", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
-            
             return cell
-        }
-        
+    }
+
         else {
-            let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
-            //cell.populate(timelineRes[indexPath.row])
+            let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
+            cell.populateData(Home[indexPath.row])
             
             return cell
         }
@@ -74,8 +69,11 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-  
+        if Home[indexPath.row].activity == "photo"{
+        return 303
+        }else{
+            return 100
+        }
     
 }
 

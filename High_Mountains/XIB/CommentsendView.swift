@@ -15,7 +15,7 @@ class CommentsendView: UIView {
     @IBOutlet weak var bbtn: UIButton!
     
       var timelineRes : [TimelineModel] = []
-  @IBAction func Sendbutton(_ sender: Any) {
+  @objc func Sendbutton(_ sender: Any) {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
             let postparam = "action=comment_data&&uid=26&&timeline_id=\(timelineRes)&&comment=\(tet.text!)";

@@ -22,9 +22,9 @@ class CommentTVC: UITableViewCell {
     func populateData(_ data : SendComment) {
         obj = data
         AppUtility.setCornerRadius(Comment_img, radius: 25)
-        if (data.profile_pic == "\(data.profile_pic!)"){
+        if (data.profile_pic?.contains("uploads"))!{
         Comment_img.loadImageUsingCache(withUrl:"\(url)\(data.profile_pic!)")
-        }else if(data.profile_pic != "\(data.profile_pic!)"){
+        }else {
             self.Comment_img.loadImageUsingCache(withUrl:"\(data.profile_pic!)")
         }
         lblComment.text = data.username?.capitalized

@@ -27,6 +27,9 @@ class ButtonExtender: UIButton {
             layer.cornerRadius = cornurRadius
             clipsToBounds = true
         }
+       
+        
+    
     }
     
     //MARK: Initializers
@@ -65,12 +68,17 @@ class ButtonExtender: UIButton {
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 1.0
+        
+        
     }
+    
+    
     
     func configure() {
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
         layer.cornerRadius = cornurRadius
+        
     }
     
     override func layoutSubviews() {

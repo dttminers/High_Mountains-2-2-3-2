@@ -21,9 +21,13 @@ class FollowingRequestsTVC: UITableViewCell {
     func populateData(_ data : FetchRequest){
         obj = data
         AppUtility.setCornerRadius(img, radius: 20)
-        img.loadImageUsingCache(withUrl:"\(url)\(data.profile_pic!)")
-        lblName.text = data.name?.capitalized
-        lblCommonFriend.text = "\(data.mutual_friend_count ?? 0) Common Friends"
+        if(obj.profile_pic?.contains("uploads"))!{
+        img.loadImageUsingCache(withUrl:"\(url)\(obj.profile_pic!)")
+        }else{
+              img.loadImageUsingCache(withUrl: obj.profile_pic!)
+        }
+        lblName.text = obj.name?.capitalized
+        lblCommonFriend.text = "\(obj.mutual_friend_count ?? 0) Common Friends"
       
     }
    

@@ -93,10 +93,10 @@
 		461786742085C7B400DE1708 /* ClickLargeImgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461786732085C7B400DE1708 /* ClickLargeImgVC.swift */; };
 		461786762085CF4E00DE1708 /* FetchPhotoLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */; };
 		461786782085D14200DE1708 /* FetchPhotoLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461786772085D14200DE1708 /* FetchPhotoLargeView.swift */; };
-		461856C32087414B000F406B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461856C22087414B000F406B /* Home.storyboard */; };
 		461856C82087439A000F406B /* PostsTextTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461856C62087439A000F406B /* PostsTextTVC.swift */; };
 		461856C92087439A000F406B /* PostsTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461856C72087439A000F406B /* PostsTextTVC.xib */; };
 		461856CD208751FB000F406B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461856CC208751FB000F406B /* HomeVC.swift */; };
+		461C31732088BEB00021179E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C31722088BEB00021179E /* UILabel.swift */; };
 		462B62742057AF9C00DE1556 /* ScrolimgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */; };
 		462B627E2057FC7500DE1556 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */; };
 		466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C2205112FB001FEB0F /* profileTableViewCell.swift */; };
@@ -275,10 +275,10 @@
 		461786732085C7B400DE1708 /* ClickLargeImgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLargeImgVC.swift; sourceTree = "<group>"; };
 		461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FetchPhotoLargeView.xib; sourceTree = "<group>"; };
 		461786772085D14200DE1708 /* FetchPhotoLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotoLargeView.swift; sourceTree = "<group>"; };
-		461856C22087414B000F406B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		461856C62087439A000F406B /* PostsTextTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTextTVC.swift; sourceTree = "<group>"; };
 		461856C72087439A000F406B /* PostsTextTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTextTVC.xib; sourceTree = "<group>"; };
 		461856CC208751FB000F406B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		461C31722088BEB00021179E /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		462B62732057AF9C00DE1556 /* ScrolimgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrolimgViewController.swift; sourceTree = "<group>"; };
 		462B627D2057FC7500DE1556 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
 		466498C2205112FB001FEB0F /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
@@ -390,6 +390,7 @@
 		46060F81206B8135002C440A /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				461C31722088BEB00021179E /* UILabel.swift */,
 				46060F82206B8163002C440A /* Validationform.swift */,
 				4603F2682070C2BF00D50374 /* LeftImage.swift */,
 				4608589720764C7800D63C2C /* RadioButton.swift */,
@@ -668,7 +669,6 @@
 				4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */,
 				460A26DE208471EA00757B72 /* Comment.storyboard */,
 				460A27262084B29600757B72 /* Tabbar.storyboard */,
-				461856C22087414B000F406B /* Home.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -816,7 +816,6 @@
 				46080DDD2080A92B00641A20 /* Montserrat-UltraLight.otf in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
 				460A27232084832600757B72 /* CommentsendView.xib in Resources */,
-				461856C32087414B000F406B /* Home.storyboard in Resources */,
 				461856C92087439A000F406B /* PostsTextTVC.xib in Resources */,
 				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
 				468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */,
@@ -996,6 +995,7 @@
 				469BBDC2204D6AB600A33EF9 /* RegisterViewController.swift in Sources */,
 				C1162293207BF69C007CEDE0 /* KingfisherSource.swift in Sources */,
 				461394E9205292A900724B07 /* ProfileVC.swift in Sources */,
+				461C31732088BEB00021179E /* UILabel.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
 				C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */,
 				460A2725208484A500757B72 /* CommentsendView.swift in Sources */,

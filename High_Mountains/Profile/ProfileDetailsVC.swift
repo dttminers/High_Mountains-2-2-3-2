@@ -461,15 +461,16 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
         }
         else if selectedIndex == 2 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-            cell.populate(timelineRes[indexPath.row])
-            
+          cell.populate(timelineRes[indexPath.row])
+
             return cell
         }
         else {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-            return cell
+          return cell
+
         }
-    }
+  }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -521,7 +522,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
         let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
-        desVC.Image = [photoRes[indexPath.row]]
+      //  desVC.Image = [photoRes[indexPath.row]]
     
         self.navigationController?.pushViewController(desVC, animated: true)
     }

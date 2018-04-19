@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileTVC: UITableViewCell {
 
+    @IBOutlet weak var lblbPhotoTItle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
@@ -29,15 +30,17 @@ class ProfileTVC: UITableViewCell {
         img.layer.cornerRadius = self.img.frame.size.width/2
         img.clipsToBounds = true
     }
-    
+    var obj : TimelineModel!
     func populate(_ data : TimelineModel) {
-        lblTitle.text = data.caption
-        imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
-        lblDate.text = data.time
-        lblLikeCount.text = "\(data.like_count!)"
-        lblCommentCount.text = "\(data.comment_count!)"
-        lblShareCount.text = "\(data.share_count!)"
         
+        obj = data
+        lblTitle.text = "Swapnil"
+        imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
+        lblDate.text = obj.time
+        lblLikeCount.text = "\(obj.like_count!) Like"
+        lblCommentCount.text = "\(obj.comment_count!) Comment"
+        lblShareCount.text = "\(obj.share_count!) Share"
+        lblbPhotoTItle.text = obj.caption?.capitalized
         if data.isliked! == "true" {
             btnLike.isSelected = true
         }
