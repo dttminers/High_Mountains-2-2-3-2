@@ -99,7 +99,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         collectionFeeds.register(UINib(nibName : "Album", bundle:nil), forCellWithReuseIdentifier: "Album")
         collectionFeeds.register(UINib(nibName : "AlbumTitle", bundle:nil), forCellWithReuseIdentifier: "AlbumTitle")
         
-        btnFeedsActbtn(btnPhotoFeeds)
+        btnPhotoFeedsActbtn(btnGrid)
     }
     
     // MARK: Button Actions
@@ -126,35 +126,6 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
         
-    }
-    
-    @IBAction func btnFeedsActbtn(_ sender: UIButton) {
-        selectedIndex = sender.tag
-        if sender.tag == 1 {
-            vewFeeds.alpha = 1
-            vewPhotoFeeds.alpha = 0
-            vewNotesFeeds.alpha = 0
-            fetchTimeline()
-            vewPhotoTabs.isHidden = true
-            tableFeeds.isHidden = false
-            collectionFeeds.isHidden = true
-        }
-        else if sender.tag == 2 {
-            selectedPhotoIndex = 1
-            vewFeeds.alpha = 0
-            vewPhotoFeeds.alpha = 1
-            vewNotesFeeds.alpha = 0
-            vewPhotoTabs.isHidden = false
-            tableFeeds.isHidden = true
-            collectionFeeds.isHidden = true
-            btnPhotoFeedsActbtn(btnGrid)
-        }
-        else if sender.tag == 3 {
-            vewFeeds.alpha = 0
-            vewPhotoFeeds.alpha = 0
-            vewNotesFeeds.alpha = 1
-            vewPhotoTabs.isHidden = true
-        }
     }
     
     @IBAction func btnPhotoFeedsActbtn(_ sender: UIButton) {
@@ -302,10 +273,16 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     self.photoRes = DATA_MANAGER.setPhotoDictionary(res)
                     //self.setPhotos(model)
-                    self.tableFeeds.reloadData()
-                    self.htTableConst.constant = self.tableViewHeight
-                    self.collectionFeeds.reloadData()
-                    self.htCollectionConst.constant = self.collectionViewHeight
+                    if self.selectedPhotoIndex == 1 {
+                        self.collectionFeeds.reloadData()
+                        self.htCollectionConst.constant = self.collectionViewHeight
+                    }
+                    else if self.selectedPhotoIndex == 2 {
+                        self.tableFeeds.reloadData()
+                        self.htTableConst.constant = self.tableViewHeight
+                    }
+                    
+                    
                 }
                 
             }
@@ -522,7 +499,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
         let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
-      //  desVC.Image = [photoRes[indexPath.row]]
+        desVC.obj = photoRes[indexPath.row]
     
         self.navigationController?.pushViewController(desVC, animated: true)
     }

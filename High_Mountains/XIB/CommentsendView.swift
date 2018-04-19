@@ -15,6 +15,7 @@ class CommentsendView: UIView {
     @IBOutlet weak var bbtn: UIButton!
     
       var timelineRes : [TimelineModel] = []
+    
   @objc func Sendbutton(_ sender: Any) {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             

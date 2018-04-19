@@ -30,17 +30,18 @@ class ProfileTVC: UITableViewCell {
         img.layer.cornerRadius = self.img.frame.size.width/2
         img.clipsToBounds = true
     }
-    var obj : TimelineModel!
+    var obj : Any!
+    
     func populate(_ data : TimelineModel) {
         
         obj = data
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
-        lblDate.text = obj.time
-        lblLikeCount.text = "\(obj.like_count!) Like"
-        lblCommentCount.text = "\(obj.comment_count!) Comment"
-        lblShareCount.text = "\(obj.share_count!) Share"
-        lblbPhotoTItle.text = obj.caption?.capitalized
+        lblDate.text = data.time
+        lblLikeCount.text = "\(data.like_count!) Like"
+        lblCommentCount.text = "\(data.comment_count!) Comment"
+        lblShareCount.text = "\(data.share_count!) Share"
+        lblbPhotoTItle.text = data.caption?.capitalized
         if data.isliked! == "true" {
             btnLike.isSelected = true
         }
@@ -49,8 +50,35 @@ class ProfileTVC: UITableViewCell {
         }
     }
     
+    func populate(_ data : PhotoModel) {
+        
+        obj = data
+        lblTitle.text = "Swapnil"
+        imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
+        lblDate.text = data.time
+        lblLikeCount.text = "\(data.like_count!) Like"
+        lblCommentCount.text = "\(data.comment_count!) Comment"
+        lblShareCount.text = "\(data.share_count!) Share"
+        lblbPhotoTItle.text = data.caption?.capitalized
+        /*if data.isliked! == "true" {
+            btnLike.isSelected = true
+        }
+        else {
+            btnLike.isSelected = false
+        }*/
+    }
         
     @IBAction func btnLikeAction(_ sender: Any) {
     }
     
+    @IBAction func btnCommentAction(_ sender: Any) {
+    }
+    
+    @IBAction func btnShareAction(_ sender: Any) {
+    }
+    
+    
+    class func instanceFromNib() -> ProfileTVC {
+        return UINib(nibName: "ProfileTVC", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProfileTVC
+    }
 }
