@@ -32,7 +32,7 @@ class navView: UIView {
     
     override func didMoveToWindow() {
         if isBack! {
-            btnLeft.setImage(#imageLiteral(resourceName: "Backicon"), for: .normal)
+            btnLeft.setImage(#imageLiteral(resourceName: "icons8-back-50"), for: .normal)
             btnRight.isHidden = true
             viewSearch.isHidden = true
             viewHeading.isHidden = false

@@ -38,7 +38,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMj-OE-av7">
-                                <rect key="frame" x="77" y="15.5" width="283" height="51"/>
+                                <rect key="frame" x="77" y="15.5" width="283" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXH-tO-d22">
+                                <rect key="frame" x="77" y="40" width="283" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="zLQ-TM-aQh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,10 +57,12 @@
                         <constraints>
                             <constraint firstItem="rwN-LZ-TLA" firstAttribute="leading" secondItem="ITJ-Hu-UUn" secondAttribute="leading" constant="14" id="3TP-ax-Gz8"/>
                             <constraint firstItem="zMj-OE-av7" firstAttribute="leading" secondItem="rwN-LZ-TLA" secondAttribute="trailing" constant="18" id="4Xb-dn-JK3"/>
-                            <constraint firstAttribute="bottom" secondItem="zMj-OE-av7" secondAttribute="bottom" constant="8" id="5qR-a7-sR3"/>
                             <constraint firstItem="rwN-LZ-TLA" firstAttribute="top" secondItem="ITJ-Hu-UUn" secondAttribute="top" constant="15" id="9ut-0k-hNP"/>
                             <constraint firstItem="zMj-OE-av7" firstAttribute="top" secondItem="ITJ-Hu-UUn" secondAttribute="top" constant="15" id="PYE-Nl-m43"/>
+                            <constraint firstItem="vXH-tO-d22" firstAttribute="leading" secondItem="rwN-LZ-TLA" secondAttribute="trailing" constant="18" id="Tdh-vU-Yg2"/>
                             <constraint firstAttribute="trailing" secondItem="zMj-OE-av7" secondAttribute="trailing" constant="8" id="U4G-Jl-2st"/>
+                            <constraint firstItem="vXH-tO-d22" firstAttribute="top" secondItem="zMj-OE-av7" secondAttribute="bottom" constant="7.5" id="VOk-5L-Wu8"/>
+                            <constraint firstAttribute="trailing" secondItem="vXH-tO-d22" secondAttribute="trailing" constant="8" id="aBC-wz-kul"/>
                             <constraint firstAttribute="height" constant="74" id="fwO-t8-SL0"/>
                         </constraints>
                     </view>
@@ -235,11 +246,12 @@
                 <outlet property="img" destination="rwN-LZ-TLA" id="e15-hR-tCl"/>
                 <outlet property="imgPost" destination="cs6-8e-lgR" id="ZBu-vG-E9G"/>
                 <outlet property="lblCommentCount" destination="Kvz-vI-nhU" id="DBb-92-H4u"/>
+                <outlet property="lblDate" destination="vXH-tO-d22" id="Mwn-d0-DOg"/>
                 <outlet property="lblLikeCount" destination="T6K-5a-HMW" id="a9H-oS-OZT"/>
                 <outlet property="lblShareCount" destination="aXf-Ku-NJa" id="ZLI-aA-19P"/>
                 <outlet property="lblTitle" destination="zMj-OE-av7" id="coX-1G-6Ip"/>
             </connections>
-            <point key="canvasLocation" x="-39" y="-68"/>
+            <point key="canvasLocation" x="-36" y="-68"/>
         </tableViewCell>
     </objects>
     <resources>

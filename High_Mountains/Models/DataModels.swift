@@ -65,6 +65,7 @@ class UserInfoModel : NSObject {
      var time : String?
      var following_count : Int?
      var dob : String?
+     var post_count : Int?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         lives_in = dictionary["lives_in"] as? String
@@ -88,6 +89,7 @@ class UserInfoModel : NSObject {
         time = dictionary["time"] as? String
         following_count = dictionary["following_count"] as? Int
         dob = dictionary["dob"] as? String
+        post_count = dictionary["post_count"] as? Int
     }
 }
 
