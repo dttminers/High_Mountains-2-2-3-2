@@ -36,7 +36,7 @@ class FetchPhotoLargeView: UIView {
         func populateData(_ data : PhotoModel) {
             obj = data
             AppUtility.setCornerRadius(Profileimg, radius: 25)
-            Profileimg.loadImageUsingCache(withUrl:"\(url)\(data.image_url)")
+            Profileimg.loadImageUsingCache(withUrl:"\(url)\(obj.image_url ?? "0")")
     }
     }
 }

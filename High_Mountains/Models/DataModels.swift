@@ -237,3 +237,44 @@ class SendComment : NSObject{
     
 }
 
+class LikeDisplay : NSObject {
+    var username = String()
+    var full_name = String()
+    var uid = String()
+    var profile_pic = String()
+    var requested = String()
+    var following = String()
+    
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        
+        if let full_name = dictionary["full_name"] as? String {
+            self.full_name = full_name
+        }
+        
+        if let username = dictionary["username"] as? String {
+            self.username = username
+        }
+        
+        if let uid = dictionary["uid"] as? String {
+            self.uid = uid
+        }
+        if let profile_pic = dictionary["profile_pic"] as? String {
+            self.profile_pic = profile_pic
+        }
+        
+        if let requested = dictionary["Requested"] as? String {
+            self.requested = requested
+        }
+        else {
+            self.requested = "0"
+        }
+        if let following = dictionary["following"] as? String {
+            self.following = following
+        }
+        else {
+            self.following = "0"
+        }
+    }
+    
+}
+

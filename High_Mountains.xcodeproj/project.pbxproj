@@ -45,6 +45,8 @@
 		4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */; };
 		4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */; };
 		4608DFE4207F2C1300FEBBE2 /* TravelPackagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */; };
+		46092E702089F3250006E9E2 /* DisplayLikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46092E6F2089F3250006E9E2 /* DisplayLikeVC.swift */; };
+		46092E722089F36B0006E9E2 /* DisplayLike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46092E712089F36B0006E9E2 /* DisplayLike.storyboard */; };
 		4609379F20773F5200B529BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FE660520696B9B00B006D3 /* Main.storyboard */; };
 		460937A12077805200B529BF /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A02077805200B529BF /* AlbumModels.swift */; };
 		460937A4207790C400B529BF /* ScrollViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460937A2207790C400B529BF /* ScrollViewTVC.swift */; };
@@ -66,7 +68,6 @@
 		460A26E320847A1300757B72 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A26E220847A1300757B72 /* CommentVC.swift */; };
 		460A27232084832600757B72 /* CommentsendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A27222084832600757B72 /* CommentsendView.xib */; };
 		460A2725208484A500757B72 /* CommentsendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A2724208484A500757B72 /* CommentsendView.swift */; };
-		460A27272084B29600757B72 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A27262084B29600757B72 /* Tabbar.storyboard */; };
 		460A27292084B41C00757B72 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A27282084B41C00757B72 /* TabbarVC.swift */; };
 		460A272B2084B4E400757B72 /* tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A272A2084B4E400757B72 /* tab1VC.swift */; };
 		460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A5F77207C878300E7B213 /* Plan_Trip.storyboard */; };
@@ -227,6 +228,8 @@
 		4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelPartHeaderTVC.xib; sourceTree = "<group>"; };
 		4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelPackages.storyboard; sourceTree = "<group>"; };
 		4608DFE3207F2C1300FEBBE2 /* TravelPackagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPackagesVC.swift; sourceTree = "<group>"; };
+		46092E6F2089F3250006E9E2 /* DisplayLikeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLikeVC.swift; sourceTree = "<group>"; };
+		46092E712089F36B0006E9E2 /* DisplayLike.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DisplayLike.storyboard; sourceTree = "<group>"; };
 		460937A02077805200B529BF /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		460937A2207790C400B529BF /* ScrollViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTVC.swift; sourceTree = "<group>"; };
 		460937A3207790C400B529BF /* ScrollViewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewTVC.xib; sourceTree = "<group>"; };
@@ -247,7 +250,6 @@
 		460A26E220847A1300757B72 /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		460A27222084832600757B72 /* CommentsendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsendView.xib; sourceTree = "<group>"; };
 		460A2724208484A500757B72 /* CommentsendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsendView.swift; sourceTree = "<group>"; };
-		460A27262084B29600757B72 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		460A27282084B41C00757B72 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		460A272A2084B4E400757B72 /* tab1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab1VC.swift; sourceTree = "<group>"; };
 		460A5F77207C878300E7B213 /* Plan_Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Plan_Trip.storyboard; sourceTree = "<group>"; };
@@ -427,6 +429,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		46092E6E2089F28E0006E9E2 /* LikeDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				46092E6F2089F3250006E9E2 /* DisplayLikeVC.swift */,
+			);
+			path = LikeDisplay;
+			sourceTree = "<group>";
+		};
 		461394E72052679100724B07 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +497,7 @@
 				460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */,
 				466498C820515CC9001FEB0F /* collectiionimageViewController.swift */,
 				C1A83CBB207D3CB000CD9C9F /* Profile */,
+				46092E6E2089F28E0006E9E2 /* LikeDisplay */,
 				461394EC2052AB1B00724B07 /* friendrequestViewController.swift */,
 				4605F2FF2053A16C002A9FD5 /* NotificationViewController.swift */,
 				460A1EB820579BC30069EECD /* SideMenuViewController.swift */,
@@ -622,8 +633,8 @@
 				4609C1D12074C89B0028CA87 /* ProfileTVC.swift */,
 				C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */,
 				C1E09359207A2A030071FC93 /* ProfileWITVC.swift */,
-				C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */,
 				C116228E207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift */,
+				C116228F207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib */,
 				460858902076202B00D63C2C /* FollowListTVC.xib */,
 				4608588F2076202B00D63C2C /* FollowListTVC.swift */,
 				460937A3207790C400B529BF /* ScrollViewTVC.xib */,
@@ -668,7 +679,7 @@
 				468A776E207E056F0049BDAD /* Travel_Themes.storyboard */,
 				4608DFE1207F2B4F00FEBBE2 /* TravelPackages.storyboard */,
 				460A26DE208471EA00757B72 /* Comment.storyboard */,
-				460A27262084B29600757B72 /* Tabbar.storyboard */,
+				46092E712089F36B0006E9E2 /* DisplayLike.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -830,7 +841,6 @@
 				4608DFE2207F2B4F00FEBBE2 /* TravelPackages.storyboard in Resources */,
 				4608589420762B4500D63C2C /* Second.storyboard in Resources */,
 				468A7769207DE2D00049BDAD /* All_DestinationTVC.xib in Resources */,
-				460A27272084B29600757B72 /* Tabbar.storyboard in Resources */,
 				4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */,
 				C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */,
 				4608DFE0207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib in Resources */,
@@ -847,6 +857,7 @@
 				460A26DF208471EA00757B72 /* Comment.storyboard in Resources */,
 				C1622D1B2083A01500DA42B2 /* navVew.xib in Resources */,
 				468A776F207E056F0049BDAD /* Travel_Themes.storyboard in Resources */,
+				46092E722089F36B0006E9E2 /* DisplayLike.storyboard in Resources */,
 				C1162291207BF483007CEDE0 /* ProfileFeedAlbumTVC.xib in Resources */,
 				46080DD82080A92B00641A20 /* Montserrat-Bold.otf in Resources */,
 				460A0289207BC3EC00DA422C /* FetchRequest.storyboard in Resources */,
@@ -1044,6 +1055,7 @@
 				C1FE661620696BBB00B006D3 /* HoshiTextField.swift in Sources */,
 				469F1806207F515100FBD9C1 /* Cradview4.swift in Sources */,
 				4613B615205BBCEF00C7245D /* TabAlbumCamera3ViewController.swift in Sources */,
+				46092E702089F3250006E9E2 /* DisplayLikeVC.swift in Sources */,
 				C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
 				460A272B2084B4E400757B72 /* tab1VC.swift in Sources */,

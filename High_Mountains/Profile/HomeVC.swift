@@ -70,9 +70,9 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if Home[indexPath.row].activity == "photo"{
-        return 303
+        return UITableViewAutomaticDimension
         }else{
-            return 100
+            return UITableViewAutomaticDimension
         }
     
 }

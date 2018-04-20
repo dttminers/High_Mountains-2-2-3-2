@@ -17,6 +17,8 @@ class FollowListTVC: UITableViewCell {
     
     var ListType : String!
     var obj : FollowModel!
+    var obj1 : LikeDisplay!
+   var ListType1 : String!
     
     func populateData(_ data : FollowModel) {
         obj = data
@@ -43,13 +45,44 @@ class FollowListTVC: UITableViewCell {
         }
     }
     
+
+    
     @IBAction func btnFollowAction(_ sender: Any) {
         
         
     }
     
-}
+    @IBAction func btnLikeDisplay(_ sender: Any) {
+        
+        
+    }
+    func populateDataLikesFetch(_ data : LikeDisplay) {
+        obj1 = data
+        AppUtility.setCornerRadius(img, radius: 20)
+        AppUtility.setShadow(btnFollow, opacity: 0, radius: 0)
+        img.loadImageUsingCache(withUrl: obj1.profile_pic)
+        lblName.text = obj1.username
+    
+    if ListType1 == "follower" {
+            if Int(obj1.following)! == 1 {
+                btnFollow.setTitle("Following", for: .normal)
+            }
+            else {
+                if Int(obj1.requested)! == 1 {
+                    btnFollow.setTitle("Requested", for: .normal)
+                }
+                else {
+                    btnFollow.setTitle("Follow", for: .normal)
+                }
+            }
+        }
+      
+     else {
+    btnFollow.setTitle("UnFollow", for: .normal)
+    }
 
+}
+}
 
 
 /*

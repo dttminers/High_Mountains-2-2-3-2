@@ -29,7 +29,13 @@ class ProfileTVC: UITableViewCell {
         
         img.layer.cornerRadius = self.img.frame.size.width/2
         img.clipsToBounds = true
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileTVC.btnLikeAction(_:)))
+       lblLikeCount.addGestureRecognizer(tap)
+       lblLikeCount.isUserInteractionEnabled = true
     }
+    
     var obj : Any!
     
     func populate(_ data : TimelineModel) {

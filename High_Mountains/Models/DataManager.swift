@@ -104,4 +104,16 @@ func sendCommentDictionary(_ array:[AnyObject]) ->  [SendComment] {
     return models
 }
 
+
+func sendLikeDisplayDictionary(_ array:[AnyObject]) ->  [LikeDisplay] {
+    var models:[LikeDisplay] = []
+    for item in array
+    {
+        let object = LikeDisplay()
+        object.setDictionary(item as! [AnyHashable : Any])
+        models.append(object)
+    }
+    return models
+}
+
 }
