@@ -69,7 +69,6 @@
 		460A27232084832600757B72 /* CommentsendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A27222084832600757B72 /* CommentsendView.xib */; };
 		460A2725208484A500757B72 /* CommentsendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A2724208484A500757B72 /* CommentsendView.swift */; };
 		460A27292084B41C00757B72 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A27282084B41C00757B72 /* TabbarVC.swift */; };
-		460A272B2084B4E400757B72 /* tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A272A2084B4E400757B72 /* tab1VC.swift */; };
 		460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A5F77207C878300E7B213 /* Plan_Trip.storyboard */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
 		460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE51204FBB4400BBE5A6 /* Extensions.swift */; };
@@ -104,6 +103,8 @@
 		466498C52051145E001FEB0F /* profiletvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C42051145E001FEB0F /* profiletvViewController.swift */; };
 		466498C720515482001FEB0F /* imageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C620515482001FEB0F /* imageCollectionViewCell.swift */; };
 		466498C920515CC9001FEB0F /* collectiionimageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C820515CC9001FEB0F /* collectiionimageViewController.swift */; };
+		466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466517B2208DC41D0052D7F4 /* PostsVC.swift */; };
+		466517B5208DDEFB0052D7F4 /* PhotoAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */; };
 		467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8620592AC000B5B321 /* FindGuideViewController.swift */; };
 		467F4B8920592B8700B5B321 /* FindGuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8820592B8700B5B321 /* FindGuideCollectionViewCell.swift */; };
 		467F4B8B2059487300B5B321 /* FindGuideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F4B8A2059487300B5B321 /* FindGuideTableViewCell.swift */; };
@@ -251,7 +252,6 @@
 		460A27222084832600757B72 /* CommentsendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsendView.xib; sourceTree = "<group>"; };
 		460A2724208484A500757B72 /* CommentsendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsendView.swift; sourceTree = "<group>"; };
 		460A27282084B41C00757B72 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
-		460A272A2084B4E400757B72 /* tab1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab1VC.swift; sourceTree = "<group>"; };
 		460A5F77207C878300E7B213 /* Plan_Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Plan_Trip.storyboard; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
 		460BBE51204FBB4400BBE5A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -287,6 +287,8 @@
 		466498C42051145E001FEB0F /* profiletvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profiletvViewController.swift; sourceTree = "<group>"; };
 		466498C620515482001FEB0F /* imageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCollectionViewCell.swift; sourceTree = "<group>"; };
 		466498C820515CC9001FEB0F /* collectiionimageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectiionimageViewController.swift; sourceTree = "<group>"; };
+		466517B2208DC41D0052D7F4 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
+		466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumVC.swift; sourceTree = "<group>"; };
 		467F4B8620592AC000B5B321 /* FindGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideViewController.swift; sourceTree = "<group>"; };
 		467F4B8820592B8700B5B321 /* FindGuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		467F4B8A2059487300B5B321 /* FindGuideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuideTableViewCell.swift; sourceTree = "<group>"; };
@@ -587,9 +589,10 @@
 				C1E09363207A31810071FC93 /* ProfileFeedVC.swift */,
 				C1A83CB9207D3C9A00CD9C9F /* ProfilePhotoVC.swift */,
 				460A26E220847A1300757B72 /* CommentVC.swift */,
-				460A272A2084B4E400757B72 /* tab1VC.swift */,
 				461786732085C7B400DE1708 /* ClickLargeImgVC.swift */,
 				461856CC208751FB000F406B /* HomeVC.swift */,
+				466517B2208DC41D0052D7F4 /* PostsVC.swift */,
+				466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1038,7 +1041,9 @@
 				C1FE661A20696BBB00B006D3 /* extensions.swift in Sources */,
 				4613B611205BA10500C7245D /* AlbumCollectionViewCell.swift in Sources */,
 				C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */,
+				466517B5208DDEFB0052D7F4 /* PhotoAlbumVC.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
+				466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */,
 				C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,
@@ -1058,7 +1063,6 @@
 				46092E702089F3250006E9E2 /* DisplayLikeVC.swift in Sources */,
 				C1162290207BF483007CEDE0 /* ProfileFeedAlbumTVC.swift in Sources */,
 				4613B60B205B99B000C7245D /* CameraProfileViewController.swift in Sources */,
-				460A272B2084B4E400757B72 /* tab1VC.swift in Sources */,
 				460BBE57204FC6FF00BBE5A6 /* HomeViewController.swift in Sources */,
 				460937A82077A26E00B529BF /* FollowingRequestsTVC.swift in Sources */,
 				466498C920515CC9001FEB0F /* collectiionimageViewController.swift in Sources */,
