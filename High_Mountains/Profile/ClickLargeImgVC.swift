@@ -38,7 +38,29 @@ class ClickLargeImgVC: UIViewController {
      
     }
 
+    func likeData(_ tid : String) {
+        let postparam="action=like_data&&uid=\(userId)&&timeline_id=\(tid)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : AnyObject = dt.object as AnyObject
+                    
+                }
+                
+            }
+            else {
+                self.alertDialog(msg: result as! String)
+            }
+        })
+    }
   
+    @objc func btnLikeAction(sender:UIButton)
+    {
+        likeData(obj.timeline_id!)
+    }
+    
     @objc func sendComment(sender:UIButton)
     {
         let storyboard = UIStoryboard(name: "Comment", bundle: nil)
