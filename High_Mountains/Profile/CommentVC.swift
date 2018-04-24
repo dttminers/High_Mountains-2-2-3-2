@@ -9,24 +9,23 @@
 import UIKit
 
 class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
-  
+    
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var commentview: UIView!
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var tet: UITextField!
+    @IBOutlet weak var bbtn: UIButton!
     
-  var Comment: [SendComment] = []
-  
+    var Comment: [SendComment] = []
+    
+    var tId : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        if let Comment = Bundle.main.loadNibNamed("CommentsendView", owner: self, options: nil)?.first as?CommentsendView {
-            Comment.bbtn.addTarget(self, action: #selector(CommentsendView.Sendbutton(_:)) , for: .touchUpInside)
-            //Comment.frame.origin.y = 667
-            AppUtility.setCornerRadius(Comment.img, radius: 20)
-            self.commentview?.addSubview(Comment)
-            
-        }
+        
+        
         tableview?.register(UINib(nibName : "CommentTVC", bundle:nil), forCellReuseIdentifier: "CommentTVC")
-        self.URLDownload()
+        self.getComments()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,28 +47,52 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
- 
- 
     
-    func URLDownload()
-    {
-         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
-        let postparam = "action=fetch_comment&&timeline_id=101";
-        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
-            if status {
-                let dt = JSON(data : result as! Data)
-                let res : [AnyObject] = dt.object as! [AnyObject]
-                print(res)
+    func Sendbutton(_ sender: Any) {
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+            let postparam = "action=comment_data&&uid=26&&timeline_id=\(tId)&&comment=\(tet.text!)";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    print(dt)
+                    let res : AnyObject = dt.object as AnyObject
+                    print(res)
+                    
+                    
+                    
+                }
+                else {
+                    print("msg: result as! String")
+                }
                 
-                self.Comment = DATA_MANAGER.sendCommentDictionary(res)
-                self.tableview?.reloadData()
-            }
-            else {
-                self.alertDialog(msg: result as! String)
-            }
-        })
+            })
+            
+        }else {
+            print("There is no internet connection")
+        }
+        
     }
     
+    func getComments()
+    {
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            let postparam = "action=fetch_comment&&timeline_id=\(tId)";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    let res : [AnyObject] = dt.object as! [AnyObject]
+                    print(res)
+                    
+                    self.Comment = DATA_MANAGER.sendCommentDictionary(res)
+                    self.tableview?.reloadData()
+                }
+                else {
+                    self.alertDialog(msg: result as! String)
+                }
+            })
+        }
+        
     }
     
     

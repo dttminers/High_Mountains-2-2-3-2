@@ -24,16 +24,18 @@ class ProfileTVC: UITableViewCell {
     @IBOutlet weak var btnComment: UIButton!
     @IBOutlet weak var btnShare: UIButton!
     
+    var tid : String = ""
+    
+    var parent : UIViewController!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         img.layer.cornerRadius = self.img.frame.size.width/2
         img.clipsToBounds = true
         
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileTVC.btnLikeAction(_:)))
-       lblLikeCount.addGestureRecognizer(tap)
-       lblLikeCount.isUserInteractionEnabled = true
+        self.btnLike.addTarget(self, action: #selector(ProfileTVC.btnLikeAction(_:)) , for: .touchUpInside)
+        self.btnComment.addTarget(self, action: #selector(ProfileTVC.btnCommentAction(_:)) , for: .touchUpInside)
     }
     
     var obj : Any!
@@ -41,6 +43,7 @@ class ProfileTVC: UITableViewCell {
     func populate(_ data : TimelineModel) {
         
         obj = data
+        tid = data.timeline_id!
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
         lblDate.text = data.time
@@ -59,6 +62,7 @@ class ProfileTVC: UITableViewCell {
     func populate(_ data : PhotoModel) {
         
         obj = data
+        tid = data.timeline_id!
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
@@ -75,14 +79,41 @@ class ProfileTVC: UITableViewCell {
     }
         
     @IBAction func btnLikeAction(_ sender: Any) {
+        likeData(tid)
     }
     
     @IBAction func btnCommentAction(_ sender: Any) {
+        let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC
+        controller.tId = tid
+        self.parent.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func btnShareAction(_ sender: Any) {
     }
     
+    func likeData(_ tid : String) {
+        let postparam="action=like_data&&uid=\(userId)&&timeline_id=\(tid)";
+        APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+            if status {
+                let dt = JSON(data : result as! Data)
+                print(dt)
+                if dt != nil {
+                    let res : AnyObject = dt.object as AnyObject
+                    self.lblLikeCount.text = "\(res["like Count"]!! as! String) Like"
+                    if (res["msg"]!! as! String).contains("increase") {
+                        self.btnLike.isSelected = true
+                    }
+                    else {
+                        self.btnLike.isSelected = false
+                    }
+                }
+                
+            }
+            else {
+                //self.alertDialog(msg: result as! String)
+            }
+        })
+    }
     
     class func instanceFromNib() -> ProfileTVC {
         return UINib(nibName: "ProfileTVC", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProfileTVC
