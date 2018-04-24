@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import BSImagePicker
 
 class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
    
@@ -15,13 +16,13 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     @IBOutlet weak var SelectImage: UIImageView!
     @IBOutlet weak var Collectionview: UICollectionView!
     var imageArray = [UIImage]()
-
+    var selectedAssesta = [PHAsset]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
-      grabphotos()
+        grabphotos()
        
     }
   
@@ -46,8 +47,7 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     
     
     func grabphotos(){
-        
-        
+    
         
         let imgManager = PHImageManager.default()
         
@@ -68,6 +68,7 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
                     })
                 }
             }
+            
         }
         else{
             print("you got no photo")
