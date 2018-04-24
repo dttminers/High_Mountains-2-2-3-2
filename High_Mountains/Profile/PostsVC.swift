@@ -24,6 +24,7 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
         case 0:
             let controller = STORY_BOARD.instantiateViewController(withIdentifier: "postsAlbum")
              self.navigationController?.present(controller, animated: true, completion: nil)
+          
             break
         case 1:
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -38,8 +39,7 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
         default:
             break
         }
-        
-        
+      
     }
     
    

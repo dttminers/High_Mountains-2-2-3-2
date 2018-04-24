@@ -12,17 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="navView" customModule="High_Mountains" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="336" height="61"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-3F-hG9">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="336" height="61"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfv-pc-ijk">
-                            <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INn-3a-1pW">
-                                    <rect key="frame" x="3" y="0.0" width="40" height="50"/>
+                                    <rect key="frame" x="3" y="0.0" width="40" height="61"/>
                                     <color key="tintColor" red="1" green="0.47058823529999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" image="slide-1"/>
                                     <connections>
@@ -40,10 +40,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-kF-0g6">
-                            <rect key="frame" x="280" y="0.0" width="40" height="50"/>
+                            <rect key="frame" x="296" y="0.0" width="40" height="61"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQw-DT-edF">
-                                    <rect key="frame" x="-12" y="2" width="45" height="45"/>
+                                    <rect key="frame" x="-12" y="2" width="45" height="56"/>
                                     <state key="normal" image="home" backgroundImage="download"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -71,16 +71,16 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTF-YP-ajU">
-                            <rect key="frame" x="40" y="0.0" width="240" height="50"/>
+                            <rect key="frame" x="40" y="0.0" width="256" height="61"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqI-ow-xBl">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="61"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-ta-84r">
-                                            <rect key="frame" x="200" y="0.0" width="40" height="50"/>
+                                            <rect key="frame" x="216" y="0.0" width="40" height="61"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-eo-6l6">
-                                                    <rect key="frame" x="-14" y="0.0" width="40" height="50"/>
+                                                    <rect key="frame" x="-14" y="0.0" width="40" height="61"/>
                                                     <state key="normal" image="search2"/>
                                                     <connections>
                                                         <action selector="btnSearchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="RSa-Va-xno"/>
@@ -97,7 +97,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzp-Dy-zHd">
-                                            <rect key="frame" x="8" y="10" width="177" height="30"/>
+                                            <rect key="frame" x="8" y="10" width="193" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -115,10 +115,10 @@
                                     </constraints>
                                 </view>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k88-3t-Ha9">
-                                    <rect key="frame" x="-50" y="0.0" width="20" height="50"/>
+                                    <rect key="frame" x="-50" y="0.0" width="20" height="61"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kxW-B7-1li">
-                                            <rect key="frame" x="10" y="0.0" width="0.0" height="50"/>
+                                            <rect key="frame" x="10" y="0.0" width="0.0" height="61"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
                                     </subviews>
@@ -165,7 +165,7 @@
                 <outlet property="viewHeading" destination="hqI-ow-xBl" id="SyL-G6-5HG"/>
                 <outlet property="viewSearch" destination="k88-3t-Ha9" id="BQY-xa-117"/>
             </connections>
-            <point key="canvasLocation" x="65" y="-187"/>
+            <point key="canvasLocation" x="73" y="-181.5"/>
         </view>
     </objects>
     <resources>

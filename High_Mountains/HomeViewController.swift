@@ -29,7 +29,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //slidingMenus()
-        tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
+       tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
         tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC1")
         self.URLDownload()
         
@@ -135,11 +135,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
         else {
             let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
-            cell.populateData(Home[indexPath.row])
-            
+           cell.populateData(Home[indexPath.row])
+
             return cell
         }
-        
+      
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

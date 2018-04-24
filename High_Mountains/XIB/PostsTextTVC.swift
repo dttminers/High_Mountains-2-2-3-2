@@ -44,4 +44,6 @@ class PostsTextTVC: UITableViewCell {
         lblpost.text = obj.post
     }
     }
+    
 }
+

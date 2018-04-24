@@ -17,7 +17,6 @@ class ProfileTVC: UITableViewCell {
     @IBOutlet weak var imgPost: UIImageView!
     
     @IBOutlet weak var lblLikeCount: UILabel!
-    @IBOutlet weak var lblCommentCount: UILabel!
     @IBOutlet weak var lblShareCount: UILabel!
     
     @IBOutlet weak var btnLike: UIButton!
@@ -47,8 +46,7 @@ class ProfileTVC: UITableViewCell {
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
         lblDate.text = data.time
-        lblLikeCount.text = "\(data.like_count!) Like"
-        lblCommentCount.text = "\(data.comment_count!) Comment"
+        lblLikeCount.text = "\(data.friend_like ?? "") \(data.like_count!) others likes"
         lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
         if data.isliked! == "true" {
@@ -60,14 +58,14 @@ class ProfileTVC: UITableViewCell {
     }
     
     func populate(_ data : PhotoModel) {
-        
+
         obj = data
         tid = data.timeline_id!
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
         lblLikeCount.text = "\(data.like_count!) Like"
-        lblCommentCount.text = "\(data.comment_count!) Comment"
+        //lblCommentCount.text = "\(data.comment_count!) Comment"
         lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
         /*if data.isliked! == "true" {
@@ -77,7 +75,7 @@ class ProfileTVC: UITableViewCell {
             btnLike.isSelected = false
         }*/
     }
-        
+
     @IBAction func btnLikeAction(_ sender: Any) {
         likeData(tid)
     }

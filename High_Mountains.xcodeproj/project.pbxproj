@@ -21,6 +21,7 @@
 		46060F83206B8163002C440A /* Validationform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46060F82206B8163002C440A /* Validationform.swift */; };
 		4606A86820505DA300DB0298 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86720505DA300DB0298 /* Section.swift */; };
 		4606A86A20505E2100DB0298 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */; };
+		4607B132208F2620009CD79C /* Share_PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607B131208F2620009CD79C /* Share_PostsVC.swift */; };
 		4607F205207D69AB00432C74 /* All_Destination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4607F204207D69AB00432C74 /* All_Destination.storyboard */; };
 		4607F207207D6E0800432C74 /* All_DestinationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607F206207D6E0800432C74 /* All_DestinationVC.swift */; };
 		46080DD72080A92B00641A20 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46080DCD2080A92900641A20 /* Montserrat-ExtraBold.otf */; };
@@ -203,6 +204,7 @@
 		46060F82206B8163002C440A /* Validationform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validationform.swift; sourceTree = "<group>"; };
 		4606A86720505DA300DB0298 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		4606A86920505E2100DB0298 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		4607B131208F2620009CD79C /* Share_PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share_PostsVC.swift; sourceTree = "<group>"; };
 		4607F204207D69AB00432C74 /* All_Destination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = All_Destination.storyboard; sourceTree = "<group>"; };
 		4607F206207D6E0800432C74 /* All_DestinationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_DestinationVC.swift; sourceTree = "<group>"; };
 		46080DCD2080A92900641A20 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				461856CC208751FB000F406B /* HomeVC.swift */,
 				466517B2208DC41D0052D7F4 /* PostsVC.swift */,
 				466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */,
+				4607B131208F2620009CD79C /* Share_PostsVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1052,6 +1055,7 @@
 				466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */,
 				C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
+				4607B132208F2620009CD79C /* Share_PostsVC.swift in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,
 				468A7771207E09140049BDAD /* Travel_ThemesVC.swift in Sources */,
 				467F4B8720592AC000B5B321 /* FindGuideViewController.swift in Sources */,

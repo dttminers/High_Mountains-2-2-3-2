@@ -105,7 +105,7 @@ class TimelineModel : NSObject {
      var isliked : String?
     var image : String?
     var caption : String?
-    
+    var friend_like: String?
    
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         activity = dictionary["activity"] as? String
@@ -119,7 +119,7 @@ class TimelineModel : NSObject {
         isliked = dictionary["isliked"] as? String
         image = dictionary["image"] as? String
         caption = dictionary["caption"] as? String
-       
+        friend_like = dictionary["friend_like"] as? String
     }
 }
 
@@ -277,4 +277,5 @@ class LikeDisplay : NSObject {
     }
     
 }
+
 

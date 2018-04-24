@@ -103,4 +103,22 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let DestinationVC : Share_PostsVC = segue.destination as! Share_PostsVC
+        DestinationVC.postimg = SelectImage.image!
+        
+    }
+    
+    @IBAction func btnNext(_ sender: Any) {
+       
+//        let controller = STORY_BOARD.instantiateViewController(withIdentifier: "SharePage")
+//        self.showDetailViewController(controller, sender: nil)
+        
+    }
+    
+    @IBAction func btnBackIcon(_ sender: Any) {
+        
+        let controller = STORY_BOARD.instantiateViewController(withIdentifier: "Posts")
+        self.show(controller, sender: nil)
+    }
 }

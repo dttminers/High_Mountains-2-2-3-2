@@ -120,11 +120,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     //pop button action
     @IBAction func PopUpActbtn(_ sender: Any) {
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Popup") as! PopMenuViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
+        let controller = STORY_BOARD.instantiateViewController(withIdentifier: "Popup")
+        self.navigationController?.showDetailViewController(controller, sender: nil)
         
     }
     
