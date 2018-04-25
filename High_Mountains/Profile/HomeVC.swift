@@ -62,10 +62,10 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         else {
             let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
             cell.populateData(Home[indexPath.row])
-            
+
             return cell
         }
-        
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

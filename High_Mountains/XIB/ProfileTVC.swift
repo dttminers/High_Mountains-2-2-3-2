@@ -113,6 +113,14 @@ class ProfileTVC: UITableViewCell {
         })
     }
     
+    @IBAction func MoreIcon(_ sender: UIButton) {
+        var alert = UIAlertController(title: "dddddd", message: "aaaa", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+      
+       
+    }
+    
+    
     class func instanceFromNib() -> ProfileTVC {
         return UINib(nibName: "ProfileTVC", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProfileTVC
     }
