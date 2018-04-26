@@ -14,7 +14,7 @@ class DisplayLikeVC: UIViewController {
     
     var LikeDisplay : [LikeDisplay] = []
     var ListType1 : String = ""
-    
+    var tId : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +24,7 @@ class DisplayLikeVC: UIViewController {
 
     func URLDownload()
     {
-        let postparam = "action=display_like_details&&timeline_id=101&&uid=2";
+        let postparam = "action=display_like_details&&timeline_id=\(tId)&&uid=\(userId)";
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)display_like_details.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
@@ -40,6 +40,7 @@ class DisplayLikeVC: UIViewController {
         })
     }
 
+    
 
   @objc func btnLikeDisplay(_ sender: UIButton) {
     var action = ""

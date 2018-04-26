@@ -34,6 +34,8 @@ let selectedSegmentColor = UIColor(red: 151.0/255.0, green: 128.0/255.0, blue: 2
 let STORY_BOARD = UIStoryboard(name: "Main", bundle: nil)
 let SECOND_STORYBOARD = UIStoryboard(name: "Second", bundle: nil)
 let PROFILE_STORYBOARD = UIStoryboard(name: "Profile", bundle: nil)
+let Comment_STORYBOARD = UIStoryboard(name: "Comment", bundle: nil)
+
 let TAB_HEIGHT:CGFloat = 54.0
 let TAB_BG_COLOR = UIColor(red: 76.0/255.0, green: 76.0/255.0, blue: 129.0/255.0, alpha: 1.0)
 

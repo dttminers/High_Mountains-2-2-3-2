@@ -44,28 +44,28 @@ class FollowModel : NSObject {
 }
 
 class UserInfoModel : NSObject {
-     var lives_in : String?
-     var profile_pic : String?
-     var email : String?
-     var full_name : String?
-     var fav_quote : String?
-     var gender : String?
-     var from_des : String?
-     var profile_type : String?
-     var followers_count : Int?
-     var relationship_status : String?
-     var bio : String?
-     var result_status : Int?
-     var status : Int?
-     var contact_no : Int?
-     var username : String?
-     var id : Int?
-     var password : String?
-     var referral_code : String?
-     var time : String?
-     var following_count : Int?
-     var dob : String?
-     var post_count : Int?
+    var lives_in : String?
+    var profile_pic : String?
+    var email : String?
+    var full_name : String?
+    var fav_quote : String?
+    var gender : String?
+    var from_des : String?
+    var profile_type : String?
+    var followers_count : Int?
+    var relationship_status : String?
+    var bio : String?
+    var result_status : Int?
+    var status : Int?
+    var contact_no : Int?
+    var username : String?
+    var id : Int?
+    var password : String?
+    var referral_code : String?
+    var time : String?
+    var following_count : Int?
+    var dob : String?
+    var post_count : Int?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         lives_in = dictionary["lives_in"] as? String
@@ -94,24 +94,24 @@ class UserInfoModel : NSObject {
 }
 
 class TimelineModel : NSObject {
-     var activity : String?
-     var id : String?
-     var timeline_id : String?
-     var post : String?
-     var like_count : String?
-     var comment_count : String?
-     var share_count : String?
-     var time : String?
-     var isliked : String?
+    var activity : String?
+    var id : String?
+    var timeline_id : String?
+    // var post : String?
+    var like_count : String?
+    var comment_count : String?
+    var share_count : String?
+    var time : String?
+    var isliked : String?
     var image : String?
     var caption : String?
     var friend_like: String?
-   
+    
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         activity = dictionary["activity"] as? String
         id = dictionary["id"] as? String
         timeline_id = dictionary["timeline_id"] as? String
-        post = dictionary["post"] as? String
+        // post = dictionary["post"] as? String
         like_count = dictionary["like_count"] as? String
         comment_count = dictionary["comment_count"] as? String
         share_count = dictionary["share_count"] as? String
@@ -124,16 +124,16 @@ class TimelineModel : NSObject {
 }
 
 class PhotoModel : NSObject {
-     var like_count : String?
-     var id : String?
-     var image_url : String?
-     var share_count : String?
-     var time : String?
-     var username : String?
-     var comment_count : String?
-     var uid : String?
-     var timeline_id : String?
-     var caption : String?
+    var like_count : String?
+    var id : String?
+    var image_url : String?
+    var share_count : String?
+    var time : String?
+    var username : String?
+    var comment_count : String?
+    var uid : String?
+    var timeline_id : String?
+    var caption : String?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         like_count = dictionary["like_count"] as? String
@@ -161,19 +161,19 @@ class AllDestination : NSObject{
     var image_url: String?
     var status: Int?
     
-
-func setDictionary(_ dictionary:[AnyHashable : Any]){
     
-    id = dictionary["id"] as? Int
-    title = dictionary["title"]as? String
-    country = dictionary["country"] as? String
-    state = dictionary["state"] as? String
-    city = dictionary["city"] as? String
-    details = dictionary["details"] as? String
-    continent = dictionary["continent"] as? String
-    image_url = dictionary["image_url"] as? String
-    status  = dictionary["status"] as? Int
-}
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        
+        id = dictionary["id"] as? Int
+        title = dictionary["title"]as? String
+        country = dictionary["country"] as? String
+        state = dictionary["state"] as? String
+        city = dictionary["city"] as? String
+        details = dictionary["details"] as? String
+        continent = dictionary["continent"] as? String
+        image_url = dictionary["image_url"] as? String
+        status  = dictionary["status"] as? Int
+    }
 }
 
 class TravelTheme : NSObject{
@@ -183,15 +183,15 @@ class TravelTheme : NSObject{
     var theme_image: String?
     var status: Int?
     
-
-func setDictionary(_ dictionary:[AnyHashable : Any]){
     
-    id = dictionary["id"] as? Int
-    title = dictionary["title"] as? String
-    theme_image = dictionary["theme_image"] as? String
-    status = dictionary["status"] as? Int
-    
-}
+    func setDictionary(_ dictionary:[AnyHashable : Any]){
+        
+        id = dictionary["id"] as? Int
+        title = dictionary["title"] as? String
+        theme_image = dictionary["theme_image"] as? String
+        status = dictionary["status"] as? Int
+        
+    }
 }
 
 class FetchRequest : NSObject{
@@ -205,7 +205,7 @@ class FetchRequest : NSObject{
         name = dictionary["name"] as? String
         uid = dictionary["uid"] as? Int
         profile_pic = dictionary["profile_pic"] as? String
-       mutual_friend_count = dictionary["mutual friend count"] as? Int
+        mutual_friend_count = dictionary["mutual friend count"] as? Int
         
     }
 }
@@ -224,15 +224,15 @@ class SendComment : NSObject{
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         
-       id = dictionary["id"] as? String
-       timeline_id = dictionary["timeline_id"] as? String
-       uid = dictionary["uid"] as? String
-       comment = dictionary["comment"] as? String
-       like_count = dictionary["like_count"] as? String
-       reply_count = dictionary["reply_count"] as? String
-       time = dictionary["time"] as? String
-       username = dictionary["username"] as? String
-       profile_pic = dictionary["profile_pic"] as? String
+        id = dictionary["id"] as? String
+        timeline_id = dictionary["timeline_id"] as? String
+        uid = dictionary["uid"] as? String
+        comment = dictionary["comment"] as? String
+        like_count = dictionary["like_count"] as? String
+        reply_count = dictionary["reply_count"] as? String
+        time = dictionary["time"] as? String
+        username = dictionary["username"] as? String
+        profile_pic = dictionary["profile_pic"] as? String
     }
     
 }

@@ -57,10 +57,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate  {
 
     
     @IBAction func Cancelpopupbtn(_ sender: Any) {
-        let controller = STORY_BOARD.instantiateViewController(withIdentifier: " ProfileDetails")
-        self.navigationController?.showDetailViewController(controller, sender: nil)
-       
-        //self.view.removeFromSuperview()
+    self.view.removeFromSuperview()
         
     }
     func showAnimate()

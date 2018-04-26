@@ -13,7 +13,7 @@ class Displayfetch_imgVC: UIViewController {
     @IBOutlet weak var FetchImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      AppUtility.setCornerRadius(FetchImg, radius: 25)
       URLDownload()
     }
 
@@ -24,9 +24,11 @@ class Displayfetch_imgVC: UIViewController {
             if status {
                 let dt = JSON(data : result as! Data)
                 let res : [AnyObject] = dt.object as! [AnyObject]
-                print(res[0]["profile_pic"] as! String)
+                print(res)
+                self.FetchImg.loadImageUsingCache(withUrl: "\(url)\(res[0]["profile_pic"] as! String)")
                 
-                var vs = res[0]["profile_pic"] as! String
+                
+                
                
         
                 

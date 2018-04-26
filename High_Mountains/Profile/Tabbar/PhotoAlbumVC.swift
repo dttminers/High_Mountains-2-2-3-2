@@ -8,7 +8,7 @@
 
 import UIKit
 import Photos
-import BSImagePicker
+
 
 class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
    
