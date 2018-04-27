@@ -9,8 +9,9 @@
 import UIKit
 
 class HomeClcklargVC: UIViewController {
-
+    
     @IBOutlet weak var DisplayimgView: UIView!
+    
     var obj : TimelineModel!
     
     override func viewDidLoad() {
@@ -21,10 +22,10 @@ class HomeClcklargVC: UIViewController {
         viewN.populate(obj)
         viewN.parent = self
         viewN.bringSubview(toFront: self.view)
-       DisplayimgView.addSubview(viewN)
+        DisplayimgView.addSubview(viewN)
     }
-
     
     
-
+    
+    
 }

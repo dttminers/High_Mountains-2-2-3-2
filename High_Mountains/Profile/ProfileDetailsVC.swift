@@ -120,7 +120,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     //pop button action
     @IBAction func PopUpActbtn(_ sender: Any) {
-        let controller = STORY_BOARD.instantiateViewController(withIdentifier: "Popup")
+        let controller = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Popup")
         self.navigationController?.showDetailViewController(controller, sender: nil)
         
     }
@@ -229,7 +229,15 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     let res : AnyObject = dt.object as AnyObject
                     self.userInfo = DATA_MANAGER.setUserInfoDictionary(res)
                     self.populateUserData()
+                    
+                    if let ProfileImg = res["profile_pic"] as? String{
+                        
+                        self.ProfileIMG.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
+                        
+                    }
                 }
+                
+               
                 else {
                     self.alertDialog(msg: result as! String)
                 }
@@ -495,7 +503,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
-        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
+        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC") as! ClickLargeImgVC
         desVC.obj = photoRes[indexPath.row]
     
         self.navigationController?.pushViewController(desVC, animated: true)

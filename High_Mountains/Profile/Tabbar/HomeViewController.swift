@@ -8,19 +8,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate{
     
     @IBOutlet weak var tableviewHome: UITableView!
     @IBOutlet weak var menubar: UIBarButtonItem!
     @IBOutlet weak var profile: UIBarButtonItem!
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+        desVC.obj = Home[indexPath.row]
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
     
     var Home : [TimelineModel] = []
     var photoRes : [PhotoModel] = []
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        
         
         //        //sidemenu()
         
@@ -88,7 +93,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func URLDownload()
     {
-        let postparam = "action=fetch_timeline&&uid=2";
+        let postparam = "action=fetch_timeline&&uid=\(userId)";
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
@@ -103,6 +108,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         })
     }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -142,12 +149,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
  
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "Displayimg") as! HomeClcklargVC
-        desVC.obj = Home[indexPath.row]
-        self.navigationController?.pushViewController(desVC, animated: true)
-    }
+    
 }
 
 extension HomeViewController : slideMenuDelegate {
@@ -155,6 +157,7 @@ extension HomeViewController : slideMenuDelegate {
         self.slideMenuController()?.openLeft()
         
     }
+    
 }
 
 extension HomeViewController: MoreItem{

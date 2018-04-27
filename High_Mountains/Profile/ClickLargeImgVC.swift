@@ -9,7 +9,7 @@
 import UIKit
 
 class ClickLargeImgVC: UIViewController {
- 
+    
     //var Image: [PhotoModel] = []
     var obj : PhotoModel!
     
@@ -27,14 +27,14 @@ class ClickLargeImgVC: UIViewController {
         viewN.bringSubview(toFront: self.view)
         LArgeImgView.addSubview(viewN)
         
-     
+        
     }
     
     @objc func sendComment(sender:UIButton)
     {
         let storyboard = UIStoryboard(name: "Comment", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Comment")
-       self.navigationController?.pushViewController(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     @objc func share(sender:UIButton){
         let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
