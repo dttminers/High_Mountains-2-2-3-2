@@ -118,7 +118,8 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     
     @IBAction func btnBackIcon(_ sender: Any) {
         
-        let controller = STORY_BOARD.instantiateViewController(withIdentifier: "Posts")
-        self.show(controller, sender: nil)
+        self.navigationController?.popViewController(animated: true)
+        //let controller = STORY_BOARD.instantiateViewController(withIdentifier: "Posts")
+        //self.show(controller, sender: nil)
     }
 }

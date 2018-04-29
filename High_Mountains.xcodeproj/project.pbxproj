@@ -146,6 +146,7 @@
 		C1B1305420860FE200374B73 /* SideDrawerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B1305220860FE200374B73 /* SideDrawerTVC.xib */; };
 		C1B130572086102C00374B73 /* SideDrawerSectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B130552086102C00374B73 /* SideDrawerSectionTVC.swift */; };
 		C1B130582086102C00374B73 /* SideDrawerSectionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B130562086102C00374B73 /* SideDrawerSectionTVC.xib */; };
+		C1C412752090EDE800FE2A11 /* MainTabTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C412742090EDE800FE2A11 /* MainTabTBC.swift */; };
 		C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E09359207A2A030071FC93 /* ProfileWITVC.swift */; };
 		C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */; };
 		C1E09360207A2F280071FC93 /* ProfileFeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */; };
@@ -341,6 +342,7 @@
 		C1B1305220860FE200374B73 /* SideDrawerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideDrawerTVC.xib; sourceTree = "<group>"; };
 		C1B130552086102C00374B73 /* SideDrawerSectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDrawerSectionTVC.swift; sourceTree = "<group>"; };
 		C1B130562086102C00374B73 /* SideDrawerSectionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideDrawerSectionTVC.xib; sourceTree = "<group>"; };
+		C1C412742090EDE800FE2A11 /* MainTabTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabTBC.swift; sourceTree = "<group>"; };
 		C1E09359207A2A030071FC93 /* ProfileWITVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWITVC.swift; sourceTree = "<group>"; };
 		C1E0935A207A2A030071FC93 /* ProfileWITVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileWITVC.xib; sourceTree = "<group>"; };
 		C1E0935F207A2F280071FC93 /* ProfileFeedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedView.xib; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 				C1FE660720696BBB00B006D3 /* HelperClasses */,
 				469BBD87204D16EE00A33EF9 /* AppDelegate.swift */,
 				C1E3F8EB2077EFA40056BDE8 /* customNVC.swift */,
+				C1C412742090EDE800FE2A11 /* MainTabTBC.swift */,
 				C1B1304420848B4400374B73 /* Login */,
 				466498C42051145E001FEB0F /* profiletvViewController.swift */,
 				460BBE56204FC6FF00BBE5A6 /* HomeViewController.swift */,
@@ -1052,6 +1055,7 @@
 				C1E0935B207A2A030071FC93 /* ProfileWITVC.swift in Sources */,
 				466517B5208DDEFB0052D7F4 /* PhotoAlbumVC.swift in Sources */,
 				C1FE661920696BBB00B006D3 /* cfg.swift in Sources */,
+				C1C412752090EDE800FE2A11 /* MainTabTBC.swift in Sources */,
 				466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */,
 				C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
