@@ -143,11 +143,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 313
-        
-        
+        return UITableViewAutomaticDimension//313
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
+        //desVC.obj = Home[indexPath.row]
+        
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
 }
 
 extension HomeViewController : slideMenuDelegate {

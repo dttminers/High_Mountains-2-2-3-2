@@ -19,7 +19,7 @@ class ClickLargeImgVC: UIViewController {
         
         
         let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
-        viewN.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)//nav.frame
+        viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
         viewN.populate(obj)
         viewN.parent = self
         //viewN.btnComment.addTarget(self, action: #selector(ClickLargeImgVC.sendComment(sender:)) , for: .touchUpInside)
