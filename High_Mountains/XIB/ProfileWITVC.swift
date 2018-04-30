@@ -12,23 +12,23 @@ class ProfileWITVC: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
-    
+
     @IBOutlet weak var Profileimg: UIView!
     @IBOutlet weak var lblLikeCount: UILabel!
     @IBOutlet weak var lblCommentCount: UILabel!
     @IBOutlet weak var lblShareCount: UILabel!
-    
+
     @IBOutlet weak var btnLike: UIButton!
     @IBOutlet weak var btnComment: UIButton!
     @IBOutlet weak var btnShare: UIButton!
-    
+
     func populate(_ data : TimelineModel) {
-        lblTitle.text = data.post
-        
+      // lblTitle.text = data.post
+
         lblLikeCount.text = "\(data.like_count!)"
         lblCommentCount.text = "\(data.comment_count!)"
         lblShareCount.text = "\(data.share_count!)"
-        
+
         if data.isliked! == "true" {
             btnLike.isSelected = true
         }
@@ -36,7 +36,7 @@ class ProfileWITVC: UITableViewCell {
             btnLike.isSelected = false
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,7 +44,8 @@ class ProfileWITVC: UITableViewCell {
         img.clipsToBounds = true
     }
 
-    
-    
-    
+
+
+
 }
+

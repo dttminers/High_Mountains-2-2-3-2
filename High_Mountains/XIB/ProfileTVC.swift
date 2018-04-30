@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ProfileTVC: UITableViewCell {
+protocol MoreItem {
+    
+    func didButtonPressed()
+}
 
+
+
+class ProfileTVC: UITableViewCell {
+    
+    @IBOutlet weak var lblCommentCount: UILabel!
     @IBOutlet weak var lblbPhotoTItle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var img: UIImageView!
@@ -17,15 +25,16 @@ class ProfileTVC: UITableViewCell {
     @IBOutlet weak var imgPost: UIImageView!
     
     @IBOutlet weak var lblLikeCount: UILabel!
-    @IBOutlet weak var lblShareCount: UILabel!
+    //@IBOutlet weak var lblShareCount: UILabel!
     
     @IBOutlet weak var btnLike: UIButton!
     @IBOutlet weak var btnComment: UIButton!
     @IBOutlet weak var btnShare: UIButton!
     
     var tid : String = ""
-    
     var parent : UIViewController!
+    var delegate: MoreItem?
+     var obj : Any!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +44,15 @@ class ProfileTVC: UITableViewCell {
         
         self.btnLike.addTarget(self, action: #selector(ProfileTVC.btnLikeAction(_:)) , for: .touchUpInside)
         self.btnComment.addTarget(self, action: #selector(ProfileTVC.btnCommentAction(_:)) , for: .touchUpInside)
+      
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileTVC.LikeDisplay(_:)))
+        lblLikeCount.addGestureRecognizer(tap)
+        lblLikeCount.isUserInteractionEnabled = true
+        
+    
     }
     
-    var obj : Any!
+   
     
     func populate(_ data : TimelineModel) {
         
@@ -46,9 +61,10 @@ class ProfileTVC: UITableViewCell {
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
         lblDate.text = data.time
-        lblLikeCount.text = "\(data.friend_like ?? "") \(data.like_count!) others likes"
-        lblShareCount.text = "\(data.share_count!) Share"
+        lblLikeCount.text = "Liked by \(data.friend_like ?? "") and \(data.like_count!) others "
+       // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
+        lblCommentCount.text = "View all \(data.comment_count ?? "0") Comment"
         if data.isliked! == "true" {
             btnLike.isSelected = true
         }
@@ -58,7 +74,7 @@ class ProfileTVC: UITableViewCell {
     }
     
     func populate(_ data : PhotoModel) {
-
+        
         obj = data
         tid = data.timeline_id!
         lblTitle.text = "Swapnil"
@@ -66,16 +82,16 @@ class ProfileTVC: UITableViewCell {
         lblDate.text = data.time
         lblLikeCount.text = "\(data.like_count!) Like"
         //lblCommentCount.text = "\(data.comment_count!) Comment"
-        lblShareCount.text = "\(data.share_count!) Share"
+       // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
         /*if data.isliked! == "true" {
-            btnLike.isSelected = true
-        }
-        else {
-            btnLike.isSelected = false
-        }*/
+         btnLike.isSelected = true
+         }
+         else {
+         btnLike.isSelected = false
+         }*/
     }
-
+    
     @IBAction func btnLikeAction(_ sender: Any) {
         likeData(tid)
     }
@@ -111,6 +127,20 @@ class ProfileTVC: UITableViewCell {
                 //self.alertDialog(msg: result as! String)
             }
         })
+    }
+    
+    @IBAction func MoreIcon(_ sender: UIButton) {
+        
+      delegate?.didButtonPressed()
+        
+    }
+    
+    @objc func LikeDisplay(_ sender: UITapGestureRecognizer){
+        
+        let vc: DisplayLikeVC  = Comment_STORYBOARD.instantiateViewController(withIdentifier: "LikeDisplay") as! DisplayLikeVC
+        vc.tId = tid
+        self.parent.navigationController?.pushViewController(vc, animated: true)
+       
     }
     
     class func instanceFromNib() -> ProfileTVC {

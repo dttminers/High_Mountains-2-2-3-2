@@ -1,21 +1,16 @@
 //
-//  collectiionimageViewController.swift
+//  MultipleSelectedVC.swift
 //  High_Mountains
 //
-//  Created by Abhishek on 08/03/18.
+//  Created by Abhishek on 25/04/18.
 //  Copyright © 2018 Abhishek. All rights reserved.
 //
 
 import UIKit
 
-class collectiionimageViewController: UIViewController {
-   
-    //collection view 1
-    
-   
-    
-    
+class MultipleSelectedVC: UIViewController {
 
+    @IBOutlet weak var Display_img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +22,7 @@ class collectiionimageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
+
     /*
     // MARK: - Navigation
 

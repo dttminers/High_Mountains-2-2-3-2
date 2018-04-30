@@ -26,7 +26,13 @@ class Share_PostsVC: UIViewController {
         
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
-            let postparam="image_url=\(Postsimg.image!)&&action=upload_image&&uid=1&&activity=photo&&tag_status=0&&location_status=0&&caption=\(CaptionTxt.text!)";
+            let image : UIImage = Postsimg.image!
+            
+            //Now use image to create into NSData format
+            let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
+            let strBase64:String = imageData.base64EncodedString(options: .lineLength64Characters)
+            
+            let postparam="image_url=\(strBase64)&&action=upload_image&&uid=\(userId)&&activity=photo&&tag_status=0&&location_status=0&&caption=\(CaptionTxt.text!)";
             
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)time_log.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {

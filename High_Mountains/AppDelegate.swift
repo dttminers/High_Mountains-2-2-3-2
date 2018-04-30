@@ -26,10 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             userId = userData["id"] as! String
         }
     
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.makeKeyAndVisible()
-      // let mainVC = HomeViewController()
-//      window?.rootViewController = mainVC
+
         return true
     }
 

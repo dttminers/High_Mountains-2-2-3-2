@@ -79,43 +79,43 @@ class DataManager {
         }
         return models
     }
-
-
-func setFetchRequestDictionary(_ array:[AnyObject]) ->  [FetchRequest] {
-    var models:[FetchRequest] = []
-    for item in array
-    {
-        let object = FetchRequest()
-        object.setDictionary(item as! [AnyHashable : Any])
-        models.append(object)
-    }
-    return models
-}
-
-
-func sendCommentDictionary(_ array:[AnyObject]) ->  [SendComment] {
-    var models:[SendComment] = []
-    for item in array
-    {
-        let object = SendComment()
-        object.setDictionary(item as! [AnyHashable : Any])
-        models.append(object)
-    }
-    return models
-}
-
-
-func sendLikeDisplayDictionary(_ array:[AnyObject]) ->  [LikeDisplay] {
-    var models:[LikeDisplay] = []
-    for item in array
-    {
-        let object = LikeDisplay()
-        object.setDictionary(item as! [AnyHashable : Any])
-        models.append(object)
-    }
-    return models
     
-  
-}
-
+    
+    func setFetchRequestDictionary(_ array:[AnyObject]) ->  [FetchRequest] {
+        var models:[FetchRequest] = []
+        for item in array
+        {
+            let object = FetchRequest()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
+    }
+    
+    
+    func sendCommentDictionary(_ array:[AnyObject]) ->  [SendComment] {
+        var models:[SendComment] = []
+        for item in array
+        {
+            let object = SendComment()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
+    }
+    
+    
+    func sendLikeDisplayDictionary(_ array:[AnyObject]) ->  [LikeDisplay] {
+        var models:[LikeDisplay] = []
+        for item in array
+        {
+            let object = LikeDisplay()
+            object.setDictionary(item as! [AnyHashable : Any])
+            models.append(object)
+        }
+        return models
+        
+        
+    }
+    
 }

@@ -8,29 +8,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate{
     
     @IBOutlet weak var tableviewHome: UITableView!
     @IBOutlet weak var menubar: UIBarButtonItem!
     @IBOutlet weak var profile: UIBarButtonItem!
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+        desVC.obj = Home[indexPath.row]
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
     
-     var Home : [TimelineModel] = []
-    
+    var Home : [TimelineModel] = []
+    var photoRes : [PhotoModel] = []
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-//         tabBar.barTintColor = UIColor(red: 38/255, green: 196/255, blue: 133/255, alpha: 1)
-//
-//        //sidemenu()
-//        setupTabBar()
+        
+        
+        //        //sidemenu()
+        
         //let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.red]
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //slidingMenus()
-       tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
-        tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC1")
+        //tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
+        tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         self.URLDownload()
         
     }
@@ -86,24 +90,10 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         
     }
-//    func setupTabBar() {
-//
-//        let videoController = createNavController(vc: FetchRequestVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
-//        let favoriteController = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
-//        let favoriteController1 = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
-//        let favoriteController2 = createNavController(vc: CommentVC(), selected: #imageLiteral(resourceName: "ic_mybucketlist"), unselected: #imageLiteral(resourceName: "location_red"))
-//        viewControllers = [videoController,favoriteController,favoriteController1,favoriteController2]
-//
-//        guard let items = tabBar.items else { return }
-//
-//        for item in items {
-//            item.imageInsets = UIEdgeInsetsMake(4, 0, -4, 0)
-//        }
-//    }
-
+    
     func URLDownload()
     {
-        let postparam = "action=fetch_timeline&&uid=2";
+        let postparam = "action=fetch_timeline&&uid=\(userId)";
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
@@ -118,6 +108,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         })
     }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -127,19 +119,21 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if Home[indexPath.row].activity == "photo"{
-            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC1", for: indexPath) as! ProfileTVC
+       if (Home[indexPath.row].activity == "photo"){
+            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
+            cell.delegate = self
             return cell
         }
             
         else {
-            let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
-           cell.populateData(Home[indexPath.row])
-
-            return cell
+//            //            let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
+//            //cell.populateData(Home[indexPath.row])
+      let cell  = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath)
+        
+                 return cell
         }
-      
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -159,15 +153,38 @@ extension HomeViewController : slideMenuDelegate {
         self.slideMenuController()?.openLeft()
         
     }
+    
 }
-//extension UITabBarController {
-//
-//    func createNavController(vc: UIViewController, selected: UIImage, unselected: UIImage) -> UINavigationController {
-//        let viewController = vc
-//        let navController = UINavigationController(rootViewController: viewController)
-//        navController.tabBarItem.image = unselected
-//        navController.tabBarItem.selectedImage = selected
-//        return navController
-//    }
-//}
 
+extension HomeViewController: MoreItem{
+    
+    func didButtonPressed() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let camera = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {ACTION in
+            
+            let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC,animated: true,completion: nil)
+            
+        })
+        
+        let Photolib = UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {ACTION in
+            
+            let imagePicker = UIImagePickerController()
+           // imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil)
+        
+        alert.addAction(camera)
+        alert.addAction(Photolib)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+}
