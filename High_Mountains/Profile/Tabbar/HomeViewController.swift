@@ -14,11 +14,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var menubar: UIBarButtonItem!
     @IBOutlet weak var profile: UIBarButtonItem!
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
-        desVC.obj = Home[indexPath.row]
-        self.navigationController?.pushViewController(desVC, animated: true)
-    }
+    
     
     var Home : [TimelineModel] = []
     var photoRes : [PhotoModel] = []
@@ -33,7 +29,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //slidingMenus()
-        //tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
+        tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
         tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         self.URLDownload()
         
@@ -141,9 +137,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC.") as! ClickLargeImgVC
-        //desVC.obj = Home[indexPath.row]
-        
+        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+        desVC.obj = Home[indexPath.row]
         self.navigationController?.pushViewController(desVC, animated: true)
     }
 }
