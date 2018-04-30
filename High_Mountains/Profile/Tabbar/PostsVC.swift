@@ -32,6 +32,7 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnActiononTab(btnGallery)
     }
     
     
