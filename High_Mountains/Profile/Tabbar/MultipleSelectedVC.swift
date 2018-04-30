@@ -10,6 +10,7 @@ import UIKit
 
 class MultipleSelectedVC: UIViewController {
 
+    @IBOutlet var cc: UICollectionView!
     @IBOutlet weak var Display_img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,12 +12,15 @@ import Photos
 
 class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
    
+    @IBOutlet var net: UIButton!
     
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var SelectImage: UIImageView!
     @IBOutlet weak var Collectionview: UICollectionView!
     var imageArray = [UIImage]()
     var selectedAssesta = [PHAsset]()
+  
     var selectedIndex: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,18 +100,17 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     
     @IBAction func btnNext(_ sender: Any) {
        
-//        let controller: MultipleSelectedVC = STORY_BOARD.instantiateViewController(withIdentifier: "Multiplepost") as! MultipleSelectedVC
-//        for i in 0..<self.selectedAssesta.count{
-//
-//            if i == true as! Int  {
-//
-//            }
-//
-//        }
-//
-//
-//        self.showDetailViewController(controller, sender: nil)
-//
+        let controller: MultipleSelectedVC = STORY_BOARD.instantiateViewController(withIdentifier: "Multiplepost") as! MultipleSelectedVC
+        for i in 0..<self.imageArray.count{
+
+            
+            print(i)
+
+        }
+
+
+        self.showDetailViewController(controller, sender: nil)
+
         
     }
     
