@@ -129,7 +129,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
             cell.delegate = self
-            cell.delegate = self
 
 
             return cell
@@ -138,7 +137,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         else if (Home[indexPath.row].activity == "album"){
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
-            cell.delegate = self
             cell.delegate = self
             return cell
         }
