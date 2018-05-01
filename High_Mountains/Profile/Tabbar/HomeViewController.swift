@@ -22,6 +22,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         
         //        //sidemenu()
         
@@ -34,11 +35,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.URLDownload()
         
     }
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+//        desVC.feedimg.image = photoRes[indexPath.row]as! UIImage
+//        self.navigationController?.pushViewController(desVC, animated: true)
+//    }
     override func viewWillAppear(_ animated: Bool) {
         configureNavView(self, isBack: false)
         //navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: false)
-        
     }
     
     @IBAction func btnProfileAction(_ sender: Any) {
@@ -112,20 +116,36 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Home.count
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc: HomeClcklargVC  = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+        vc.obj = photoRes[indexPath.row]
+        self.show(vc, sender: nil)
+        
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
        if (Home[indexPath.row].activity == "photo"){
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
             cell.delegate = self
+            cell.delegate = self
+
+
             return cell
         }
-            
+        
+        else if (Home[indexPath.row].activity == "album"){
+            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+            cell.populate(Home[indexPath.row])
+            cell.delegate = self
+            cell.delegate = self
+            return cell
+        }
         else {
-//            //            let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
-//            //cell.populateData(Home[indexPath.row])
-      let cell  = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath)
+           let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
+           cell.populateData(Home[indexPath.row])
+     // let cell  = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath)
         
                  return cell
         }
@@ -136,11 +156,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return UITableViewAutomaticDimension//313
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
-        desVC.obj = Home[indexPath.row]
-        self.navigationController?.pushViewController(desVC, animated: true)
-    }
 }
 
 extension HomeViewController : slideMenuDelegate {
@@ -152,6 +167,9 @@ extension HomeViewController : slideMenuDelegate {
 }
 
 extension HomeViewController: MoreItem{
+    
+    
+    
     
     func didButtonPressed() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)

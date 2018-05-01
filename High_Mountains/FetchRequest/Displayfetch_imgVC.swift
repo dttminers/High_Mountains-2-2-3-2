@@ -17,6 +17,12 @@ class Displayfetch_imgVC: UIViewController {
       URLDownload()
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: true)
+        
+    }
+    
     func URLDownload()
     {
         let postparam = "action=follow_request_fetch&&uid=\(userId)";

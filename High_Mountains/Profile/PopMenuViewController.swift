@@ -51,7 +51,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
         self.showAnimate()
         // self.removeAnimate()
         
-        AppUtility.setCornerRadius(Profileimg, radius: 50)
+        AppUtility.setCornerRadius(Profileimg, radius: 40)
         self.userInfoDisplay()
         
     }
@@ -181,8 +181,10 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
             
             Profileimg.contentMode = .scaleToFill
             Profileimg.image = pickedImage
+            
         }
         picker.dismiss(animated: true, completion: nil)
+        
     }
     
     

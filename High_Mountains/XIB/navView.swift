@@ -32,7 +32,7 @@ class navView: UIView {
     
     override func didMoveToWindow() {
         if isBack! {
-            btnLeft.setImage(#imageLiteral(resourceName: "icons8-back-50"), for: .normal)
+            btnLeft.setImage(#imageLiteral(resourceName: "ic_backarrow"), for: .normal)
             btnRight.isHidden = true
             viewSearch.isHidden = true
             viewHeading.isHidden = false
@@ -79,7 +79,7 @@ class navView: UIView {
     }
     
     @IBAction func btnRightAction(_ sender: Any) {
-        let vc : profileVC = STORY_BOARD.instantiateViewController(withIdentifier: "profileVC") as! profileVC
+        let vc: ProfileDetailsVC  = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ProfileDetails")as! ProfileDetailsVC
         nvc?.pushViewController(vc, animated: true)
     }
     

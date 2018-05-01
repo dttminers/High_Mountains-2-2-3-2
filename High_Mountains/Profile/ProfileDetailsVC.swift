@@ -102,6 +102,10 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         btnPhotoFeedsActbtn(btnGrid)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: true)
+        
+    }
     // MARK: Button Actions
     
     @objc func Following(_ sender: UITapGestureRecognizer)
