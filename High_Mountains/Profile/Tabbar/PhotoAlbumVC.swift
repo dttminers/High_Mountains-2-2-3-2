@@ -20,7 +20,7 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     @IBOutlet weak var Collectionview: UICollectionView!
     var imageArray = [UIImage]()
     var selectedAssesta = [PHAsset]()
-  
+    //var selected : Bool = true
     var selectedIndex: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,9 +85,11 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
             
             
             self.selectedIndex.remove(at: self.selectedIndex.index(of: indexPath.row)!)
+            
         }else{
-           
+        
             self.selectedIndex.append(indexPath.row)
+            
         }
         self.Collectionview.reloadData()
     }
@@ -101,9 +103,10 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     @IBAction func btnNext(_ sender: Any) {
        
         let controller: MultipleSelectedVC = STORY_BOARD.instantiateViewController(withIdentifier: "Multiplepost") as! MultipleSelectedVC
+        controller.Display_img = SelectImage
         for i in 0..<self.imageArray.count{
-
-            
+           
+             controller.selectedIndex.append(i)
             print(i)
 
         }
@@ -141,6 +144,7 @@ class PhotoAlbumVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
                     imgManager.requestImage(for: fetchResults.object(at: i)  , targetSize: CGSize(width: 200 , height: 200), contentMode: .aspectFill, options: requestoption, resultHandler: { (image, error) in
                         
                         self.imageArray.append(image!)
+                        
                         
                     })
                 }

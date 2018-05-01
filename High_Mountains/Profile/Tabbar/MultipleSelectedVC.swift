@@ -9,13 +9,13 @@
 import UIKit
 
 class MultipleSelectedVC: UIViewController {
-
+  var selectedIndex: [Int] = []
     @IBOutlet var cc: UICollectionView!
     @IBOutlet weak var Display_img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+     print(selectedIndex)
+        
     }
 
     override func didReceiveMemoryWarning() {

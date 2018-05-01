@@ -9,20 +9,15 @@
 import UIKit
 
 class HomeClcklargVC: UIViewController {
-    
-    @IBOutlet weak var DisplayimgView: UIView!
-    
-    var obj : TimelineModel!
-    
+  
+    @IBOutlet var feedimg: UIImageView!
+    var obj : PhotoModel!
+    var img = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
-        viewN.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)//nav.frame
-        viewN.populate(obj)
-        viewN.parent = self
-        viewN.bringSubview(toFront: self.view)
-        DisplayimgView.addSubview(viewN)
+        feedimg.image = img
+        
     }
     
     

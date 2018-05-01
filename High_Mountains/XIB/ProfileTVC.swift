@@ -11,6 +11,7 @@ import UIKit
 protocol MoreItem {
     
     func didButtonPressed()
+   
 }
 
 
@@ -135,6 +136,7 @@ class ProfileTVC: UITableViewCell {
         
     }
     
+  
     @objc func LikeDisplay(_ sender: UITapGestureRecognizer){
         
         let vc: DisplayLikeVC  = Comment_STORYBOARD.instantiateViewController(withIdentifier: "LikeDisplay") as! DisplayLikeVC

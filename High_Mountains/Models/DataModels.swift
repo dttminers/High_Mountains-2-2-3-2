@@ -97,7 +97,7 @@ class TimelineModel : NSObject {
     var activity : String?
     var id : String?
     var timeline_id : String?
-    // var post : String?
+    var post : String?
     var like_count : String?
     var comment_count : String?
     var share_count : String?
@@ -111,7 +111,7 @@ class TimelineModel : NSObject {
         activity = dictionary["activity"] as? String
         id = dictionary["id"] as? String
         timeline_id = dictionary["timeline_id"] as? String
-        // post = dictionary["post"] as? String
+        post = dictionary["post"] as? String
         like_count = dictionary["like_count"] as? String
         comment_count = dictionary["comment_count"] as? String
         share_count = dictionary["share_count"] as? String
