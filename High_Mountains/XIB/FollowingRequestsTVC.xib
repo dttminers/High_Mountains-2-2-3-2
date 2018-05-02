@@ -103,6 +103,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Ignorebtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sOM-zq-3Nr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOU-18-0N3" customClass="ButtonExtender" customModule="High_Mountains" customModuleProvider="target">
                                         <rect key="frame" x="12" y="30" width="88" height="35"/>

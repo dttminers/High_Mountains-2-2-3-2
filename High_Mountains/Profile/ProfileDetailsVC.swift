@@ -95,7 +95,6 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         tableFeeds.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         tableFeeds.register(UINib(nibName : "ProfileWITVC", bundle:nil), forCellReuseIdentifier: "ProfileWITVC")
         tableFeeds.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
-        
         collectionFeeds.register(UINib(nibName : "Album", bundle:nil), forCellWithReuseIdentifier: "Album")
         collectionFeeds.register(UINib(nibName : "AlbumTitle", bundle:nil), forCellWithReuseIdentifier: "AlbumTitle")
         
@@ -439,7 +438,8 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
                 return cell
             }
             else {
-                let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
+               let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
+              
                 cell.populate(timelineRes[indexPath.row])
                 
                 return cell
@@ -493,6 +493,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
         }
         else {
             let cell : AlbumTitle = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumTitle", for: indexPath) as! AlbumTitle
+           
             cell.populate(photoRes[indexPath.row])
             
             return cell
@@ -506,10 +507,19 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      
-        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC") as! ClickLargeImgVC
+      if selectedPhotoIndex == 1 {
+        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC1") as! ClickLargeImgVC
         desVC.obj = photoRes[indexPath.row]
-    
+        
         self.navigationController?.pushViewController(desVC, animated: true)
+        }
+        else if selectedPhotoIndex == 3 {
+        
+        let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC1") as! ClickLargeImgVC
+        desVC.obj1 = timelineRes[indexPath.row]
+        self.navigationController?.pushViewController(desVC, animated: true)
+        }
+     
+    
     }
 }

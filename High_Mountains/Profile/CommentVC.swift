@@ -48,32 +48,7 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         return 100
     }
     
-    func Sendbutton(_ sender: Any) {
-        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
-            
-            let postparam = "action=comment_data&&uid=26&&timeline_id=\(tId)&&comment=\(tet.text!)";
-            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
-                if status {
-                    let dt = JSON(data : result as! Data)
-                    print(dt)
-                    let res : AnyObject = dt.object as AnyObject
-                    print(res)
-                    
-                    
-                    
-                }
-                else {
-                    print("msg: result as! String")
-                }
-                
-            })
-            
-        }else {
-            print("There is no internet connection")
-        }
-        
-    }
-    
+
     func getComments()
     {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
@@ -95,6 +70,32 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
     }
     
+    @IBAction func sendcommentbtn(_ sender: Any) {
+        
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+            let postparam = "action=comment_data&&uid=\(userId)&&timeline_id=\(tId)&&comment=\(tet.text!)";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    print(dt)
+                    let res : AnyObject = dt.object as AnyObject
+                    print(res)
+                    
+                    
+                    
+                }
+                else {
+                    print("msg: result as! String")
+                }
+                
+            })
+            
+        }else {
+            print("There is no internet connection")
+        }
+        
+    }
     
 }
 

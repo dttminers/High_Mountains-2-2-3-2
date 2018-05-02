@@ -16,7 +16,7 @@ class FollowingRequestsTVC: UITableViewCell {
     
     
      var obj : FetchRequest!
-
+    var fid : String = ""
     
     func populateData(_ data : FetchRequest){
         obj = data
@@ -35,7 +35,7 @@ class FollowingRequestsTVC: UITableViewCell {
        
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
             
-            let postparam = "action=follow_accept_data&&friend_id=\(obj.uid ?? 0)&&uid=\(userId)";
+            let postparam = "action=follow_accept_data&&friend_id=\(fid)&&uid=\(userId)";
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
@@ -63,4 +63,35 @@ class FollowingRequestsTVC: UITableViewCell {
         }
        
 }
+    @IBAction func Ignorebtn(_ sender: UIButton) {
+        
+        if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+            
+            let postparam = "action=delete_sent_request&&friend_id=\(fid)&&uid=\(userId)";
+            APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)unfollow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                if status {
+                    let dt = JSON(data : result as! Data)
+                    print(dt)
+                    let res : AnyObject = dt.object as AnyObject
+                    if let name = res["status"]as? Int as Optional!{
+                      //  print(name!)
+                        if (name == 1)
+                        {
+                            print("deleted confirm")
+                            
+                        }
+                    }
+                    
+                    
+                }
+                else {
+                    print("fsil")
+                }
+                
+            })
+            
+        }else {
+            print("There is no internet connection")
+        }
+    }
 }

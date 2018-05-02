@@ -66,8 +66,6 @@
 		460A1EBB20579D8B0069EECD /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */; };
 		460A26DF208471EA00757B72 /* Comment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A26DE208471EA00757B72 /* Comment.storyboard */; };
 		460A26E320847A1300757B72 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A26E220847A1300757B72 /* CommentVC.swift */; };
-		460A27232084832600757B72 /* CommentsendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460A27222084832600757B72 /* CommentsendView.xib */; };
-		460A2725208484A500757B72 /* CommentsendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A2724208484A500757B72 /* CommentsendView.swift */; };
 		460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460A5F77207C878300E7B213 /* Plan_Trip.storyboard */; };
 		460BBE50204FB09B00BBE5A6 /* customtoolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */; };
 		460BBE52204FBB4500BBE5A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BBE51204FBB4400BBE5A6 /* Extensions.swift */; };
@@ -95,6 +93,8 @@
 		466498C3205112FB001FEB0F /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466498C2205112FB001FEB0F /* profileTableViewCell.swift */; };
 		466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466517B2208DC41D0052D7F4 /* PostsVC.swift */; };
 		466517B5208DDEFB0052D7F4 /* PhotoAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */; };
+		466DEA6B2099B81E0019A102 /* homeclickopenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 466DEA6A2099B81E0019A102 /* homeclickopenView.xib */; };
+		466DEA6D2099B8330019A102 /* homeclickopenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DEA6C2099B8330019A102 /* homeclickopenView.swift */; };
 		4677B5332091F7B1006F38D3 /* HomeClcklargVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4677B5322091F7B1006F38D3 /* HomeClcklargVC.swift */; };
 		468A7765207DD37B0049BDAD /* DropMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A7764207DD37B0049BDAD /* DropMenuButton.swift */; };
 		468A7768207DE2D00049BDAD /* All_DestinationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */; };
@@ -238,8 +238,6 @@
 		460A1EBA20579D8B0069EECD /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		460A26DE208471EA00757B72 /* Comment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comment.storyboard; sourceTree = "<group>"; };
 		460A26E220847A1300757B72 /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
-		460A27222084832600757B72 /* CommentsendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsendView.xib; sourceTree = "<group>"; };
-		460A2724208484A500757B72 /* CommentsendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsendView.swift; sourceTree = "<group>"; };
 		460A5F77207C878300E7B213 /* Plan_Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Plan_Trip.storyboard; sourceTree = "<group>"; };
 		460BBE4F204FB09B00BBE5A6 /* customtoolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customtoolbar.swift; sourceTree = "<group>"; };
 		460BBE51204FBB4400BBE5A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -268,6 +266,8 @@
 		466498C2205112FB001FEB0F /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
 		466517B2208DC41D0052D7F4 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		466517B4208DDEFB0052D7F4 /* PhotoAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumVC.swift; sourceTree = "<group>"; };
+		466DEA6A2099B81E0019A102 /* homeclickopenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeclickopenView.xib; sourceTree = "<group>"; };
+		466DEA6C2099B8330019A102 /* homeclickopenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeclickopenView.swift; sourceTree = "<group>"; };
 		4677B5322091F7B1006F38D3 /* HomeClcklargVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClcklargVC.swift; sourceTree = "<group>"; };
 		468A7764207DD37B0049BDAD /* DropMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropMenuButton.swift; sourceTree = "<group>"; };
 		468A7766207DE2D00049BDAD /* All_DestinationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_DestinationTVC.swift; sourceTree = "<group>"; };
@@ -644,12 +644,12 @@
 				4608DFDE207F26BA00FEBBE2 /* TravelPartHeaderTVC.xib */,
 				469F1801207F419200FBD9C1 /* CommentTVC.swift */,
 				469F1802207F419200FBD9C1 /* CommentTVC.xib */,
-				460A27222084832600757B72 /* CommentsendView.xib */,
-				460A2724208484A500757B72 /* CommentsendView.swift */,
 				461786752085CF4E00DE1708 /* FetchPhotoLargeView.xib */,
 				461786772085D14200DE1708 /* FetchPhotoLargeView.swift */,
 				461856C62087439A000F406B /* PostsTextTVC.swift */,
 				461856C72087439A000F406B /* PostsTextTVC.xib */,
+				466DEA6A2099B81E0019A102 /* homeclickopenView.xib */,
+				466DEA6C2099B8330019A102 /* homeclickopenView.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -812,7 +812,6 @@
 			files = (
 				46080DDD2080A92B00641A20 /* Montserrat-UltraLight.otf in Resources */,
 				460858922076202B00D63C2C /* FollowListTVC.xib in Resources */,
-				460A27232084832600757B72 /* CommentsendView.xib in Resources */,
 				461856C92087439A000F406B /* PostsTextTVC.xib in Resources */,
 				460937A5207790C400B529BF /* ScrollViewTVC.xib in Resources */,
 				468A776D207DFDFF0049BDAD /* Travel_ThemesCVC.xib in Resources */,
@@ -836,6 +835,7 @@
 				C1E0935C207A2A030071FC93 /* ProfileWITVC.xib in Resources */,
 				46080DDA2080A92B00641A20 /* Montserrat-Hairline.otf in Resources */,
 				46080DD72080A92B00641A20 /* Montserrat-ExtraBold.otf in Resources */,
+				466DEA6B2099B81E0019A102 /* homeclickopenView.xib in Resources */,
 				460A5F78207C878300E7B213 /* Plan_Trip.storyboard in Resources */,
 				46080DDB2080A92B00641A20 /* Montserrat-SemiBold.otf in Resources */,
 				C1F4AD1F206EC5F200D470BA /* SideDrawerProfileTVC.xib in Resources */,
@@ -991,7 +991,6 @@
 				4677B5332091F7B1006F38D3 /* HomeClcklargVC.swift in Sources */,
 				C1FE661C20696BBB00B006D3 /* CAPSPageMenu.swift in Sources */,
 				C1E09362207A2F390071FC93 /* ProfileFeedView.swift in Sources */,
-				460A2725208484A500757B72 /* CommentsendView.swift in Sources */,
 				4608AEDD204E65B5009E0A43 /* round image.swift in Sources */,
 				C1F4AD1E206EC5F200D470BA /* SideDrawerProfileTVC.swift in Sources */,
 				4604174D206CFC7E00BA0694 /* CollectioAlbumVC.swift in Sources */,
@@ -1020,6 +1019,7 @@
 				C1C412752090EDE800FE2A11 /* MainTabTBC.swift in Sources */,
 				466517B3208DC41D0052D7F4 /* PostsVC.swift in Sources */,
 				C1B1305320860FE200374B73 /* SideDrawerTVC.swift in Sources */,
+				466DEA6D2099B8330019A102 /* homeclickopenView.swift in Sources */,
 				469BBD90204D16EE00A33EF9 /* High_Mountains.xcdatamodeld in Sources */,
 				4607B132208F2620009CD79C /* Share_PostsVC.swift in Sources */,
 				4609C1D32074C89B0028CA87 /* ProfileTVC.swift in Sources */,

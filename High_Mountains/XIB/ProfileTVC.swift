@@ -81,7 +81,7 @@ class ProfileTVC: UITableViewCell {
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
-        lblLikeCount.text = "\(data.like_count!) Like"
+        lblLikeCount.text = "\(data.like_count ?? "0") Like"
         //lblCommentCount.text = "\(data.comment_count!) Comment"
        // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
@@ -98,9 +98,12 @@ class ProfileTVC: UITableViewCell {
     }
     
     @IBAction func btnCommentAction(_ sender: Any) {
+        
         let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC
         controller.tId = tid
         self.parent.navigationController?.pushViewController(controller, animated: true)
+        
+        
     }
     
     @IBAction func btnShareAction(_ sender: Any) {

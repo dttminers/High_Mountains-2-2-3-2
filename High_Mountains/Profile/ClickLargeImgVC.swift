@@ -12,15 +12,23 @@ class ClickLargeImgVC: UIViewController {
     
     //var Image: [PhotoModel] = []
     var obj : PhotoModel!
+    var obj1: TimelineModel!
     
     @IBOutlet weak var LArgeImgView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
-        viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
-        viewN.populate(obj)
+        // viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
+        if obj == nil {
+            viewN.populate(obj1)
+        }
+        else {
+            viewN.populate(obj)
+        }
+        
+        
+        
         viewN.parent = self
         //viewN.btnComment.addTarget(self, action: #selector(ClickLargeImgVC.sendComment(sender:)) , for: .touchUpInside)
         viewN.btnShare.addTarget(self, action: #selector(ClickLargeImgVC.share(sender:)) , for: .touchUpInside)

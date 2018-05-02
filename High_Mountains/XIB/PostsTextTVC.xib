@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrS-N3-qqe">
-                        <rect key="frame" x="0.0" y="0.0" width="501" height="142.5"/>
+                        <rect key="frame" x="0.0" y="8" width="501" height="134.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-hD-t7r" userLabel="View1">
                                 <rect key="frame" x="0.0" y="0.0" width="501" height="56"/>
@@ -65,13 +65,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Label" textAlignment="justified" lineBreakMode="clip" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WW-l5-dyr">
-                                <rect key="frame" x="4" y="56" width="487" height="17"/>
+                                <rect key="frame" x="4" y="56" width="487" height="9"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skl-Uc-AYt" userLabel="View3">
-                                <rect key="frame" x="0.0" y="72" width="501" height="24"/>
+                                <rect key="frame" x="0.0" y="64" width="501" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Comment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-It-aSL">
                                         <rect key="frame" x="63" y="2" width="59" height="24"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6j-TL-vd3">
-                                <rect key="frame" x="0.0" y="74" width="59" height="24"/>
+                                <rect key="frame" x="0.0" y="66" width="59" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="N7a-bm-pDt"/>
                                     <constraint firstAttribute="height" constant="24" id="gqo-cA-P9k"/>
@@ -101,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-bY-JtT">
-                                <rect key="frame" x="0.0" y="98" width="501" height="44"/>
+                                <rect key="frame" x="0.0" y="90" width="501" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apO-Ci-vvL" userLabel="View4">
                                         <rect key="frame" x="0.0" y="42" width="501" height="2"/>
@@ -190,7 +190,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="CrS-N3-qqe" secondAttribute="trailing" id="2V6-nz-mC9"/>
                     <constraint firstItem="CrS-N3-qqe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ETu-Ld-j0h"/>
-                    <constraint firstItem="CrS-N3-qqe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aQl-c3-MDp"/>
+                    <constraint firstItem="CrS-N3-qqe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aQl-c3-MDp"/>
                     <constraint firstAttribute="bottom" secondItem="CrS-N3-qqe" secondAttribute="bottom" id="okk-L2-hrE"/>
                 </constraints>
             </tableViewCellContentView>

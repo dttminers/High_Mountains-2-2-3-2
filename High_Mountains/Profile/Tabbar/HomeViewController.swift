@@ -119,7 +119,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc: HomeClcklargVC  = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
-        vc.obj = photoRes[indexPath.row]
+     vc.obj1 = Home[indexPath.row]
+        
+        
         self.show(vc, sender: nil)
         
     }

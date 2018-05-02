@@ -134,6 +134,7 @@ class PhotoModel : NSObject {
     var uid : String?
     var timeline_id : String?
     var caption : String?
+    var image : String?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         like_count = dictionary["like_count"] as? String
@@ -146,6 +147,7 @@ class PhotoModel : NSObject {
         uid = dictionary["Uid"] as? String
         timeline_id = dictionary["timeline_id"] as? String
         caption = dictionary["caption"] as? String
+        image = dictionary["image"] as? String
     }
 }
 
