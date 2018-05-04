@@ -58,6 +58,7 @@ class ProfileTVC: UITableViewCell {
     func populate(_ data : TimelineModel) {
         
         obj = data
+        //img.loadImageUsingCache(withUrl: "\(profile_img)")
         tid = data.timeline_id!
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
@@ -77,15 +78,16 @@ class ProfileTVC: UITableViewCell {
     func populate(_ data : PhotoModel) {
         
         obj = data
+       // img.loadImageUsingCache(withUrl: "\(profile_img)")
         tid = data.timeline_id!
         lblTitle.text = "Swapnil"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
-        lblLikeCount.text = "\(data.like_count ?? "0") Like"
+        lblLikeCount.text = "\(data.like_count ?? "0") Likes"
         //lblCommentCount.text = "\(data.comment_count!) Comment"
        // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
-        /*if data.isliked! == "true" {
+       /* if data.isliked! == "true" {
          btnLike.isSelected = true
          }
          else {
@@ -107,6 +109,10 @@ class ProfileTVC: UITableViewCell {
     }
     
     @IBAction func btnShareAction(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self
+      //  self.parent(activityVC,animated: true,completion: nil)
+    
     }
     
     func likeData(_ tid : String) {
@@ -117,7 +123,7 @@ class ProfileTVC: UITableViewCell {
                 print(dt)
                 if dt != nil {
                     let res : AnyObject = dt.object as AnyObject
-                    self.lblLikeCount.text = "\(res["like Count"]!! as! String) Like"
+                    self.lblLikeCount.text = "\(res["like Count"]!! as! String) Likes"
                     if (res["msg"]!! as! String).contains("increase") {
                         self.btnLike.isSelected = true
                     }

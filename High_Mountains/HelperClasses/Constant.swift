@@ -14,6 +14,7 @@ let APPNAME = "HM"
 //URL
 let url : String = "http://vnoi.in/hmapi/"
 
+
 var userId = ""
 var userData : AnyObject!
 
@@ -68,6 +69,7 @@ let img_pause_music = UIImage(named: "btn_pause")
 let defaults = UserDefaults.standard
 let ud_key_userData = "UserData"
 let ud_key_userID = "UserID"
+
 
 //For STORING STATIC DATA
 

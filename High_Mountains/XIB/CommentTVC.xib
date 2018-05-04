@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -46,7 +51,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzq-IL-rG1">
                                                 <rect key="frame" x="8" y="8" width="282" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -64,7 +69,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hiidsmam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcZ-4H-UQI">
                                                 <rect key="frame" x="12" y="0.0" width="278" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -106,7 +111,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/03/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C3-P0-Y6G">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -123,20 +128,38 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydh-Wt-xnq">
                                         <rect key="frame" x="159" y="0.0" width="45" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-4q-CfD">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-4q-CfD">
+                                                <rect key="frame" x="0.0" y="0.0" width="10" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="aSt-El-gIV"/>
+                                                    <constraint firstAttribute="height" constant="23" id="q4H-qP-jK5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNm-fe-OPu">
+                                                <rect key="frame" x="11" y="0.0" width="34" height="23"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Like">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnlike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1UM-DP-IDl"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="rOp-4q-CfD" firstAttribute="top" secondItem="Ydh-Wt-xnq" secondAttribute="top" id="16p-Ik-oiV"/>
-                                            <constraint firstItem="rOp-4q-CfD" firstAttribute="leading" secondItem="Ydh-Wt-xnq" secondAttribute="leading" id="G83-Q7-GqK"/>
-                                            <constraint firstAttribute="trailing" secondItem="rOp-4q-CfD" secondAttribute="trailing" id="Q0R-zj-4lz"/>
-                                            <constraint firstAttribute="bottom" secondItem="rOp-4q-CfD" secondAttribute="bottom" constant="13" id="Wf5-sl-aQV"/>
+                                            <constraint firstItem="rOp-4q-CfD" firstAttribute="top" secondItem="Ydh-Wt-xnq" secondAttribute="top" id="89C-hy-Rvh"/>
+                                            <constraint firstItem="qNm-fe-OPu" firstAttribute="leading" secondItem="rOp-4q-CfD" secondAttribute="trailing" constant="1" id="Diw-T4-lbO"/>
+                                            <constraint firstItem="qNm-fe-OPu" firstAttribute="top" secondItem="Ydh-Wt-xnq" secondAttribute="top" id="SeH-cb-KMh"/>
+                                            <constraint firstAttribute="bottom" secondItem="qNm-fe-OPu" secondAttribute="bottom" constant="13" id="ZJg-oV-3ZU"/>
                                             <constraint firstAttribute="width" constant="45" id="hCf-m5-Es1"/>
+                                            <constraint firstAttribute="trailing" secondItem="qNm-fe-OPu" secondAttribute="trailing" id="p1M-hs-ual"/>
                                             <constraint firstAttribute="height" constant="36" id="vY8-d5-yl4"/>
+                                            <constraint firstAttribute="bottom" secondItem="rOp-4q-CfD" secondAttribute="bottom" constant="13" id="yhk-bd-5b6"/>
+                                            <constraint firstItem="rOp-4q-CfD" firstAttribute="leading" secondItem="Ydh-Wt-xnq" secondAttribute="leading" id="z6y-Um-AgM"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-ox-y3C">
@@ -144,7 +167,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Reply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-4C-YqZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -194,6 +217,7 @@
             <connections>
                 <outlet property="CommentDate" destination="5C3-P0-Y6G" id="zG5-gS-KhD"/>
                 <outlet property="Comment_img" destination="hYp-07-igR" id="Gln-xJ-DSK"/>
+                <outlet property="btnLikes" destination="qNm-fe-OPu" id="7Yh-Jg-8gf"/>
                 <outlet property="lblComment" destination="Gzq-IL-rG1" id="hq8-lv-pwv"/>
                 <outlet property="lblCommentLike" destination="rOp-4q-CfD" id="aHJ-4Y-uOt"/>
                 <outlet property="lblCommentRply" destination="wAK-4C-YqZ" id="qo9-WF-IU0"/>

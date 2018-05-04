@@ -138,7 +138,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             vewList.alpha = 0
             vewAlbum.alpha = 0
             vewGroup.alpha = 0
-            tableFeeds.isHidden = true
+           tableFeeds.isHidden = true
             collectionFeeds.isHidden = false
         }
         else if sender.tag == 2 {
@@ -392,9 +392,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             Doblbl.text = userInfo.dob
             Biolbl.text = userInfo.bio
             FavTravlQuoteslbl.text = userInfo.fav_quote
-            FollowingAction_lbl.text = "Following\(userInfo.following_count ?? 3)"
-            lblFollowers.text = "Followers\(userInfo.followers_count ?? 4)"
-            lblPosts.text  = "Posts\(userInfo.post_count ?? 12)"
+            FollowingAction_lbl.text = "Following\(userInfo.following_count ?? 0 )"
+            lblFollowers.text = "Followers\(userInfo.followers_count ?? 0 )"
+            lblPosts.text  = "Posts\(userInfo.post_count ?? 0 )"
         }
     }
 }
@@ -412,10 +412,10 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if selectedIndex == 1 {
+        if selectedIndex == 2 {
             return timelineRes.count
         }
-        else if selectedIndex == 2 {
+         if selectedIndex == 1 {
             return photoRes.count
         }
         else {
@@ -424,30 +424,30 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if selectedIndex == 1 {
+        if selectedIndex == 2 {
             if timelineRes[indexPath.row].activity == "photo" {
                 let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
                 cell.populate(timelineRes[indexPath.row])
-                
+
                 return cell
             }
             else if timelineRes[indexPath.row].activity == "album" {
                 let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
                 cell.populate(timelineRes[indexPath.row])
-                
+
                 return cell
             }
             else {
                let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
-              
+
                 cell.populate(timelineRes[indexPath.row])
-                
+
                 return cell
             }
         }
-        else if selectedIndex == 2 {
+        if selectedIndex == 1 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-          cell.populate(timelineRes[indexPath.row])
+          cell.populate(photoRes[indexPath.row])
 
             return cell
         }

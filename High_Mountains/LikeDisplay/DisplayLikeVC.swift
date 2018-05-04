@@ -33,6 +33,7 @@ class DisplayLikeVC: UIViewController {
                 
                 self.LikeDisplay = DATA_MANAGER.sendLikeDisplayDictionary(res)
                 self.tableDisplayLike.reloadData()
+            
             }
             else {
                 self.alertDialog(msg: result as! String)

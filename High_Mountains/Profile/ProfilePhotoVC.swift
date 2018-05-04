@@ -42,16 +42,16 @@ class ProfilePhotoVC: UIViewController {
             vewList.alpha = 0
             vewAlbum.alpha = 0
             vewGroup.alpha = 0
-            //tableFeeds.isHidden = true
-            //collectionFeeds.isHidden = false
+            tableFeeds.isHidden = true
+            collectionFeeds.isHidden = false
         }
         else if sender.tag == 2 {
             vewGrid.alpha = 0
             vewList.alpha = 1
             vewAlbum.alpha = 0
             vewGroup.alpha = 0
-            //tableFeeds.isHidden = true
-            //tableFeeds.reloadData()
+            tableFeeds.isHidden = true
+            tableFeeds.reloadData()
         }
         else if sender.tag == 3 {
             vewGrid.alpha = 0

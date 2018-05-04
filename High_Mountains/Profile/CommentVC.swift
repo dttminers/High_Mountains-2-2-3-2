@@ -23,7 +23,7 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        AppUtility.setCornerRadius(img, radius: 20)
         tableview?.register(UINib(nibName : "CommentTVC", bundle:nil), forCellReuseIdentifier: "CommentTVC")
         self.getComments()
     }

@@ -173,7 +173,7 @@ extension HomeViewController: MoreItem{
     
     func didButtonPressed() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        let camera = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {ACTION in
+        let share = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {ACTION in
             
             let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
@@ -181,7 +181,7 @@ extension HomeViewController: MoreItem{
             
         })
         
-        let Photolib = UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {ACTION in
+        let Delete = UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {ACTION in
             
             let imagePicker = UIImagePickerController()
            // imagePicker.delegate = self
@@ -193,8 +193,8 @@ extension HomeViewController: MoreItem{
         
         let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil)
         
-        alert.addAction(camera)
-        alert.addAction(Photolib)
+        alert.addAction(share)
+        alert.addAction(Delete)
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
         
