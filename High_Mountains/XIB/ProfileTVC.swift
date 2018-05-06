@@ -106,7 +106,7 @@ class ProfileTVC: UITableViewCell {
         self.parent.navigationController?.pushViewController(controller, animated: true)
         
         
-    }
+    } 
     
     @IBAction func btnShareAction(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)

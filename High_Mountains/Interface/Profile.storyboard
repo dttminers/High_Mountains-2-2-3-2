@@ -985,6 +985,7 @@
                         <viewLayoutGuide key="safeArea" id="j6h-aR-RWl"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="LArgeImgView" destination="m7X-Z2-Nxk" id="T8D-M5-JpI"/>
                     </connections>

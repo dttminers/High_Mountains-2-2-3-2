@@ -53,10 +53,10 @@ class CommentTVC: UITableViewCell {
     func populate(_ data : TimelineModel) {
       
         if data.isliked! == "true" {
-            btnLikes.isSelected = true
+           // btnLikes.isSelected = true
         }
         else {
-           btnLikes.isSelected = false
+          // btnLikes.isSelected = false
         }
     }
     

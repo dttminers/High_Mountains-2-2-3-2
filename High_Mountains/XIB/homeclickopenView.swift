@@ -31,6 +31,16 @@ class homeclickopenView: UIView,UIScrollViewDelegate{
         
     }
     
+    @IBAction func btntapGesture(_ sender: UITapGestureRecognizer) {
+        if(sender.view?.contentMode == UIViewContentMode.scaleAspectFit){
+            sender.view?.contentMode = UIViewContentMode.center
+        }else{
+            
+            sender.view?.contentMode = UIViewContentMode.scaleAspectFit
+        }
+       
+    }
+    
     @IBAction func btnComment(_ sender: Any) {
         
         let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC

@@ -64,12 +64,16 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-mR-JI9">
+                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="H1W-mR-JI9">
                                     <rect key="frame" x="0.0" y="112" width="374" height="300"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="7Or-wF-R7s"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="eRY-EF-lhu" appends="YES" id="9wt-lt-5mt"/>
+                                    </connections>
                                 </imageView>
                             </subviews>
                             <constraints>
@@ -206,6 +210,12 @@
             </connections>
             <point key="canvasLocation" x="-482" y="79"/>
         </scrollView>
+        <tapGestureRecognizer numberOfTapsRequired="2" id="eRY-EF-lhu">
+            <connections>
+                <action selector="btntapGesture:" destination="iN0-l3-epB" id="wiz-xo-mgB"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="eUz-ht-3ay"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="download" width="275" height="183"/>
