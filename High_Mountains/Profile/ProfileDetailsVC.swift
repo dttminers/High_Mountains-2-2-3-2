@@ -71,6 +71,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     var photoRes : [PhotoModel] = []
     var selectedIndex : Int = 1
     var selectedPhotoIndex : Int = 1
+    var fullName : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +103,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: true)
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 4, lblheading: "\(fullName)")
         
     }
     // MARK: Button Actions
@@ -111,7 +112,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     {
         let vc : FollowVC = SECOND_STORYBOARD.instantiateViewController(withIdentifier: "Following") as! FollowVC
         vc.ListType = "following"
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.show(vc, sender: nil)
     }
     
     @objc func Follow(_ sender: UITapGestureRecognizer)
@@ -233,11 +234,17 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     self.userInfo = DATA_MANAGER.setUserInfoDictionary(res)
                     self.populateUserData()
                     
+                    if let Fullname = res["full_name"] as? String{
+                        
+                        self.fullName = Fullname
+                        
+                    }
                     if let ProfileImg = res["profile_pic"] as? String{
                         
                         self.ProfileIMG.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
                         
                     }
+                    
                 }
                 
                
@@ -283,7 +290,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     //self.setPhotos(model)
                     if self.selectedPhotoIndex == 1 {
                         self.collectionFeeds.reloadData()
-                        self.htCollectionConst.constant = self.collectionViewHeight
+                       self.htCollectionConst.constant = self.collectionViewHeight
                     }
                     else if self.selectedPhotoIndex == 2 {
                         self.tableFeeds.reloadData()
@@ -312,7 +319,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     //self.setPhotos(model)
                     
                     self.collectionFeeds.reloadData()
-                    self.htCollectionConst.constant = self.collectionViewHeight
+                   // self.htCollectionConst.constant = self.collectionViewHeight
                 }
                 
             }
@@ -428,13 +435,13 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
             if timelineRes[indexPath.row].activity == "photo" {
                 let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
                 cell.populate(timelineRes[indexPath.row])
-
+             
                 return cell
             }
             else if timelineRes[indexPath.row].activity == "album" {
                 let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
                 cell.populate(timelineRes[indexPath.row])
-
+           
                 return cell
             }
             else {
@@ -461,6 +468,17 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if selectedPhotoIndex == 2 {
+            let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC1") as! ClickLargeImgVC
+            desVC.obj = photoRes[indexPath.row]
+            
+            self.navigationController?.pushViewController(desVC, animated: true)
+        }
+        
+    }
 }
 
 extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -482,7 +500,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
         if selectedPhotoIndex == 1 {
             let cell : Album = collectionView.dequeueReusableCell(withReuseIdentifier: "Album", for: indexPath) as! Album
             cell.populate(photoRes[indexPath.row])
-            
+           
             return cell
         }
         else if selectedPhotoIndex == 3 {
@@ -523,3 +541,4 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     
     }
 }
+

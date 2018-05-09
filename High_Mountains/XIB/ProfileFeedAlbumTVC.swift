@@ -30,7 +30,7 @@ class ProfileFeedAlbumTVC: UITableViewCell {
         for obj in imgDt {
             arrSource.append(KingfisherSource(urlString: "\(url)\(obj)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!)
         }
-        imgPost.draggingEnabled = false
+        imgPost.draggingEnabled = true
         imgPost.circular = true
         imgPost.setImageInputs(arrSource)
         

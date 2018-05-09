@@ -16,11 +16,12 @@ class FollowingRequestsTVC: UITableViewCell {
     
     
      var obj : FetchRequest!
-    var fid : String = ""
+    var fid : String=""
     
     func populateData(_ data : FetchRequest){
         obj = data
         AppUtility.setCornerRadius(img, radius: 20)
+        fid = obj.uid!
         if(obj.profile_pic?.contains("uploads"))!{
         img.loadImageUsingCache(withUrl:"\(url)\(obj.profile_pic!)")
         }else{

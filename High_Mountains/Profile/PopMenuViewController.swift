@@ -22,6 +22,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     @IBOutlet weak var GenderLbl: UILabel!
     
     
+    
     @IBAction func GenderBtn(_ sender: Any) {
         
         let alret = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -235,7 +236,6 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
                         
                         self.Profileimg.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
                         
-
                        
                     }
                     

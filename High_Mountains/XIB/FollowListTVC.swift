@@ -20,6 +20,9 @@ class FollowListTVC: UITableViewCell {
     var obj1 : LikeDisplay!
    var ListType1 : String!
     
+    
+   
+
     func populateData(_ data : FollowModel) {
         obj = data
         AppUtility.setCornerRadius(img, radius: 20)
@@ -82,6 +85,7 @@ class FollowListTVC: UITableViewCell {
     }
 
 }
+    
 }
 
 

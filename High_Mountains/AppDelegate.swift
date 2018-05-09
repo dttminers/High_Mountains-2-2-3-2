@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             userData = data
             userId = userData["id"] as! String
         }
-
-    
+        
+       
 
         return true
     }

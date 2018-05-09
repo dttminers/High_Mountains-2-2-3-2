@@ -20,6 +20,13 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var tId : String = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 0,  lblheading: "        Comment")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

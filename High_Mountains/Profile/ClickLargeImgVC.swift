@@ -17,7 +17,7 @@ class ClickLargeImgVC: UIViewController {
     @IBOutlet weak var LArgeImgView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
         // viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
         if obj == nil {
@@ -38,6 +38,13 @@ class ClickLargeImgVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 0,  lblheading: "")
+        
+    }
+    
     @objc func sendComment(sender:UIButton)
     {
         let storyboard = UIStoryboard(name: "Comment", bundle: nil)
@@ -49,4 +56,6 @@ class ClickLargeImgVC: UIViewController {
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC,animated: true,completion: nil)
     }
+    
 }
+

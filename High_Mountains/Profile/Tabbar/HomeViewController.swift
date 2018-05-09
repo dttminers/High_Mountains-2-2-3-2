@@ -15,14 +15,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var profile: UIBarButtonItem!
     
     
-    
+    var tid : String = "" 
     var Home : [TimelineModel] = []
     var photoRes : [PhotoModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         
         //        //sidemenu()
         
@@ -30,25 +30,29 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //slidingMenus()
-        tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
+        //tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
         tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         self.URLDownload()
         
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
-//        desVC.feedimg.image = photoRes[indexPath.row]as! UIImage
-//        self.navigationController?.pushViewController(desVC, animated: true)
-//    }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        let desVC : HomeClcklargVC = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
+    //        desVC.feedimg.image = photoRes[indexPath.row]as! UIImage
+    //        self.navigationController?.pushViewController(desVC, animated: true)
+    //    }
     override func viewWillAppear(_ animated: Bool) {
-        configureNavView(self, isBack: false)
-        //navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: false)
+        //configureNavView(self, isBack: false)
+        
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 1,  lblheading: "  High Mountain")
+        
     }
     
-    @IBAction func btnProfileAction(_ sender: Any) {
-        let vc : profileVC = STORY_BOARD.instantiateViewController(withIdentifier: "profileVC") as! profileVC
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+    
+    
+    //    @IBAction func btnProfileAction(_ sender: Any) {
+    //        let vc : profileVC = STORY_BOARD.instantiateViewController(withIdentifier: "profileVC") as! profileVC
+    //        self.navigationController?.pushViewController(vc, animated: true)
+    //    }
     
     func openLeftMenu() {
         
@@ -116,38 +120,33 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Home.count
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc: HomeClcklargVC  = STORY_BOARD.instantiateViewController(withIdentifier: "HomeClcklargVC") as! HomeClcklargVC
-     vc.obj1 = Home[indexPath.row]
-        
-        
-        self.show(vc, sender: nil)
-        
-    }
+  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       if (Home[indexPath.row].activity == "photo"){
+        if (Home[indexPath.row].activity == "photo"){
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
             cell.delegate = self
-
-
+             cell.delegate1 = self
+            cell.delegate2 = self
             return cell
         }
-        
+            
         else if (Home[indexPath.row].activity == "album"){
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             cell.populate(Home[indexPath.row])
             cell.delegate = self
+            cell.delegate1 = self
+            cell.delegate2 = self
             return cell
         }
+            
         else {
-           let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
-           cell.populateData(Home[indexPath.row])
-     // let cell  = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath)
-        
-                 return cell
+            //           let cell : PostsTextTVC = tableView.dequeueReusableCell(withIdentifier: "PostsTextTVC", for: indexPath) as! PostsTextTVC
+            //           cell.populateData(Home[indexPath.row])
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath)
+            
+            return cell
         }
         
     }
@@ -155,7 +154,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension//313
     }
-
+    
 }
 
 extension HomeViewController : slideMenuDelegate {
@@ -166,11 +165,22 @@ extension HomeViewController : slideMenuDelegate {
     
 }
 
-extension HomeViewController: MoreItem{
+extension HomeViewController: MoreItem,Comment1,share{
+    func ShareT() {
+        
+        let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC,animated: true,completion: nil)
+    }
     
+   
+    func Commet(_ tid: String) {
+        let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC
+        controller.tId = tid
+        self.parent?.navigationController?.pushViewController(controller, animated: true)
+    }
     
-    
-    
+  
     func didButtonPressed() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
         let share = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {ACTION in
@@ -184,7 +194,7 @@ extension HomeViewController: MoreItem{
         let Delete = UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {ACTION in
             
             let imagePicker = UIImagePickerController()
-           // imagePicker.delegate = self
+            // imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)

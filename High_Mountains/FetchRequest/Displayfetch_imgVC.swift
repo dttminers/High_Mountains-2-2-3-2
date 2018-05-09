@@ -19,7 +19,7 @@ class Displayfetch_imgVC: UIViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: true)
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 0, lblheading: "       Follow request")
         
     }
     

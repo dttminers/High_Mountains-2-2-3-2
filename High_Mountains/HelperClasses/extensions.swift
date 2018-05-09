@@ -140,7 +140,7 @@ extension UIViewController {
         //navView.check = check
         //navView.ref = vc
         
-        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: isBack)
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 0, lblheading: "High Mountain")
         
         /*if check == true {
          

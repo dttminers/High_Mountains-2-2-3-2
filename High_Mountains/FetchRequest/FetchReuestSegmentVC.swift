@@ -26,16 +26,12 @@ class FetchReuestSegmentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+   
        TabbarActionbtn(followingbtn)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
    
+    
         
     @IBAction func TabbarActionbtn(_ sender: UIButton) {
         

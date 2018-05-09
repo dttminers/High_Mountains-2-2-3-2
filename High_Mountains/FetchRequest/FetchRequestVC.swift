@@ -22,6 +22,9 @@ class FetchRequestVC: UIViewController{
         self.URLDownload()
     }
 
+    
+     
+    
     func URLDownload()
     {
         let postparam = "action=follow_request_fetch&&uid=\(userId)";

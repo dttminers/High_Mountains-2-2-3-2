@@ -23,6 +23,13 @@ class FollowVC: UIViewController {
         self.URLDownload()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //configureNavView(self, isBack: false)
+        
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 0,  lblheading: "")
+        
+    }
+    
     func URLDownload()
     {
         let postparam = "action=follow_\(ListType)_fetch&&uid=\(userId)";
