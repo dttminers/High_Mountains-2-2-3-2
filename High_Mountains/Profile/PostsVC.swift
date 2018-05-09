@@ -49,10 +49,10 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
         if sender.tag == 1 {
             GalleryView.alpha = 1
             CaneraView.alpha = 0
-            VideoView.alpha = 0
+           // VideoView.alpha = 0
             ClickDisplayView.alpha = 1
             CameraDisplayView.alpha = 0
-            VideoDisplayView.alpha = 0
+           // VideoDisplayView.alpha = 0
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.ContainerGView.alpha = 1
@@ -63,11 +63,11 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
             CameraNav()
             GalleryView.alpha = 0
             CaneraView.alpha = 1
-            VideoView.alpha = 0
+          //  VideoView.alpha = 0
             ClickDisplayView.alpha = 0
             CameraDisplayView.alpha = 1
             ClickDisplayView.alpha = 0
-            VideoDisplayView.alpha = 0
+            //VideoDisplayView.alpha = 0
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.ContainerGView.alpha = 0
@@ -77,9 +77,9 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
         }else if sender.tag == 3 {
             GalleryView.alpha = 0
             CaneraView.alpha = 0
-            VideoView.alpha = 1
+            //VideoView.alpha = 1
             ClickDisplayView.alpha = 0
-            VideoDisplayView.alpha = 1
+           // VideoDisplayView.alpha = 1
             CameraDisplayView.alpha = 0
             ClickDisplayView.alpha = 0
 
