@@ -13,7 +13,7 @@ class Share_PostsVC: UIViewController {
     @IBOutlet weak var Postsimg: UIImageView!
     @IBOutlet weak var CaptionTxt: UITextField!
     
-    var postimg = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       Postsimg.image = postimg

@@ -28,6 +28,10 @@ class AlbumTitle: UICollectionViewCell {
     }
     
     func populate(_ data : TimelineModel) {
+        let imgDt = data.image!.components(separatedBy: ",")
+        if imgDt.count > 0 {
+            imgPost.loadImageUsingCache(withUrl: "\(url)\(imgDt[0])")
+        }
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image ?? "")")
         lblTitle.text = data.caption ?? "PUB"
     }

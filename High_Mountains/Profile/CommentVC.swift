@@ -63,11 +63,13 @@ class CommentVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)like_share_comment.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                 if status {
                     let dt = JSON(data : result as! Data)
+                    if dt != nil{
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     print(res)
                     
                     self.Comment = DATA_MANAGER.sendCommentDictionary(res)
                     self.tableview?.reloadData()
+                    }
                 }
                 else {
                     self.alertDialog(msg: result as! String)

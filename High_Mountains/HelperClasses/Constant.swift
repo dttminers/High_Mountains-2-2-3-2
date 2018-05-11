@@ -14,7 +14,7 @@ let APPNAME = "HM"
 //URL
 let url : String = "http://vnoi.in/hmapi/"
 
-
+var postimg = UIImage()
 var userId = ""
 var userData : AnyObject!
 
@@ -132,4 +132,15 @@ func checkNULLString(_ passedStr: Any) -> String {
     else {
         return returnStr.trimmingCharacters(in: CharacterSet.whitespaces)
     }
+}
+
+protocol Comment1 {
+    
+    func Commet(_ tid : String)
+    
+}
+protocol share {
+    
+    func ShareT()
+    
 }

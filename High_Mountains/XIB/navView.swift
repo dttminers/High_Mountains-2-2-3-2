@@ -26,6 +26,7 @@ class navView: UIView {
     var nvc : UINavigationController? = nil
     //var isBack : Bool?
     var isBack : Int?
+    var parent: UIViewController?
     var lblheading : String = ""
 //    override func awakeFromNib() {
 //        
@@ -129,6 +130,10 @@ class navView: UIView {
 //        nvc?.pushViewController(vc, animated: true)
         if isBack == 4 {
         print("d")
+        }else if isBack == 5{
+            let vc: Share_PostsVC  = STORY_BOARD.instantiateViewController(withIdentifier: "SharePage")as! Share_PostsVC
+               nvc?.pushViewController(vc, animated: true)
+            
         }
     }
     

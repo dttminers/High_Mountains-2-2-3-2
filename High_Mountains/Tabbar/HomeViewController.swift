@@ -30,7 +30,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         //slidingMenus()
-        //tableviewHome.register(UINib(nibName : "PostsTextTVC", bundle:nil), forCellReuseIdentifier: "PostsTextTVC")
+        tableviewHome.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
         tableviewHome.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         self.URLDownload()
         
@@ -101,11 +101,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)feed.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
+                if dt != nil{
                 let res : [AnyObject] = dt.object as! [AnyObject]
                 print(res)
                 
                 self.Home = DATA_MANAGER.setTimelineDictionary(res)
                 self.tableviewHome.reloadData()
+            }
             }
             else {
                 self.alertDialog(msg: result as! String)
@@ -133,11 +135,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
             
         else if (Home[indexPath.row].activity == "album"){
-            let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+            let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
             cell.populate(Home[indexPath.row])
-            cell.delegate = self
+//            cell.delegate = self
             cell.delegate1 = self
-            cell.delegate2 = self
+//            cell.delegate2 = self
             return cell
         }
             

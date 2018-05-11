@@ -1,44 +1,33 @@
 //
-//  ClickLargeImgVC.swift
+//  LargeClickAlbumVC.swift
 //  High_Mountains
 //
-//  Created by Abhishek on 17/04/18.
+//  Created by Abhishek on 11/05/18.
 //  Copyright © 2018 Abhishek. All rights reserved.
 //
 
 import UIKit
 
-class ClickLargeImgVC: UIViewController {
+class LargeClickAlbumVC: UIViewController {
+ var obj1: TimelineModel!
+  var obj : PhotoModel!
     
-    //var Image: [PhotoModel] = []
-    var obj : PhotoModel!
-    var obj1: TimelineModel!
-    var selectedPhotoIndex : Int = 1
-    @IBOutlet weak var LArgeImgView: UIView!
+    @IBOutlet weak var LargeClickAlbumView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
-        
-        // viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
-        if obj == nil {
-            viewN.populate(obj1)
-        }
-        else {
+            
+            let viewN =  ProfileFeedAlbumTVC.instanceFromNib() as ProfileFeedAlbumTVC
+            // viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
+            
             viewN.populate(obj)
+            
+            viewN.parent = self
+            //viewN.btnComment.addTarget(self, action: #selector(ClickLargeImgVC.sendComment(sender:)) , for: .touchUpInside)
+            viewN.btnShare.addTarget(self, action: #selector(ClickLargeImgVC.share(sender:)) , for: .touchUpInside)
+            viewN.bringSubview(toFront: self.view)
+            LargeClickAlbumView.addSubview(viewN)
+            
         }
-        
-        
-        
-        viewN.parent = self
-        //viewN.btnComment.addTarget(self, action: #selector(ClickLargeImgVC.sendComment(sender:)) , for: .touchUpInside)
-        viewN.btnShare.addTarget(self, action: #selector(ClickLargeImgVC.share(sender:)) , for: .touchUpInside)
-        viewN.bringSubview(toFront: self.view)
-        LArgeImgView.addSubview(viewN)
-        
-        
-
-    }
     override func viewWillAppear(_ animated: Bool) {
         
         
@@ -59,4 +48,8 @@ class ClickLargeImgVC: UIViewController {
     }
     
 }
+
+
+  
+
 

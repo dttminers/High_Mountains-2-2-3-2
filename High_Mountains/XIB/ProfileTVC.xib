@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-lS-O3E">
-                        <rect key="frame" x="0.0" y="0.0" width="415" height="607.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="608"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-Hu-UUn">
                                 <rect key="frame" x="0.0" y="0.0" width="415" height="75"/>
@@ -136,7 +136,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-oJ-f86">
-                                <rect key="frame" x="0.0" y="515" width="415" height="92.5"/>
+                                <rect key="frame" x="0.0" y="515" width="415" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-5a-HMW">
                                         <rect key="frame" x="17" y="5" width="46.5" height="18"/>
@@ -145,26 +145,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbV-1b-oog">
-                                        <rect key="frame" x="17" y="53.5" width="66" height="16"/>
+                                        <rect key="frame" x="17" y="54" width="66" height="16"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsv-I2-GVl">
-                                        <rect key="frame" x="17" y="28" width="46" height="20.5"/>
+                                        <rect key="frame" x="17" y="28" width="46" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Fsv-I2-GVl" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="Efi-tW-Lm0"/>
-                                    <constraint firstItem="T6K-5a-HMW" firstAttribute="top" secondItem="Pzr-oJ-f86" secondAttribute="top" constant="5" id="J4j-zV-xIe"/>
-                                    <constraint firstItem="VbV-1b-oog" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="L12-hp-kq3"/>
-                                    <constraint firstItem="T6K-5a-HMW" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="XE6-Yh-dwS"/>
-                                    <constraint firstItem="Fsv-I2-GVl" firstAttribute="top" secondItem="T6K-5a-HMW" secondAttribute="bottom" constant="5" id="c30-sf-21j"/>
-                                    <constraint firstAttribute="bottom" secondItem="VbV-1b-oog" secondAttribute="bottom" constant="23" id="raQ-RL-EIn"/>
-                                    <constraint firstItem="VbV-1b-oog" firstAttribute="top" secondItem="Fsv-I2-GVl" secondAttribute="bottom" constant="5" id="u3v-zu-6RI"/>
+                                    <constraint firstItem="T6K-5a-HMW" firstAttribute="top" secondItem="Pzr-oJ-f86" secondAttribute="top" constant="5" id="O9W-3M-dRa"/>
+                                    <constraint firstItem="T6K-5a-HMW" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="SM1-Kc-wiA"/>
+                                    <constraint firstItem="VbV-1b-oog" firstAttribute="top" secondItem="Fsv-I2-GVl" secondAttribute="bottom" constant="5" id="SpY-mE-RKH"/>
+                                    <constraint firstItem="Fsv-I2-GVl" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="WIV-0P-9zI"/>
+                                    <constraint firstAttribute="bottom" secondItem="VbV-1b-oog" secondAttribute="bottom" constant="23" id="glC-Rx-Ijl"/>
+                                    <constraint firstItem="Fsv-I2-GVl" firstAttribute="top" secondItem="T6K-5a-HMW" secondAttribute="bottom" constant="5" id="oc8-vr-6rm"/>
+                                    <constraint firstItem="VbV-1b-oog" firstAttribute="leading" secondItem="Pzr-oJ-f86" secondAttribute="leading" constant="17" id="qJx-u4-HrO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -209,7 +209,7 @@
                 <outlet property="lblTitle" destination="zMj-OE-av7" id="coX-1G-6Ip"/>
                 <outlet property="lblbPhotoTItle" destination="Fsv-I2-GVl" id="0rm-aL-b7v"/>
             </connections>
-            <point key="canvasLocation" x="-493.5" y="450"/>
+            <point key="canvasLocation" x="-563.5" y="444"/>
         </tableViewCell>
     </objects>
     <resources>

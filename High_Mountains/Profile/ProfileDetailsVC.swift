@@ -268,7 +268,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
                     //self.setTimeline(model)
                     self.tableFeeds.reloadData()
-                    self.htTableConst.constant = self.tableViewHeight
+                    self.htTableConst.constant = SCREEN_HEIGHT
+                        //self.tableViewHeight
                 }
                 
             }
@@ -294,7 +295,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     }
                     else if self.selectedPhotoIndex == 2 {
                         self.tableFeeds.reloadData()
-                        self.htTableConst.constant = self.tableViewHeight
+                        self.htTableConst.constant = SCREEN_HEIGHT
+                            //self.tableViewHeight
                     }
                     
                     
@@ -319,7 +321,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     //self.setPhotos(model)
                     
                     self.collectionFeeds.reloadData()
-                   // self.htCollectionConst.constant = self.collectionViewHeight
+                    self.htCollectionConst.constant = self.collectionViewHeight
                 }
                 
             }
@@ -335,7 +337,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             if status {
                 let dt = JSON(data : result as! Data)
                 print(dt)
-                if dt != nil {
+                if dt == nil {
                     let res : [AnyObject] = dt.object as! [AnyObject]
                     self.timelineRes = DATA_MANAGER.setTimelineDictionary(res)
                     //self.setPhotos(model)
@@ -376,7 +378,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         stackVew.addSubview(vc.view)
         vc.didMove(toParentViewController: self)
         stackVew.translatesAutoresizingMaskIntoConstraints = false
-        //htConst.constant = SCREEN_HEIGHT
+       // htConst.constant = SCREEN_HEIGHT
     }
     
     func setPhotos(_ tableFeeds : [TimelineModel]) {
@@ -387,7 +389,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         stackVew.addSubview(vc.view)
         vc.didMove(toParentViewController: self)
         stackVew.translatesAutoresizingMaskIntoConstraints = false
-        //htConst.constant = SCREEN_HEIGHT
+       // htConst.constant = SCREEN_HEIGHT
     }
     
     func populateUserData() {
@@ -439,18 +441,18 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
                 return cell
             }
             else if timelineRes[indexPath.row].activity == "album" {
-                let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
+                let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
                 cell.populate(timelineRes[indexPath.row])
            
                 return cell
             }
-            else {
-               let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
-
-                cell.populate(timelineRes[indexPath.row])
-
-                return cell
-            }
+//            else {
+//               let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
+//
+//                cell.populate(timelineRes[indexPath.row])
+//
+//                return cell
+//            }
         }
         if selectedIndex == 1 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
@@ -536,6 +538,10 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
         let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC1") as! ClickLargeImgVC
         desVC.obj1 = timelineRes[indexPath.row]
         self.navigationController?.pushViewController(desVC, animated: true)
+      }else if selectedPhotoIndex == 4{
+        let desVC1 : LargeClickAlbumVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "LargeClickAlbumVC") as! LargeClickAlbumVC
+        desVC1.obj = photoRes[indexPath.row]
+        self.navigationController?.pushViewController(desVC1, animated: true)
         }
      
     

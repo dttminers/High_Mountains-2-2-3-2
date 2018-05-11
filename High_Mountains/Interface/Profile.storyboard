@@ -1066,6 +1066,36 @@
             </objects>
             <point key="canvasLocation" x="2382" y="-331"/>
         </scene>
+        <!--Large Click AlbumVC-->
+        <scene sceneID="S7D-CF-AzU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNM-BB-Ftv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LargeClickAlbumVC" id="wEW-gJ-1No" customClass="LargeClickAlbumVC" customModule="High_Mountains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWt-21-97J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy1-8h-7nk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zy1-8h-7nk" secondAttribute="bottom" id="6ol-Ez-GhE"/>
+                            <constraint firstAttribute="trailing" secondItem="Zy1-8h-7nk" secondAttribute="trailing" id="XJ8-Ha-hTL"/>
+                            <constraint firstItem="Zy1-8h-7nk" firstAttribute="top" secondItem="dWt-21-97J" secondAttribute="top" id="cWU-cq-wQ6"/>
+                            <constraint firstItem="Zy1-8h-7nk" firstAttribute="leading" secondItem="dWt-21-97J" secondAttribute="leading" id="lAT-xf-M73"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jee-AA-GgN"/>
+                    </view>
+                    <connections>
+                        <outlet property="LargeClickAlbumView" destination="Zy1-8h-7nk" id="TwN-0p-X3b"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3138" y="-335"/>
+        </scene>
         <!--Pop Menu View Controller-->
         <scene sceneID="q4b-78-fW6">
             <objects>

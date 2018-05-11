@@ -13,5 +13,6 @@ pod 'SJSegmentedScrollView’, ‘1.3.8'
 pod 'IQKeyboardManagerSwift'
 pod 'ImageSlideshow'
 pod 'Kingfisher'
+pod 'BSImagePicker', '~> 2.4'
 
 end

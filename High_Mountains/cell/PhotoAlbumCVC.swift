@@ -7,8 +7,19 @@
 //
 
 import UIKit
-
-class PhotoAlbumCVC: UICollectionViewCell {
+protocol  delete {
     
-    @IBOutlet weak var SelectedView: UIView!
+    func deleteCell(indx: Int)
+}
+class PhotoAlbumCVC: UICollectionViewCell {
+    @IBOutlet weak var image: UIImageView!
+    var delegate: delete!
+    var index: IndexPath!
+    
+    @IBAction func deleteimgCell(_ sender: Any) {
+        
+        delegate?.deleteCell(indx: index.row)
+    }
+    
+    
 }

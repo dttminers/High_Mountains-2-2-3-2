@@ -13,16 +13,7 @@ protocol MoreItem {
     func didButtonPressed()
     
 }
-protocol Comment1 {
-    
-    func Commet(_ tid : String)
-    
-}
-protocol share {
-    
-    func ShareT()
-    
-}
+
 
 class ProfileTVC: UITableViewCell {
     

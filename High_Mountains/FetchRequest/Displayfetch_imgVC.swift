@@ -29,11 +29,14 @@ class Displayfetch_imgVC: UIViewController {
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
+                
                 let res : [AnyObject] = dt.object as! [AnyObject]
                 print(res)
+                    if dt == nil{
                 self.FetchImg.loadImageUsingCache(withUrl: "\(url)\(res[0]["profile_pic"] as! String)")
+                    }
                 
-                
+             
                 
                
         
