@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol MoreItem {
-    
-    func didButtonPressed()
-    
-}
-
 
 class ProfileTVC: UITableViewCell {
     
@@ -37,12 +31,12 @@ class ProfileTVC: UITableViewCell {
     var delegate1: Comment1?
     var delegate2: share?
     var obj : Any!
-    
+    var profimg = UIImage()
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        img.layer.cornerRadius = self.img.frame.size.width/2
-        img.clipsToBounds = true
+        AppUtility.setCornerRadius(img, radius: 22)
+        img.loadImageUsingCache(withUrl: "\(url)\(profimg)")
         
         self.btnLike.addTarget(self, action: #selector(ProfileTVC.btnLikeAction(_:)) , for: .touchUpInside)
         self.btnComment.addTarget(self, action: #selector(ProfileTVC.btnCommentAction(_:)) , for: .touchUpInside)
@@ -93,21 +87,17 @@ class ProfileTVC: UITableViewCell {
     func populate(_ data : PhotoModel) {
         
         obj = data
-        // img.loadImageUsingCache(withUrl: "\(profile_img)")
+       
         tid = data.timeline_id!
-        lblTitle.text = "Swapnil"
+        lblTitle.text = "Swapnil22"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
-        lblLikeCount.text = "\(data.like_count ?? "0") Likes"
-        //lblCommentCount.text = "\(data.comment_count!) Comment"
+         lblLikeCount.text = "Liked by \(data.friend_like ?? "") and \(data.like_count!) others"
+         lblCommentCount.text = "View all \(data.comment_count ?? "0") Comment"
         // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
-        /* if data.isliked! == "true" {
-         btnLike.isSelected = true
-         }
-         else {
-         btnLike.isSelected = false
-         }*/
+        likeData(tid)
+        
     }
     
     @IBAction func btnLikeAction(_ sender: Any) {
@@ -117,11 +107,13 @@ class ProfileTVC: UITableViewCell {
     @IBAction func btnCommentAction(_ sender: Any) {
         if parent == nil {
             delegate1?.Commet(tid)
+            
         }else{
             let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC
             controller.tId = tid
             self.parent.navigationController?.pushViewController(controller, animated: true)
-        }
+            }
+        
         
     } 
     

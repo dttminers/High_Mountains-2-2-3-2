@@ -204,14 +204,66 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
                     
                 })
                 
-                let data = UIImageJPEGRepresentation(thumbnail, 0.7)
-                let newImage = UIImage(data: data!)
-                
+                let data1 = UIImageJPEGRepresentation(thumbnail, 0.7)
+               
+
+                let newImage = UIImage(data: data1!)
+                let imageData: NSData = UIImageJPEGRepresentation(newImage!, 1.0)! as NSData
                 
                 self.PhotoArray.append(newImage! as UIImage)
                 
-            }
             
+            if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
+                
+                
+              
+                
+                let postparam="image_url=\(imageData)&&action=upload_image&&uid=\(userId)&&activity=photo&&tag_status=0&&location_status=0&&caption=jjj";
+                
+                APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)time_log.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
+                    if status {
+                        let dt = JSON(data : result as! Data)
+                        print(dt)
+                        let res : AnyObject = dt.object as AnyObject
+                        if let name = res["status"]as? Int as Optional!{
+                            print(name!)
+                            if (name == 1)
+                            {
+                                
+                                print("Saved")
+                                
+                                //  alertDialog(header: "Alert", msg: "Update SuccessFul")
+                                
+                                
+                            }
+                                
+                                
+                            else if(name == 0){
+                                let res = dt.object as AnyObject
+                                if (res["type"]as? String) != nil{
+                                    //  alertDialog(header: "Alert", msg: "Sorry, only JPG, JPEG, PNG & GIF files are allowed.")
+                                    print("failed")
+                                }
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                    }
+                    else {
+                        // self.alertDialog(msg: result as! String)
+                    }
+                    
+                })
+                
+            }else {
+                print("There is no internet connection")
+            }
+        }
+        
             
                     //   postimg.animationImages = self.PhotoArray
                  //      self.image.animationDuration = 3.0

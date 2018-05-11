@@ -21,11 +21,11 @@ class ClickLargeImgVC: UIViewController {
         let viewN =  ProfileTVC.instanceFromNib() as ProfileTVC
         
         // viewN.frame = CGRect(x: 0, y: 0, width: 0, height: self.view.frame.size.height)//nav.frame
-        if obj == nil {
-            viewN.populate(obj1)
+        if obj1 == nil {
+            viewN.populate(obj)
         }
         else {
-            viewN.populate(obj)
+            viewN.populate(obj1)
         }
         
         

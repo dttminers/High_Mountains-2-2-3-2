@@ -35,7 +35,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTb-pr-lMK">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BzS-nH-1C6">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BzS-nH-1C6">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <bool key="isElement" value="YES"/>
@@ -1069,7 +1069,6 @@
         <!--Large Click AlbumVC-->
         <scene sceneID="S7D-CF-AzU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JNM-BB-Ftv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LargeClickAlbumVC" id="wEW-gJ-1No" customClass="LargeClickAlbumVC" customModule="High_Mountains" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWt-21-97J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1093,6 +1092,7 @@
                         <outlet property="LargeClickAlbumView" destination="Zy1-8h-7nk" id="TwN-0p-X3b"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNM-BB-Ftv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3138" y="-335"/>
         </scene>

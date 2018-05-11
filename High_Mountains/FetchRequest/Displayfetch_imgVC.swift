@@ -29,7 +29,7 @@ class Displayfetch_imgVC: UIViewController {
         APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)follow_data.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
             if status {
                 let dt = JSON(data : result as! Data)
-                
+                if dt != nil{
                 let res : [AnyObject] = dt.object as! [AnyObject]
                 print(res)
                     if dt == nil{
@@ -37,7 +37,7 @@ class Displayfetch_imgVC: UIViewController {
                     }
                 
              
-                
+                }
                
         
                 

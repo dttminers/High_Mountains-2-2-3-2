@@ -72,7 +72,6 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     var selectedIndex : Int = 1
     var selectedPhotoIndex : Int = 1
     var fullName : String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,7 +93,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         lblFollowers.isUserInteractionEnabled = true
         
         tableFeeds.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
-        tableFeeds.register(UINib(nibName : "ProfileWITVC", bundle:nil), forCellReuseIdentifier: "ProfileWITVC")
+        tableFeeds.register(UINib(nibName : "ProfileTVC", bundle:nil), forCellReuseIdentifier: "ProfileTVC")
         tableFeeds.register(UINib(nibName : "ProfileFeedAlbumTVC", bundle:nil), forCellReuseIdentifier: "ProfileFeedAlbumTVC")
         collectionFeeds.register(UINib(nibName : "Album", bundle:nil), forCellWithReuseIdentifier: "Album")
         collectionFeeds.register(UINib(nibName : "AlbumTitle", bundle:nil), forCellWithReuseIdentifier: "AlbumTitle")
@@ -143,9 +142,9 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             collectionFeeds.isHidden = false
         }
         else if sender.tag == 2 {
-            photoRes = []
+            timelineRes = []
             tableFeeds.reloadData()
-            fetchPhotos()
+            fetchTimeline() 
             vewGrid.alpha = 0
             vewList.alpha = 1
             vewAlbum.alpha = 0
@@ -222,6 +221,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     }
     
     //MARK: API Requests
+   
     
     func userInfoDisplay() {
         if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
@@ -240,7 +240,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                         
                     }
                     if let ProfileImg = res["profile_pic"] as? String{
-                        
+                       
                         self.ProfileIMG.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
                         
                     }
@@ -436,23 +436,25 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
         if selectedIndex == 2 {
             if timelineRes[indexPath.row].activity == "photo" {
                 let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-                cell.populate(timelineRes[indexPath.row])
-             
+                cell.populate(photoRes[indexPath.row])
+                cell.delegate = self
+                cell.delegate1 = self
+                cell.delegate2 = self
                 return cell
             }
             else if timelineRes[indexPath.row].activity == "album" {
-                let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
+                let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
                 cell.populate(timelineRes[indexPath.row])
-           
+                
                 return cell
             }
-//            else {
-//               let cell : ProfileWITVC = tableView.dequeueReusableCell(withIdentifier: "ProfileWITVC", for: indexPath) as! ProfileWITVC
-//
-//                cell.populate(timelineRes[indexPath.row])
-//
-//                return cell
-//            }
+            else {
+                let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
+                
+                cell.populate(timelineRes[indexPath.row])
+                
+                return cell
+            }
         }
         if selectedIndex == 1 {
             let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
@@ -475,7 +477,7 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
         
         if selectedPhotoIndex == 2 {
             let desVC : ClickLargeImgVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "ClickLargeImgVC1") as! ClickLargeImgVC
-            desVC.obj = photoRes[indexPath.row]
+            desVC.obj1 = timelineRes[indexPath.row]
             
             self.navigationController?.pushViewController(desVC, animated: true)
         }
@@ -514,7 +516,7 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
         else {
             let cell : AlbumTitle = collectionView.dequeueReusableCell(withReuseIdentifier: "AlbumTitle", for: indexPath) as! AlbumTitle
            
-            cell.populate(photoRes[indexPath.row])
+           cell.populate(photoRes[indexPath.row])
             
             return cell
         }
@@ -546,5 +548,52 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
      
     
     }
+}
+
+extension ProfileDetailsVC: MoreItem,Comment1,share{
+    func ShareT() {
+        
+        let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC,animated: true,completion: nil)
+    }
+    
+    
+    func Commet(_ tid: String) {
+        let controller : CommentVC = PROFILE_STORYBOARD.instantiateViewController(withIdentifier: "Comment") as! CommentVC
+        controller.tId = tid
+        self.parent?.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    func didButtonPressed() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let share = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: {ACTION in
+            
+            let activityVC = UIActivityViewController(activityItems:["www.google.com"], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC,animated: true,completion: nil)
+            
+        })
+        
+        let Delete = UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {ACTION in
+            
+            let imagePicker = UIImagePickerController()
+            // imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil)
+        
+        alert.addAction(share)
+        alert.addAction(Delete)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
 }
 

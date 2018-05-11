@@ -21,7 +21,7 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     //Gender
     @IBOutlet weak var GenderLbl: UILabel!
     
-    
+var profimg = UIImage()
     
     @IBAction func GenderBtn(_ sender: Any) {
         
@@ -234,6 +234,8 @@ class PopMenuViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
                     }
                     if let ProfileImg = res["profile_pic"] as? String{
                         
+                        self.profimg = ProfileImg as! UIImage
+                        print(self.profimg)
                         self.Profileimg.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
                         
                        

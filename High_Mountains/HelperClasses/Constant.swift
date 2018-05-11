@@ -13,7 +13,8 @@ let APPNAME = "HM"
 
 //URL
 let url : String = "http://vnoi.in/hmapi/"
-
+var profimg : String = ""
+ var img = ""
 var postimg = UIImage()
 var userId = ""
 var userData : AnyObject!
@@ -133,7 +134,11 @@ func checkNULLString(_ passedStr: Any) -> String {
         return returnStr.trimmingCharacters(in: CharacterSet.whitespaces)
     }
 }
-
+protocol MoreItem {
+    
+    func didButtonPressed()
+    
+}
 protocol Comment1 {
     
     func Commet(_ tid : String)

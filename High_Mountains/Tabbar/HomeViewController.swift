@@ -161,7 +161,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
 extension HomeViewController : slideMenuDelegate {
     func open() {
-        self.slideMenuController()?.openLeft()
+        //self.slideMenuController()?.openLeft()
         
     }
     

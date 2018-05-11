@@ -40,7 +40,10 @@ class ProfileFeedAlbumTVC: UITableViewCell {
         imgPost.draggingEnabled = true
         imgPost.circular = false
         imgPost.setImageInputs(arrSource)
-        
+        imgPost.pageControlPosition = PageControlPosition.underScrollView
+        imgPost.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        imgPost.pageControl.pageIndicatorTintColor = UIColor.black
+        imgPost.contentScaleMode = UIViewContentMode.scaleAspectFill
         lblLikeCount.text = "Liked by \(data.friend_like ?? "") and \(data.like_count!) others "
         
         lblCommentCount.text = "View all \(data.comment_count ?? "0") Comment"
@@ -69,6 +72,10 @@ class ProfileFeedAlbumTVC: UITableViewCell {
         imgPost.draggingEnabled = true
         imgPost.circular = false
         imgPost.setImageInputs(arrSource)
+        imgPost.pageControlPosition = PageControlPosition.underScrollView
+        imgPost.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        imgPost.pageControl.pageIndicatorTintColor = UIColor.black
+        imgPost.contentScaleMode = UIViewContentMode.scaleAspectFill
         
         lblCommentCount.text = "View all \(data.comment_count ?? "0") Comment"
         
