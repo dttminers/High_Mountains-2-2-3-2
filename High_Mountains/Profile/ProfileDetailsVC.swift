@@ -71,10 +71,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     var photoRes : [PhotoModel] = []
     var selectedIndex : Int = 1
     var selectedPhotoIndex : Int = 1
-    var fullName : String = ""
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.userInfoDisplay()
         //  self.loadDesign()
         
@@ -236,7 +234,7 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
                     
                     if let Fullname = res["full_name"] as? String{
                         
-                        self.fullName = Fullname
+                      //  self.fullName = Fullname
                         
                     }
                     if let ProfileImg = res["profile_pic"] as? String{
@@ -394,6 +392,8 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     func populateUserData() {
         if userInfo != nil {
+            fullName = userInfo.full_name!
+            username_user = userInfo.username!
             LiveInlbl.text = userInfo.lives_in
             Fromlbl.text = userInfo.from_des
             Genderlbl.text = userInfo.gender
@@ -401,9 +401,10 @@ class ProfileDetailsVC: UIViewController,UIImagePickerControllerDelegate,UINavig
             Doblbl.text = userInfo.dob
             Biolbl.text = userInfo.bio
             FavTravlQuoteslbl.text = userInfo.fav_quote
-            FollowingAction_lbl.text = "Following\(userInfo.following_count ?? 0 )"
-            lblFollowers.text = "Followers\(userInfo.followers_count ?? 0 )"
-            lblPosts.text  = "Posts\(userInfo.post_count ?? 0 )"
+            FollowingAction_lbl.text = "Following\(userInfo.following_count ?? "0" )"
+            lblFollowers.text = "Followers\(userInfo.followers_count ?? "0" )"
+            lblPosts.text  = "Posts\(userInfo.post_count ?? "0" )"
+            UserNamelbl.text = userInfo.username!
         }
     }
 }
@@ -445,12 +446,15 @@ extension ProfileDetailsVC : UITableViewDelegate,UITableViewDataSource {
             else if timelineRes[indexPath.row].activity == "album" {
                 let cell : ProfileFeedAlbumTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileFeedAlbumTVC", for: indexPath) as! ProfileFeedAlbumTVC
                 cell.populate(timelineRes[indexPath.row])
+
                 
                 return cell
             }
             else {
                 let cell : ProfileTVC = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
-                
+                cell.delegate = self
+                cell.delegate1 = self
+                cell.delegate2 = self
                 cell.populate(timelineRes[indexPath.row])
                 
                 return cell
@@ -524,8 +528,20 @@ extension ProfileDetailsVC : UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //let cells = floor(collectionView.frame.width/80) - 10
-        let wd = (collectionView.frame.width-20)/3
-        return CGSize(width: wd, height: 100)
+//        let wd = (collectionView.frame.width-20)/3
+//        return CGSize(width: wd, height: 100)
+        
+        let width = collectionView.frame.width/3-1
+        return CGSize(width: width ,height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 1.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

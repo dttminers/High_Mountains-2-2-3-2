@@ -13,11 +13,12 @@ let APPNAME = "HM"
 
 //URL
 let url : String = "http://vnoi.in/hmapi/"
-var profimg : String = ""
- var img = ""
+
 var postimg = UIImage()
 var userId = ""
 var userData : AnyObject!
+var fullName = ""
+var username_user = ""
 
 let imageCache = NSCache<NSString, AnyObject>()
 //TODO:- Colors

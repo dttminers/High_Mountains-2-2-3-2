@@ -234,8 +234,6 @@ var profimg = UIImage()
                     }
                     if let ProfileImg = res["profile_pic"] as? String{
                         
-                        self.profimg = ProfileImg as! UIImage
-                        print(self.profimg)
                         self.Profileimg.loadImageUsingCache(withUrl: "\(url)\(ProfileImg)")
                         
                        

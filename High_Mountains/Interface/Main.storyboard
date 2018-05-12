@@ -2490,22 +2490,22 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="787"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTd-Na-KEP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-VZ-dHs">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="310"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiy-Zv-TFE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <bool key="isElement" value="YES"/>
                                                         </accessibility>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="230" id="6PN-u6-SlD"/>
+                                                            <constraint firstAttribute="height" constant="260" id="6PN-u6-SlD"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gk-dE-ZKy">
-                                                        <rect key="frame" x="0.0" y="176" width="414" height="54"/>
+                                                        <rect key="frame" x="0.0" y="206" width="414" height="54"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw8-1x-Oju">
                                                                 <rect key="frame" x="327" y="0.0" width="79" height="51"/>
@@ -2513,7 +2513,7 @@
                                                                     <constraint firstAttribute="height" constant="51" id="QQp-uW-bUu"/>
                                                                     <constraint firstAttribute="width" constant="79" id="yxv-oc-31c"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -2523,16 +2523,16 @@
                                                                     <constraint firstAttribute="height" constant="51" id="POy-44-iXp"/>
                                                                     <constraint firstAttribute="width" constant="79" id="vDU-13-YPo"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts 12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06Y-fE-z9E">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06Y-fE-z9E">
                                                                 <rect key="frame" x="182" y="0.0" width="50" height="51"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Aul-1A-CnN"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -2551,26 +2551,27 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HX5-Um-DVF">
-                                                        <rect key="frame" x="0.0" y="230" width="414" height="84"/>
+                                                        <rect key="frame" x="0.0" y="260" width="414" height="51"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swapnils" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-ym-4xe">
-                                                                <rect key="frame" x="8" y="11" width="72" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                                <rect key="frame" x="8" y="4" width="90" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referral Code : 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-ev-zlc">
-                                                                <rect key="frame" x="8" y="32.5" width="116.5" height="16"/>
+                                                                <rect key="frame" x="8" y="30" width="116.5" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" red="0.91250266369999999" green="0.91250266369999999" blue="0.91250266369999999" alpha="0.10236515409999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="84" id="EIt-Go-PAs"/>
+                                                            <constraint firstAttribute="height" constant="51" id="EIt-Go-PAs"/>
                                                             <constraint firstItem="Hw3-ym-4xe" firstAttribute="leading" secondItem="HX5-Um-DVF" secondAttribute="leading" constant="8" id="Hu6-Gt-AdL"/>
                                                             <constraint firstItem="4oC-ev-zlc" firstAttribute="top" secondItem="Hw3-ym-4xe" secondAttribute="bottom" constant="2" id="K5R-Tp-pvm"/>
-                                                            <constraint firstItem="Hw3-ym-4xe" firstAttribute="top" secondItem="HX5-Um-DVF" secondAttribute="top" constant="11" id="r2U-kc-vdi"/>
+                                                            <constraint firstItem="Hw3-ym-4xe" firstAttribute="top" secondItem="HX5-Um-DVF" secondAttribute="top" constant="4" id="r2U-kc-vdi"/>
                                                             <constraint firstItem="4oC-ev-zlc" firstAttribute="leading" secondItem="HX5-Um-DVF" secondAttribute="leading" constant="8" id="wS7-AP-xle"/>
                                                         </constraints>
                                                     </view>
@@ -2589,15 +2590,8 @@
                                                     <constraint firstItem="HX5-Um-DVF" firstAttribute="leading" secondItem="Dbe-VZ-dHs" secondAttribute="leading" id="oVs-TZ-Mp1"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEg-TW-FTa">
-                                                <rect key="frame" x="0.0" y="310" width="414" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="MVh-uO-8Zc"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76i-VH-lg3">
-                                                <rect key="frame" x="8" y="319" width="398" height="250"/>
+                                                <rect key="frame" x="8" y="316" width="398" height="250"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6k-rj-8TC">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="35"/>
@@ -2843,7 +2837,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-yG-QUw">
-                                                <rect key="frame" x="8" y="577" width="398" height="268"/>
+                                                <rect key="frame" x="8" y="574" width="398" height="268"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2xV-Nx-8Il">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="268"/>
@@ -3054,10 +3048,17 @@
                                                     <constraint firstItem="2xV-Nx-8Il" firstAttribute="top" secondItem="WLP-yG-QUw" secondAttribute="top" id="xdB-XN-c0f"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEg-TW-FTa">
+                                                <rect key="frame" x="0.0" y="313" width="414" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="MVh-uO-8Zc"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="QEg-TW-FTa" firstAttribute="top" secondItem="Dbe-VZ-dHs" secondAttribute="bottom" id="AAM-Pr-krc"/>
+                                            <constraint firstItem="QEg-TW-FTa" firstAttribute="top" secondItem="Dbe-VZ-dHs" secondAttribute="bottom" constant="3" id="AAM-Pr-krc"/>
                                             <constraint firstItem="Dbe-VZ-dHs" firstAttribute="leading" secondItem="yTd-Na-KEP" secondAttribute="leading" id="Gmh-Z4-7Kw"/>
                                             <constraint firstItem="QEg-TW-FTa" firstAttribute="leading" secondItem="yTd-Na-KEP" secondAttribute="leading" id="L9O-EO-4pQ"/>
                                             <constraint firstAttribute="trailing" secondItem="76i-VH-lg3" secondAttribute="trailing" constant="8" id="MAm-5c-3gl"/>
@@ -3067,7 +3068,7 @@
                                             <constraint firstItem="WLP-yG-QUw" firstAttribute="leading" secondItem="yTd-Na-KEP" secondAttribute="leading" constant="8" id="QxA-e9-OiG"/>
                                             <constraint firstAttribute="trailing" secondItem="WLP-yG-QUw" secondAttribute="trailing" constant="8" id="cVt-Nh-wZx"/>
                                             <constraint firstAttribute="trailing" secondItem="QEg-TW-FTa" secondAttribute="trailing" id="hcO-HY-UUo"/>
-                                            <constraint firstItem="76i-VH-lg3" firstAttribute="top" secondItem="QEg-TW-FTa" secondAttribute="bottom" constant="8" id="iSS-jE-GF7"/>
+                                            <constraint firstItem="76i-VH-lg3" firstAttribute="top" secondItem="QEg-TW-FTa" secondAttribute="bottom" constant="2" id="iSS-jE-GF7"/>
                                             <constraint firstItem="76i-VH-lg3" firstAttribute="leading" secondItem="yTd-Na-KEP" secondAttribute="leading" constant="8" id="ptL-6w-nGi"/>
                                             <constraint firstItem="Dbe-VZ-dHs" firstAttribute="top" secondItem="yTd-Na-KEP" secondAttribute="top" id="ykP-9p-cnC"/>
                                         </constraints>
@@ -3127,7 +3128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTX-Mr-AQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1469" y="695"/>
+            <point key="canvasLocation" x="1468.8" y="694.45277361319347"/>
         </scene>
     </scenes>
     <resources>

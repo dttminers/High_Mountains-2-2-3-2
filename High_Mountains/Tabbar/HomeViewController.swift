@@ -43,7 +43,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         //configureNavView(self, isBack: false)
         
-        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 1,  lblheading: "  High Mountain")
+        navigationController?.navigationBar.showView((self.navigationController?.navigationBar)!, navigationItem: navigationItem, navigationController: self.navigationController!, isBack: 1,  lblheading: "     High Mountain")
         
     }
     

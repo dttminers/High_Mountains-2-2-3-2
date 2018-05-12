@@ -99,7 +99,7 @@
                                                 <constraint firstItem="BfF-eo-6l6" firstAttribute="top" secondItem="uXp-ta-84r" secondAttribute="top" id="qTL-Pd-wRO"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzp-Dy-zHd">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzp-Dy-zHd">
                                             <rect key="frame" x="-26" y="10" width="242" height="46"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
                                             <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                                     </constraints>
                                 </view>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k88-3t-Ha9">
-                                    <rect key="frame" x="-40" y="0.0" width="20" height="66"/>
+                                    <rect key="frame" x="-50" y="0.0" width="20" height="66"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="kxW-B7-1li">
                                             <rect key="frame" x="10" y="0.0" width="0.0" height="66"/>

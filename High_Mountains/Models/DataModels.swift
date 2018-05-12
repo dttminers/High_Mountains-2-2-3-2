@@ -52,20 +52,20 @@ class UserInfoModel : NSObject {
     var gender : String?
     var from_des : String?
     var profile_type : String?
-    var followers_count : Int?
+    var followers_count : String?
     var relationship_status : String?
     var bio : String?
-    var result_status : Int?
-    var status : Int?
-    var contact_no : Int?
+    var result_status : String?
+    var status : String?
+    var contact_no : String?
     var username : String?
-    var id : Int?
+    var id : String?
     var password : String?
     var referral_code : String?
     var time : String?
-    var following_count : Int?
+    var following_count : String?
     var dob : String?
-    var post_count : Int?
+    var post_count : String?
     
     func setDictionary(_ dictionary:[AnyHashable : Any]){
         lives_in = dictionary["lives_in"] as? String
@@ -76,20 +76,21 @@ class UserInfoModel : NSObject {
         gender = dictionary["gender"] as? String
         from_des = dictionary["from_des"] as? String
         profile_type = dictionary["profile_type"] as? String
-        followers_count = dictionary["followers_count"] as? Int
+        followers_count = dictionary["followers_count"] as? String
         relationship_status = dictionary["relationship_status"] as? String
         bio = dictionary["bio"] as? String
-        result_status = dictionary["result_status"] as? Int
-        status = dictionary["status"] as? Int
-        contact_no = dictionary["contact_no"] as? Int
+        result_status = dictionary["result_status"] as? String
+        status = dictionary["status"] as? String
+        contact_no = dictionary["contact_no"] as? String
         username = dictionary["username"] as? String
-        id = dictionary["id"] as? Int
+        id = dictionary["id"] as? String
         password = dictionary["password"] as? String
         referral_code = dictionary["referral_code"] as? String
         time = dictionary["time"] as? String
-        following_count = dictionary["following_count"] as? Int
+        following_count = dictionary["following_count"] as? String
         dob = dictionary["dob"] as? String
-        post_count = dictionary["post_count"] as? Int
+        post_count = dictionary["post_count"] as? String
+        
     }
 }
 
@@ -132,7 +133,7 @@ class PhotoModel : NSObject {
     var uid : String?
     var timeline_id : String?
     var caption : String?
-    var image : String?
+    //var image : String?
     var friend_like: String?
      var isliked : String?
     
@@ -147,7 +148,7 @@ class PhotoModel : NSObject {
         uid = dictionary["Uid"] as? String
         timeline_id = dictionary["timeline_id"] as? String
         caption = dictionary["caption"] as? String
-        image = dictionary["image"] as? String
+       // image = dictionary["image"] as? String
         friend_like = dictionary["friend_like"] as? String
         isliked = dictionary["isliked"] as? String
     }

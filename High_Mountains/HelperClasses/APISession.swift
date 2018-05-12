@@ -50,6 +50,7 @@ class APISession {
                 }
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
+            
         }
         task.resume()
         

@@ -59,7 +59,7 @@ class ProfileTVC: UITableViewCell {
         obj = data
         //img.loadImageUsingCache(withUrl: "\(img1)")
         tid = data.timeline_id!
-        lblTitle.text = "Swapnil"
+        lblTitle.text = "\(username_user)"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image!)")
         lblDate.text = data.time
         lblLikeCount.text = "Liked by \(data.friend_like ?? "") and \(data.like_count!) others "
@@ -72,6 +72,7 @@ class ProfileTVC: UITableViewCell {
             //btnLike.setTitleColor(.blue, for: .normal)
             self.btnLike.setImage(UIImage(named:"like2"), for: .normal)
             self.btnLike.imageEdgeInsets = UIEdgeInsets(top: 3,left: 5,bottom: 3,right: 5)
+            
             btnLike.tintColor = UIColor.red
         }
         else {
@@ -89,7 +90,7 @@ class ProfileTVC: UITableViewCell {
         obj = data
        
         tid = data.timeline_id!
-        lblTitle.text = "Swapnil22"
+        lblTitle.text = "\(username_user)"
         imgPost.loadImageUsingCache(withUrl: "\(url)\(data.image_url!)")
         lblDate.text = data.time
          lblLikeCount.text = "Liked by \(data.friend_like ?? "") and \(data.like_count!) others"
@@ -97,14 +98,15 @@ class ProfileTVC: UITableViewCell {
         // lblShareCount.text = "\(data.share_count!) Share"
         lblbPhotoTItle.text = data.caption?.capitalized
         likeData(tid)
-        
+        delegate2?.ShareT()
+       
     }
     
     @IBAction func btnLikeAction(_ sender: Any) {
         likeData(tid)
     }
     
-    @IBAction func btnCommentAction(_ sender: Any) {
+    @IBAction func btnCommentAction(_ sender: UIButton) {
         if parent == nil {
             delegate1?.Commet(tid)
             
@@ -139,6 +141,7 @@ class ProfileTVC: UITableViewCell {
                         //  self.btnLike.setTitleColor(.blue, for: .normal)
                         self.btnLike.setImage(UIImage(named:"like2"), for: .normal)
                         self.btnLike.imageEdgeInsets = UIEdgeInsets(top: 3,left: 5,bottom: 3,right: 5)
+                        self.btnLike.isHidden = false
                         //self.btnLike.tintColor = UIColor.blue
                         
                     }
@@ -148,7 +151,7 @@ class ProfileTVC: UITableViewCell {
                         self.btnLike.setImage(UIImage(named:"like1"), for: .normal)
                         self.btnLike.imageEdgeInsets = UIEdgeInsets(top: 3,left: 5,bottom: 3,right: 5)
                         // self.btnLike.tintColor = UIColor.black
-                        
+                        self.btnLike.isHidden = false
                     }
                 }
                 

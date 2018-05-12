@@ -166,11 +166,12 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
                                                 
         }, deselect: { (asset: PHAsset) -> Void in
             // User deselected an assets.
-            
+        
         }, cancel: { (assets: [PHAsset]) -> Void in
             // User cancelled. And this where the assets currently selected.
         }, finish: { (assets: [PHAsset]) -> Void in
             // User finished with these assets
+            
              self.collectionview.reloadData()
             for i in 0..<assets.count
             {
@@ -179,8 +180,8 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
             }
             
             self.convertAssetToImages()
-            
-            
+
+          
         }, completion: nil)
         
     }
@@ -206,38 +207,37 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
                 
                 let data1 = UIImageJPEGRepresentation(thumbnail, 0.7)
                
-
-                let newImage = UIImage(data: data1!)
-                let imageData: NSData = UIImageJPEGRepresentation(newImage!, 1.0)! as NSData
+                let newImage = UIImage(data: data1 as! Data)
+                //let imageData: NSData = UIImageJPEGRepresentation(newImage!, 1.0)! as NSData
                 
                 self.PhotoArray.append(newImage! as UIImage)
-                
-            
+               
+
             if ((currentReachabilityStatus == .reachableViaWiFi ||  currentReachabilityStatus == .reachableViaWWAN)){
-                
-                
-              
-                
-                let postparam="image_url=\(imageData)&&action=upload_image&&uid=\(userId)&&activity=photo&&tag_status=0&&location_status=0&&caption=jjj";
-                
+
+
+
+
+                let postparam="image_url=\(newImage!)&&action=upload_image&&uid=\(userId)&&activity=photo&&tag_status=0&&location_status=0&&caption=jjj";
+
                 APISession.postRequets(objDic: postparam.data(using: String.Encoding.utf8)! as AnyObject, APIURL: "\(url)time_log.php", withAPINo: Int(arc4random_uniform(1234)), completionHandler: { (result, status) in
                     if status {
                         let dt = JSON(data : result as! Data)
                         print(dt)
                         let res : AnyObject = dt.object as AnyObject
                         if let name = res["status"]as? Int as Optional!{
-                            print(name!)
+                           // print(name!)
                             if (name == 1)
                             {
-                                
+
                                 print("Saved")
-                                
+
                                 //  alertDialog(header: "Alert", msg: "Update SuccessFul")
-                                
-                                
+
+
                             }
-                                
-                                
+
+
                             else if(name == 0){
                                 let res = dt.object as AnyObject
                                 if (res["type"]as? String) != nil{
@@ -245,41 +245,49 @@ class PostsVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCont
                                     print("failed")
                                 }
                             }
-                            
+
                         }
-                        
-                        
-                        
-                        
-                        
+
+
+
+
+
                     }
                     else {
                         // self.alertDialog(msg: result as! String)
                     }
-                    
+
                 })
-                
+
             }else {
                 print("There is no internet connection")
             }
         }
         
-            
+            }
                     //   postimg.animationImages = self.PhotoArray
                  //      self.image.animationDuration = 3.0
 //                        self.image.startAnimating()
             
-        }
+        
         
         
         print("complete photo array \(self.PhotoArray)")
     }
+
+   
 }
 extension PostsVC: delete{
     func deleteCell(indx: Int) {
        
-       PhotoArray.remove(at: indx)
+        PhotoArray.remove(at: indx)
+        largeimg.image = nil
+        
+        if collectionview != nil {
         self.collectionview.reloadData()
+        
+        }
+
         
     
     }
